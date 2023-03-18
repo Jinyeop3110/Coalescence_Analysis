@@ -1,0 +1,40 @@
+%%
+set(0,'defaultAxesFontSize',25)
+clear; close all;
+addpath(genpath(cd))
+
+%%
+global Seqdir TAXAdir OTUdir;
+
+Seqdir='SEQanalysis/Plate2_M_OTUtableGreenGenes.csv';
+TAXAdir='SEQanalysis/Plate2_M_TAXAtableGreenGenes.csv';
+OTUdir='SEQanalysis/Plate2_M_UniqueSequences.csv';
+
+PostProcessingSequences
+MetadataGenerator
+RecipeGenerator
+ExperimentalDataProcessing
+%%
+clear; 
+ProcessedSeqdir='Postprocessed/processed_Sequences.xlsx';
+METAdir='Postprocessed/Metadata.xlsx';
+CoalRecipedir='Postprocessed/CoalescenceRecipe.xlsx';
+ProcessedSimdir='SimulationResult/result_rand/processed_simulations.xlsx';
+
+global ProcessedSeq Metadata CoalRecipe CoalRecipe_natural ProcessedSim;
+ProcessedSeq=readtable(ProcessedSeqdir);
+Metadata=readtable(METAdir);
+CoalRecipe=readtable(CoalRecipedir);
+CoalRecipe_natural=readtable(CoalRecipedir,'Sheet', 2);
+ProcessedSim=readtable(ProcessedSimdir)
+
+AnalyzeCoalescence
+
+
+%%
+ProcessedComdir='Analyzed/processed_Communities_synthetic.xlsx';
+ProcessedCoaldir='Analyzed/processed_CoalescenceEvent_synthetic.xlsx';
+
+Community_data=readtable(ProcessedComdir);
+Metadata=readtable(METAdir);
+Coalescence_data=readtable(ProcessedCoaldir);
