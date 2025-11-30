@@ -1,0 +1,11 @@
+COALESCENCE OUTCOMES BY INTERACTION STRENGTH
+==================================================
+
+Strength  Dominance     Mixing Restructuring    Total
+--------------------------------------------------
+u =  0.3     21.7%     60.0%       18.3%     60
+u =  0.5     40.0%     28.3%       31.7%     60
+u =  0.8     70.0%     10.0%       20.0%     60
+
+KEY PATTERN: Higher interaction strength → More dominance outcomes
+BIOLOGICAL MEANING: Stronger competition → Competitive exclusion

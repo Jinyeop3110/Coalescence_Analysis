@@ -1,0 +1,26 @@
+HOW TO CREATE PLOTS IN EXCEL:
+
+1. Open coalescence_data_all.csv in Excel
+
+2. For each interaction strength (0.3, 0.5, 0.8):
+   - Filter data by interaction_strength column
+   - Select u_coordinate and v_coordinate columns
+   - Insert > Charts > Scatter > Scatter with smooth lines and markers
+   - Format axes to range 0-1
+   - Add diagonal reference line (y = x)
+
+3. For heatmap effect:
+   - Use scatter plot
+   - Right-click data points > Format Data Series
+   - Change marker options to increase size and transparency
+   - Use different colors for each interaction strength
+
+4. Comparison plot:
+   - Create scatter plot with all data
+   - Color-code points by interaction_strength
+   - Use legend to distinguish groups
+
+Your data summary:
+- Total points: 180 (60 per interaction strength)
+- Clear pattern: Higher interaction → More dominance outcomes
+- Ready for publication-quality plotting in any software!

@@ -1,0 +1,15 @@
+SMOOTH CONTOUR HEATMAPS - 100 REPETITION ANALYSIS
+=======================================================
+
+VISUALIZATION FEATURES:
+- Smooth, continuous density representation
+- Gaussian-filtered density fields
+- Contour-style appearance with gradients
+- High-resolution bins for smooth appearance
+
+RESULTS SUMMARY:
+Strength  Dominance     Mixing Restructuring    Total
+-------------------------------------------------------
+u =  0.3     18.5%     68.5%       13.0%    600
+u =  0.6     59.5%     13.8%       26.7%    600
+u =  0.8     69.7%      8.7%       21.7%    600

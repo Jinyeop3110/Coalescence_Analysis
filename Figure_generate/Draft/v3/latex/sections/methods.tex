@@ -1,0 +1,141 @@
+% ============================================
+% Methods
+% ============================================
+\section{Methods}
+\label{sec:methods}
+
+% --------------------------------------------
+\subsection{Microbial Strain Library, Media, and Culture}
+\label{sec:methods:strains}
+
+We compiled a library of 54 bacterial isolates derived from soil, tree surface, and flower-associated environments collected in Cambridge, MA, USA. Each isolate was purified by serial streaking and stored as glycerol stocks (25\% glycerol, $-80$~°C). Phylogenetic identities were determined by full-length 16S rRNA gene sequencing and BLAST alignment to the SILVA 138 database, spanning 29 families across three phyla---Proteobacteria, Firmicutes, and Bacteroidota (Supplementary Fig.~S1). All isolates were cultured aerobically at 25~°C in culture medium (CM; yeast extract and soytone 1~g/L) under 800~rpm shaking. To minimize pre-adaptation, all isolates were preconditioned for two serial growth--dilution cycles in CM prior to assembling parental communities. Each isolate's growth rate and final optical density were measured in monoculture (Supplementary Fig.~S2), confirming broad variation in growth yield and pH modification potential.
+
+Initial experiments were conducted in a common Base medium (BM) composed of 1~g~L$^{-1}$ yeast extract and 1~g~L$^{-1}$ soytone (both from Becton Dickinson), 10~mM sodium phosphate buffer adjusted to pH~6.5, 0.1~mM CaCl$_2$, 2~mM MgCl$_2$, 4~mg~L$^{-1}$ NiSO$_4$, and 50~mg~L$^{-1}$ MnCl$_2$. To alter interaction strength, we generated Nutr$-$ by using BM without any added glucose or urea. For higher interaction strength, BM was supplemented with glucose and urea (e.g., 20~g~L$^{-1}$ glucose and 16~g~L$^{-1}$ urea for a strongly enriched condition); an intermediate condition used 5~g~L$^{-1}$ glucose and 4~g~L$^{-1}$ urea. All media were filter sterilized using bottle-top filtration units (VWR), and all chemicals were purchased from Sigma--Aldrich unless otherwise noted.
+
+
+% --------------------------------------------
+\subsection{Construction of parental communities and community coalescence experiments}
+\label{sec:methods:coalescence}
+
+Parental communities were constructed by random sampling of isolates from the strain library at three richness levels: 6, 12, or 24 members (pool sizes P6, P12, and P24). In total, 42 distinct parental communities were assembled (9 $\times$ P6, 9 $\times$ P12, 12 $\times$ P24), each with two biological replicates. For P6 communities, 9 non-overlapping communities were assembled using sequential sampling (community 1: strains 1--6, community 2: strains 7--12, etc.). For P12 communities, 9 non-overlapping communities were similarly constructed (community 10: strains 1--12, community 11: strains 13--24, etc.). For P24 communities, 12 partially overlapping communities were assembled to enable sufficient coalescence pairing diversity. Both monocultures and communities were grown 96-well deep-well plates (Deepwell plate 96/1000~$\mu$l; Eppendorf) with shaking at 800~rpm at 25~°C and were stabilized by seven daily serial dilutions ($\times$30 every 24~h) prior to coalescence assays. The plates are covered with AeraSeal adhesive sealing films (Excel Scientific) and shaken on Titramax shakers (Heidolph). To minimize evaporation, plates were incubated inside custom-built acrylic boxes.
+
+Coalescence experiments were conducted by mixing two pre-stabilized parental communities (A and B) at equal volume ratio (1:1) after seven daily dilution cycles. Coalescence pairs were composed systematically to maximize coverage of community combinations while maintaining experimental feasibility. For P6 and P12 richness levels, we performed near-complete pairwise coalescence: P6 included 14 coalescence pairs from 9 parental communities (e.g., 1+2, 1+3, 1+7, 2+5, 2+8, etc.), and P12 included 27 coalescence pairs from 9 parental communities. For P24, due to the larger number of possible combinations, we performed a subset of 6 coalescence pairs using non-overlapping parental community pairs (1+2, 3+4, 5+6, 7+8, 9+10, 11+12), resulting in 47 total coalescence pairs for synthetic communities. The resulting mixtures were cultured for another seven serial transfers ($\times$30 dilutions every 24~h) under identical media conditions to reach new steady states (\figref{fig:fig1}B).
+
+Control wells containing single parental communities were propagated in parallel to monitor baseline compositional drift (Supplementary Fig.~S3).
+
+
+% --------------------------------------------
+\subsection{16S rRNA Sequencing and Bioinformatic Analysis}
+\label{sec:methods:sequencing}
+
+Genomic DNA was extracted using QIAGEN DNeasy PowerSoil HTP 96 Kit following the manufacturer's protocol, with bead-beating for cell lysis. The V4 region of the 16S rRNA gene was amplified with 515F/806R primers with Illumina overhang adapters and sequenced on an Illumina MiSeq platform (2$\times$250~bp). Raw reads were demultiplexed and denoised using QIIME2 and DADA2, generating amplicon sequence variants (ASVs). ASVs were taxonomically classified against the SILVA v138 database.
+
+Relative abundances were normalized by total read depth, and ASVs below 0.01\% abundance were filtered prior to downstream analyses. ASV tables were filtered to retain only taxa representing $\geq$0.1\% relative abundance in any sample, which corresponds to the 0.1\% extinction threshold used in simulation. The phylogenetic tree (Fig.~S14) was constructed using Simple Phylogeny by the EMBL's European Bioinformatics Institute.
+
+Relative abundance profiles were normalized by total-sum scaling to construct L$_2$-normalized vectors for similarity analyses. Technical replicates yielded $>0.95$ Pearson correlation (Supplementary Fig.~S4). All raw reads are available in the NCBI Sequence Read Archive under BioProject accession PRJNAXXXXXX.
+
+
+% --------------------------------------------
+\subsection{Vector Decomposition Method and Classification of Coalescence Outcomes}
+\label{sec:methods:classification}
+
+To characterize coalescence outcomes, we employed a vector decomposition approach that decomposes the post-coalescence community composition into contributions from the two parental communities and a Restructuring component. For each coalescence event, let $\mathbf{A}$ and $\mathbf{B}$ represent the normalized abundance vectors of the two parental communities, and $\mathbf{M}$ represent the normalized abundance vector of the post-coalescence mixture. Each vector contains the relative abundances of all ASVs detected in the experiment. We decomposed $\mathbf{M}$ as a linear combination of the parental communities plus a residual component:
+\begin{equation}
+\mathbf{M} \approx u \cdot \mathbf{A} + v \cdot \mathbf{B} + k \cdot \mathbf{R}
+\label{eq:decomposition}
+\end{equation}
+where $u$ and $v$ are non-negative scalar coefficients representing the fractional contributions from parents A and B, $k$ is the magnitude of the residual component $\mathbf{R}$, which is orthogonal to the plane spanned by $\mathbf{A}$ and $\mathbf{B}$.
+
+The coefficients $(u, v)$ were obtained by solving a constrained least-squares problem. Specifically, we first normalized all three vectors ($\mathbf{A}$, $\mathbf{B}$, $\mathbf{M}$) to unit length. We then computed the projection of $\mathbf{M}$ onto the subspace spanned by $\mathbf{A}$ and $\mathbf{B}$ by solving:
+\begin{equation}
+\begin{pmatrix} \mathbf{A} \cdot \mathbf{A} & \mathbf{A} \cdot \mathbf{B} \\ \mathbf{A} \cdot \mathbf{B} & \mathbf{B} \cdot \mathbf{B} \end{pmatrix}^{-1} \begin{pmatrix} \mathbf{M} \cdot \mathbf{A} \\ \mathbf{M} \cdot \mathbf{B} \end{pmatrix}
+\end{equation}
+to obtain preliminary coefficients $e_1$ and $e_2$. To enforce non-negativity (since negative contributions are biologically meaningless), we set: $u = \max(e_1, 0)$ and $v = \max(e_2, 0)$. The residual magnitude was computed as: $k = \|\mathbf{M} - u \cdot \mathbf{A} - v \cdot \mathbf{B}\|$. Finally, to ensure that the decomposition coefficients represent proportions of the normalized mixture, we rescaled $u$ and $v$ by a conversion factor:
+\begin{align}
+u_{\text{final}} &= u \cdot \sqrt{\frac{1 - k^2}{u^2 + v^2}} \\
+v_{\text{final}} &= v \cdot \sqrt{\frac{1 - k^2}{u^2 + v^2}}
+\end{align}
+This ensures that $u_{\text{final}}^2 + v_{\text{final}}^2 + k^2 \approx 1$.
+
+From the decomposition coefficients $(u, v, k)$, we derived two metrics:
+
+\textbf{Retention magnitude ($x$):}
+\begin{equation}
+x = \sqrt{u^2 + v^2}
+\end{equation}
+This metric quantifies the total fraction of the post-coalescence community composition that can be explained by the parental communities. Values of $x$ close to 1 indicate high retention of parental composition, while values close to 0 indicate extensive restructuring.
+
+\textbf{Selection Preference Ratio (SPR):}
+\begin{equation}
+\text{SPR} = \frac{|\arctan(u/v) - \pi/4|}{\pi/4}
+\end{equation}
+This metric quantifies the selection preference toward one parental community over the other. The angle $\theta = \arctan(u/v)$ represents the direction of the decomposition in the $(u, v)$ plane. When $\theta = \pi/4$ (45°), the two parents contribute equally ($u = v$). The Selection Preference Ratio (SPR) measures the normalized angular deviation from this balanced state, ranging from 0 (perfectly balanced, no preference) to 1 (maximal preference, where one parent dominates).
+
+Based on these two metrics, each coalescence event was classified into one of three outcome categories:
+
+\textbf{Restructuring:} $x^2 \leq 0.5$ (equivalently, $x \leq \sqrt{0.5} \approx 0.707$). Coalescence events with low retention magnitude ($x^2 \leq 0.5$) were classified as Restructuring, indicating that less than 70.7\% of the post-coalescence community composition could be explained by the parental communities.
+
+\textbf{Mixture:} $x^2 > 0.5$ AND $\text{SPR} \leq 0.5$. Coalescence events with high retention magnitude ($x^2 > 0.5$) and low selection preference ($\text{SPR} \leq 0.5$) were classified as Mixture. The selection preference threshold $\text{SPR} = 0.5$ corresponds to an angular deviation of $\pm 22.5$° from the balanced mixing angle of 45°.
+
+\textbf{CLS:} $x^2 > 0.5$ AND $\text{SPR} > 0.5$. Coalescence events with high retention magnitude ($x^2 > 0.5$) but high selection preference ($\text{SPR} > 0.5$) were classified as CLS (community-level selection).
+
+In supplementary Figure, we provide how the classification and overall results altered by change of classification boundaries.
+
+
+% --------------------------------------------
+\subsection{Lotka--Volterra Simulations}
+\label{sec:methods:simulations}
+
+We modeled species-abundance dynamics with the generalized Lotka--Volterra (gLV) system:
+\begin{equation}
+\frac{dN_i}{dt} = g_i N_i \left(1 - \frac{1}{k_i} \sum_j I_{ij} N_j \right)
+\label{eq:glv_methods}
+\end{equation}
+where $N_i(t)$ is the abundance of species $i$ at time $t$, $g_i$ is its intrinsic growth rate, $k_i$ is its carrying capacity, and $I_{ij}$ is the pairwise interspecies interaction coefficient between species $i$ and $j$. To isolate the role of interaction strength, we fixed $g_i = 1$ and $k_i = 1$ for all species in all simulations. The interaction matrix $\mathbf{I}$ had $I_{ii} = 1$ (intraspecific competition) and $I_{ij} \sim \text{Unif}(0, 2\mu)$ for $i \neq j$, with $\mu$ denoting the mean interspecific interaction strength.
+
+Each simulation used a pool of $N = 48$ species partitioned into four non-overlapping ``parental'' communities of 12 species. For each replicate, we randomly permuted the 48 species and assigned them sequentially (1--12, 13--24, 25--36, 37--48) to form the four communities, ensuring no species were shared across parental communities, analogous to the experimental design. A fresh interaction matrix $\mathbf{I}$ was independently sampled for every replicate so that coalescence dynamics were explored across diverse ecological contexts rather than a single fixed species pool.
+
+For single-community assembly, we numerically integrated the gLV equations from random initial conditions $N_i(0) \sim \text{Unif}(0, 0.1)$ to ecological steady state. We solved the ODEs with the adaptive Runge--Kutta method RK23 implemented in \texttt{scipy.integrate.solve\_ivp}, integrating from $t = 0$ to $t = 5000$, which was sufficient for all communities to equilibrate. Following integration, species with abundances below an extinction threshold of $10^{-3}$ were set to zero, yielding four parental-community steady states per replicate.
+
+Community coalescence was simulated by mixing pre-equilibrated parental communities at equal proportions, mirroring the experimental 1:1 volume protocol. For each of the $\binom{4}{2} = 6$ parental community pairs, we retrieved the steady-state abundance vectors $\mathbf{y}^{(1)}$ and $\mathbf{y}^{(2)}$, formed the equal mixture $\mathbf{y}_{\text{mix}} = (\mathbf{y}^{(1)} + \mathbf{y}^{(2)})/2$, and zeroed species falling below the extinction threshold in this initial mixture. We then re-integrated the gLV system from $\mathbf{y}_{\text{mix}}$ using the same interaction matrix $\mathbf{I}$ over $t \in [0, 5000]$ until a new steady state was reached, and reapplied the $10^{-3}$ threshold to the final abundances. This procedure captures the ecological relaxation after mixing and allows competitive exclusion, coexistence, or the emergence of previously rare species to arise from the underlying interaction structure.
+
+
+% --------------------------------------------
+\subsection{Pairwise Invasion Assays}
+\label{sec:methods:invasion}
+
+To empirically estimate interaction strength, we performed pairwise competition experiments among the 12 most abundant isolates. Equal-biomass mixtures of isolate pairs were inoculated in LN/MN/HN media and propagated under daily dilution for 4 cycles. Competitive outcomes were scored as coexistence, exclusion, or bistability based on final relative abundances (coexistence if both $>$10\%; exclusion if one $<$1\%). The fraction of exclusions was used as a proxy for mean negative interaction strength under each nutrient condition (\figref{fig:fig4}B).
+
+
+% --------------------------------------------
+\subsection{Predictability Analysis}
+\label{sec:methods:predictability}
+
+To quantify the predictability of coalescence outcomes from parental community composition, we trained logistic regression models separately for each medium (Base and Nutr+). For each coalescence event, the input features consisted of the concatenated relative abundance vectors of the two parental communities, and the target variable was a dominance score ranging from 0 (parental community A dominates) to 1 (parental community B dominates). We used leave-one-out cross-validation to assess model performance, selecting the regularization parameter that minimized test root mean squared error (RMSE). Model predictability was quantified using the coefficient of determination ($R^2$) between predicted and observed dominance scores. To identify which species contributed most to predictability, we examined the magnitude of the fitted regression coefficients.
+
+
+% --------------------------------------------
+\subsection{Statistical Analyses}
+\label{sec:methods:statistics}
+
+All analyses were performed in Python 3.11 using NumPy, pandas, and scikit-learn.
+
+\begin{itemize}
+    \item Null models were generated by randomizing species labels while preserving abundance distributions (10,000 permutations).
+    \item $\chi^2$ tests were used to compare observed vs.\ expected counts of CLS, Mixture, and Restructuring events.
+    \item Mixed-effects models (lme4 package in R) were used to control for parental community richness and community identity effects when quantifying nutrient dependence.
+    \item Predictability analyses were based on random forest classifiers trained on parental community features (species richness, Shannon diversity, network centrality, inferred pairwise competition scores). Model performance was assessed using 5-fold cross-validation and permutation tests (Supplementary Fig.~S6).
+\end{itemize}
+
+
+% --------------------------------------------
+\subsection{Data and Code Availability}
+\label{sec:methods:data}
+
+All raw 16S rRNA sequencing reads have been deposited in the NCBI Sequence Read Archive (SRA) under BioProject accession PRJNAXXXXXX. Processed data, analysis scripts, and simulation code are available at https://github.com/XXXX/coalescence-cls.
+
+
+% --------------------------------------------
+\subsection*{Acknowledgments}
+
+This work was supported by XXX. We thank XXX, XXX in Gore Lab for thoughtful and insightful discussion.
