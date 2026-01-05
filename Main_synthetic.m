@@ -6,9 +6,9 @@ addpath(genpath(cd))
 %%
 global Seqdir TAXAdir OTUdir;
 
-Seqdir='SEQanalysis/excludeNatural/Plate2_M_OTUtableGreenGenes.csv';
-TAXAdir='SEQanalysis/excludeNatural/Plate2_M_TAXAtableGreenGenes.csv';
-OTUdir='SEQanalysis/excludeNatural/Plate2_M_UniqueSequences.csv';
+Seqdir='SEQanalysis/excludeNatural/M_OTUtableGreenGenes.csv';
+TAXAdir='SEQanalysis/excludeNatural/M_TAXAtableGreenGenes.csv';
+OTUdir='SEQanalysis/excludeNatural/M_UniqueSequences.csv';
 
 PostProcessingSequences_synthetic
 MetadataGenerator

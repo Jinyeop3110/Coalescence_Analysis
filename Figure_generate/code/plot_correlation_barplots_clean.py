@@ -228,10 +228,8 @@ def plot_clean_barplots(results_dict, save_dir):
         ax.spines['top'].set_visible(False)
         ax.spines['right'].set_visible(False)
 
-        if stars_diff != 'ns':
-            ax.set_ylim(y_min - y_range * 0.05, bracket_y1 + y_range * 0.08)
-        else:
-            ax.set_ylim(y_min - y_range * 0.05, y_max + y_range * 0.1)
+        # Fixed y-axis range for consistency across conditions
+        ax.set_ylim(-0.2, 0.6)
 
         plt.tight_layout()
 

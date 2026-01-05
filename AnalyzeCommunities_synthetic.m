@@ -72,62 +72,6 @@ for idx=1:size(ID_list,1)
 end
 
 
-ID_list=[CommunityPermutate("F","N", "L", "S"); CommunityPermutate("F","N", "M", "S"); CommunityPermutate("F","N", "H", "S") ];
-for idx=1:size(ID_list,1)
-    disp(ID_list(idx,:));
-    ID=ID_list(idx,:);
-    S=GetCommunity(ID);
-    A=GetAbundance(S);
-
-    S.CommunityIDX=string(S.CommunityIDX);
-    T_toadd=S;
-    T_toadd.SampleIDX= S.SampleIDX;
-
-    Threshold_level=[0.1, 0.033, 0.01, 0.0033, 0.001];
-    T_toadd.Threshold_num=length(Threshold_level);
-
-    for i=1:T_toadd.Threshold_num
-        threshold=Threshold_level(i);
-        T_toadd.("Threshold_level_"+string(i))=threshold
-        T_toadd.("DiversityR_"+string(i))=Diversity1(A,threshold);
-        T_toadd.("DiversitySN_"+string(i))=Diversity2(A,threshold);
-        T_toadd.("DiversitySS_"+string(i))=Diversity3(A,threshold);
-
-
-        %idx=find((Metadata.Timepoint==Timepoint).*(Metadata.CommunityOrigin==CommunityOrigin).*(Metadata.Medium==Medium).*(Metadata.CoalescenceType==CoalescenceType));
-        %O=cell2mat(Metadata.SampleIDX(idx,:))
-    end
-    T=[T; struct2table(T_toadd)];
-
-end
-
-ID_list=[CommunityPermutate("F","N", "L", "C"); CommunityPermutate("F","N", "M", "C"); CommunityPermutate("F","N", "H", "C")];
-for idx=1:size(ID_list,1)
-    disp(ID_list(idx,:));
-    ID=ID_list(idx,:);
-    S=GetCommunity(ID);
-    A=GetAbundance(S);
-
-    S.CommunityIDX=string(S.CommunityIDX);
-    T_toadd=S;
-    T_toadd.SampleIDX= S.SampleIDX;
-
-    Threshold_level=[0.1, 0.033, 0.01, 0.0033, 0.001];
-    T_toadd.Threshold_num=length(Threshold_level);
-
-    for i=1:T_toadd.Threshold_num
-        threshold=Threshold_level(i);
-        T_toadd.("Threshold_level_"+string(i))=threshold;
-        T_toadd.("DiversityR_"+string(i))=Diversity1(A,threshold);
-        T_toadd.("DiversitySN_"+string(i))=Diversity2(A,threshold);
-        T_toadd.("DiversitySS_"+string(i))=Diversity3(A,threshold);
-
-        %idx=find((Metadata.Timepoint==Timepoint).*(Metadata.CommunityOrigin==CommunityOrigin).*(Metadata.Medium==Medium).*(Metadata.CoalescenceType==CoalescenceType));
-        %O=cell2mat(Metadata.SampleIDX(idx,:))
-    end
-    T=[T; struct2table(T_toadd)];
-
-end
 
 
 filename = session_name +'/processed_Communities_synthetic.xlsx';

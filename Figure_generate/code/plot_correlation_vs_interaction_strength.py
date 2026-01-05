@@ -61,7 +61,7 @@ def plot_correlations_vs_interaction(df, save_dir):
 
     # Labels and styling
     ax.set_xlabel('Interaction Strength', fontsize=11)
-    ax.set_ylabel('Pairwise Correlation', fontsize=11)
+    ax.set_ylabel('Pairwise Selection Correlation', fontsize=11)
     ax.legend(fontsize=9, frameon=True, fancybox=False, edgecolor='black')
     ax.grid(axis='both', alpha=0.3, linewidth=0.5)
     ax.spines['top'].set_visible(False)
@@ -77,6 +77,22 @@ def plot_correlations_vs_interaction(df, save_dir):
     save_path_svg = os.path.join(save_dir, 'correlation_vs_interaction_strength.svg')
     plt.savefig(save_path_svg, format='svg', bbox_inches='tight')
     print(f"Saved: {save_path_svg}")
+
+    # Also save PDF
+    save_path_pdf = os.path.join(save_dir, 'correlation_vs_interaction_strength.pdf')
+    plt.savefig(save_path_pdf, format='pdf', bbox_inches='tight')
+    print(f"Saved: {save_path_pdf}")
+
+    # Copy to supplementary_figs directory
+    import shutil
+    script_dir = os.path.dirname(os.path.abspath(__file__))
+    supp_dir = os.path.join(script_dir, '..', 'Draft', 'v3', 'latex', 'supplementary_figs')
+    supp_dir = os.path.normpath(supp_dir)
+    os.makedirs(supp_dir, exist_ok=True)
+    shutil.copy2(save_path_png, os.path.join(supp_dir, 'correlation_vs_interaction_strength.png'))
+    shutil.copy2(save_path_svg, os.path.join(supp_dir, 'correlation_vs_interaction_strength.svg'))
+    shutil.copy2(save_path_pdf, os.path.join(supp_dir, 'correlation_vs_interaction_strength.pdf'))
+    print(f"Copied to supplementary_figs")
 
     plt.close()
 

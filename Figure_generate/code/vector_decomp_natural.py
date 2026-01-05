@@ -29,9 +29,71 @@ os.makedirs(output_dir, exist_ok=True)
 
 def normalize(v):
     norm = np.linalg.norm(v)
-    if norm == 0: 
+    if norm == 0:
        return v
     return v / norm
+
+def metric1(u,v,m):
+    u=normalize(u)
+    v=normalize(v)
+    m=normalize(m)
+
+    A = np.array([[np.sum(u*u), np.sum(u*v)], [np.sum(u*v), np.sum(v*v)]])
+
+    e12=np.matmul(np.linalg.inv(A),np.array([np.sum(m*u), np.sum(m*v)]))
+    return np.linalg.norm(m-(e12[0]*u)-(e12[1]*v))**2
+
+def metric2(u,v,m):
+    u=normalize(u)
+    v=normalize(v)
+    m=normalize(m)
+
+    return abs(np.sum(m*u)-np.sum(m*v))
+
+def metric3(u,v,m):
+    u=normalize(u)
+    v=normalize(v)
+    m=normalize(m)
+
+    A = np.array([[np.sum(u*u), np.sum(u*v)], [np.sum(u*v), np.sum(v*v)]])
+
+    e12=np.matmul(np.linalg.inv(A),np.array([np.sum(m*u), np.sum(m*v)]))
+    return (e12[0]),(e12[1]), np.linalg.norm(m-(e12[0]*u)-(e12[1]*v))
+
+def metric4(u,v,m,):
+    return np.sum(np.minimum(u,m)), np.sum(np.minimum(v,m))
+
+def metric5(u,v,m):
+    return SimilarityJS(u,m), SimilarityJS(v,m)
+
+def metric6(u,v,m):
+    return SimilarityJS(u,m,1e-4), SimilarityJS(v,m,1e-4)
+
+def metric7(u,v,m):
+    return np.sum(np.minimum(u,m))/np.sum(np.maximum(u,m)), np.sum(np.minimum(v,m))/np.sum(np.maximum(v,m))
+
+def drawPairwiseChange(i, j, x):
+    return np.sin(i*x) + np.cos(j*x)
+
+def InterpretPairwiseResult(y1,y2):
+    if y1==1 and y2==1:
+        return 'E',(0.85, 0.7, 0.7) #E : competitive exclusion
+    elif y1==0 and y2==0:
+        return 'E',(0.85, 0.7, 0.7) #E : competitive exclusion
+    elif y1==0 and y2==1:
+        return 'B',(0.7, 0.7, 0.9) #B : Bistability
+    elif y1>0 and y1<1 and y2>0 and y2<1:
+        return 'C',(0.7, 0.85, 0.7) #C : Coexistence
+    else:
+        return 'U',(0.5, 0.5, 0.5) #U : Unclassified
+
+def mask_equal(u,v,m):
+    u_m=np.array(u)>0
+    v_m=np.array(v)>0
+    shared=u_m*v_m
+    mask1=u_m-shared*(np.array(v)/(np.array(u)+np.array(v)+1e-8))
+    mask2=1-mask1
+    return mask1, mask2
 
 def metric_VectorDecomposition_onlyPositive(u,v,m):
     u=normalize(u)
@@ -80,93 +142,130 @@ def PolarizedPlot(data1,data2, c_i, colors):
     ax.spines['left'].set_visible(False)
     return f
 
+def TriangularPlot(data1,data2, c_i, colors):
+    mm = 1 / 25.4
+    data1=np.array(data1)
+    data2=np.array(data2)
+    fig, ax = plt.subplots(1,1, figsize=(60*mm,60*mm),facecolor='w', edgecolor='k')
+    i2=data1**2; i3=data2**2; i1=1-data1**2-data2**2;
+    iy = i1*(3**0.5); # y coordinate in simplex plot, where top=1, bottom left=2, bottom right=3
+    ix = (i3-i2); # x coordinate in simplex plot
+    ax.scatter( ix, iy , s=30,color=colors[c_i], marker='.', alpha=0.5,linewidths=0)
+
+    ax.scatter(iy,ix, s=30,color='grey', marker='.', alpha=0.5,linewidths=0)
+
+    p1=[1, 0]
+    p2=[-1, 0]
+    p3=[0, np.sqrt(3)]
+    ax.plot([1, -1], [0, 0] , linewidth= 0.8, c= 'black')
+    ax.plot([1, 0], [0, np.sqrt(3)] , linewidth= .8, c= 'black')
+    ax.plot([-1, 0], [0, np.sqrt(3)] , linewidth= .8, c= 'black')
+
+    ax.set_xlim(-1.1,1.1)
+    ax.set_ylim(-0.2,2.)
+    plt.gca().set_axis_off()
+    return fig
+
+def AsyPrePlot(data1,data2, c_i, colors, type_name):
+    mm = 1 / 25.4
+    f, ax = plt.subplots(1,1, figsize=(60*mm,60*mm),facecolor='w', edgecolor='k')
+    data1=np.array(data1)
+    data2=np.array(data2)
+    x=np.sqrt(np.array(data1)**2+np.array(data2)**2)
+    y=np.abs(np.abs(np.arctan(np.array(data1)/np.array(data2)))-np.pi/4)/(np.pi/4)
+    print(type_name,np.mean(x*y), np.std(x*y))
+    y=x*y
+
+    ax.scatter(x, y , s=30,color=colors[c_i], marker='.', alpha=0.5,linewidths=0)
+
+    # Define the grid of points
+    x = np.linspace(-0.15, 1.2, 500)
+    y = np.linspace(-0.15, 1.2, 500)
+    X, Y = np.meshgrid(x, y)
+
+    plt.plot([-1, 2], [-1, 2], 'black', label='x = y', linewidth=.5)
+
+    ax.yaxis.set_label_position("right")
+    ax.yaxis.set_ticks_position("right")
+
+    plt.axhline(0,  xmin=0.05, xmax=1, color='k', linestyle='--', linewidth=.5)
+    plt.axvline(1, ymin=0, ymax=0.95, color='k', linestyle='--', linewidth=.5)
+    plt.axhline(-0.05, color='k', linestyle='-', linewidth=.5)
+    plt.axvline(1.05, color='k', linestyle='-', linewidth=.5)
+
+    # Set plot limits and labels
+    ax.spines['top'].set_visible(False)
+    ax.spines['right'].set_visible(False)
+    ax.spines['bottom'].set_visible(False)
+    ax.spines['left'].set_visible(False)
+    plt.xlim(-0.05, 1.05)
+    plt.ylim(-0.05, 1.05)
+    plt.xticks([0, 0.5, 1.0])
+    plt.yticks([0, 0.5, 1.0])
+    return f
+
+def HalfFoldedPolarizedPlot(data1,data2, c_i, colors):
+    mm = 1 / 25.4
+    f, ax = plt.subplots(1,1, figsize=(60*mm,60*mm),facecolor='w', edgecolor='k')
+    data1=np.array(data1)
+    data2=np.array(data2)
+    x=np.maximum(data1,data2)
+    y=np.minimum(data1,data2)
+
+    ax.scatter(x, y , s=30,color=colors[c_i], marker='.', alpha=0.5,linewidths=0)
+
+    # Define the grid of points
+    x = np.linspace(-0.15, 1.2, 500)
+    y = np.linspace(-0.15, 1.2, 500)
+    X, Y = np.meshgrid(x, y)
+
+    plt.plot([-1, 2], [-1, 2], 'black', label='x = y', linewidth=.5)
+
+    R = np.sqrt(abs(X**2 + Y**2))*np.floor(X>Y)
+    contour = plt.contour(X, Y, R, levels=[0.25, 0.5, 0.75, 1.0], colors='grey', alpha=0.2, linewidths=0.5)
+
+    ax.yaxis.set_label_position("right")
+    ax.yaxis.set_ticks_position("right")
+
+    plt.axhline(0,  xmin=0.05, xmax=1, color='k', linestyle='--', linewidth=.5)
+    plt.axvline(1, ymin=0, ymax=0.95, color='k', linestyle='--', linewidth=.5)
+    plt.axhline(-0.05, color='k', linestyle='-', linewidth=.5)
+    plt.axvline(1.05, color='k', linestyle='-', linewidth=.5)
+
+    # Set plot limits and labels
+    ax.spines['top'].set_visible(False)
+    ax.spines['right'].set_visible(False)
+    ax.spines['bottom'].set_visible(False)
+    ax.spines['left'].set_visible(False)
+    plt.xlim(-0.05, 1.05)
+    plt.ylim(-0.05, 1.05)
+    plt.xticks([0, 0.5, 1.0])
+    plt.yticks([])
+
+    return f
+
 def thetaplot(data1, data2, color, smoothing=0.1):
     mm = 1 / 25.4
 
-    # Compute theta/(π/2) normalized to range [0, 1]
-    theta = np.arctan2(data2, data1)  # Note: swapped to match our convention
-    theta = np.abs(theta)
-    theta = np.minimum(theta, np.pi/2)
-    theta_normalized = theta / (np.pi/2)  # Normalize to [0, 1]
-    
-    # Compute inverted theta for stacking
-    theta_inverted = 1 - theta_normalized
+    # Compute folded theta (matching experimental style)
+    theta = np.abs(np.arctan2(data1, data2) - np.pi / 4)
 
-    # Create figure with exact reference dimensions
-    f, ax = plt.subplots(figsize=(167.330938/25.4 * mm, 63.93/25.4 * mm))
+    # Create figure (matching experimental dimensions)
+    f, ax = plt.subplots(figsize=(60 * mm, 25 * mm))
 
-    # Create histograms for stacking
-    n_bins = 20
-    hist_orig, bin_edges = np.histogram(theta_normalized, bins=n_bins, range=(0, 1))
-    hist_inverted, _ = np.histogram(theta_inverted, bins=n_bins, range=(0, 1))
-    
-    # Normalize by maximum for proper scaling
-    max_val = np.max(hist_orig)
-    if max_val > 0:
-        hist_orig_norm = hist_orig / max_val
-    else:
-        hist_orig_norm = hist_orig
+    # KDE smoothing
+    kde = gaussian_kde(theta, bw_method=smoothing)
+    theta_vals = np.linspace(0, np.pi / 4, 500)
+    kde_vals = kde(theta_vals)
 
-    # Plot stacked bars (brown + grey)
-    bin_centers = (bin_edges[:-1] + bin_edges[1:]) / 2
-    bin_width = bin_edges[1] - bin_edges[0]
-    
-    # Normalize inverted histogram by same factor for consistent stacking
-    max_combined = np.max(hist_orig + hist_inverted)
-    if max_combined > 0:
-        hist_orig_norm = hist_orig / max_combined
-        hist_inverted_norm = hist_inverted / max_combined
-    else:
-        hist_orig_norm = hist_orig
-        hist_inverted_norm = hist_inverted
-    
-    for i in range(n_bins):
-        brown_height = hist_orig[i]
-        grey_height = hist_inverted[i]
-        
-        if brown_height > 0 or grey_height > 0:
-            # Brown bar (bottom)
-            if brown_height > 0:
-                brown_opacity = 0.3 + 0.7 * hist_orig_norm[i]
-                ax.bar(bin_centers[i], brown_height, width=bin_width, color=color, alpha=brown_opacity, edgecolor='none')
-            
-            # Grey bar (top)
-            if grey_height > 0:
-                grey_opacity = 0.3 + 0.7 * hist_inverted_norm[i]
-                ax.bar(bin_centers[i], grey_height, width=bin_width, bottom=brown_height, 
-                       color='#808080', alpha=grey_opacity, edgecolor='none')
+    # Plot histogram (matching experimental style - simple single-color bars)
+    ax.hist(theta, bins=20, range=(0, np.pi/4), color=color, edgecolor='none', alpha=0.7, density=False)
 
-    # Add step function outline around combined bars
-    if np.any(hist_orig + hist_inverted > 0):
-        # Create step function coordinates for total height
-        x_vals = []
-        y_vals = []
-        
-        for i in range(n_bins):
-            total_height = hist_orig[i] + hist_inverted[i]
-            if total_height > 0:
-                x_left = bin_edges[i]
-                x_right = bin_edges[i+1]
-                
-                # Add points for step function
-                x_vals.extend([x_left, x_left, x_right, x_right])
-                y_vals.extend([0, total_height, total_height, 0])
-        
-        if x_vals:
-            ax.plot(x_vals, y_vals, color='#333333', linewidth=0.8)
-
-    # Axis settings - match our new style
-    ax.set_xlim(0, 1)
+    # Axis settings (matching experimental style with LaTeX labels)
+    ax.set_xlim(0, np.pi / 4)
     ax.set_ylim(0, 30)
-    ax.set_xticks([0, 0.5, 1.0])
-    ax.set_xticklabels(['0', '0.5', '1'])
-    
-    # Increase tick label size
-    ax.tick_params(axis='both', which='major', labelsize=12.8*72/25.4/2.54)  # Convert to matplotlib points
-
-    # Remove spines for clean look
-    ax.spines['top'].set_visible(False)
-    ax.spines['right'].set_visible(False)
+    ax.set_xticks([0, np.pi/8, np.pi/4])
+    ax.set_xticklabels(['0', r'$\frac{\pi}{8}$', r'$\frac{\pi}{4}$'])
 
     plt.tight_layout()
     return f
@@ -534,7 +633,7 @@ def main():
                         pass
                 
                 if to_plot_subperturb:
-                    for j in range(10):  # Reduced iterations for natural data
+                    for j in range(100):  # Match experimental iterations
                         try:
                             # Create mock mixtures for sub-perturbation model
                             mix_label = (np.random.rand(species_num) > 0.5).astype(int)

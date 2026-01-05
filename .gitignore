@@ -61,3 +61,81 @@
 # 3D Images
 *.3dm
 *.max
+.Rproj.user
+
+# MATLAB files
+*.asv
+*.autosave
+*.m~
+
+# Python files
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# Jupyter Notebook
+.ipynb_checkpoints
+
+# Data files (large)
+*.mat
+*.csv
+*.xlsx
+*.xls
+
+# Results and figures
+*.png
+*.jpg
+*.jpeg
+*.pdf
+*.svg
+*.eps
+
+# OS files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Temporary files
+*.tmp
+*.temp
+~$*
+
+# Log files
+*.log
+
+# IDE files
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Environment files
+.env
+.venv
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/

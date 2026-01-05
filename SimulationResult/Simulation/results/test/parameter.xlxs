@@ -1,0 +1,5 @@
+N,3
+f_interaction,input_distribution
+f_g,<lambda>
+f_k,<lambda>
+is_diagonal_one,True

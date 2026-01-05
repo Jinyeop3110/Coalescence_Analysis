@@ -143,7 +143,7 @@ def get_subcommunities_by_medium_and_pool(metadata_df, sequences_df):
         replicate = int(row['Replicate'])
 
         # Map medium codes to names
-        medium_name = {'H': 'HN', 'M': 'MN', 'L': 'LN'}.get(medium, medium)
+        medium_name = {'H': 'Nutr+', 'M': 'Base', 'L': 'Nutr-'}.get(medium, medium)
 
         # Determine species pool from CommunityIDX
         community_idx = int(row['CommunityIDX'])
@@ -207,8 +207,8 @@ def plot_subcommunity_pies(subcommunities, colors, isolate_idx, output_dir):
 
             # Create figure
             fig, axes = plt.subplots(n_rows, n_cols, figsize=(n_cols * 1.5, n_rows * 1.5))
-            fig.suptitle(f'Subcommunities: {medium} - Species Pool {species_pool}',
-                        fontsize=12, fontweight='bold')
+            fig.suptitle(f'{medium} - Parentals (N_species = {species_pool})',
+                        fontsize=12, fontweight='bold', y=1.02)
 
             # Handle single row case
             if n_rows == 1:
@@ -223,9 +223,9 @@ def plot_subcommunity_pies(subcommunities, colors, isolate_idx, output_dir):
                 subcomm_meta = Metadata[Metadata['SampleIDX'] == sample_id]
                 if not subcomm_meta.empty:
                     comm_idx = int(subcomm_meta.iloc[0]['CommunityIDX'])
-                    axes[idx, 0].set_title(f'{sample_id} (C{comm_idx})', fontsize=7)
+                    axes[idx, 0].set_title(f'{sample_id} (C{comm_idx})', fontsize=9)
                 else:
-                    axes[idx, 0].set_title(f'{sample_id}', fontsize=7)
+                    axes[idx, 0].set_title(f'{sample_id}', fontsize=9)
 
             # Hide unused plots in rep1 column
             for idx in range(len(rep1_samples), n_rows):
@@ -240,19 +240,19 @@ def plot_subcommunity_pies(subcommunities, colors, isolate_idx, output_dir):
                 subcomm_meta = Metadata[Metadata['SampleIDX'] == sample_id]
                 if not subcomm_meta.empty:
                     comm_idx = int(subcomm_meta.iloc[0]['CommunityIDX'])
-                    axes[idx, 1].set_title(f'{sample_id} (C{comm_idx})', fontsize=7)
+                    axes[idx, 1].set_title(f'{sample_id} (C{comm_idx})', fontsize=9)
                 else:
-                    axes[idx, 1].set_title(f'{sample_id}', fontsize=7)
+                    axes[idx, 1].set_title(f'{sample_id}', fontsize=9)
 
             # Hide unused plots in rep2 column
             for idx in range(len(rep2_samples), n_rows):
                 axes[idx, 1].axis('off')
 
             # Add column labels
-            axes[0, 0].text(0.5, 1.15, 'Replicate 1', transform=axes[0, 0].transAxes,
-                           ha='center', fontsize=10, fontweight='bold')
-            axes[0, 1].text(0.5, 1.15, 'Replicate 2', transform=axes[0, 1].transAxes,
-                           ha='center', fontsize=10, fontweight='bold')
+            axes[0, 0].text(0.5, 1.25, 'Replicate 1', transform=axes[0, 0].transAxes,
+                           ha='center', fontsize=13, fontweight='bold')
+            axes[0, 1].text(0.5, 1.25, 'Replicate 2', transform=axes[0, 1].transAxes,
+                           ha='center', fontsize=13, fontweight='bold')
 
             plt.tight_layout()
 
@@ -277,7 +277,7 @@ def get_coalescence_matrix_data(metadata_df, coalescence_df):
     coal_matrices = {}
 
     # Map medium codes
-    medium_map = {'H': 'HN', 'M': 'MN', 'L': 'LN'}
+    medium_map = {'H': 'Nutr+', 'M': 'Base', 'L': 'Nutr-'}
 
     # Process each combination of medium, species pool, and replicate
     for medium_code in ['H', 'M', 'L']:
@@ -356,7 +356,7 @@ def plot_coalescence_matrices(coal_matrices, colors, isolate_idx, output_dir):
             # Create figure with two matrix panels side by side
             # Total width = n1 + n2 (both matrices)
             fig = plt.figure(figsize=((n1 + n2 + 1) * 1, max(n1, n2) * 1))
-            fig.suptitle(f'Coalescence Matrix: {medium} - Species Pool {species_pool}',
+            fig.suptitle(f'{medium} - Coalescence Outcomes (N_species = {species_pool})',
                         fontsize=14, fontweight='bold')
 
             # Create gridspec for side-by-side matrices
@@ -406,15 +406,15 @@ def plot_coalescence_matrices(coal_matrices, colors, isolate_idx, output_dir):
 
                         # Add row labels on left edge
                         if j == 0:
-                            ax.set_ylabel(rep1_labels[i], fontsize=5, rotation=0,
+                            ax.set_ylabel(rep1_labels[i], fontsize=7, rotation=0,
                                          ha='right', va='center', labelpad=5)
 
                         # Add column labels on top edge
                         if i == 0:
-                            ax.set_title(rep1_labels[j], fontsize=5, pad=2)
+                            ax.set_title(rep1_labels[j], fontsize=7, pad=2)
 
                 # Add replicate label
-                fig.text(0.25, 0.95, 'Replicate 1', ha='center', fontsize=12, fontweight='bold')
+                fig.text(0.25, 0.95, 'Replicate 1', ha='center', fontsize=16, fontweight='bold')
 
             # Plot replicate 2 matrix (right)
             if n2 > 0:
@@ -460,15 +460,15 @@ def plot_coalescence_matrices(coal_matrices, colors, isolate_idx, output_dir):
 
                         # Add row labels on left edge
                         if j == 0:
-                            ax.set_ylabel(rep2_labels[i], fontsize=5, rotation=0,
+                            ax.set_ylabel(rep2_labels[i], fontsize=7, rotation=0,
                                          ha='right', va='center', labelpad=5)
 
                         # Add column labels on top edge
                         if i == 0:
-                            ax.set_title(rep2_labels[j], fontsize=5, pad=2)
+                            ax.set_title(rep2_labels[j], fontsize=7, pad=2)
 
                 # Add replicate label
-                fig.text(0.75, 0.95, 'Replicate 2', ha='center', fontsize=12, fontweight='bold')
+                fig.text(0.75, 0.95, 'Replicate 2', ha='center', fontsize=16, fontweight='bold')
 
             # Save figure
             filename = f'coalescence_matrix_{medium}_s{species_pool}.png'

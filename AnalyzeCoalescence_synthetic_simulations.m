@@ -39,9 +39,11 @@ for id_i=1:size(ID_list,1)
         T_toadd.("SimilarityTo1_BC_"+string(i))=SimilarityTo1(A,A1,A2,threshold,@SimilarityBC);
         T_toadd.("SimilarityTo1_J_"+string(i))=SimilarityTo1(A,A1,A2,threshold,@SimilarityJ);
         T_toadd.("SimilarityTo1_JS_"+string(i))=SimilarityTo1(A,A1,A2,threshold,@SimilarityJS);
+        T_toadd.("SimilarityTo1_DP_"+string(i))=SimilarityTo1(A,A1,A2,threshold,@SimilarityDP);
         T_toadd.("SimilarityTo2_BC_" + string(i)) = SimilarityTo2(A, A1, A2, threshold, @SimilarityBC);
         T_toadd.("SimilarityTo2_J_" + string(i)) = SimilarityTo2(A, A1, A2, threshold, @SimilarityJ);
         T_toadd.("SimilarityTo2_JS_" + string(i)) = SimilarityTo2(A, A1, A2, threshold, @SimilarityJS);
+        T_toadd.("SimilarityTo2_DP_"+string(i))=SimilarityTo2(A,A1,A2,threshold,@SimilarityDP);
                     
         T_toadd.("Additivity1_" + string(i)) = Additivity1(A, A1, A2, threshold);
         T_toadd.("Additivity2_" + string(i)) = Additivity2(A, A1, A2, threshold);
@@ -50,6 +52,7 @@ for id_i=1:size(ID_list,1)
         T_toadd.("Assymetricity_BC_" + string(i)) = Assymetricity_basedOnSimilarity(A, A1, A2, threshold, @SimilarityBC);
         T_toadd.("Assymetricity_J_" + string(i)) = Assymetricity_basedOnSimilarity(A, A1, A2, threshold, @SimilarityJ);
         T_toadd.("Assymetricity_JS_" + string(i)) = Assymetricity_basedOnSimilarity(A, A1, A2, threshold, @SimilarityJS);
+        T_toadd.("Assymetricity_DP_" + string(i)) = Assymetricity_basedOnSimilarity(A, A1, A2, threshold, @SimilarityDP);
         T_toadd.("Assymetricity1_" + string(i)) = Assymetricity1(A, A1, A2, threshold);
         T_toadd.("Assymetricity2_" + string(i)) = Assymetricity2(A, A1, A2, threshold);
         T_toadd.("Assymetricity3_" + string(i)) = Assymetricity3(A, A1, A2, threshold);
@@ -132,6 +135,14 @@ function O=SimilarityJ(A,B,threshold)
     % BAsed on richness
     O=sum((A>threshold) & (B>threshold))/sum((A>threshold) | (B>threshold));
 end
+
+function O=SimilarityDP(A,B,threshold)
+    % BAsed on Dotproduct
+    A=A.*(A>threshold);
+    B=B.*(B>threshold);
+    O=sum(sqrt(A/sum(A.^2)).*sqrt(B/sum(B.^2)))
+end
+
 
 function O=SimilarityTo1(A,A1,A2,threshold,f_similarity)
     % BAsed on richness

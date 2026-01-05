@@ -1,7 +1,23 @@
 % ============================================
-% 16S Sequencing
+% 16S Sequencing and Data Processing
 % ============================================
-\subsection*{16S Sequencing}
+\subsection*{B. 16S Sequencing and Data Processing}
 \label{sec:suppl:sequencing}
 
-\todo{Add 16S sequencing details}
+Full details of the 16S rRNA sequencing and bioinformatic analysis pipeline are provided in the main text Methods section. Here we provide supplementary information on quality control and reproducibility.
+
+% --------------------------------------------
+% B.1 Sequencing Quality Metrics
+% --------------------------------------------
+\subsubsection*{B.1 Sequencing Quality Metrics}
+
+All samples achieved $>$10,000 reads per sample after quality filtering. Technical replicates showed high reproducibility with Pearson correlation $>$0.95 between replicate abundance profiles. Samples with fewer than 1,000 reads after quality filtering were excluded from analysis.
+% \jy{NOTE: Technical replicate correlation figure reference removed - S4 is for similarity metric robustness. Need separate figure for technical replicates.}
+
+% --------------------------------------------
+% B.2 ASV Filtering and Normalization
+% --------------------------------------------
+\subsubsection*{B.2 ASV Filtering and Normalization}
+
+Raw ASV counts were converted to relative abundances by total-sum normalization. ASVs below 0.1\% relative abundance in all samples were filtered out, corresponding to the extinction threshold ($10^{-3}$) used in simulations. For the vector decomposition analysis, relative abundance profiles were further L$_2$-normalized to unit vectors.
+

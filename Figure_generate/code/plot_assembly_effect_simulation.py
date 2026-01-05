@@ -202,14 +202,12 @@ def plot_pie_charts(results, output_dir):
 
     print("\n=== Generating Pie Charts ===")
 
-    mm = 1 / 25.4
     n_strengths = len(INTERACTION_STRENGTHS)
 
-    fig, axes = plt.subplots(2, n_strengths, figsize=(50*n_strengths*mm, 100*mm),
+    fig, axes = plt.subplots(2, n_strengths, figsize=(10, 5),
                             facecolor='w', edgecolor='k')
 
     colors = get_phase_diagram_colors()  # Use standardized phase diagram colors
-    labels = ['Dominance', 'Mixing', 'Restructuring']
 
     for idx, mean_val in enumerate(INTERACTION_STRENGTHS):
         # Coalescence (top row)
@@ -217,34 +215,72 @@ def plot_pie_charts(results, output_dir):
         coal_counts = [results[mean_val]['coalescence']['Dominance'],
                       results[mean_val]['coalescence']['Mixing'],
                       results[mean_val]['coalescence']['Restructuring']]
+        total_coal = sum(coal_counts)
 
-        if sum(coal_counts) > 0:
-            ax_coal.pie(coal_counts, labels=labels, colors=colors, autopct='%1.1f%%',
-                       startangle=90, textprops={'fontsize': 8})
-            ax_coal.set_title(f'μ={mean_val}\nCoalescence\n(n={sum(coal_counts)})',
-                            fontsize=9, fontweight='bold')
+        if total_coal > 0:
+            wedges, texts, autotexts = ax_coal.pie(
+                coal_counts,
+                labels=None,
+                colors=colors,
+                autopct=lambda pct: f'{pct:.0f}%' if pct > 0 else '',
+                startangle=90,
+                pctdistance=0.6,
+                wedgeprops={'linewidth': 0.5, 'edgecolor': 'white'}
+            )
+            for autotext in autotexts:
+                autotext.set_color('black')
+                autotext.set_fontsize(9)
+            ax_coal.text(0, -1.25, f'n={total_coal}', ha='center', fontsize=9)
+            ax_coal.set_title(f'μ={mean_val}', fontsize=11, fontweight='bold', pad=8)
         else:
             ax_coal.text(0.5, 0.5, 'No data', ha='center', va='center',
-                        transform=ax_coal.transAxes)
-            ax_coal.set_title(f'μ={mean_val}\nCoalescence', fontsize=9)
+                        transform=ax_coal.transAxes, fontsize=10)
+            ax_coal.set_title(f'μ={mean_val}', fontsize=11, fontweight='bold', pad=8)
 
         # Direct assembly (bottom row)
         ax_direct = axes[1, idx]
         direct_counts = [results[mean_val]['direct']['Dominance'],
                         results[mean_val]['direct']['Mixing'],
                         results[mean_val]['direct']['Restructuring']]
+        total_direct = sum(direct_counts)
 
-        if sum(direct_counts) > 0:
-            ax_direct.pie(direct_counts, labels=labels, colors=colors, autopct='%1.1f%%',
-                         startangle=90, textprops={'fontsize': 8})
-            ax_direct.set_title(f'Direct Assembly\n(n={sum(direct_counts)})',
-                              fontsize=9, fontweight='bold')
+        if total_direct > 0:
+            wedges, texts, autotexts = ax_direct.pie(
+                direct_counts,
+                labels=None,
+                colors=colors,
+                autopct=lambda pct: f'{pct:.0f}%' if pct > 0 else '',
+                startangle=90,
+                pctdistance=0.6,
+                wedgeprops={'linewidth': 0.5, 'edgecolor': 'white'}
+            )
+            for autotext in autotexts:
+                autotext.set_color('black')
+                autotext.set_fontsize(9)
+            ax_direct.text(0, -1.25, f'n={total_direct}', ha='center', fontsize=9)
         else:
             ax_direct.text(0.5, 0.5, 'No data', ha='center', va='center',
-                          transform=ax_direct.transAxes)
-            ax_direct.set_title('Direct Assembly', fontsize=9)
+                          transform=ax_direct.transAxes, fontsize=10)
 
-    plt.tight_layout()
+    # Add row labels on the left side
+    axes[0, 0].text(-0.35, 0.5, 'Coalescence', rotation=90, fontsize=11,
+                   fontweight='bold', va='center', ha='center',
+                   transform=axes[0, 0].transAxes)
+    axes[1, 0].text(-0.35, 0.5, 'Direct Assembly', rotation=90, fontsize=11,
+                   fontweight='bold', va='center', ha='center',
+                   transform=axes[1, 0].transAxes)
+
+    # Add legend with CLS instead of Dominance
+    fig.legend(
+        labels=['CLS', 'Mixing', 'Restructuring'],
+        loc='upper center',
+        bbox_to_anchor=(0.5, 0.98),
+        ncol=3,
+        fontsize=10,
+        frameon=False
+    )
+
+    plt.tight_layout(rect=[0.05, 0, 1, 0.93])
 
     output_file = output_dir / "Fig_assembly_effect_parent_vs_coalesced.svg"
     try:

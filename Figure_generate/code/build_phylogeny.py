@@ -19,12 +19,17 @@ import os
 
 
 def settingTheColor(seed=4):
-    """Generate and shuffle color palette for ASV visualization (matching main script)."""
-    import seaborn as sns
+    """Generate and shuffle color palette for ASV visualization.
+    Uses inferno colormap to match pie charts in generate_pie_plots.py."""
     np.random.seed(seed)
-    cm = sns.color_palette("husl", 50)  # 50 ASVs in phylogeny data
-    np.random.shuffle(cm)
-    return cm
+    try:
+        inferno = plt.colormaps.get_cmap('inferno').resampled(50)
+    except AttributeError:
+        from matplotlib import cm as mpl_cm
+        inferno = mpl_cm.get_cmap('inferno', 50)
+    colors = [inferno(i)[:3] for i in range(50)]
+    np.random.shuffle(colors)
+    return colors
 
 
 def load_phylogeny_data(filepath):
@@ -226,11 +231,16 @@ def build_phylogeny_tree_advanced(tree, df_phylo, abundances, output_path):
     # Remap to consecutive numbering (ASV1, ASV2, ASV3...ASV50 without gaps)
     df_phylo_sorted['ASV_remapped'] = ['ASV' + str(i+1) for i in range(len(df_phylo_sorted))]
 
-    # Create color map matching taxonomy_color_map.svg
+    # Create color map matching taxonomy_color_map.svg (using inferno)
     np.random.seed(4)
-    cm = sns.color_palette("husl", len(df_phylo_sorted))
-    np.random.shuffle(cm)
-    color_map_sorted = cm[::-1]
+    try:
+        inferno = plt.colormaps.get_cmap('inferno').resampled(len(df_phylo_sorted))
+    except AttributeError:
+        from matplotlib import cm as mpl_cm
+        inferno = mpl_cm.get_cmap('inferno', len(df_phylo_sorted))
+    colors = [inferno(i)[:3] for i in range(len(df_phylo_sorted))]
+    np.random.shuffle(colors)
+    color_map_sorted = colors[::-1]
 
     # Create dictionaries mapping original ASV ID to color and remapped ID
     asv_color_dict = {}

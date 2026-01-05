@@ -226,7 +226,7 @@ def create_comparison_plot(results, output_dir):
     """
     from COLORMAP import get_phase_diagram_colors
 
-    fig, axes = plt.subplots(2, 3, figsize=(10, 5.3))
+    fig, axes = plt.subplots(2, 3, figsize=(8, 5))
     colors = get_phase_diagram_colors()
 
     media_order = ['LN', 'MN', 'HN']
@@ -251,22 +251,20 @@ def create_comparison_plot(results, output_dir):
                 values_coal,
                 labels=None,
                 colors=colors,
-                autopct=lambda pct: f'{int(pct*total_coal/100)}\n({pct:.1f}%)' if pct > 0 else '',
+                autopct=lambda pct: f'{pct:.0f}%' if pct > 0 else '',
                 startangle=90,
-                pctdistance=0.65
+                pctdistance=0.6,
+                wedgeprops={'linewidth': 0.5, 'edgecolor': 'white'}
             )
-            for wedge in wedges:
-                wedge.set_alpha(0.85)
             for autotext in autotexts:
                 autotext.set_color('black')
-                autotext.set_fontsize(10)
-                autotext.set_fontweight('bold')
-            ax_coal.text(0, -1.3, f'n = {total_coal}', ha='center', fontsize=10, fontweight='bold')
+                autotext.set_fontsize(9)
+            ax_coal.text(0, -1.25, f'n={total_coal}', ha='center', fontsize=9)
         else:
-            ax_coal.text(0.5, 0.5, 'No Data', ha='center', va='center', fontsize=12)
+            ax_coal.text(0.5, 0.5, 'No Data', ha='center', va='center', fontsize=10)
 
         ax_coal.set_title(f'{media_labels[medium]}',
-                         fontsize=12, fontweight='bold', pad=10)
+                         fontsize=11, fontweight='bold', pad=8)
 
         # Bottom row: Direct Assembly
         ax_parent = axes[1, col_idx]
@@ -282,41 +280,37 @@ def create_comparison_plot(results, output_dir):
                 values_parent,
                 labels=None,
                 colors=colors,
-                autopct=lambda pct: f'{int(pct*total_parent/100)}\n({pct:.1f}%)' if pct > 0 else '',
+                autopct=lambda pct: f'{pct:.0f}%' if pct > 0 else '',
                 startangle=90,
-                pctdistance=0.65
+                pctdistance=0.6,
+                wedgeprops={'linewidth': 0.5, 'edgecolor': 'white'}
             )
-            for wedge in wedges:
-                wedge.set_alpha(0.85)
             for autotext in autotexts:
                 autotext.set_color('black')
-                autotext.set_fontsize(10)
-                autotext.set_fontweight('bold')
-            ax_parent.text(0, -1.3, f'n = {total_parent}', ha='center', fontsize=10, fontweight='bold')
+                autotext.set_fontsize(9)
+            ax_parent.text(0, -1.25, f'n={total_parent}', ha='center', fontsize=9)
         else:
-            ax_parent.text(0.5, 0.5, 'No Data', ha='center', va='center', fontsize=12)
+            ax_parent.text(0.5, 0.5, 'No Data', ha='center', va='center', fontsize=10)
 
     # Add row labels on the left side
-    axes[0, 0].text(-0.3, 0.5, 'Coalescence', rotation=90, fontsize=14,
+    axes[0, 0].text(-0.35, 0.5, 'Coalescence', rotation=90, fontsize=11,
                    fontweight='bold', va='center', ha='center',
                    transform=axes[0, 0].transAxes)
-    axes[1, 0].text(-0.3, 0.5, 'Direct Assembly', rotation=90, fontsize=14,
+    axes[1, 0].text(-0.35, 0.5, 'Direct Assembly', rotation=90, fontsize=11,
                    fontweight='bold', va='center', ha='center',
                    transform=axes[1, 0].transAxes)
 
-    # Add legend
+    # Add legend with CLS instead of Dominance
     fig.legend(
-        labels=['Dominance', 'Mixing', 'Restructuring'],
+        labels=['CLS', 'Mixing', 'Restructuring'],
         loc='upper center',
-        bbox_to_anchor=(0.5, 0.99),
+        bbox_to_anchor=(0.5, 0.98),
         ncol=3,
-        fontsize=12,
+        fontsize=10,
         frameon=False
     )
 
-    plt.suptitle('Assembly Method Comparison Across Nutrient Levels',
-                 fontsize=16, fontweight='bold', y=0.995)
-    plt.tight_layout(rect=[0, 0, 1, 0.98])
+    plt.tight_layout(rect=[0.05, 0, 1, 0.93])
 
     # Save
     output_filename = output_dir / "Fig_assembly_effect_parent_vs_coalesced.svg"

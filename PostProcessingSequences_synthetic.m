@@ -10,8 +10,12 @@ end
 global Seqdir TAXAdir OTUdir
 
 
-initialCutoff=200;
-MAX_ASV_num=50;
+Seqdir='SEQanalysis/excludeNatural/M_OTUtableGreenGenes.csv';
+TAXAdir='SEQanalysis/excludeNatural/M_TAXAtableGreenGenes.csv';
+OTUdir='SEQanalysis/excludeNatural/M_UniqueSequences.csv';
+
+initialCutoff_ASV_num=200;
+MAX_ASV_num=57;
 A=readtable(Seqdir);
 
 B=readtable(TAXAdir);
@@ -19,14 +23,105 @@ C=readtable(OTUdir);
 
 
 
-A=A(:,1:initialCutoff+1);
+A=A(:,1:initialCutoff_ASV_num+1);
 [Samplename,Sequenced,OTUIDX]=Parse(A);
 
-% For now, I manually remove OTU idx
-OTUIDX_toremove=[44,47,62,79];
-[Sequenced_filtered,OTUIDX_filtered]=Filtering(Sequenced,OTUIDX,OTUIDX_toremove);
-%
 
+
+%%
+%CL1	18,20, 28,30	3:2:1:1
+%to delete : 20, 28,30
+Sequenced(:,18)=Sequenced(:,18)+Sequenced(:,20)+Sequenced(:,28)+Sequenced(:,30);
+
+%CL2	12,23	3 to 1
+%to delete : 23
+Sequenced(:,12)=Sequenced(:,12)+Sequenced(:,23);
+
+%CL3	16,33	1:0 for C6
+%C
+% L3'	16,33	5:1 for E9
+%to delete : x
+
+seq1=6*Sequenced(:,33);
+seq2=max(Sequenced(:,16) - 6*Sequenced(:,33),0);
+Sequenced(:,16)=seq1;
+Sequenced(:,33)=seq2;
+
+%CL4	34,50	8:1 for E4
+%CL4'	34,50	1:0 for F1
+%to delete : x
+seq1=9*Sequenced(:,50);
+seq2=max(Sequenced(:,34) - 8*Sequenced(:,50),0);
+Sequenced(:,34)=seq1;
+Sequenced(:,50)=seq2;
+
+%CL5	38,51	6:1
+%to delete : 51
+Sequenced(:,38)=Sequenced(:,38)+Sequenced(:,51);
+
+%CL6	11,36	8:1
+%to delete : 36
+Sequenced(:,11)=Sequenced(:,11)+Sequenced(:,36);
+
+
+OTUIDX_toremove_byNotfound=[43,44, 45, 48,49, 53, 55, 57];
+OTU_toremove_byclustering=[20,28,30,23,51,36];
+
+Sequenced(:,[OTUIDX_toremove_byNotfound,OTU_toremove_byclustering])=[]
+OTUIDX(:,[OTUIDX_toremove_byNotfound,OTU_toremove_byclustering])=[]
+
+%{
+%CL1	18,21, 29,32	3:2:1:1
+%to delete : 21, 29, 32
+Sequenced(:,18)=Sequenced(:,18)+Sequenced(:,21)+Sequenced(:,29)+Sequenced(:,32);
+
+%CL2	11,23	3 to 1
+%to delete : 23
+Sequenced(:,11)=Sequenced(:,11)+Sequenced(:,23);
+
+%CL3	16,33	1:0 for C6
+%C
+% L3'	16,33	5:1 for E9
+%to delete : x
+
+seq1=6*Sequenced(:,33);
+seq2=max(Sequenced(:,16) - 6*Sequenced(:,33),0);
+Sequenced(:,16)=seq1;
+Sequenced(:,33)=seq2;
+
+%CL4	34,50	8:1 for E4
+%CL4'	34,50	1:0 for F1
+%to delete : x
+seq1=9*Sequenced(:,50);
+seq2=max(Sequenced(:,34) - 8*Sequenced(:,50),0);
+Sequenced(:,34)=seq1;
+Sequenced(:,50)=seq2;
+
+%CL5	38,51	6:1
+%to delete : 51
+Sequenced(:,38)=Sequenced(:,38)+Sequenced(:,51);
+
+%CL6	12,35	8:1
+%to delete : 35
+Sequenced(:,12)=Sequenced(:,12)+Sequenced(:,35);
+
+
+OTUIDX_toremove_byNotfound=[43,44, 45, 47,49, 52, 54, 56];
+OTU_toremove_byclustering=[21,29,32,23,51,35];
+
+Sequenced(:,[OTUIDX_toremove_byNotfound,OTU_toremove_byclustering])=[]
+OTUIDX(:,[OTUIDX_toremove_byNotfound,OTU_toremove_byclustering])=[]
+%}
+
+%%
+% For now, I manually remove OTU idx
+[Sequenced_filtered,OTUIDX_filtered]=Filtering(Sequenced,OTUIDX);
+
+
+%%
+
+%%%%
+%
 NormalizedAbundance=Sequenced_filtered./(sum(Sequenced_filtered,2)+1e-6);
 
 
@@ -66,16 +161,13 @@ function [Samplename,Sequenced, OTUIDX] = Parse(A)
     OTUIDX=1:size(Sequenced,2);
 end
 
-function [Sequenced_filtered,OTUIDX_filtered] = Filtering(Sequenced,OTUIDX,OTUIDX_toremove)
+function [Sequenced_filtered,OTUIDX_filtered] = Filtering(Sequenced,OTUIDX)
     %IF rank of ASV > 80, or sum of detected ASV <500 then filterd out 
     %Filtering criteria : 0.5% for 
 
     Input_Sequences=sum(Sequenced(:));
-    Sequenced(:,OTUIDX_toremove)=[];
-    OTUIDX(OTUIDX_toremove)=[];
 
-
-    OTU_cutoff_flag=(sum(Sequenced,1)<500) | (OTUIDX>80);
+    OTU_cutoff_flag=(sum(Sequenced,1)<500) | (OTUIDX>56);
     Sequenced(:,OTU_cutoff_flag)=[];
     OTUIDX(OTU_cutoff_flag)=[];
 

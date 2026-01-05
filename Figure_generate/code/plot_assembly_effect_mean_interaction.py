@@ -330,7 +330,7 @@ def plot_assembly_effect(results, output_dir):
     ax.set_yticks([0, 0.5, 1.0, 1.5])
 
     ax.set_xlabel('Interaction strength (μ)', fontsize=14)
-    ax.set_ylabel('Mean Pairwise interaction', fontsize=14)
+    ax.set_ylabel('Mean pairwise interaction', fontsize=14)
     ax.legend(loc='upper left', fontsize=9, framealpha=0.9)
     ax.grid(True, alpha=0.3)
 
