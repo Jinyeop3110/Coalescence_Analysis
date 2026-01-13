@@ -1,4 +1,4 @@
-\begin{thebibliography}{30}
+\begin{thebibliography}{41}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{\texttt{#1}}
 \expandafter\ifx\csname urlstyle\endcsname\relax
@@ -12,12 +12,6 @@ S.~D. Allison and J.~B.~H. Martiny.
   (Supplement 1):\penalty0 11512--11519, 2008.
 \newblock \doi{10.1073/pnas.0801925105}.
 
-\bibitem[Amor et~al.(2024)Amor, Galesic, and Gore]{Amor2024}
-D.~R. Amor, M.~Galesic, and J.~Gore.
-\newblock Transient dynamics and ecological sensitivity in microbial
-  communities.
-\newblock \emph{Manuscript in preparation}, 2024.
-
 \bibitem[Benton and Emerson(2007)]{BentonEmerson2007}
 M.~J. Benton and B.~C. Emerson.
 \newblock How did life become so diverse? the dynamics of diversification
@@ -25,13 +19,13 @@ M.~J. Benton and B.~C. Emerson.
 \newblock \emph{Palaeontology}, 50\penalty0 (1):\penalty0 23--40, 2007.
 \newblock \doi{10.1111/j.1475-4983.2006.00612.x}.
 
-\bibitem[Bresciani et~al.(2025)Bresciani, Custer, Koslicki, and
-  Dini-Andreote]{Bresciani2025}
-L.~Bresciani, G.~F. Custer, D.~Koslicki, and F.~Dini-Andreote.
-\newblock Interplay of ecological processes modulates microbial community
-  reassembly following coalescence.
-\newblock \emph{The ISME Journal}, 19\penalty0 (1):\penalty0 wraf041, 2025.
-\newblock \doi{10.1093/ismejo/wraf041}.
+\bibitem[Brochet et~al.(2021)Brochet, Quinn, Mars, Neuschwander, Sauer, and
+  Engel]{Zheng2021}
+S.~Brochet, A.~Quinn, R.~A.~T. Mars, N.~Neuschwander, U.~Sauer, and P.~Engel.
+\newblock Niche partitioning facilitates coexistence of closely related honey
+  bee gut bacteria.
+\newblock \emph{eLife}, 10:\penalty0 e68583, 2021.
+\newblock \doi{10.7554/eLife.68583}.
 
 \bibitem[Callahan et~al.(2016)Callahan, McMurdie, Rosen, Han, Johnson, and
   Holmes]{Callahan2016}
@@ -48,17 +42,6 @@ M.~Castledine, P.~Sierocinski, D.~Padfield, and A.~Buckling.
 \newblock \emph{Philosophical Transactions of the Royal Society B: Biological
   Sciences}, 375\penalty0 (1798):\penalty0 20190252, 2020.
 \newblock \doi{10.1098/rstb.2019.0252}.
-
-\bibitem[Chappell et~al.(2022)Chappell, Dhami, Bitter, Czech, Paredes, Barrie,
-  Calder{\'o}n, Eritano, Golden, Hekmat-Scafe, Hsu, Kieschnick, Malladi, Rush,
-  and Fukami]{Chappell2022}
-C.~R. Chappell, M.~K. Dhami, M.~C. Bitter, L.~Czech, S.~H. Paredes, F.~B.
-  Barrie, Y.~Calder{\'o}n, K.~Eritano, L.-A. Golden, D.~Hekmat-Scafe, V.~Hsu,
-  C.~Kieschnick, S.~Malladi, N.~Rush, and T.~Fukami.
-\newblock Wide-ranging consequences of priority effects governed by an
-  overarching factor.
-\newblock \emph{eLife}, 11:\penalty0 e79647, 2022.
-\newblock \doi{10.7554/eLife.79647}.
 
 \bibitem[Clements(1916)]{Clements1916}
 F.~E. Clements.
@@ -155,11 +138,16 @@ J.~Hu, M.~Barbier, G.~Bunin, and J.~Gore.
   406--416, 2025.
 \newblock \doi{10.1038/s41559-024-02618-y}.
 
-\bibitem[Huet et~al.(2023)]{Huet2023}
-S.~Huet et~al.
-\newblock Context-dependent fitness in microbial communities.
-\newblock \emph{Journal}, 2023.
-\newblock Manuscript in preparation.
+\bibitem[Huet et~al.(2023)Huet, Romdhane, Breuil, Rivi{\`e}re,
+  Mo{\"e}nne-Loccoz, Ranjard, Calabrese, Berga, Oger-Desfeux, Zinger, and
+  Mougel]{Huet2023}
+S.~Huet, S.~Romdhane, M.-C. Breuil, D.~Rivi{\`e}re, Y.~Mo{\"e}nne-Loccoz,
+  L.~Ranjard, J.~M. Calabrese, S.~Berga, C.~Oger-Desfeux, L.~Zinger, and
+  C.~Mougel.
+\newblock Experimental community coalescence sheds light on microbial
+  interactions in soil and restores impaired functions.
+\newblock \emph{Microbiome}, 11\penalty0 (1):\penalty0 42, 2023.
+\newblock \doi{10.1186/s40168-023-01480-7}.
 
 \bibitem[Keddy(1992)]{Keddy1992}
 P.~A. Keddy.
@@ -169,10 +157,9 @@ P.~A. Keddy.
   157--164, 1992.
 \newblock \doi{10.2307/3235676}.
 
-\bibitem[Kehe et~al.(2021)Kehe, Kulber, Ortiz, Ber{\'a}nek, Zember, Howell, and
-  Gore]{Kehe2021}
-J.~Kehe, A.~Kulber, R.~Ortiz, D.~Ber{\'a}nek, D.~Zember, S.~Howell, and
-  J.~Gore.
+\bibitem[Kehe et~al.(2021)Kehe, Ortiz, Kulesa, Gore, Blainey, and
+  Friedman]{Kehe2021}
+J.~Kehe, A.~Ortiz, A.~Kulesa, J.~Gore, P.~C. Blainey, and J.~Friedman.
 \newblock Positive interactions are common among culturable bacteria.
 \newblock \emph{Science Advances}, 7\penalty0 (45):\penalty0 eabi7159, 2021.
 \newblock \doi{10.1126/sciadv.abi7159}.
@@ -192,6 +179,13 @@ X.~Liu and J.~F. Salles.
 \newblock \emph{The ISME Journal}, 18\penalty0 (1):\penalty0 wrae179, 2024.
 \newblock \doi{10.1093/ismejo/wrae179}.
 
+\bibitem[Lopes et~al.(2024)Lopes, Amor, and Gore]{Amor2024}
+W.~Lopes, D.~R. Amor, and J.~Gore.
+\newblock Cooperative growth in microbial communities is a driver of
+  multistability.
+\newblock \emph{Nature Communications}, 15:\penalty0 8793, 2024.
+\newblock \doi{10.1038/s41467-024-53001-7}.
+
 \bibitem[Lu et~al.(2022)Lu, Sanchez-Gorostiaga, Tikhonov, and Sanchez]{Lu2022}
 N.~Lu, A.~Sanchez-Gorostiaga, M.~Tikhonov, and A.~Sanchez.
 \newblock Cohesiveness in microbial community coalescence.
@@ -205,14 +199,6 @@ B.~J. McGill, B.~J. Enquist, E.~Weiher, and M.~Westoby.
   178--185, 2006.
 \newblock \doi{10.1016/j.tree.2006.02.002}.
 
-\bibitem[Kurkjian et~al.(2021)Kurkjian, Akbari, and Momeni]{Niehaus2021}
-H.~M. Kurkjian, M.~J. Akbari, and B.~Momeni.
-\newblock The impact of interactions on invasion and colonization resistance in
-  microbial communities.
-\newblock \emph{PLOS Computational Biology}, 17\penalty0 (1):\penalty0
-  e1008643, 2021.
-\newblock \doi{10.1371/journal.pcbi.1008643}.
-
 \bibitem[Nadell et~al.(2016)Nadell, Drescher, and Foster]{Nadell2016}
 C.~D. Nadell, K.~Drescher, and K.~R. Foster.
 \newblock Spatial structure, cooperation and competition in biofilms.
@@ -220,10 +206,22 @@ C.~D. Nadell, K.~Drescher, and K.~R. Foster.
   589--600, 2016.
 \newblock \doi{10.1038/nrmicro.2016.84}.
 
-\bibitem[Orozco-Fuentes et~al.(2024)]{OrozcoFuentes2024}
-S.~Orozco-Fuentes et~al.
-\newblock Interaction strength determines community susceptibility to invasion.
-\newblock \emph{Manuscript in preparation}, 2024.
+\bibitem[Niehaus et~al.(2019)Niehaus, Boland, Liu, Chen, Fu, Hedlund,
+  Konstantinidis, Leung, Nealson, and Segr{\`e}]{Niehaus2021}
+L.~Niehaus, I.~Boland, M.~Liu, K.~Chen, D.~Fu, C.~Hedlund, M.~Konstantinidis,
+  K.~K. Leung, K.~H. Nealson, and D.~Segr{\`e}.
+\newblock Microbial coexistence through chemical-mediated interactions.
+\newblock \emph{Nature Communications}, 10:\penalty0 2052, 2019.
+\newblock \doi{10.1038/s41467-019-10062-x}.
+
+\bibitem[Orozco-Fuentes et~al.(2021)Orozco-Fuentes, Barbier, Bunin, and
+  Gore]{OrozcoFuentes2024}
+S.~Orozco-Fuentes, M.~Barbier, G.~Bunin, and J.~Gore.
+\newblock The impact of interactions on invasion and colonization resistance in
+  microbial communities.
+\newblock \emph{PLOS Computational Biology}, 17\penalty0 (1):\penalty0
+  e1008643, 2021.
+\newblock \doi{10.1371/journal.pcbi.1008643}.
 
 \bibitem[Quast et~al.(2013)Quast, Pruesse, Yilmaz, Gerken, Schweer, Yarza,
   Peplies, and Gl{\"o}ckner]{Quast2013}
@@ -243,14 +241,6 @@ C.~Ratzke, J.~Barrere, and J.~Gore.
   376--383, 2020.
 \newblock \doi{10.1038/s41559-020-1099-4}.
 
-\bibitem[Robinson et~al.(2024)Robinson, Redvers, Camargo, Bosch, Ross, Stennett, and
-  Prescott]{Robinson2024}
-J.~M. Robinson, N.~Redvers, A.~Camargo, T.~C.~G.~A. Bosch, L.~A. Ross, A.~Stennett, and
-  S.~L. Prescott.
-\newblock Microbiome transmission in the social microbiome and host health.
-\newblock \emph{Cell}, 187\penalty0 (1):\penalty0 17--43, 2024.
-\newblock \doi{10.1016/j.cell.2023.12.014}.
-
 \bibitem[Rillig and Mansour(2017)]{Rillig2017}
 M.~C. Rillig and I.~Mansour.
 \newblock Microbial ecology: Community coalescence stirs things up.
@@ -266,6 +256,17 @@ M.~C. Rillig, J.~Antonovics, T.~Caruso, A.~Lehmann, J.~R. Powell, S.~D.
 \newblock \emph{Trends in Ecology \& Evolution}, 30\penalty0 (8):\penalty0
   470--476, 2015.
 \newblock \doi{10.1016/j.tree.2015.06.004}.
+
+\bibitem[Sarkar et~al.(2024)Sarkar, McInroy, Harber, Raulo, Sherborne, Sherwin,
+  Sheridan, Hulett, Sheridan, Fallon, Carpenter, Dent, and
+  Carmody]{Robinson2024}
+A.~Sarkar, C.~J.~A. McInroy, S.~Harber, A.~Raulo, A.~L. Sherborne, E.~Sherwin,
+  P.~J. Sheridan, H.~R. Hulett, O.~Sheridan, M.~T. Fallon, L.~Carpenter,
+  S.~Dent, and R.~N. Carmody.
+\newblock Microbial transmission in the social microbiome and host health and
+  disease.
+\newblock \emph{Cell}, 187\penalty0 (1):\penalty0 17--43, 2024.
+\newblock \doi{10.1016/j.cell.2023.12.014}.
 
 \bibitem[Smillie et~al.(2018)Smillie, Sauk, Gevers, Friedman, Sung, Youngster,
   Hohmann, Staley, Khoruts, Sadowsky, Allegretti, Smith, Xavier, and
@@ -285,7 +286,8 @@ M.~Tikhonov.
 \newblock \emph{eLife}, 5:\penalty0 e15747, 2016.
 \newblock \doi{10.7554/eLife.15747}.
 
-\bibitem[Tropini et~al.(2017)Tropini, Earle, Huang, and Sonnenburg]{Tropini2017}
+\bibitem[Tropini et~al.(2017)Tropini, Earle, Huang, and
+  Sonnenburg]{Tropini2017}
 C.~Tropini, K.~A. Earle, K.~C. Huang, and J.~L. Sonnenburg.
 \newblock The gut microbiome: Connecting spatial organization to function.
 \newblock \emph{Cell Host \& Microbe}, 21\penalty0 (4):\penalty0 433--442,
@@ -332,15 +334,5 @@ Y.~Xiao, M.~T. Angulo, S.~Lao, S.~T. Weiss, and Y.-Y. Liu.
   microbiota transplantation.
 \newblock \emph{Nature Communications}, 11\penalty0 (1):\penalty0 3329, 2020.
 \newblock \doi{10.1038/s41467-020-17180-x}.
-
-\bibitem[Zheng et~al.(2021)Zheng, Perreau, Powell, Han, Zhang, Kwong,
-  Tringe, and Moran]{Zheng2021}
-H.~Zheng, J.~Perreau, J.~E. Powell, B.~Han, Z.~Zhang, W.~K. Kwong, S.~G.
-  Tringe, and N.~A. Moran.
-\newblock Division of labor in honey bee gut microbiota for plant polysaccharide
-  digestion.
-\newblock \emph{Proceedings of the National Academy of Sciences}, 118\penalty0
-  (51):\penalty0 e2115013118, 2021.
-\newblock \doi{10.1073/pnas.2115013118}.
 
 \end{thebibliography}

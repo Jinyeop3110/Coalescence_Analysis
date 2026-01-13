@@ -3,56 +3,44 @@ Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
 The top-level auxiliary file: main.aux
 The style file: abbrvnat.bst
 Database file #1: references.bib
-Warning--I didn't find a database entry for "Robinson2024"
-Warning--I didn't find a database entry for "Debray2022"
-Warning--I didn't find a database entry for "Zheng2021"
-Warning--I didn't find a database entry for "Niehaus2021"
-Warning--I didn't find a database entry for "OrozcoFuentes2024"
-Warning--I didn't find a database entry for "Kehe2021"
-Warning--I didn't find a database entry for "Nadell2016"
-Warning--I didn't find a database entry for "Custer2024"
-Warning--I didn't find a database entry for "Fukami2015"
-Warning--I didn't find a database entry for "Tropini2017"
-Warning--I didn't find a database entry for "Amor2024"
-You've used 30 entries,
+You've used 41 entries,
             2773 wiz_defined-function locations,
-            866 strings with 11791 characters,
-and the built_in function-call counts, 17420 in all, are:
-= -- 1542
-> -- 1264
+            925 strings with 14538 characters,
+and the built_in function-call counts, 24752 in all, are:
+= -- 2158
+> -- 1908
 < -- 12
-+ -- 426
-- -- 396
-* -- 1640
-:= -- 2769
-add.period$ -- 119
-call.type$ -- 30
-change.case$ -- 220
-chr.to.int$ -- 30
-cite$ -- 60
-duplicate$ -- 615
-empty$ -- 1209
-format.name$ -- 437
-if$ -- 3531
++ -- 641
+- -- 600
+* -- 2384
+:= -- 3954
+add.period$ -- 163
+call.type$ -- 41
+change.case$ -- 322
+chr.to.int$ -- 41
+cite$ -- 82
+duplicate$ -- 847
+empty$ -- 1651
+format.name$ -- 651
+if$ -- 4995
 int.to.chr$ -- 1
 int.to.str$ -- 1
-missing$ -- 30
-newline$ -- 187
-num.names$ -- 120
-pop$ -- 364
+missing$ -- 41
+newline$ -- 253
+num.names$ -- 164
+pop$ -- 533
 preamble$ -- 1
-purify$ -- 190
+purify$ -- 281
 quote$ -- 0
-skip$ -- 504
+skip$ -- 703
 stack$ -- 0
-substring$ -- 773
-swap$ -- 30
+substring$ -- 1026
+swap$ -- 41
 text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 330
+type$ -- 451
 warning$ -- 0
-while$ -- 137
+while$ -- 188
 width$ -- 0
-write$ -- 452
-(There were 11 warnings)
+write$ -- 618
