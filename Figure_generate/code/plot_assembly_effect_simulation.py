@@ -282,12 +282,21 @@ def plot_pie_charts(results, output_dir):
 
     plt.tight_layout(rect=[0.05, 0, 1, 0.93])
 
+    # Save SVG
     output_file = output_dir / "Fig_assembly_effect_parent_vs_coalesced.svg"
     try:
         fig.savefig(str(output_file), format='svg', dpi=300, bbox_inches='tight')
         print(f"  ✓ Created: {output_file}")
     except Exception as e:
         print(f"  ✗ ERROR saving {output_file}: {e}")
+
+    # Save PDF
+    output_file_pdf = output_dir / "Fig_assembly_effect_parent_vs_coalesced.pdf"
+    try:
+        fig.savefig(str(output_file_pdf), format='pdf', dpi=300, bbox_inches='tight')
+        print(f"  ✓ Created: {output_file_pdf}")
+    except Exception as e:
+        print(f"  ✗ ERROR saving {output_file_pdf}: {e}")
     finally:
         plt.close()
 

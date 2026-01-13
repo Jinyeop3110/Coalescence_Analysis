@@ -528,30 +528,37 @@ def plot_timeseries_merged(Processed_sequences_synthetic, IDX_list_sub1, IDX_lis
     ax_arrow.set_ylim(0, 1)
     ax_arrow.axis('off')
 
-    # Draw curly brace using bezier curve
-    from matplotlib.patches import FancyBboxPatch, FancyArrowPatch
-    import matplotlib.patches as mpatches
-    from matplotlib.path import Path
-    import matplotlib.patches as patches
-
-    # Curly brace points
-    brace_x = 0.2
-    # Draw simple curly brace with lines
-    brace_top = 0.85
-    brace_bottom = 0.15
+    # Simple approach: draw a curly brace using lines and then an arrow
+    brace_left = 0.15
+    brace_tip = 0.35
+    brace_top = 0.82
+    brace_bottom = 0.18
     brace_mid = 0.5
-    brace_tip = 0.6
 
-    # Top part of brace
-    ax_arrow.plot([brace_x, brace_x], [brace_top, brace_mid + 0.1], 'k-', lw=0.8)
-    ax_arrow.plot([brace_x, brace_tip], [brace_mid + 0.1, brace_mid], 'k-', lw=0.8)
-    # Bottom part of brace
-    ax_arrow.plot([brace_x, brace_x], [brace_bottom, brace_mid - 0.1], 'k-', lw=0.8)
-    ax_arrow.plot([brace_x, brace_tip], [brace_mid - 0.1, brace_mid], 'k-', lw=0.8)
+    # Draw the curly brace with simple lines
+    lw = 0.8
+    # Top vertical line
+    ax_arrow.plot([brace_left, brace_left], [brace_top, brace_mid + 0.06], 'k-', lw=lw)
+    # Top diagonal to tip
+    ax_arrow.plot([brace_left, brace_tip], [brace_mid + 0.06, brace_mid], 'k-', lw=lw)
+    # Bottom vertical line
+    ax_arrow.plot([brace_left, brace_left], [brace_bottom, brace_mid - 0.06], 'k-', lw=lw)
+    # Bottom diagonal to tip
+    ax_arrow.plot([brace_left, brace_tip], [brace_mid - 0.06, brace_mid], 'k-', lw=lw)
 
-    # Arrow from brace tip to right
-    ax_arrow.annotate('', xy=(0.95, 0.5), xytext=(brace_tip + 0.05, 0.5),
-                     arrowprops=dict(arrowstyle='->', color='black', lw=0.8))
+    # Draw arrow: line + triangle arrowhead
+    arrow_start = brace_tip + 0.05
+    arrow_end = 0.88
+    arrow_y = 0.5
+    # Arrow shaft (thicker)
+    ax_arrow.plot([arrow_start, arrow_end - 0.12], [arrow_y, arrow_y], 'k-', lw=1.2)
+    # Arrowhead as filled triangle (larger)
+    from matplotlib.patches import Polygon
+    arrow_head = Polygon([[arrow_end, arrow_y],
+                          [arrow_end - 0.15, arrow_y + 0.12],
+                          [arrow_end - 0.15, arrow_y - 0.12]],
+                         closed=True, facecolor='black', edgecolor='black')
+    ax_arrow.add_patch(arrow_head)
 
     # Plot coal (right side, spanning both rows)
     bar_l = np.array(range(n_coal))

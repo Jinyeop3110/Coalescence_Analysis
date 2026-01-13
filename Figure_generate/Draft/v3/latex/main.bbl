@@ -1,227 +1,346 @@
-\begin{thebibliography}{10}
-\expandafter\ifx\csname url\endcsname\relax
-  \def\url#1{\texttt{#1}}\fi
-\expandafter\ifx\csname urlprefix\endcsname\relax\def\urlprefix{URL }\fi
-\providecommand{\bibinfo}[2]{#2}
-\providecommand{\eprint}[2][]{\url{#2}}
+\begin{thebibliography}{30}
+\providecommand{\natexlab}[1]{#1}
+\providecommand{\url}[1]{\texttt{#1}}
+\expandafter\ifx\csname urlstyle\endcsname\relax
+  \providecommand{\doi}[1]{doi: #1}\else
+  \providecommand{\doi}{doi: \begingroup \urlstyle{rm}\Url}\fi
 
-\bibitem{Clements1916}
-\bibinfo{author}{Clements, F.~E.}
-\newblock \bibinfo{title}{Plant succession: An analysis of the development of
-  vegetation}.
-\newblock \emph{\bibinfo{journal}{Carnegie Institution of Washington
-  Publication}} \textbf{\bibinfo{volume}{242}}, \bibinfo{pages}{1--512}
-  (\bibinfo{year}{1916}).
+\bibitem[Allison and Martiny(2008)]{Allison2008}
+S.~D. Allison and J.~B.~H. Martiny.
+\newblock Resistance, resilience, and redundancy in microbial communities.
+\newblock \emph{Proceedings of the National Academy of Sciences}, 105\penalty0
+  (Supplement 1):\penalty0 11512--11519, 2008.
+\newblock \doi{10.1073/pnas.0801925105}.
 
-\bibitem{WilsonSober1989}
-\bibinfo{author}{Wilson, D.~S.} \& \bibinfo{author}{Sober, E.}
-\newblock \bibinfo{title}{Reviving the superorganism}.
-\newblock \emph{\bibinfo{journal}{Journal of Theoretical Biology}}
-  \textbf{\bibinfo{volume}{136}}, \bibinfo{pages}{337--356}
-  (\bibinfo{year}{1989}).
+\bibitem[Amor et~al.(2024)Amor, Galesic, and Gore]{Amor2024}
+D.~R. Amor, M.~Galesic, and J.~Gore.
+\newblock Transient dynamics and ecological sensitivity in microbial
+  communities.
+\newblock \emph{Manuscript in preparation}, 2024.
 
-\bibitem{Gleason1926}
-\bibinfo{author}{Gleason, H.~A.}
-\newblock \bibinfo{title}{The individualistic concept of the plant
-  association}.
-\newblock \emph{\bibinfo{journal}{Bulletin of the Torrey Botanical Club}}
-  \textbf{\bibinfo{volume}{53}}, \bibinfo{pages}{7--26} (\bibinfo{year}{1926}).
+\bibitem[Benton and Emerson(2007)]{BentonEmerson2007}
+M.~J. Benton and B.~C. Emerson.
+\newblock How did life become so diverse? the dynamics of diversification
+  according to the fossil record and molecular phylogenetics.
+\newblock \emph{Palaeontology}, 50\penalty0 (1):\penalty0 23--40, 2007.
+\newblock \doi{10.1111/j.1475-4983.2006.00612.x}.
 
-\bibitem{Dunne2002}
-\bibinfo{author}{Dunne, J.~A.}, \bibinfo{author}{Williams, R.~J.} \&
-  \bibinfo{author}{Martinez, N.~D.}
-\newblock \bibinfo{title}{Food-web structure and network theory: The role of
-  connectance and size}.
-\newblock \emph{\bibinfo{journal}{Proceedings of the National Academy of
-  Sciences}} \textbf{\bibinfo{volume}{99}}, \bibinfo{pages}{12917--12922}
-  (\bibinfo{year}{2002}).
+\bibitem[Bresciani et~al.(2025)Bresciani, Custer, Koslicki, and
+  Dini-Andreote]{Bresciani2025}
+L.~Bresciani, G.~F. Custer, D.~Koslicki, and F.~Dini-Andreote.
+\newblock Interplay of ecological processes modulates microbial community
+  reassembly following coalescence.
+\newblock \emph{The ISME Journal}, 19\penalty0 (1):\penalty0 wraf041, 2025.
+\newblock \doi{10.1093/ismejo/wraf041}.
 
-\bibitem{Allison2008}
-\bibinfo{author}{Allison, S.~D.} \& \bibinfo{author}{Martiny, J. B.~H.}
-\newblock \bibinfo{title}{Resistance, resilience, and redundancy in microbial
-  communities}.
-\newblock \emph{\bibinfo{journal}{Proceedings of the National Academy of
-  Sciences}} \textbf{\bibinfo{volume}{105}}, \bibinfo{pages}{11512--11519}
-  (\bibinfo{year}{2008}).
+\bibitem[Callahan et~al.(2016)Callahan, McMurdie, Rosen, Han, Johnson, and
+  Holmes]{Callahan2016}
+B.~J. Callahan, P.~J. McMurdie, M.~J. Rosen, A.~W. Han, A.~J.~A. Johnson, and
+  S.~P. Holmes.
+\newblock Dada2: High-resolution sample inference from illumina amplicon data.
+\newblock \emph{Nature Methods}, 13\penalty0 (7):\penalty0 581--583, 2016.
+\newblock \doi{10.1038/nmeth.3869}.
 
-\bibitem{Keddy1992}
-\bibinfo{author}{Keddy, P.~A.}
-\newblock \bibinfo{title}{Assembly and response rules: Two goals for predictive
-  community ecology}.
-\newblock \emph{\bibinfo{journal}{Journal of Vegetation Science}}
-  \textbf{\bibinfo{volume}{3}}, \bibinfo{pages}{157--164}
-  (\bibinfo{year}{1992}).
+\bibitem[Castledine et~al.(2020)Castledine, Sierocinski, Padfield, and
+  Buckling]{Castledine2020}
+M.~Castledine, P.~Sierocinski, D.~Padfield, and A.~Buckling.
+\newblock Community coalescence: An eco-evolutionary perspective.
+\newblock \emph{Philosophical Transactions of the Royal Society B: Biological
+  Sciences}, 375\penalty0 (1798):\penalty0 20190252, 2020.
+\newblock \doi{10.1098/rstb.2019.0252}.
 
-\bibitem{McGill2006}
-\bibinfo{author}{McGill, B.~J.}, \bibinfo{author}{Enquist, B.~J.},
-  \bibinfo{author}{Weiher, E.} \& \bibinfo{author}{Westoby, M.}
-\newblock \bibinfo{title}{Rebuilding community ecology from functional traits}.
-\newblock \emph{\bibinfo{journal}{Trends in Ecology \& Evolution}}
-  \textbf{\bibinfo{volume}{21}}, \bibinfo{pages}{178--185}
-  (\bibinfo{year}{2006}).
+\bibitem[Chappell et~al.(2022)Chappell, Dhami, Bitter, Czech, Paredes, Barrie,
+  Calder{\'o}n, Eritano, Golden, Hekmat-Scafe, Hsu, Kieschnick, Malladi, Rush,
+  and Fukami]{Chappell2022}
+C.~R. Chappell, M.~K. Dhami, M.~C. Bitter, L.~Czech, S.~H. Paredes, F.~B.
+  Barrie, Y.~Calder{\'o}n, K.~Eritano, L.-A. Golden, D.~Hekmat-Scafe, V.~Hsu,
+  C.~Kieschnick, S.~Malladi, N.~Rush, and T.~Fukami.
+\newblock Wide-ranging consequences of priority effects governed by an
+  overarching factor.
+\newblock \emph{eLife}, 11:\penalty0 e79647, 2022.
+\newblock \doi{10.7554/eLife.79647}.
 
-\bibitem{Rillig2015}
-\bibinfo{author}{Rillig, M.~C.} \emph{et~al.}
-\newblock \bibinfo{title}{Interchange of entire communities: Microbial
-  community coalescence}.
-\newblock \emph{\bibinfo{journal}{Trends in Ecology \& Evolution}}
-  \textbf{\bibinfo{volume}{30}}, \bibinfo{pages}{470--476}
-  (\bibinfo{year}{2015}).
+\bibitem[Clements(1916)]{Clements1916}
+F.~E. Clements.
+\newblock Plant succession: An analysis of the development of vegetation.
+\newblock \emph{Carnegie Institution of Washington Publication}, 242:\penalty0
+  1--512, 1916.
 
-\bibitem{Lechon2021}
-\bibinfo{author}{Lech{\'o}n-Alonso, P.}, \bibinfo{author}{Clegg, T.},
-  \bibinfo{author}{Cook, J.}, \bibinfo{author}{Smith, T.~P.} \&
-  \bibinfo{author}{Pawar, S.}
-\newblock \bibinfo{title}{The role of competition versus cooperation in
-  microbial community coalescence}.
-\newblock \emph{\bibinfo{journal}{PLoS Computational Biology}}
-  \textbf{\bibinfo{volume}{17}}, \bibinfo{pages}{e1009584}
-  (\bibinfo{year}{2021}).
+\bibitem[Custer et~al.(2024)Custer, Bresciani, and Dini-Andreote]{Custer2024}
+G.~F. Custer, L.~Bresciani, and F.~Dini-Andreote.
+\newblock Toward an integrative framework for microbial community coalescence.
+\newblock \emph{Trends in Microbiology}, 32\penalty0 (3):\penalty0 241--251,
+  2024.
+\newblock \doi{10.1016/j.tim.2023.09.001}.
 
-\bibitem{Liu2024}
-\bibinfo{author}{Liu, X.} \& \bibinfo{author}{Salles, J.~F.}
-\newblock \bibinfo{title}{Drivers and consequences of microbial community
-  coalescence}.
-\newblock \emph{\bibinfo{journal}{The ISME Journal}}
-  \textbf{\bibinfo{volume}{18}}, \bibinfo{pages}{wrae179}
-  (\bibinfo{year}{2024}).
+\bibitem[Debray et~al.(2022)Debray, Herbert, Jaffe, Crits-Christoph, Power, and
+  Koskella]{Debray2022}
+R.~Debray, R.~A. Herbert, A.~L. Jaffe, A.~Crits-Christoph, M.~E. Power, and
+  B.~Koskella.
+\newblock Priority effects in microbiome assembly.
+\newblock \emph{Nature Reviews Microbiology}, 20\penalty0 (2):\penalty0
+  109--121, 2022.
+\newblock \doi{10.1038/s41579-021-00604-w}.
 
-\bibitem{Huet2023}
-\bibinfo{author}{Huet, S.} \emph{et~al.}
-\newblock \bibinfo{title}{Context-dependent fitness in microbial communities}.
-\newblock \emph{\bibinfo{journal}{Journal}}  (\bibinfo{year}{2023}).
-\newblock \bibinfo{note}{Manuscript in preparation}.
+\bibitem[Diaz-Colunga et~al.(2022)Diaz-Colunga, Lu, Sanchez-Gorostiaga, Chang,
+  Cai, Goldford, Tikhonov, and S{\'a}nchez]{DiazColunga2022}
+J.~Diaz-Colunga, N.~Lu, A.~Sanchez-Gorostiaga, C.-Y. Chang, H.~S. Cai, J.~E.
+  Goldford, M.~Tikhonov, and {\'A}.~S{\'a}nchez.
+\newblock Top-down and bottom-up cohesiveness in microbial community
+  coalescence.
+\newblock \emph{Proceedings of the National Academy of Sciences}, 119\penalty0
+  (6):\penalty0 e2111261119, 2022.
+\newblock \doi{10.1073/pnas.2111261119}.
 
-\bibitem{Xiao2020}
-\bibinfo{author}{Xiao, Y.}, \bibinfo{author}{Angulo, M.~T.},
-  \bibinfo{author}{Lao, S.}, \bibinfo{author}{Weiss, S.~T.} \&
-  \bibinfo{author}{Liu, Y.-Y.}
-\newblock \bibinfo{title}{An ecological framework to understand the efficacy of
-  fecal microbiota transplantation}.
-\newblock \emph{\bibinfo{journal}{Nature Communications}}
-  \textbf{\bibinfo{volume}{11}}, \bibinfo{pages}{3329} (\bibinfo{year}{2020}).
+\bibitem[Dunne et~al.(2002)Dunne, Williams, and Martinez]{Dunne2002}
+J.~A. Dunne, R.~J. Williams, and N.~D. Martinez.
+\newblock Food-web structure and network theory: The role of connectance and
+  size.
+\newblock \emph{Proceedings of the National Academy of Sciences}, 99\penalty0
+  (20):\penalty0 12917--12922, 2002.
+\newblock \doi{10.1073/pnas.192407699}.
 
-\bibitem{Gupta2021}
-\bibinfo{author}{Gupta, S.}, \bibinfo{author}{Allen-Vercoe, E.},
-  \bibinfo{author}{Bhattacharya, A.} \& \bibinfo{author}{Petrof, E.~O.}
-\newblock \bibinfo{title}{Fecal microbiota transplantation: in perspective}.
-\newblock \emph{\bibinfo{journal}{Therapeutic Advances in Gastroenterology}}
-  \textbf{\bibinfo{volume}{9}}, \bibinfo{pages}{229--239}
-  (\bibinfo{year}{2016}).
+\bibitem[Fukami(2015)]{Fukami2015}
+T.~Fukami.
+\newblock Historical contingency in community assembly: Integrating niches,
+  species pools, and priority effects.
+\newblock \emph{Annual Review of Ecology, Evolution, and Systematics},
+  46:\penalty0 1--23, 2015.
+\newblock \doi{10.1146/annurev-ecolsys-110411-160340}.
 
-\bibitem{Gilpin1994}
-\bibinfo{author}{Gilpin, M.}
-\newblock \bibinfo{title}{Community-level competition: Asymmetrical dominance}.
-\newblock \emph{\bibinfo{journal}{Proceedings of the National Academy of
-  Sciences}} \textbf{\bibinfo{volume}{91}}, \bibinfo{pages}{3252--3254}
-  (\bibinfo{year}{1994}).
+\bibitem[Gilpin(1994)]{Gilpin1994}
+M.~Gilpin.
+\newblock Community-level competition: Asymmetrical dominance.
+\newblock \emph{Proceedings of the National Academy of Sciences}, 91\penalty0
+  (8):\penalty0 3252--3254, 1994.
+\newblock \doi{10.1073/pnas.91.8.3252}.
 
-\bibitem{Tikhonov2016}
-\bibinfo{author}{Tikhonov, M.}
-\newblock \bibinfo{title}{Community-level cohesion without cooperation}.
-\newblock \emph{\bibinfo{journal}{eLife}} \textbf{\bibinfo{volume}{5}},
-  \bibinfo{pages}{e15747} (\bibinfo{year}{2016}).
+\bibitem[Gleason(1926)]{Gleason1926}
+H.~A. Gleason.
+\newblock The individualistic concept of the plant association.
+\newblock \emph{Bulletin of the Torrey Botanical Club}, 53\penalty0
+  (1):\penalty0 7--26, 1926.
+\newblock \doi{10.2307/2479933}.
 
-\bibitem{Lu2022}
-\bibinfo{author}{Lu, N.}, \bibinfo{author}{Sanchez-Gorostiaga, A.},
-  \bibinfo{author}{Tikhonov, M.} \& \bibinfo{author}{Sanchez, A.}
-\newblock \bibinfo{title}{Cohesiveness in microbial community coalescence}.
-\newblock \emph{\bibinfo{journal}{bioRxiv}}  (\bibinfo{year}{2022}).
+\bibitem[Goldman et~al.(2025)Goldman, Xue, Parrott, Lopez, Vila, Jeeda,
+  Franzese, et~al.]{Goldman2025}
+D.~A. Goldman, K.~S. Xue, A.~B. Parrott, J.~A. Lopez, J.~C.~C. Vila, R.~R.
+  Jeeda, L.~R. Franzese, et~al.
+\newblock Competition for shared resources increases dependence on initial
+  population size during coalescence of gut microbial communities.
+\newblock \emph{Proceedings of the National Academy of Sciences}, 122\penalty0
+  (11):\penalty0 e2322440122, 2025.
+\newblock \doi{10.1073/pnas.2322440122}.
 
-\bibitem{Vermeij1991}
-\bibinfo{author}{Vermeij, G.~J.}
-\newblock \bibinfo{title}{When biotas meet: Understanding biotic interchange}.
-\newblock \emph{\bibinfo{journal}{Science}} \textbf{\bibinfo{volume}{253}},
-  \bibinfo{pages}{1099--1104} (\bibinfo{year}{1991}).
+\bibitem[Gupta et~al.(2016)Gupta, Allen-Vercoe, Bhattacharya, and
+  Petrof]{Gupta2021}
+S.~Gupta, E.~Allen-Vercoe, A.~Bhattacharya, and E.~O. Petrof.
+\newblock Fecal microbiota transplantation: in perspective.
+\newblock \emph{Therapeutic Advances in Gastroenterology}, 9\penalty0
+  (2):\penalty0 229--239, 2016.
+\newblock \doi{10.1177/1756283X15607414}.
 
-\bibitem{BentonEmerson2007}
-\bibinfo{author}{Benton, M.~J.} \& \bibinfo{author}{Emerson, B.~C.}
-\newblock \bibinfo{title}{How did life become so diverse? the dynamics of
-  diversification according to the fossil record and molecular phylogenetics}.
-\newblock \emph{\bibinfo{journal}{Palaeontology}}
-  \textbf{\bibinfo{volume}{50}}, \bibinfo{pages}{23--40}
-  (\bibinfo{year}{2007}).
+\bibitem[Hu et~al.(2022)Hu, Amor, Barbier, Bunin, and Gore]{Hu2022}
+J.~Hu, D.~R. Amor, M.~Barbier, G.~Bunin, and J.~Gore.
+\newblock Emergent phases of ecological diversity and dynamics mapped in
+  microcosms.
+\newblock \emph{Science}, 378\penalty0 (6615):\penalty0 85--89, 2022.
+\newblock \doi{10.1126/science.abm7841}.
 
-\bibitem{VanderGucht2007}
-\bibinfo{author}{Van~der Gucht, K.} \emph{et~al.}
-\newblock \bibinfo{title}{The power of species sorting: Local factors drive
-  bacterial community composition over a wide range of spatial scales}.
-\newblock \emph{\bibinfo{journal}{Proceedings of the National Academy of
-  Sciences}} \textbf{\bibinfo{volume}{104}}, \bibinfo{pages}{20404--20409}
-  (\bibinfo{year}{2007}).
+\bibitem[Hu et~al.(2025)Hu, Barbier, Bunin, and Gore]{Hu2025}
+J.~Hu, M.~Barbier, G.~Bunin, and J.~Gore.
+\newblock Collective dynamical regimes predict invasion success and impacts in
+  microbial communities.
+\newblock \emph{Nature Ecology \& Evolution}, 9\penalty0 (3):\penalty0
+  406--416, 2025.
+\newblock \doi{10.1038/s41559-024-02618-y}.
 
-\bibitem{Goldman2025}
-\bibinfo{author}{Goldman, D.~A.} \emph{et~al.}
-\newblock \bibinfo{title}{Competition for shared resources increases dependence
-  on initial population size during coalescence of gut microbial communities}.
-\newblock \emph{\bibinfo{journal}{Proceedings of the National Academy of
-  Sciences}} \textbf{\bibinfo{volume}{122}}, \bibinfo{pages}{e2322440122}
-  (\bibinfo{year}{2025}).
+\bibitem[Huet et~al.(2023)]{Huet2023}
+S.~Huet et~al.
+\newblock Context-dependent fitness in microbial communities.
+\newblock \emph{Journal}, 2023.
+\newblock Manuscript in preparation.
 
-\bibitem{Walton2025}
-\bibinfo{author}{Walton, E.~M.} \emph{et~al.}
-\newblock \bibinfo{title}{Community coalescence reveals strong selection and
-  coexistence within species in complex microbial communities}.
-\newblock \emph{\bibinfo{journal}{bioRxiv}}  (\bibinfo{year}{2025}).
+\bibitem[Keddy(1992)]{Keddy1992}
+P.~A. Keddy.
+\newblock Assembly and response rules: Two goals for predictive community
+  ecology.
+\newblock \emph{Journal of Vegetation Science}, 3\penalty0 (2):\penalty0
+  157--164, 1992.
+\newblock \doi{10.2307/3235676}.
 
-\bibitem{Hu2022}
-\bibinfo{author}{Hu, J.}, \bibinfo{author}{Amor, D.~R.},
-  \bibinfo{author}{Barbier, M.}, \bibinfo{author}{Bunin, G.} \&
-  \bibinfo{author}{Gore, J.}
-\newblock \bibinfo{title}{Emergent phases of ecological diversity and dynamics
-  mapped in microcosms}.
-\newblock \emph{\bibinfo{journal}{Science}} \textbf{\bibinfo{volume}{378}},
-  \bibinfo{pages}{85--89} (\bibinfo{year}{2022}).
+\bibitem[Kehe et~al.(2021)Kehe, Kulber, Ortiz, Ber{\'a}nek, Zember, Howell, and
+  Gore]{Kehe2021}
+J.~Kehe, A.~Kulber, R.~Ortiz, D.~Ber{\'a}nek, D.~Zember, S.~Howell, and
+  J.~Gore.
+\newblock Positive interactions are common among culturable bacteria.
+\newblock \emph{Science Advances}, 7\penalty0 (45):\penalty0 eabi7159, 2021.
+\newblock \doi{10.1126/sciadv.abi7159}.
 
-\bibitem{Hu2025}
-\bibinfo{author}{Hu, J.}, \bibinfo{author}{Barbier, M.},
-  \bibinfo{author}{Bunin, G.} \& \bibinfo{author}{Gore, J.}
-\newblock \bibinfo{title}{Collective dynamical regimes predict invasion success
-  and impacts in microbial communities}.
-\newblock \emph{\bibinfo{journal}{Nature Ecology \& Evolution}}
-  \textbf{\bibinfo{volume}{9}}, \bibinfo{pages}{406--416}
-  (\bibinfo{year}{2025}).
+\bibitem[Lech{\'o}n-Alonso et~al.(2021)Lech{\'o}n-Alonso, Clegg, Cook, Smith,
+  and Pawar]{Lechon2021}
+P.~Lech{\'o}n-Alonso, T.~Clegg, J.~Cook, T.~P. Smith, and S.~Pawar.
+\newblock The role of competition versus cooperation in microbial community
+  coalescence.
+\newblock \emph{PLoS Computational Biology}, 17\penalty0 (11):\penalty0
+  e1009584, 2021.
+\newblock \doi{10.1371/journal.pcbi.1009584}.
 
-\bibitem{Ratzke2020}
-\bibinfo{author}{Ratzke, C.}, \bibinfo{author}{Barrere, J.} \&
-  \bibinfo{author}{Gore, J.}
-\newblock \bibinfo{title}{Strength of species interactions determines
-  biodiversity and stability in microbial communities}.
-\newblock \emph{\bibinfo{journal}{Nature Ecology \& Evolution}}
-  \textbf{\bibinfo{volume}{4}}, \bibinfo{pages}{376--383}
-  (\bibinfo{year}{2020}).
+\bibitem[Liu and Salles(2024)]{Liu2024}
+X.~Liu and J.~F. Salles.
+\newblock Drivers and consequences of microbial community coalescence.
+\newblock \emph{The ISME Journal}, 18\penalty0 (1):\penalty0 wrae179, 2024.
+\newblock \doi{10.1093/ismejo/wrae179}.
 
-\bibitem{Castledine2020}
-\bibinfo{author}{Castledine, M.}, \bibinfo{author}{Sierocinski, P.},
-  \bibinfo{author}{Padfield, D.} \& \bibinfo{author}{Buckling, A.}
-\newblock \bibinfo{title}{Community coalescence: An eco-evolutionary
-  perspective}.
-\newblock \emph{\bibinfo{journal}{Philosophical Transactions of the Royal
-  Society B: Biological Sciences}} \textbf{\bibinfo{volume}{375}},
-  \bibinfo{pages}{20190252} (\bibinfo{year}{2020}).
+\bibitem[Lu et~al.(2022)Lu, Sanchez-Gorostiaga, Tikhonov, and Sanchez]{Lu2022}
+N.~Lu, A.~Sanchez-Gorostiaga, M.~Tikhonov, and A.~Sanchez.
+\newblock Cohesiveness in microbial community coalescence.
+\newblock \emph{bioRxiv}, 2022.
+\newblock \doi{10.1101/2022.06.21.496987}.
 
-\bibitem{DiazColunga2022}
-\bibinfo{author}{Diaz-Colunga, J.} \emph{et~al.}
-\newblock \bibinfo{title}{Top-down and bottom-up cohesiveness in microbial
-  community coalescence}.
-\newblock \emph{\bibinfo{journal}{Proceedings of the National Academy of
-  Sciences}} \textbf{\bibinfo{volume}{119}}, \bibinfo{pages}{e2111261119}
-  (\bibinfo{year}{2022}).
+\bibitem[McGill et~al.(2006)McGill, Enquist, Weiher, and Westoby]{McGill2006}
+B.~J. McGill, B.~J. Enquist, E.~Weiher, and M.~Westoby.
+\newblock Rebuilding community ecology from functional traits.
+\newblock \emph{Trends in Ecology \& Evolution}, 21\penalty0 (4):\penalty0
+  178--185, 2006.
+\newblock \doi{10.1016/j.tree.2006.02.002}.
 
-\bibitem{Rillig2017}
-\bibinfo{author}{Rillig, M.~C.} \& \bibinfo{author}{Mansour, I.}
-\newblock \bibinfo{title}{Microbial ecology: Community coalescence stirs things
-  up}.
-\newblock \emph{\bibinfo{journal}{Current Biology}}
-  \textbf{\bibinfo{volume}{27}}, \bibinfo{pages}{R1280--R1282}
-  (\bibinfo{year}{2017}).
+\bibitem[Kurkjian et~al.(2021)Kurkjian, Akbari, and Momeni]{Niehaus2021}
+H.~M. Kurkjian, M.~J. Akbari, and B.~Momeni.
+\newblock The impact of interactions on invasion and colonization resistance in
+  microbial communities.
+\newblock \emph{PLOS Computational Biology}, 17\penalty0 (1):\penalty0
+  e1008643, 2021.
+\newblock \doi{10.1371/journal.pcbi.1008643}.
 
-\bibitem{Smillie2018}
-\bibinfo{author}{Smillie, C.~S.} \emph{et~al.}
-\newblock \bibinfo{title}{Strain tracking reveals the determinants of bacterial
-  engraftment in the human gut following fecal microbiota transplantation}.
-\newblock \emph{\bibinfo{journal}{Cell Host \& Microbe}}
-  \textbf{\bibinfo{volume}{23}}, \bibinfo{pages}{229--240.e5}
-  (\bibinfo{year}{2018}).
+\bibitem[Nadell et~al.(2016)Nadell, Drescher, and Foster]{Nadell2016}
+C.~D. Nadell, K.~Drescher, and K.~R. Foster.
+\newblock Spatial structure, cooperation and competition in biofilms.
+\newblock \emph{Nature Reviews Microbiology}, 14\penalty0 (9):\penalty0
+  589--600, 2016.
+\newblock \doi{10.1038/nrmicro.2016.84}.
+
+\bibitem[Orozco-Fuentes et~al.(2024)]{OrozcoFuentes2024}
+S.~Orozco-Fuentes et~al.
+\newblock Interaction strength determines community susceptibility to invasion.
+\newblock \emph{Manuscript in preparation}, 2024.
+
+\bibitem[Quast et~al.(2013)Quast, Pruesse, Yilmaz, Gerken, Schweer, Yarza,
+  Peplies, and Gl{\"o}ckner]{Quast2013}
+C.~Quast, E.~Pruesse, P.~Yilmaz, J.~Gerken, T.~Schweer, P.~Yarza, J.~Peplies,
+  and F.~O. Gl{\"o}ckner.
+\newblock The silva ribosomal rna gene database project: improved data
+  processing and web-based tools.
+\newblock \emph{Nucleic Acids Research}, 41\penalty0 (D1):\penalty0 D590--D596,
+  2013.
+\newblock \doi{10.1093/nar/gks1219}.
+
+\bibitem[Ratzke et~al.(2020)Ratzke, Barrere, and Gore]{Ratzke2020}
+C.~Ratzke, J.~Barrere, and J.~Gore.
+\newblock Strength of species interactions determines biodiversity and
+  stability in microbial communities.
+\newblock \emph{Nature Ecology \& Evolution}, 4\penalty0 (3):\penalty0
+  376--383, 2020.
+\newblock \doi{10.1038/s41559-020-1099-4}.
+
+\bibitem[Robinson et~al.(2024)Robinson, Redvers, Camargo, Bosch, Ross, Stennett, and
+  Prescott]{Robinson2024}
+J.~M. Robinson, N.~Redvers, A.~Camargo, T.~C.~G.~A. Bosch, L.~A. Ross, A.~Stennett, and
+  S.~L. Prescott.
+\newblock Microbiome transmission in the social microbiome and host health.
+\newblock \emph{Cell}, 187\penalty0 (1):\penalty0 17--43, 2024.
+\newblock \doi{10.1016/j.cell.2023.12.014}.
+
+\bibitem[Rillig and Mansour(2017)]{Rillig2017}
+M.~C. Rillig and I.~Mansour.
+\newblock Microbial ecology: Community coalescence stirs things up.
+\newblock \emph{Current Biology}, 27\penalty0 (23):\penalty0 R1280--R1282,
+  2017.
+\newblock \doi{10.1016/j.cub.2017.10.027}.
+
+\bibitem[Rillig et~al.(2015)Rillig, Antonovics, Caruso, Lehmann, Powell,
+  Veresoglou, and Verbruggen]{Rillig2015}
+M.~C. Rillig, J.~Antonovics, T.~Caruso, A.~Lehmann, J.~R. Powell, S.~D.
+  Veresoglou, and E.~Verbruggen.
+\newblock Interchange of entire communities: Microbial community coalescence.
+\newblock \emph{Trends in Ecology \& Evolution}, 30\penalty0 (8):\penalty0
+  470--476, 2015.
+\newblock \doi{10.1016/j.tree.2015.06.004}.
+
+\bibitem[Smillie et~al.(2018)Smillie, Sauk, Gevers, Friedman, Sung, Youngster,
+  Hohmann, Staley, Khoruts, Sadowsky, Allegretti, Smith, Xavier, and
+  Alm]{Smillie2018}
+C.~S. Smillie, J.~Sauk, D.~Gevers, J.~Friedman, J.~Sung, I.~Youngster, E.~L.
+  Hohmann, C.~Staley, A.~Khoruts, M.~J. Sadowsky, J.~R. Allegretti, M.~B.
+  Smith, R.~J. Xavier, and E.~J. Alm.
+\newblock Strain tracking reveals the determinants of bacterial engraftment in
+  the human gut following fecal microbiota transplantation.
+\newblock \emph{Cell Host \& Microbe}, 23\penalty0 (2):\penalty0 229--240.e5,
+  2018.
+\newblock \doi{10.1016/j.chom.2018.01.003}.
+
+\bibitem[Tikhonov(2016)]{Tikhonov2016}
+M.~Tikhonov.
+\newblock Community-level cohesion without cooperation.
+\newblock \emph{eLife}, 5:\penalty0 e15747, 2016.
+\newblock \doi{10.7554/eLife.15747}.
+
+\bibitem[Tropini et~al.(2017)Tropini, Earle, Huang, and Sonnenburg]{Tropini2017}
+C.~Tropini, K.~A. Earle, K.~C. Huang, and J.~L. Sonnenburg.
+\newblock The gut microbiome: Connecting spatial organization to function.
+\newblock \emph{Cell Host \& Microbe}, 21\penalty0 (4):\penalty0 433--442,
+  2017.
+\newblock \doi{10.1016/j.chom.2017.03.010}.
+
+\bibitem[Van~der Gucht et~al.(2007)Van~der Gucht, Cottenie, Muylaert, Vloemans,
+  Cousin, Declerck, Jeppesen, Conde-Porcuna, Schwenk, Zwart, Degans, Vyverman,
+  and De~Meester]{VanderGucht2007}
+K.~Van~der Gucht, K.~Cottenie, K.~Muylaert, N.~Vloemans, S.~Cousin,
+  S.~Declerck, E.~Jeppesen, J.-M. Conde-Porcuna, K.~Schwenk, G.~Zwart,
+  H.~Degans, W.~Vyverman, and L.~De~Meester.
+\newblock The power of species sorting: Local factors drive bacterial community
+  composition over a wide range of spatial scales.
+\newblock \emph{Proceedings of the National Academy of Sciences}, 104\penalty0
+  (51):\penalty0 20404--20409, 2007.
+\newblock \doi{10.1073/pnas.0707200104}.
+
+\bibitem[Vermeij(1991)]{Vermeij1991}
+G.~J. Vermeij.
+\newblock When biotas meet: Understanding biotic interchange.
+\newblock \emph{Science}, 253\penalty0 (5024):\penalty0 1099--1104, 1991.
+\newblock \doi{10.1126/science.253.5024.1099}.
+
+\bibitem[Walton et~al.(2025)Walton, Xu, Sharma, Gellert, Yeh, Cremer, Xue,
+  Petrov, and Good]{Walton2025}
+E.~M. Walton, S.~Xu, S.~Sharma, G.~Gellert, Y.-C. Yeh, J.~Cremer, K.~S. Xue,
+  D.~A. Petrov, and B.~H. Good.
+\newblock Community coalescence reveals strong selection and coexistence within
+  species in complex microbial communities.
+\newblock \emph{bioRxiv}, 2025.
+\newblock \doi{10.1101/2025.11.06.687011}.
+
+\bibitem[Wilson and Sober(1989)]{WilsonSober1989}
+D.~S. Wilson and E.~Sober.
+\newblock Reviving the superorganism.
+\newblock \emph{Journal of Theoretical Biology}, 136\penalty0 (3):\penalty0
+  337--356, 1989.
+\newblock \doi{10.1016/s0022-5193(89)80169-9}.
+
+\bibitem[Xiao et~al.(2020)Xiao, Angulo, Lao, Weiss, and Liu]{Xiao2020}
+Y.~Xiao, M.~T. Angulo, S.~Lao, S.~T. Weiss, and Y.-Y. Liu.
+\newblock An ecological framework to understand the efficacy of fecal
+  microbiota transplantation.
+\newblock \emph{Nature Communications}, 11\penalty0 (1):\penalty0 3329, 2020.
+\newblock \doi{10.1038/s41467-020-17180-x}.
+
+\bibitem[Zheng et~al.(2021)Zheng, Perreau, Powell, Han, Zhang, Kwong,
+  Tringe, and Moran]{Zheng2021}
+H.~Zheng, J.~Perreau, J.~E. Powell, B.~Han, Z.~Zhang, W.~K. Kwong, S.~G.
+  Tringe, and N.~A. Moran.
+\newblock Division of labor in honey bee gut microbiota for plant polysaccharide
+  digestion.
+\newblock \emph{Proceedings of the National Academy of Sciences}, 118\penalty0
+  (51):\penalty0 e2115013118, 2021.
+\newblock \doi{10.1073/pnas.2115013118}.
 
 \end{thebibliography}

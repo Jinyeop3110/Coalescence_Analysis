@@ -312,12 +312,17 @@ def create_comparison_plot(results, output_dir):
 
     plt.tight_layout(rect=[0.05, 0, 1, 0.93])
 
-    # Save
+    # Save SVG
     output_filename = output_dir / "Fig_assembly_effect_parent_vs_coalesced.svg"
     fig.savefig(output_filename, format='svg', dpi=300, bbox_inches='tight')
-    plt.close()
-
     print(f"\n✓ Created comparison plot: {output_filename}")
+
+    # Save PDF
+    output_filename_pdf = output_dir / "Fig_assembly_effect_parent_vs_coalesced.pdf"
+    fig.savefig(output_filename_pdf, format='pdf', dpi=300, bbox_inches='tight')
+    print(f"✓ Created PDF: {output_filename_pdf}")
+
+    plt.close()
 
 
 def print_statistical_summary(results):

@@ -1,46 +1,58 @@
 This is BibTeX, Version 0.99d (TeX Live 2023)
 Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
 The top-level auxiliary file: main.aux
-The style file: naturemag.bst
+The style file: abbrvnat.bst
 Database file #1: references.bib
-You've used 28 entries,
-            2348 wiz_defined-function locations,
-            1181 strings with 14519 characters,
-and the built_in function-call counts, 11433 in all, are:
-= -- 825
-> -- 284
-< -- 0
-+ -- 142
-- -- 71
-* -- 1438
-:= -- 1283
-add.period$ -- 85
-call.type$ -- 28
-change.case$ -- 29
-chr.to.int$ -- 0
-cite$ -- 28
-duplicate$ -- 999
-empty$ -- 1047
-format.name$ -- 93
-if$ -- 2255
-int.to.chr$ -- 0
-int.to.str$ -- 28
-missing$ -- 234
-newline$ -- 149
-num.names$ -- 28
-pop$ -- 153
+Warning--I didn't find a database entry for "Robinson2024"
+Warning--I didn't find a database entry for "Debray2022"
+Warning--I didn't find a database entry for "Zheng2021"
+Warning--I didn't find a database entry for "Niehaus2021"
+Warning--I didn't find a database entry for "OrozcoFuentes2024"
+Warning--I didn't find a database entry for "Kehe2021"
+Warning--I didn't find a database entry for "Nadell2016"
+Warning--I didn't find a database entry for "Custer2024"
+Warning--I didn't find a database entry for "Fukami2015"
+Warning--I didn't find a database entry for "Tropini2017"
+Warning--I didn't find a database entry for "Amor2024"
+You've used 30 entries,
+            2773 wiz_defined-function locations,
+            866 strings with 11791 characters,
+and the built_in function-call counts, 17420 in all, are:
+= -- 1542
+> -- 1264
+< -- 12
++ -- 426
+- -- 396
+* -- 1640
+:= -- 2769
+add.period$ -- 119
+call.type$ -- 30
+change.case$ -- 220
+chr.to.int$ -- 30
+cite$ -- 60
+duplicate$ -- 615
+empty$ -- 1209
+format.name$ -- 437
+if$ -- 3531
+int.to.chr$ -- 1
+int.to.str$ -- 1
+missing$ -- 30
+newline$ -- 187
+num.names$ -- 120
+pop$ -- 364
 preamble$ -- 1
-purify$ -- 0
+purify$ -- 190
 quote$ -- 0
-skip$ -- 154
+skip$ -- 504
 stack$ -- 0
-substring$ -- 659
-swap$ -- 1005
+substring$ -- 773
+swap$ -- 30
 text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 0
+type$ -- 330
 warning$ -- 0
-while$ -- 71
-width$ -- 30
-write$ -- 314
+while$ -- 137
+width$ -- 0
+write$ -- 452
+(There were 11 warnings)

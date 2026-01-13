@@ -105,3 +105,31 @@
 - **Source**: `Figure_generate/code/Figure/SkewedDistributionTest/skewness_null_comparison_synthetic.{png,svg,pdf}`
 - **Code**: `Figure_generate/code/SkewedDistributionTest/plot_single_comparison.py`
 - **Description**: Scatter plot with mean ± SEM comparing experimental one-sided selection against two null models testing whether skewed parental abundance distributions explain the observed asymmetric outcomes. Shows 100 randomly sampled points with jitter as background, and mean as squares with error bars. Null models: (1) Abundance-weighted random selection - species survival probability proportional to abundance in combined pool; (2) Shuffled abundance - abundances randomly permuted within each parent before neutral mixing. Both null models show significantly lower one-sided selection than experimental data (p < 0.001), indicating skewness alone does not explain the pattern.
+
+## Growth Rate Heterogeneity Ablation (S9)
+
+### Fig_phase_diagram_ablation_growth_std01.pdf / Fig_phase_diagram_ablation_growth_std02.pdf
+- **Source**: `Figure_generate/code/Figure/PhaseDiagram_ablation/Fig_phase_diagram_ablation_growth_std01.pdf`
+- **Code**: `Figure_generate/code/plot_phase_diagram_ablation_growth_rate.py`
+- **Description**: Phase diagrams with heterogeneous growth rates sampled from N(1, σ²) where σ=0.1 (std01) or σ=0.2 (std02). Shows that the qualitative transition from mixing-dominated to CLS/restructuring outcomes is robust to growth-rate variation.
+
+## Carrying Capacity Variation Ablation (S10)
+
+### Fig_phase_diagram_ablation_k_std01.pdf / Fig_phase_diagram_ablation_k_std02.pdf
+- **Source**: `Figure_generate/code/Figure/PhaseDiagram_ablation/Fig_phase_diagram_ablation_k_std01.pdf`
+- **Code**: `Figure_generate/code/plot_phase_diagram_ablation_carrying_capacity.py`
+- **Description**: Phase diagrams with heterogeneous carrying capacities sampled from N(1, σ²) where σ=0.1 (std01) or σ=0.2 (std02). Shows that the qualitative transition from mixing-dominated to CLS/restructuring outcomes is robust to carrying-capacity variation.
+
+## Species Number Ablation (S12)
+
+### overview_ablation_species.pdf
+- **Source**: `Figure_generate/code/Figure/PhaseDiagram_ablation_species_number/overview_ablation_species.pdf`
+- **Code**: `Figure_generate/code/plot_phase_diagram_ablation_species_number.py`
+- **Description**: Three-panel figure showing coalescence outcome fractions (CLS, Mixing, Restructuring) across different numbers of species per parental community (4, 6, 9, 12, 24, 48) at three interaction strengths: (A) μ=0.3, (B) μ=0.6, and (C) μ=0.8. Demonstrates that CLS frequency remains relatively stable across community sizes while Mixing decreases and Restructuring increases with larger communities. Generated from simulation data in `Simulation_Data/*percomm_ablation_species_number/` directories.
+
+## Species-pH Correlation (S23)
+
+### two_panel_ph_asv_figure.pdf
+- **Source**: `Figure_generate/code/Figure/pH_Analysis/two_panel_ph_asv_figure.svg`
+- **Code**: `Figure_generate/code/multivariate_species_ph_regression.py` (generates data), `Figure_generate/code/plot_ph_asv_summary.py` (generates figure)
+- **Description**: Two-panel figure showing (A) distribution of monoculture pH after 15h growth, and (B) summary table of key acidifying and alkalinizing ASVs with their taxonomy and pH values. These species' abundances predict coalescence outcomes.

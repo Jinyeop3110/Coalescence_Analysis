@@ -1,31 +1,10 @@
 % ============================================
-% Lotka-Volterra Simulations
+% Supplementary Note 3: Simulation Robustness
 % ============================================
-\subsection*{E. Lotka-Volterra Simulations}
-\label{sec:suppl:simulations}
+\subsection*{Supplementary Note 3: Simulation Robustness}
+\label{sec:suppl:note3}
 
-Full details of the Lotka-Volterra simulation framework, including model formulation, parameter generation, and coalescence simulation procedures, are provided in the main text Methods section. Here we provide additional details on robustness analyses.
+To test the robustness of our simulation results to the choice of interaction coefficient distribution, we compared three distributions with matched mean interaction strength $\mu$: uniform ranging from 0 to $2\mu$ (primary analysis), Gaussian with mean $\mu$ and standard deviation $\mu/\sqrt{3}$ (truncated at 0), and Gamma with mean $\mu$ and shape parameter 3. All three distributions were parameterized to have the same mean $\mu$ and similar variability. The qualitative transition from mixing-dominated to CLS/Restructuring outcomes with increasing interaction strength was robust across all tested distributions (Supplementary Fig. 11).
 
-% --------------------------------------------
-% E.1 Alternative Interaction Distributions
-% --------------------------------------------
-\subsubsection*{E.1 Alternative Interaction Distributions}
-
-To test the robustness of our simulation results to the choice of interaction coefficient distribution, we compared three distributions with matched mean interaction strength $\mu$:
-
-\begin{itemize}
-    \item \textbf{Uniform:} $I_{ij} \sim \text{Unif}(0, 2\mu)$ (primary analysis)
-    \item \textbf{Gaussian:} $I_{ij} \sim \mathcal{N}(\mu, (\mu/\sqrt{3})^2)$, truncated at 0
-    \item \textbf{Gamma:} $I_{ij} \sim \text{Gamma}(k=3, \theta=\mu/3)$
-\end{itemize}
-
-All three distributions were parameterized to have the same mean $\mu$ and similar coefficient of variation. The qualitative transition from mixing-dominated to CLS/Restructuring outcomes with increasing interaction strength was robust across all tested distributions (Supplementary Fig.~S11).
-
-% --------------------------------------------
-% E.2 Community Size Effects
-% --------------------------------------------
-\subsubsection*{E.2 Community Size Effects}
-
-% \jy{TODO: This section claims that larger communities show higher CLS frequencies - need to verify with actual simulation data or add supporting figure reference. The claim about "competitive exclusion cascades" may need justification.}
-We tested whether community size (number of species per parental community) affects the frequency of CLS outcomes. Simulations were performed with parental community sizes of 6, 12, and 24 species, matching the experimental design. The qualitative patterns were consistent across community sizes, though larger communities showed slightly higher CLS frequencies due to increased opportunity for competitive exclusion cascades.
+We also tested whether community size (number of species per parental community) affects the frequency of CLS outcomes. Simulations were performed with parental community sizes ranging from 4 to 48 species per community (Supplementary Fig. 12). The qualitative patterns were consistent across community sizes: CLS frequency remained relatively stable ($\sim$14--26\% at $\mu=0.3$, $\sim$56--67\% at $\mu=0.6$, $\sim$69--78\% at $\mu=0.8$), while Mixing decreased and Restructuring increased with larger species pools. This pattern reflects increased opportunity for competitive exclusion cascades in larger communities, but the qualitative dominance of CLS at moderate-to-high interaction strengths is robust to community size.
 

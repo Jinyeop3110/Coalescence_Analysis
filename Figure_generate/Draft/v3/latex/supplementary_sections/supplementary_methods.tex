@@ -4,41 +4,145 @@
 \subsection*{Supplementary Methods}
 \label{sec:suppl:methods}
 
-% --------------------------------------------
+% ============================================
+% Microbial Strain Library, Media, and Culture
+% ============================================
+\subsubsection*{Microbial Strain Library, Media, and Culture}
+\label{sec:suppl:strains}
+
+We obtained a library of 54 bacterial isolates derived from soil, tree surface, and flower stamen environments collected in Cambridge, MA, USA. Each isolate was purified by serial streaking and stored as glycerol stocks (25\% glycerol, $-80$~°C). Phylogenetic identities were determined by full-length 16S rRNA gene sequencing and V4 region amplicon sequencing with BLAST alignment to the SILVA 138 database; the 54 isolates corresponded to 50 unique amplicon sequence variants (ASVs) spanning 29 families across three phyla (Proteobacteria, Firmicutes, and Bacteroidota) (Supplementary Fig. 1). Monoculture growth characteristics were measured for all 54 isolates prior to community assembly experiments. Growth yield ranged from OD$_{600}$ = 0.1 to 1.2 after 24~h, and final pH in unbuffered medium ranged from 4.5 to 8.5, indicating substantial phenotypic diversity in growth rate and environmental modification potential (Supplementary Fig. 29).
+
+The culture medium (CM) for isolates was composed of 1~g~L$^{-1}$ yeast extract and 1~g~L$^{-1}$ soytone (both from Becton Dickinson), 10~mM sodium phosphate buffer adjusted to pH~6.5, 0.1~mM CaCl$_2$, 2~mM MgCl$_2$, 4~mg~L$^{-1}$ NiSO$_4$, and 50~mg~L$^{-1}$ MnCl$_2$. All media were filter sterilized using bottle-top filtration units (VWR), and all chemicals were purchased from Sigma--Aldrich unless otherwise noted.
+
+Our coalescence experiments were conducted in three media conditions with varying nutrient supplementation, which produce different strengths of pairwise interactions: (1) Nutr$-$, the culture medium without additional carbon or nitrogen supplementation; (2) Base, CM supplemented with 5~g~L$^{-1}$ glucose and 4~g~L$^{-1}$ urea; and (3) Nutr+, CM supplemented with 20~g~L$^{-1}$ glucose and 16~g~L$^{-1}$ urea. Both parental community assembly and coalescence experiments were performed in the same media condition throughout each experimental series.
+
+Both monocultures and communities were grown in 300~$\mu$L volumes in 96-well deep-well plates (Deepwell plate 96/1000~$\mu$L; Eppendorf) covered with AeraSeal adhesive sealing films (Excel Scientific). Plates were incubated aerobically at 25~°C and shaken at 800~rpm on Titramax shakers (Heidolph). To minimize pre-adaptation, all isolates from frozen stocks were preconditioned for two serial growth--dilution cycles prior to assembling parental communities.
+
+
+% ============================================
+% Construction of Parental Communities and Coalescence
+% ============================================
+\subsubsection*{Construction of Parental Communities and Community Coalescence}
+\label{sec:suppl:coalescence}
+
+Parental communities were constructed at three richness levels: 6, 12, or 24 members (P6, P12, P24), with 42 total communities (9 $\times$ P6, 9 $\times$ P12, 12 $\times$ P24). For P24 communities, 12 partially overlapping communities were assembled because only two non-overlapping sets of 24 species can be drawn from 54 isolates. Coalescence pairs were composed systematically: P6 included 14 pairs, P12 included 27 pairs, and P24 included 6 non-overlapping pairs, resulting in 47 total coalescence pairs for synthetic communities. Some coalescence events were excluded due to sequencing failures.
+
+
+% ============================================
+% 16S rRNA Sequencing and Data Processing
+% ============================================
+\subsubsection*{16S rRNA Sequencing and Data Processing}
+\label{sec:suppl:methods:sequencing}
+
+All samples achieved $>$10,000 reads per sample after quality filtering. Technical replicates showed high reproducibility (Pearson $r > 0.95$). Samples with fewer than 1,000 reads were excluded. Raw ASV counts were converted to relative abundances by total-sum normalization; ASVs below 0.1\% relative abundance were filtered out, corresponding to the extinction threshold used in simulations. For similarity analysis, relative abundance profiles were further normalized to unit length. The phylogenetic tree (Supplementary Fig. 2) was constructed using Simple Phylogeny\citep{Madeira2022}.
+
+
+% ============================================
+% Similarity-Based Classification of Coalescence Outcomes
+% ============================================
+\subsubsection*{Similarity-Based Classification of Coalescence Outcomes}
+\label{sec:suppl:classification}
+
+To characterize coalescence outcomes, we quantified the compositional similarity between the post-coalescence community and each parental community. Each community's species abundance profile was normalized to unit length using L$_2$ normalization (i.e., dividing by the square root of the sum of squared abundances, so that the resulting vector has unit Euclidean length). We then computed the cosine similarity (dot product of normalized vectors) between the coalesced community C and each parent A and B. These two similarity scores place each coalescence outcome in a two-dimensional similarity space, where the position reflects how strongly the coalesced community resembles each parent.
+
+Because parental communities may share species (overlapping ASVs), we used a linear decomposition approach to determine how much of the coalesced community's composition can be attributed to each parent. We computed contribution coefficients $(u, v)$ representing the weighted combination of parental compositions that best reconstructs the coalesced community. When parents share no species, these coefficients equal the cosine similarities. Negative coefficients were set to zero since negative contributions are biologically meaningless. The residual (the portion of composition not explained by either parent) quantifies novel restructuring.
+
+From these coefficients, we derived two classification metrics:
+
+Retention magnitude ($x$): The overall contribution from both parents, calculated as $x = \sqrt{u^2 + v^2}$. Values close to 1 indicate high retention of parental composition; values close to 0 indicate extensive restructuring.
+
+Parental Dominance Index (PDI): A measure of selection preference toward one parent over the other, ranging from 0 (complete dominance by parent B) through 0.5 (equal contributions) to 1 (complete dominance by parent A). PDI is computed from the angular position in similarity space relative to the diagonal where both parents contribute equally:
+\begin{equation}
+\text{PDI} = \frac{1}{\pi} \arctan\left(\frac{u}{v}\right)
+\label{eq:pdi}
+\end{equation}
+where $u$ and $v$ are the contribution coefficients for parents A and B, respectively. When $u \gg v$, PDI approaches 1 (parent A dominance); when $v \gg u$, PDI approaches 0 (parent B dominance); when $u = v$, PDI equals 0.5 (equal contributions).
+
+Based on these metrics, each coalescence event was classified into one of three outcome categories. Restructuring occurs when $x^2 \leq 0.5$, meaning less than half of the coalesced community composition is explained by the parental communities, indicating substantial ecological reorganization. Mixture occurs when $x^2 > 0.5$ and PDI is near 0.5 (i.e., $0.25 \leq \text{PDI} \leq 0.75$), indicating high retention with balanced contributions from both parents and coexistence of parental lineages. CLS (community-level selection) occurs when $x^2 > 0.5$ and PDI is near 0 or 1 (i.e., $\text{PDI} < 0.25$ or $\text{PDI} > 0.75$), indicating high retention but with one parent dominating, reflecting selection for one parental community over the other.
+
+
+% ============================================
+% Lotka-Volterra Simulations
+% ============================================
+\subsubsection*{Lotka-Volterra Simulations}
+\label{sec:suppl:methods:simulations}
+
+We modeled species-abundance dynamics with the generalized Lotka--Volterra (gLV) system, where each species grows logistically and competes pairwise with other species. For species $i$, the rate of population change depends on its intrinsic growth rate, carrying capacity, and the summed competitive effects from all species. To isolate the role of interaction strength, we set all growth rates and carrying capacities to 1. Competition coefficients between species were drawn randomly from a uniform distribution with mean $\mu$, which controls the average strength of interspecific competition.
+
+From a pool of 48 species, we randomly generated two parental communities of 12 species each with no shared species for each simulation replicate. A fresh set of competition coefficients was independently sampled for every replicate so that coalescence dynamics were explored across diverse ecological contexts.
+
+For single-community assembly, we numerically integrated the gLV equations from random initial conditions to ecological steady state using standard numerical methods (\texttt{scipy.integrate.solve\_ivp}). Species with abundances below 0.1\% of carrying capacity were considered extinct and set to zero, yielding two parental-community steady states per replicate.
+
+Community coalescence was simulated by mixing the two pre-equilibrated parental communities at equal proportions, mirroring the experimental 1:1 volume protocol. We formed an equal mixture and re-integrated the gLV system until a new steady state was reached, then reapplied the extinction threshold. This procedure captures the ecological dynamics after mixing and allows competitive exclusion, coexistence, or the emergence of previously rare species.
+
+
+% ============================================
+% Pairwise Invasion Assays
+% ============================================
+\subsubsection*{Pairwise Invasion Assays}
+\label{sec:suppl:methods:invasion}
+
+To empirically estimate interaction strength, we performed pairwise invasion experiments among the 12 most abundant isolates. Isolate pairs were mixed at a 95:5 ratio (resident:invader) by colony count and propagated in Nutr$-$, Base, and Nutr+ media under daily dilution ($\times$30) for 4 cycles. Final compositions were determined by colony counting on agar plates. Competitive outcomes were scored as coexistence, exclusion, or bistability based on final relative abundances (coexistence if both $>$10\%; exclusion if one $<$1\%). The fraction of exclusions was used as a proxy for mean negative interaction strength under each nutrient condition.
+
+
+% ============================================
+% Natural Sample-Derived Communities
+% ============================================
+\subsubsection*{Natural Sample-Derived Communities}
+\label{sec:suppl:natural}
+
+To test whether the coalescence patterns observed in synthetic communities generalize to more ecologically relevant settings, we performed additional coalescence experiments using communities derived from natural environmental samples. Unlike the synthetic communities above, which were assembled from individually isolated strains, natural sample-derived communities retain the complex species assemblages and ecological interactions present in their native habitats. Six environmental samples were collected from diverse microhabitats in Cambridge, MA, USA, including soil, compost, and decomposing organic matter. Each sample was homogenized by vortexing and inoculated into culture medium (CM), then subjected to seven serial growth-dilution cycles (24~h per cycle, $\times$30 dilution) to enrich for laboratory-cultivable bacteria and establish stable communities prior to coalescence.
+
+Coalescence experiments followed the same protocol as synthetic communities. After stabilization, 16 pairwise coalescence events were performed from the 6 parental communities, mixed at 1:1 volume ratio and allowed to re-equilibrate through seven additional serial growth-dilution cycles. Experiments were conducted in all three media conditions (Nutr$-$, Base, and Nutr+) to test whether interaction strength modulates coalescence outcomes in natural sample-derived communities as in synthetic communities. Community composition at each stage (parental and post-coalescence) was characterized via 16S rRNA amplicon sequencing using the same protocol as synthetic communities.
+
+
+% ============================================
+% Statistical Analyses
+% ============================================
+\subsubsection*{Statistical Analyses}
+\label{sec:suppl:statistics}
+
+All analyses were performed in Python 3.11 using NumPy, pandas, and scikit-learn, with statistical significance defined at $\alpha = 0.05$ unless otherwise noted.
+
+\begin{itemize}
+    \item Paired $t$-tests were used to compare mean interaction strengths before and after community assembly.
+    \item Permutation tests (1,000 permutations) were used to assess whether pairwise selection correlations differed between same-parent and cross-parent species pairs. The null distribution was generated by shuffling species origin labels within each coalescence event.
+    \item Mann-Whitney U tests were used to compare experimental one-sided selection values against null model distributions.
+    \item Linear regression was used to quantify the predictability of coalescence outcomes from dominant-species pairwise competition, with $R^2$ reported as the coefficient of determination.
+    \item $\chi^2$ tests were used to compare observed vs.\ expected counts of CLS, Mixture, and Restructuring events.
+    \item Mixed-effects models (lme4 package in R) were used to control for parental community richness and community identity effects when quantifying nutrient dependence.
+\end{itemize}
+
+
+% ============================================
+% Optical Density Measurements
+% ============================================
 \subsubsection*{Optical Density Measurements}
 \label{sec:suppl:od}
 
 Optical density (OD) was measured at 600~nm using a plate reader (BioTek Synergy H1) to monitor community growth and standardize inoculation densities. For monoculture characterization, isolates were grown to stationary phase and OD$_{600}$ was recorded at 24-hour intervals during the 7-day serial dilution regime. For community assembly, parental communities were normalized to equivalent OD$_{600}$ prior to coalescence mixing to ensure equal biomass contributions from each parent. Post-coalescence samples were measured at each serial dilution cycle to track growth dynamics. All OD measurements were blanked against sterile media controls.
 
 
-% --------------------------------------------
+% ============================================
+% Monoculture Characterization
+% ============================================
 \subsubsection*{Monoculture Characterization}
 \label{sec:suppl:monoculture}
 
-To characterize the phenotypic diversity of isolates prior to community assembly, we measured growth rate and pH modification potential for each of the 54 bacterial isolates in monoculture. Growth was monitored by measuring optical density at 600~nm (OD$_{600}$) using a plate reader (BioTek Synergy H1) at 24-hour intervals during a 7-day serial dilution regime ($\times$30 dilution every 24~h) in the culture medium (CM). Growth rate was estimated from the exponential phase of growth curves. Final pH was measured using a microplate pH meter after 24~h of growth in unbuffered medium to assess each isolate's capacity to acidify or alkalinize the environment. The 54 isolates exhibited broad variation in both growth yield (OD$_{600}$ range: 0.1--1.2) and pH modification potential (final pH range: 4.5--8.5), providing the phenotypic diversity necessary for diverse coalescence outcomes (Supplementary Fig.~S30).
+To characterize the phenotypic diversity of isolates prior to community assembly, we measured growth rate and pH modification potential for each of the 54 bacterial isolates in monoculture. Growth was monitored by measuring optical density at 600~nm (OD$_{600}$) using a plate reader (BioTek Synergy H1) at 24-hour intervals during a 7-day serial dilution regime ($\times$30 dilution every 24~h) in the culture medium (CM). Growth rate was estimated from the exponential phase of growth curves. Final pH was measured using a microplate pH meter after 24~h of growth in unbuffered medium to assess each isolate's capacity to acidify or alkalinize the environment. The 54 isolates exhibited broad variation in both growth yield (OD$_{600}$ range: 0.1--1.2) and pH modification potential (final pH range: 4.5--8.5), providing the phenotypic diversity necessary for diverse coalescence outcomes (Supplementary Fig. 29).
 
 
-% --------------------------------------------
+% ============================================
+% Sensitivity Analysis
+% ============================================
 \subsubsection*{Sensitivity Analysis}
 \label{sec:suppl:sensitivity}
 
 To assess the robustness of our classification scheme, we performed sensitivity analyses across two dimensions: similarity metrics and classification boundaries.
 
-\textbf{Similarity Metric Robustness:} We compared coalescence outcome classifications using five different similarity metrics: vector decomposition (primary method), Euclidean distance, Bray-Curtis dissimilarity, Jensen-Shannon divergence, and Jaccard index. Despite different mathematical formulations, all metrics yielded qualitatively consistent outcome distributions, with CLS, Mixture, and Restructuring fractions varying by $<$15\% across metrics (Supplementary Fig.~S4).
+Similarity Metric Robustness: We compared coalescence outcome classifications using five different similarity metrics: vector decomposition (primary method), Euclidean distance, Bray-Curtis dissimilarity, Jensen-Shannon divergence, and Jaccard index. Despite different mathematical formulations, all metrics yielded qualitatively consistent outcome distributions, with CLS, Mixture, and Restructuring fractions varying by $<$15\% across metrics (Supplementary Fig. 4).
 
-\textbf{Classification Boundary Robustness:} We systematically varied the two classification thresholds---retention magnitude ($x^2$) and PDI---to test whether our conclusions depend on specific boundary choices. The retention threshold was varied from 0.3 to 0.7 (default: 0.5), and the PDI threshold from 0.3 to 0.7 (default: 0.5). The qualitative patterns---increasing CLS frequency with nutrient availability and the prevalence of one-sided selection---were robust across all tested boundary combinations.
+Classification Boundary Robustness: We systematically varied the two classification thresholds---retention magnitude ($x^2$) and PDI---to test whether our conclusions depend on specific boundary choices. The retention threshold was varied from 0.3 to 0.7 (default: 0.5), and the PDI threshold for CLS classification was varied from 0.15 to 0.35 (default: 0.25, i.e., CLS when PDI $< 0.25$ or PDI $> 0.75$). The qualitative patterns---increasing CLS frequency with nutrient availability and the prevalence of one-sided selection---were robust across all tested boundary combinations.
 
-\textbf{Simulation Robustness:} For Lotka-Volterra simulations, we tested alternative interaction coefficient distributions including Gaussian ($\alpha_{ij} \sim \mathcal{N}(\mu, (\mu/\sqrt{3})^2)$) and Gamma ($\alpha_{ij} \sim \text{Gamma}(k=3, \theta=\mu/3)$) distributions with matched coefficient of variation. The qualitative transition from mixing-dominated to CLS/Restructuring outcomes with increasing interaction strength was robust to distributional choice (Supplementary Fig.~S11).
+Simulation Robustness: For Lotka-Volterra simulations, we tested alternative interaction coefficient distributions including Gaussian (mean $\mu$, standard deviation $\mu/\sqrt{3}$) and Gamma (mean $\mu$, shape parameter 3) distributions with matched variability. The qualitative transition from mixing-dominated to CLS/Restructuring outcomes with increasing interaction strength was robust to distributional choice (Supplementary Fig. 8).
 
-
-% --------------------------------------------
-\subsubsection*{Data and Code Availability}
-\label{sec:suppl:data}
-
-All raw 16S rRNA sequencing reads have been deposited in the NCBI Sequence Read Archive (SRA) under BioProject accession PRJNAXXXXXX. Processed data, analysis scripts, and simulation code are available at https://github.com/XXXX/coalescence-cls.
-
-
-% --------------------------------------------
-\subsubsection*{Acknowledgments}
-
-This work was supported by XXX. We thank XXX, XXX in Gore Lab for thoughtful and insightful discussion.

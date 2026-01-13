@@ -8,7 +8,7 @@
 \usepackage{amsmath,amssymb,amsfonts}
 \usepackage{graphicx}
 \usepackage[margin=1in]{geometry}
-\usepackage[numbers,super,sort&compress]{natbib}
+\usepackage[round,authoryear]{natbib}
 \usepackage{hyperref}
 \usepackage{xcolor}
 \usepackage{booktabs}
@@ -26,9 +26,6 @@
 \linenumbers
 \doublespacing
 
-% No section numbering (Nature style)
-\setcounter{secnumdepth}{0}
-
 % Hyperref settings
 \hypersetup{
     colorlinks=true,
@@ -41,11 +38,11 @@
 % Custom Commands
 % ============================================
 \newcommand{\todo}[1]{\textcolor{red}{[TODO: #1]}}
-\newcommand{\jy}[1]{\textcolor{red}{#1}}
 \newcommand{\figref}[1]{Fig.~\ref{#1}}
 \newcommand{\eqnref}[1]{Eq.~(\ref{#1})}
 \newcommand{\secref}[1]{Section~\ref{#1}}
 \newcommand{\tabref}[1]{Table~\ref{#1}}
+\newcommand{\jy}[1]{\textcolor{red}{#1}}
 
 % Graphics path
 \graphicspath{{figures/}}
@@ -60,26 +57,14 @@
 
 % Main Text
 \input{sections/introduction}
-%\input{sections/introduction_new}
 \input{sections/results}
 \input{sections/discussion}
 
-% References
-\bibliographystyle{naturemag}
-\bibliography{references}
-
-% Methods (after References - Nature style)
+\newpage
 \input{sections/methods}
 
-% ============================================
-% Supplementary Materials
-% ============================================
-\newpage
-\appendix
-\setcounter{figure}{0}
-\setcounter{table}{0}
-\renewcommand{\thefigure}{S\arabic{figure}}
-\renewcommand{\thetable}{S\arabic{table}}
-%\input{supplementary_main}
+% References
+\bibliographystyle{abbrvnat}
+\bibliography{references}
 
 \end{document}
