@@ -354,8 +354,8 @@ def plot_coalescence_matrices(coal_matrices, colors, isolate_idx, output_dir):
             print(f"Processing {medium} - s{species_pool}: Rep1={n1}×{n1}, Rep2={n2}×{n2}")
 
             # Create figure with two matrix panels side by side
-            # Total width = n1 + n2 (both matrices)
-            fig = plt.figure(figsize=((n1 + n2 + 1) * 1, max(n1, n2) * 1))
+            # Total width = n1 + n2 (both matrices), with larger scaling factor for readability
+            fig = plt.figure(figsize=((n1 + n2 + 1) * 1.2, max(n1, n2) * 1.2))
             fig.suptitle(f'{medium} - Coalescence Outcomes (N_species = {species_pool})',
                         fontsize=14, fontweight='bold')
 
@@ -406,15 +406,15 @@ def plot_coalescence_matrices(coal_matrices, colors, isolate_idx, output_dir):
 
                         # Add row labels on left edge
                         if j == 0:
-                            ax.set_ylabel(rep1_labels[i], fontsize=7, rotation=0,
+                            ax.set_ylabel(rep1_labels[i], fontsize=9, rotation=0,
                                          ha='right', va='center', labelpad=5)
 
                         # Add column labels on top edge
                         if i == 0:
-                            ax.set_title(rep1_labels[j], fontsize=7, pad=2)
+                            ax.set_title(rep1_labels[j], fontsize=9, pad=2)
 
                 # Add replicate label
-                fig.text(0.25, 0.95, 'Replicate 1', ha='center', fontsize=16, fontweight='bold')
+                fig.text(0.25, 0.95, 'Replicate 1', ha='center', fontsize=14, fontweight='bold')
 
             # Plot replicate 2 matrix (right)
             if n2 > 0:
@@ -460,15 +460,15 @@ def plot_coalescence_matrices(coal_matrices, colors, isolate_idx, output_dir):
 
                         # Add row labels on left edge
                         if j == 0:
-                            ax.set_ylabel(rep2_labels[i], fontsize=7, rotation=0,
+                            ax.set_ylabel(rep2_labels[i], fontsize=9, rotation=0,
                                          ha='right', va='center', labelpad=5)
 
                         # Add column labels on top edge
                         if i == 0:
-                            ax.set_title(rep2_labels[j], fontsize=7, pad=2)
+                            ax.set_title(rep2_labels[j], fontsize=9, pad=2)
 
                 # Add replicate label
-                fig.text(0.75, 0.95, 'Replicate 2', ha='center', fontsize=16, fontweight='bold')
+                fig.text(0.75, 0.95, 'Replicate 2', ha='center', fontsize=14, fontweight='bold')
 
             # Save figure
             filename = f'coalescence_matrix_{medium}_s{species_pool}.png'

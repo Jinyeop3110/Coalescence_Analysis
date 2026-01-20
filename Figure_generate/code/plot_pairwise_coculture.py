@@ -80,6 +80,7 @@ def main():
               bbox_to_anchor=(0.5, 1.02), ncol=4)
 
     plt.tight_layout()
+    fig.savefig('Figure/PairwiseInteraction/PairwiseInteraction_StackedBar.svg', bbox_inches='tight')
     plt.show()
 
     # Create error bar plot for exclusion ratio
@@ -128,7 +129,7 @@ def main():
     plt.ylim([0,0.6])
 
     # Save the plot
-    fig.savefig('../figure/PairwiseInteraction_Errorbarplot.svg', bbox_inches='tight')
+    fig.savefig('Figure/PairwiseInteraction/PairwiseInteraction_Errorbarplot.svg', bbox_inches='tight')
     plt.show()
 
 if __name__ == "__main__":

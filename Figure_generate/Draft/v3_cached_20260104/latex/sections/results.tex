@@ -1,0 +1,138 @@
+% ============================================
+% Results
+% ============================================
+\section{Results}
+\label{sec:results}
+
+% --------------------------------------------
+\subsection{Community-level selection is prevalent in microbial coalescence}
+\label{sec:results:cls_prevalent}
+
+Our central question is whether selection acts primarily on whole communities as cohesive units during community coalescence. To address this, we asked how often coalescence outcomes are represented solely by one parental community versus blending both or forming a novel community. Consider a coalescence event where parental communities A and B mix to produce community C (\figref{fig:fig1}A). We represent each community by its abundance vector and compute cosine similarity between the mixed community C and each parent (\figref{fig:fig1}B):
+\begin{equation}
+\text{Sim}(C, A) = \vec{x}_C \cdot \vec{x}_A, \quad \text{Sim}(C, B) = \vec{x}_C \cdot \vec{x}_B
+\label{eq:similarity}
+\end{equation}
+where $\vec{x}_A$, $\vec{x}_B$ are L$_2$-normalized abundance vectors of parents A and B, and $\vec{x}_C$ is that of the coalesced community. These two similarity scores yield a two-dimensional similarity map in which the location of C reflects how strongly it resembles each parent. We partition this map into three classes, in which each corresponds to qualitatively different types of coalescence outcomes (see Methods). If C lies close to one parent and far from the other, we infer community-level selection (CLS) for that parental community. If C lies near the diagonal and similarly resembles both parents, it is consistent with a Mixture where both parental communities coexist. If C lies far from both parents, the community has reassembled into a novel configuration, which we term Restructuring.
+
+To quantify these occurrence of outcome types experimentally, we assembled random in-vitro communities and subjected them to pairwise coalescence (\figref{fig:fig1}C). We first curated a strain library of 54 bacterial isolates collected from diverse environments (soil, tree surface, and flower stamen). The library is phylogenetically broad, spanning 29 families across three phyla: Proteobacteria, Firmicutes, and Bacteroidota (Supplementary Fig.~S1, S2). From this library, we assembled 42 parental communities with varying initial richness (6, 12, or 24 species; see Methods) and stabilized them for 7 days under daily growth--dilution cycles ($\times$30 every 24~h) (\figref{fig:fig1}C). Our initial experiments were done in Base medium (BM) (1~g~L$^{-1}$ yeast extract, 1~g~L$^{-1}$ soytone, 10~mM sodium phosphate, 0.1~mM CaCl$_2$, 2~mM MgCl$_2$, 4~mg~L$^{-1}$ NiSO$_4$, 50~mg~L$^{-1}$ MnCl$_2$, 5~g~L$^{-1}$ glucose and 4~g~L$^{-1}$ urea; pH~6.5), a buffered complex medium that supports high species coexistence (Supplementary Information, mean species survival ratio = $74 \pm 2$\%). We then performed 83 pairwise coalescence events by mixing parents at equal volume and restabilizing for an additional 7 days. Community composition of parental communities and coalesced communities were measured at the end of stabilization by 16S rRNA amplicon sequencing (ASV-level profiles), and we also recorded the biomass (OD) and pH of the communities to contextualize assembly and post-coalescence dynamics.
+
+Representative time series illustrate the spectrum of post-coalescence dynamics (\figref{fig:fig1}D). In outcomes classified as CLS, one parental lineage rapidly displaces the other after mixing and the coalesced community converges to a composition closely matching that parent, while largely preserving its internal relative-abundance structure over serial dilution cycles. This behaviour is consistent with selection acting at the community level rather than on individual species alone. In the Restructuring case, the merged community converges toward a novel state distinct from both parental communities. Among 12 randomly selected time-series trajectories, we did not observe Mixture cases in which both parents remained comparably represented after coalescence (see Supplementary Fig.~S3).
+
+Projecting all outcomes into the similarity space (\figref{fig:fig1}E) revealed that CLS is the most frequent empirical outcome. Of the 82 analyzable coalescence events (one excluded due to low sequencing depth), 54 were classified as CLS, 26 as Restructuring, and only 2 as Mixture (\figref{fig:fig1}E). This pattern of CLS as the most frequent outcome was robust across variants of similarity metrics (Supplementary Fig.~S4). One possibility is that the observed frequency of CLS results from skewed species abundance distributions rather than correlated selection among species from the same parental community. To rule out this possibility, we compared experimental outcomes against two null models that assume no correlation in species selection: (1) abundance-weighted random selection and (2) shuffled abundance. The experimentally observed asymmetry in CLS significantly exceeded both null expectations (Supplementary Fig.~S8), indicating that CLS reflects genuine ecological dynamics beyond statistical artifacts of skewed abundance distributions.
+
+% Figure 1
+\begin{figure}[H]
+\centering
+\includegraphics[width=\textwidth]{figure_main_1_experimental_overview.pdf}
+\caption{\textbf{Community-level selection is the dominant outcome in experimental microbial coalescence.}
+\textbf{(A)} Schematic of community coalescence: parental communities A and B are mixed to produce outcome C, classified as community-level selection (CLS), Mixture, or Restructuring based on similarity to parents.
+\textbf{(B)} Cosine similarity between relative-abundance vectors quantifies compositional resemblance between communities.
+\textbf{(C)} Experimental workflow: bacterial isolates are assembled into parental communities, pairwise coalesced, and tracked by 16S sequencing.
+\textbf{(D)} Representative time-series showing two CLS outcomes, where one parent dominates after coalescence, and a Restructuring outcome, where a novel composition emerges.
+\textbf{(E)} Of 82 coalescence events, CLS is the most frequent outcome (65.9\%, 54/82), followed by Restructuring (31.7\%, 26/82) and Mixture (2.4\%, 2/82).}
+\label{fig:fig1}
+\end{figure}
+
+
+% --------------------------------------------
+\subsection{Theoretical model with random gLV interactions reproduces community-level selection}
+\label{sec:results:glv_model}
+To gain insight into why CLS is the prevalent outcome, we built a generalized Lotka--Volterra (gLV) model that mirrors the experimental protocol (\figref{fig:fig2}A). In the gLV model, given species $i \in \{1, 2, 3, \ldots N\}$, the dynamics are given as:
+\begin{equation}
+\frac{dn_i}{dt} = n_i \left( r_i - \sum_j \alpha_{ij} n_j \right)
+\label{eq:glv}
+\end{equation}
+where $n_i$ is the abundance of species $i$ and $r_i$ is the intrinsic growth rate set uniformly to 1. Because competition is the dominant interaction type in our experimental system \citep{Hu2022,Hu2025}, we simulated communities with purely competitive interactions by setting self-regulation $\alpha_{ii} = 1$ and drawing off-diagonal competition coefficients $\alpha_{ij} \geq 0$ independently from $\text{Uniform}(0, 2\mu)$ with mean interaction strength $\mu = \langle \alpha_{ij} \rangle$; increasing $\mu$ strengthens the net competitive interactions between species. From a species pool of $N = 48$, we generated two parental communities by sampling non-overlapping species subsets (size $S=12$ each), initialized abundances log-uniformly between $10^{-4}$ and $10^{-2}$, and evolved each to steady state (extinction threshold $10^{-4}$; stability defined by $\left|\frac{dn_i}{dt}\right| < 10^{-6}$ over the final window). Coalescence was simulated by equally mixing two equilibrated parental communities, then evolved to the new steady state (\figref{fig:fig2}A). The steady state abundance is normalized by total abundance and used for similarity calculations as in the experiment.
+
+We simulated 200 random coalescence events at interaction strength $\mu = 0.6$ and analyzed the cosine similarity of each coalescence outcome to the two parental communities. At this interaction strength, the random-interaction model quantitatively reproduces the high frequency of CLS observed in the experiments. The distribution of outcomes in the similarity map concentrates near the A-like or B-like axes, indicating that one parental community is dominantly selected rather than forming symmetric mixtures (\figref{fig:fig2}B). Quantitatively, CLS accounts for 59.1\% of all outcomes, far more frequent than Restructuring (21.6\%) or Mixture (19.2\%; \figref{fig:fig2}B, right). This observation suggests that interspecies interactions alone, a minimal and generic condition, are sufficient to reproduce community-level selection in coalescence. 
+
+To understand how CLS emerges in the model, we examined the role of the assembly process. During assembly, competitive exclusion filters out species with strong mutual interactions, leaving communities with reduced mean interaction strength compared to the initial pool (paired $t$-test, $p < 0.001$; \figref{fig:fig2}C)\cite{Gilpin1994, Lechon2021}. This generates internal coherence, whereby species that survived assembly together exhibit weak competitive interactions and consequently share a shared survival or extinction during coalescence. Consistent with this mechanism, species pairs from the same parent showed strongly positive selection correlation across coalescence events, whereas cross-parent pairs showed negative correlation (\figref{fig:fig2}D). This pattern appears in both simulation and experiment, confirming that assembly-driven coherence underlies CLS even when all pairwise interactions are drawn from a simple random distribution.
+
+% Figure 2
+\begin{figure}[H]
+\centering
+\includegraphics[width=\textwidth]{figure_main_2_simulation_framework.pdf}
+\caption{\textbf{Random competitive interactions are sufficient to reproduce community-level selection.}
+\textbf{(A)} Generalized Lotka--Volterra (gLV) simulation workflow. Interaction coefficients are drawn from a uniform distribution with mean $\mu$. Parental communities are assembled to steady state, mixed 1:1, and re-stabilized. Dashed line: extinction threshold.
+\textbf{(B)} At $\mu = 0.6$, simulations reproduce high CLS frequencies. Heatmap shows outcome density in similarity space; pie chart shows outcome fractions ($n = 200$).
+\textbf{(C)} Assembly filters out strong interactions: mean pairwise interaction strength is lower in surviving communities than in the initial pool (paired $t$-test, $p < 0.001$).
+\textbf{(D)} Pairwise selection correlation in simulation ($\mu = 0.6$) and experiment. Species from the same parent show positive correlation in survival across coalescence events; cross-parent pairs show negative correlation ($p < 0.001$).}
+\label{fig:fig2}
+\end{figure}
+
+
+% --------------------------------------------
+\subsection{Interaction strength controls the occurrence of community-level selection}
+\label{sec:results:interaction_strength}
+
+Having established that interspecies interactions can recapitulate CLS, we next investigated how interaction strength alter coalescence outcomes. We simulated 1,000 coalescence events at each of three representative interaction strengths ($\mu = 0.3, 0.6, 0.8$) and mapped outcomes into the similarity space (\figref{fig:fig3}A). At weak interactions ($\mu = 0.3$), outcomes clustered in the interior of the map, indicating that both parental communities persisted comparably after mixing. As $\mu$ increased to 0.6 and 0.8, outcomes shifted toward the axes, indicating that one parent increasingly dominated the other.
+
+To quantify this shift, we defined the Parental Dominance Index (PDI), which measures both the magnitude and direction of parental preference:
+\begin{equation}
+\text{PDI} = \frac{\arctan\left(\frac{\text{Sim}(C,B)}{\text{Sim}(C,A)}\right) - \frac{\pi}{4}}{\pi/4}
+\label{eq:pdi}
+\end{equation}
+Geometrically, PDI measures the normalized angular deviation from the diagonal $\text{Sim}(C,A) = \text{Sim}(C,B)$; PDI $= 0$ corresponds to balanced contributions from both parents, PDI $= +1$ indicates complete selection for parent B, and PDI $= -1$ indicates complete selection for parent A. At $\mu = 0.3$, $|\text{PDI}|$ values concentrated near zero, consistent with Mixture-dominated outcomes. At $\mu = 0.6$ and $0.8$, $|\text{PDI}|$ distributions became bimodal and skewed toward $\pm 1$, reflecting more frequent and stronger CLS (\figref{fig:fig3}A, histograms).
+
+Across interaction strengths $\mu = 0$–$1.2$, we observed a qualitative transition in coalescence outcomes (\figref{fig:fig3}B). At low $\mu$, Mixture was the most frequent outcome and CLS was rare. As $\mu$ increased, the Mixture fraction declined while CLS rose and eventually dominated. Restructuring emerged at modest to high interaction strengths. These patterns were robust to variation in carrying capacities, interaction distributions, and similarity metrics (Supplementary Figs.~S9--S11). The pairwise selection correlation also increased with interaction strength, indicating that amplification of the assembly effect underlies the emergence of CLS (Supplementary Fig.~S29). Together, these simulation results imply a bidirectional shift: weakening interactions drives outcomes toward Mixture, whereas strengthening interactions drives them toward CLS.
+
+% Figure 3
+\begin{figure}[H]
+\centering
+\includegraphics[width=\textwidth]{figure_main_3_interaction_strength.pdf}
+\caption{\textbf{Stronger interactions shift coalescence outcomes from Mixture toward community-level selection.}
+\textbf{(A)} Coalescence-outcome maps at three interaction strengths ($\mu = 0.3, 0.6, 0.8$). Polar heatmaps show outcome density in similarity space; histograms show Parental Dominance Index (PDI) distributions. Weak interactions ($\mu = 0.3$) produce Mixture-dominated outcomes; stronger interactions shift outcomes toward CLS.
+\textbf{(B)} Outcome fractions across interaction strengths ($\mu = 0$--$1.2$). Increasing $\mu$ shifts outcomes from Mixture toward CLS.}
+\label{fig:fig3}
+\end{figure}
+
+
+% --------------------------------------------
+\subsection{Nutrient-dependent interaction strength in experiments recapitulates model predictions}
+\label{sec:results:nutrient_experiment}
+
+We asked whether the model-predicted shift in coalescence outcomes depending on interaction strength can be recapitulated experimentally. Following prior work showing that nutrient availability intensifies microbial competition \citep{Hu2022, Ratzke2020, Hu2025}, we conducted additional coalescence experiments by removing or augmenting glucose and urea in the Base medium used in \figref{fig:fig1} (Methods). This yielded two additional media conditions (\figref{fig:fig4}A): Nutr$-$ (no added glucose/urea) and Nutr+ (high supplementation). Higher nutrient availability is expected to amplify consumer--resource feedbacks and intensify environmental modification, thereby strengthening interspecies interactions \citep{Ratzke2020}. To empirically validate this effect, we measured failed invasion frequency using pairwise invasion assays among the 12 most abundant isolates (95:5 initial frequency; Methods, Supplementary Fig.~S12--S14). The fraction of failed invasions---which roughly corresponds to species pairs with interaction coefficient $\alpha_{ij} > 1$ in the gLV framework---increased monotonically with nutrient supply (\figref{fig:fig4}B). Calibrating these values against gLV simulations yielded approximate mean interaction strengths of $\mu \approx 0.5$ for Nutr$-$, $\mu \approx 0.7$ for Base, and $\mu \approx 0.9$ for Nutr+ (see Supplementary Methods).
+
+We tested this prediction experimentally across all three media using the same parental community library. The distribution of outcomes in similarity space shifted systematically with nutrient concentration (\figref{fig:fig4}C), which we quantified by the fraction of each outcome type (\figref{fig:fig4}D). In Nutr$-$ ($n = 90$), where interactions are weakest, Mixture was the most frequent outcome (56\%), and CLS was substantially reduced to 34\% compared to the Base medium (CLS: 60\%, Mixture: 8\%), indicating that community-level selection largely disappears under weak interactions. In Nutr+ ($n = 90$), CLS further increased to 72\%. Pairwise selection correlation analysis further supported this pattern: in Nutr$-$, species from the same parent showed no significant difference in selection correlation compared to cross-parent pairs, whereas in Nutr+, same-parent species exhibited significantly higher selection correlation than cross-parent pairs ($p < 0.001$; Supplementary Fig.~S21), indicating that correlated species selection underlies the increased CLS at higher interaction strengths. These results are surprisingly consistent with the model prediction. When interactions are weak, CLS largely disappears and both parental communities mix; in contrast, stronger interactions dominated by CLS.
+
+% Figure 4
+\begin{figure}[H]
+\centering
+\includegraphics[width=\textwidth]{figure_main_4_nutrient_perturbation.pdf}
+\caption{\textbf{Nutrient modulation validates the model-predicted dependence of coalescence outcomes on interaction strength.}
+\textbf{(A)} Nutrient supply modulates competitive interactions. Communities were grown in three media: Nutr$-$ (no added glucose/urea), Base, and Nutr+ (high supplementation).
+\textbf{(B)} Failed invasion frequency among the 12 most abundant isolates increases with nutrient concentration, confirming stronger competitive interactions at higher nutrients.
+\textbf{(C)} Coalescence maps and PDI histograms for each medium. Marker shapes indicate initial richness (circles: 6, squares: 12, triangles: 24 species).
+\textbf{(D)} CLS fraction increases with nutrient concentration: 34\% in Nutr$-$, 60\% in Base, and 72\% in Nutr+, while Mixture declines from 56\% to 8\% to 6\%, confirming model predictions.}
+\label{fig:fig4}
+\end{figure}
+
+
+% --------------------------------------------
+\subsection{Predictability of community-level selection separates into two regimes}
+\label{sec:results:predictability}
+
+We observed CLS in both Base and Nutr+ media, and we next asked whether we can predict the direction of CLS—that is, which parental community will be selected during coalescence. Prior work has suggested that species-level competitive outcomes may correlate with community-level selection direction \citep{Rillig2015, Castledine2020}. Inspired by these observations, we tested whether pairwise competition between dominant species \citep{Hu2022, Ratzke2020} predicts the direction of CLS (\figref{fig:fig5}A).
+
+The relative abundance of dominant species increased with nutrient concentration (43.8\% in Nutr$-$, 51.1\% in Base, 66.9\% in Nutr+; \figref{fig:fig5}B), suggesting that dominant species have larger relative population size under stronger interactions. We therefore tested whether pairwise competition between dominant species predicts the direction of CLS by analyzing the linear relationship between dominant-species competitive success (from invasion assays) and the PDI of coalescence outcomes (\figref{fig:fig5}C). Predictive power varied markedly across media: in Nutr$-$, where CLS is rare, pairwise competition showed no predictive power ($R^2 = 0.00$); in Base medium, predictive power was weak ($R^2 = 0.11$), suggesting that collective multi-species dynamics shape outcomes; in Nutr+, pairwise competition was substantially more predictive ($R^2 = 0.49$), indicating that the dominant species largely determines which community wins. These results reveal two distinct regimes underlying CLS: an emergent regime at intermediate interactions where multi-species dynamics collectively shape the outcome, and a species-driven regime at strong interactions where a few dominant taxa determine the winner.
+
+% Figure 5
+\begin{figure}[H]
+\centering
+\includegraphics[width=\textwidth]{figure_main_5_predictability.pdf}
+\caption{\textbf{Two mechanistic regimes underlie community-level selection: emergent versus species-driven dynamics.}
+\textbf{(A)} Conceptual framework: CLS may arise from emergent dynamics (multi-species interactions collectively determine the winner) or species-driven dynamics (dominant species determines the winner).
+\textbf{(B)} Dominant species relative abundance increases with nutrient concentration, indicating stronger interactions produce more uneven communities.
+\textbf{(C)} Predictability of CLS direction from pairwise competition between dominant species. Invasion success of the dominant species (x-axis) versus PDI (y-axis). Predictive power increases from Nutr$-$ ($R^2 = 0.00$) to Base ($R^2 = 0.11$, emergent regime) to Nutr+ ($R^2 = 0.49$, species-driven regime).}
+\label{fig:fig5}
+\end{figure}
+
+
+% --------------------------------------------
+\subsection{Community-level selection generalizes to natural sample-derived communities}
+\label{sec:results:natural_communities}
+
+\jy{The synthetic communities described above were assembled from individually isolated bacterial strains, allowing precise control over initial composition but raising the question of whether CLS generalizes to more ecologically realistic settings. To address this, we performed coalescence experiments using communities derived from natural environmental samples, which harbor complex species assemblages shaped by evolutionary and ecological processes in their native habitats.}
+
+\jy{We collected six environmental samples from diverse microhabitats (soil, compost, and decomposing organic matter) and established bacterial communities through seven rounds of serial growth-dilution in laboratory media, allowing natural assemblages to stabilize under controlled conditions (Supplementary Fig.~S28A). After stabilization, we performed 16 pairwise coalescence events across all three nutrient conditions (Nutr$-$, Base, and Nutr+) and analyzed outcomes using the same vector decomposition framework applied to synthetic communities. The results revealed striking parallels between natural and synthetic systems (Supplementary Fig.~S28B,C). Natural sample-derived communities exhibited the same qualitative patterns: outcomes clustered along the axes in similarity space, indicating one-sided selection dynamics rather than symmetric mixing. Moreover, the fraction of CLS outcomes increased with nutrient availability, mirroring the interaction-strength dependence observed in synthetic communities. These results demonstrate that community-level selection is a robust phenomenon that emerges regardless of community assembly history---from precisely controlled synthetic consortia to complex, naturally-evolved microbial assemblages---suggesting that the underlying mechanism of correlated species retention operates broadly across microbial systems.}

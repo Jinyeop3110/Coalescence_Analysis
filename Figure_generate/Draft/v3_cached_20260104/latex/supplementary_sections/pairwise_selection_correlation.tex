@@ -1,0 +1,67 @@
+% ============================================
+% C. Pairwise Selection Correlation Analysis
+% ============================================
+\subsection*{C. Pairwise Selection Correlation Analysis}
+\label{sec:suppl:pairwise_correlation}
+
+To quantify whether species from the same parental community exhibit correlated selection during coalescence, we developed a pairwise selection correlation metric that measures co-occurrence patterns among species pairs within each coalescence event.
+
+\subsubsection*{Species origin assignment}
+
+For each coalescence event, we first assigned each species to its parental community of origin. A species was assigned to parent $A$ if it was present (relative abundance $> 10^{-4}$) only in parent $A$, to parent $B$ if present only in parent $B$, or to the parent with higher abundance if present in both. Species absent from both parents were excluded from the analysis.
+
+\subsubsection*{Concordance-based correlation metric}
+
+For each species pair within a coalescence event, we evaluated whether their presence/absence patterns in the offspring community were concordant. A pair $(i, j)$ is \textit{concordant} if both species share the same fate---either both are present in the offspring ($p_i = 1, p_j = 1$) or both are absent ($p_i = 0, p_j = 0$). A pair is \textit{discordant} if one species survives while the other goes extinct.
+
+We computed the concordance rate separately for two categories of species pairs:
+\begin{itemize}
+    \item \textbf{Same-origin pairs:} Species pairs where both species originate from the same parental community (either both from parent $A$ or both from parent $B$).
+    \item \textbf{Cross-origin pairs:} Species pairs where the two species originate from different parental communities (one from parent $A$ and one from parent $B$).
+\end{itemize}
+
+The concordance rate for each category is defined as the fraction of concordant pairs:
+\begin{equation}
+\text{Concordance rate} = \frac{\text{Number of concordant pairs}}{\text{Total number of pairs}}
+\end{equation}
+
+We then converted the concordance rate to a correlation-like metric ranging from $-1$ to $+1$:
+\begin{equation}
+\rho = 2 \times \text{Concordance rate} - 1
+\label{eq:concordance_to_correlation}
+\end{equation}
+Under this transformation, a concordance rate of 1 (all pairs concordant) yields $\rho = +1$, a concordance rate of 0.5 (random) yields $\rho = 0$, and a concordance rate of 0 (all pairs discordant) yields $\rho = -1$.
+
+\subsubsection*{Per-event calculation and aggregation}
+
+For each coalescence event $k$, we computed:
+\begin{itemize}
+    \item $\rho_{\text{same}}^{(k)}$: the correlation among same-origin species pairs
+    \item $\rho_{\text{cross}}^{(k)}$: the correlation among cross-origin species pairs
+\end{itemize}
+
+The mean pairwise selection correlation was then computed by averaging across all valid coalescence events:
+\begin{equation}
+\bar{\rho}_{\text{same}} = \frac{1}{N}\sum_{k=1}^{N} \rho_{\text{same}}^{(k)}, \quad
+\bar{\rho}_{\text{cross}} = \frac{1}{N}\sum_{k=1}^{N} \rho_{\text{cross}}^{(k)}
+\end{equation}
+where $N$ is the number of coalescence events with sufficient species for analysis (at least 2 species from each parent).
+
+\subsubsection*{Null model and statistical testing}
+
+To test whether observed correlations differed from random expectation, we generated a null distribution by shuffling species origin labels within each event. Specifically, for each coalescence event, we permuted the parent assignments among species while preserving the total number of species from each parent. This null model breaks any association between parental origin and co-occurrence patterns while preserving the marginal distributions.
+
+We performed 1,000 permutations and computed a two-tailed permutation $p$-value:
+\begin{equation}
+p = \frac{\#\{|\Delta_{\text{null}}| \geq |\Delta_{\text{obs}}|\}}{n_{\text{permutations}}}
+\end{equation}
+where $\Delta = \bar{\rho}_{\text{same}} - \bar{\rho}_{\text{cross}}$ is the difference between same-origin and cross-origin correlations.
+
+Additionally, we performed a paired $t$-test comparing $\rho_{\text{same}}^{(k)}$ and $\rho_{\text{cross}}^{(k)}$ across events, as each event provides a paired observation.
+
+\subsubsection*{Results interpretation}
+
+Positive same-origin correlation ($\bar{\rho}_{\text{same}} > 0$) indicates that species from the same parental community tend to share the same fate during coalescence---they either survive together or go extinct together. Negative cross-origin correlation ($\bar{\rho}_{\text{cross}} < 0$) indicates that species from different parents tend to have opposite fates, consistent with competitive exclusion between parental communities. The difference $\Delta = \bar{\rho}_{\text{same}} - \bar{\rho}_{\text{cross}}$ quantifies the strength of community-level coherence: larger positive values indicate stronger tendency for species to be selected as groups defined by parental origin.
+
+In both simulations (Supplementary Fig.~S29) and experiments (Supplementary Fig.~S21), we observed $\bar{\rho}_{\text{same}} > 0$ and $\bar{\rho}_{\text{cross}} < 0$, with the difference increasing with interaction strength. This pattern confirms that assembly history creates correlated selection among species from the same parental community, providing the mechanistic basis for community-level selection.
+

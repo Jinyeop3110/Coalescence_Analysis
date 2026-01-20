@@ -1,0 +1,44 @@
+% ============================================
+% Supplementary Methods
+% ============================================
+\subsection*{Supplementary Methods}
+\label{sec:suppl:methods}
+
+% --------------------------------------------
+\subsubsection*{Optical Density Measurements}
+\label{sec:suppl:od}
+
+Optical density (OD) was measured at 600~nm using a plate reader (BioTek Synergy H1) to monitor community growth and standardize inoculation densities. For monoculture characterization, isolates were grown to stationary phase and OD$_{600}$ was recorded at 24-hour intervals during the 7-day serial dilution regime. For community assembly, parental communities were normalized to equivalent OD$_{600}$ prior to coalescence mixing to ensure equal biomass contributions from each parent. Post-coalescence samples were measured at each serial dilution cycle to track growth dynamics. All OD measurements were blanked against sterile media controls.
+
+
+% --------------------------------------------
+\subsubsection*{Monoculture Characterization}
+\label{sec:suppl:monoculture}
+
+To characterize the phenotypic diversity of isolates prior to community assembly, we measured growth rate and pH modification potential for each of the 54 bacterial isolates in monoculture. Growth was monitored by measuring optical density at 600~nm (OD$_{600}$) using a plate reader (BioTek Synergy H1) at 24-hour intervals during a 7-day serial dilution regime ($\times$30 dilution every 24~h) in the culture medium (CM). Growth rate was estimated from the exponential phase of growth curves. Final pH was measured using a microplate pH meter after 24~h of growth in unbuffered medium to assess each isolate's capacity to acidify or alkalinize the environment. The 54 isolates exhibited broad variation in both growth yield (OD$_{600}$ range: 0.1--1.2) and pH modification potential (final pH range: 4.5--8.5), providing the phenotypic diversity necessary for diverse coalescence outcomes (Supplementary Fig.~S30).
+
+
+% --------------------------------------------
+\subsubsection*{Sensitivity Analysis}
+\label{sec:suppl:sensitivity}
+
+To assess the robustness of our classification scheme, we performed sensitivity analyses across two dimensions: similarity metrics and classification boundaries.
+
+\textbf{Similarity Metric Robustness:} We compared coalescence outcome classifications using five different similarity metrics: vector decomposition (primary method), Euclidean distance, Bray-Curtis dissimilarity, Jensen-Shannon divergence, and Jaccard index. Despite different mathematical formulations, all metrics yielded qualitatively consistent outcome distributions, with CLS, Mixture, and Restructuring fractions varying by $<$15\% across metrics (Supplementary Fig.~S4).
+
+\textbf{Classification Boundary Robustness:} We systematically varied the two classification thresholds---retention magnitude ($x^2$) and PDI---to test whether our conclusions depend on specific boundary choices. The retention threshold was varied from 0.3 to 0.7 (default: 0.5), and the PDI threshold from 0.3 to 0.7 (default: 0.5). The qualitative patterns---increasing CLS frequency with nutrient availability and the prevalence of one-sided selection---were robust across all tested boundary combinations.
+
+\textbf{Simulation Robustness:} For Lotka-Volterra simulations, we tested alternative interaction coefficient distributions including Gaussian ($\alpha_{ij} \sim \mathcal{N}(\mu, (\mu/\sqrt{3})^2)$) and Gamma ($\alpha_{ij} \sim \text{Gamma}(k=3, \theta=\mu/3)$) distributions with matched coefficient of variation. The qualitative transition from mixing-dominated to CLS/Restructuring outcomes with increasing interaction strength was robust to distributional choice (Supplementary Fig.~S11).
+
+
+% --------------------------------------------
+\subsubsection*{Data and Code Availability}
+\label{sec:suppl:data}
+
+All raw 16S rRNA sequencing reads have been deposited in the NCBI Sequence Read Archive (SRA) under BioProject accession PRJNAXXXXXX. Processed data, analysis scripts, and simulation code are available at https://github.com/XXXX/coalescence-cls.
+
+
+% --------------------------------------------
+\subsubsection*{Acknowledgments}
+
+This work was supported by XXX. We thank XXX, XXX in Gore Lab for thoughtful and insightful discussion.

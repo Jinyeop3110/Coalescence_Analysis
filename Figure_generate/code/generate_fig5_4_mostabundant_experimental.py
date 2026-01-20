@@ -160,7 +160,7 @@ def plot_most_abundant_fraction():
         val = [df.values[i,index[i]] for i in range(len(df))]
         data[c_i] = val
     
-    fig = plt.figure(figsize=(30*mm, 40*mm))
+    fig = plt.figure(figsize=(35*mm, 40*mm))
 
     x = [0, 1, 2]
     y = np.nan_to_num([np.mean(data[i]) for i in data.keys()])
@@ -174,9 +174,14 @@ def plot_most_abundant_fraction():
 
     bars = plt.bar(x, y, color=colors_points, alpha=0.3, linewidth=0.5)
 
-    # Add text labels to the bars
+    # Add error bars with matching colors
+    for i in range(3):
+        plt.errorbar(x[i], y[i], yerr=yerr[i], fmt='none',
+                     ecolor=colors_points[i], elinewidth=1.2, capsize=3, capthick=1.2, alpha=0.5)
+
+    # Add text labels to the bars (integer percentages)
     for bar, value in zip(bars, y):
-        plt.text(bar.get_x() + bar.get_width() / 2, value, str(round(value*100, 1))+'%',
+        plt.text(bar.get_x() + bar.get_width() / 2, value + 0.02, f'{int(round(value*100))}%',
                 ha='center', fontsize=6, va='bottom')
 
     plt.xticks([0, 1, 2], ['LN', 'MN', 'HN'])
@@ -201,7 +206,7 @@ def plot_most_abundant_fraction_coalesced():
         val = [df.values[i,index[i]] for i in range(len(df))]
         data[c_i] = val
 
-    fig = plt.figure(figsize=(30*mm, 40*mm))
+    fig = plt.figure(figsize=(35*mm, 40*mm))
 
     x = [0, 1, 2]
     y = np.nan_to_num([np.mean(data[i]) for i in data.keys()])
@@ -215,9 +220,14 @@ def plot_most_abundant_fraction_coalesced():
 
     bars = plt.bar(x, y, color=colors_points, alpha=0.3, linewidth=0.5)
 
-    # Add text labels to the bars
+    # Add error bars with matching colors
+    for i in range(3):
+        plt.errorbar(x[i], y[i], yerr=yerr[i], fmt='none',
+                     ecolor=colors_points[i], elinewidth=1.2, capsize=3, capthick=1.2, alpha=0.5)
+
+    # Add text labels to the bars (integer percentages)
     for bar, value in zip(bars, y):
-        plt.text(bar.get_x() + bar.get_width() / 2, value, str(round(value*100, 1))+'%',
+        plt.text(bar.get_x() + bar.get_width() / 2, value + 0.02, f'{int(round(value*100))}%',
                 ha='center', fontsize=6, va='bottom')
 
     plt.xticks([0, 1, 2], ['LN', 'MN', 'HN'])

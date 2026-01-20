@@ -1,0 +1,27 @@
+MULTIVARIATE SPECIES-pH REGRESSION SUMMARY
+==================================================
+
+MODEL PERFORMANCE:
+Training R² = 0.4663
+Test R² = 0.4457
+Training RMSE = 1.4457
+Test RMSE = 1.4823
+
+Intercept: 5.5788
+
+SPECIES COEFFICIENTS (sorted by importance):
+----------------------------------------
+NormalizedAbundance9: 5.5070 (pH increases)
+NormalizedAbundance2: 4.1792 (pH increases)
+NormalizedAbundance10: 3.8244 (pH increases)
+NormalizedAbundance7: 3.7338 (pH increases)
+NormalizedAbundance5: 3.4758 (pH increases)
+NormalizedAbundance3: -3.1446 (pH decreases)
+NormalizedAbundance4: 2.5351 (pH increases)
+NormalizedAbundance6: 2.3952 (pH increases)
+NormalizedAbundance1: 1.4927 (pH increases)
+NormalizedAbundance8: 1.2653 (pH increases)
+
+Sample size: 580 samples
+Number of predictors: 10 species
+pH range: 3.70 - 9.10

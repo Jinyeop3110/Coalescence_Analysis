@@ -1,0 +1,50 @@
+% ============================================
+% Supplementary Section: Skewness Null Model Analysis
+% ============================================
+
+\subsection*{Testing Whether Skewed Abundance Distributions Explain One-Sided Selection}
+
+A potential concern is that the observed one-sided community-level selection (where one parental community's composition dominates the coalesced offspring) could arise simply from skewed relative abundance distributions in the parental communities, rather than from ecological interactions. If one parental community has a highly uneven abundance distribution with a few dominant species, random processes alone might favor retention of those species in the offspring.
+
+\subsubsection*{Skewness of Parental and Coalesced Community Abundance Distributions}
+
+To characterize the degree of abundance skewness, we constructed rank-abundance curves comparing parental communities before coalescence with coalesced communities after coalescence for each nutrient condition (Supplementary Figs.~S5, S6, S7). All community profiles show characteristic log-linear decays with similar Gini coefficients between parental and coalesced communities: Base (parental: 0.62 $\pm$ 0.19, coalesced: 0.64 $\pm$ 0.15), Nutr$-$ (parental: 0.63 $\pm$ 0.09, coalesced: 0.61 $\pm$ 0.12), and Nutr+ (parental: 0.64 $\pm$ 0.17, coalesced: 0.66 $\pm$ 0.14). These high Gini values indicate substantial inequality in species abundances in both parental and coalesced communities, confirming that abundance skewness is a general feature that could potentially influence coalescence outcomes.
+
+\subsubsection*{Null Model Testing}
+
+To address this concern, we compared the experimental one-sided selection values against two null models designed to test whether parental abundance skewness can account for the observed patterns.
+
+\subsubsection*{Null Model Descriptions}
+
+\textbf{Null Model 1: Abundance-Weighted Random Selection.}
+In this null model, species survival probability in the offspring community is proportional to their abundance in the combined parental pool. Specifically, for each simulated coalescence event, we:
+\begin{enumerate}
+    \item Combined the two parental abundance vectors by averaging.
+    \item Assigned each species a survival probability proportional to its combined abundance.
+    \item Randomly selected species to survive based on these probabilities, maintaining the empirically observed retention rate ($\sim$71\% of species from the combined pool).
+    \item Generated offspring abundances for surviving species using exponential random sampling.
+\end{enumerate}
+This null model tests whether high-abundance species are simply more likely to survive regardless of which parent they originated from.
+
+\textbf{Null Model 2: Shuffled Abundance.}
+In this null model, we preserved species identities but randomly permuted abundances among species within each parental community. Specifically:
+\begin{enumerate}
+    \item For each parent, we shuffled the abundance values among species that were present (above threshold).
+    \item We then performed neutral mixing of the shuffled parents using a random mixing coefficient $\alpha \in [0,1]$.
+\end{enumerate}
+This null model tests whether specific species having high abundance matters for the outcome, or whether only the overall skewness structure affects one-sided selection.
+
+\subsubsection*{Results}
+
+We generated 500 null offspring communities for each null model and calculated the one-sided selection metric (defined as $\left|\frac{\arctan(a/b)}{\pi/4} - 1\right|$, where $a$ and $b$ are the vector decomposition coefficients for each parental community's contribution to the offspring).
+
+The experimental data showed a mean one-sided selection of 0.698 ($n = 265$ coalescence events). Both null models produced significantly lower one-sided selection values:
+% \jy{NOTE: TO FIX - p-values here differ from main Methods which states $p < 10^{-11}$ for both comparisons. Verify correct values.}
+\begin{itemize}
+    \item Abundance-weighted null: mean = 0.476 (Mann-Whitney U test, $p < 10^{-18}$)
+    \item Shuffled abundance null: mean = 0.557 (Mann-Whitney U test, $p < 10^{-11}$)
+\end{itemize}
+
+These results indicate that skewed parental abundance distributions alone cannot fully explain the observed one-sided selection patterns. While abundance skewness may contribute to asymmetric outcomes (as evidenced by the shuffled null being closer to experimental values than the abundance-weighted null), ecological factors beyond simple abundance-weighted survival appear to play a role in determining which parental community's species dominate the coalesced offspring.
+
+See Supplementary Fig.~S8 for the comparison of experimental versus null model distributions.

@@ -226,21 +226,23 @@ def plot_ablation_phase_diagrams():
         plot_types = expected_mu_values
         plot_data1, plot_data2, plot_data3 = padded_data1, padded_data2, padded_data3
 
-        # Generate output filename
-        output_filename = f"Figure/PhaseDiagram_ablation/Fig_phase_diagram_{session['output_suffix']}.svg"
+        # Generate output in multiple formats (svg, png, pdf)
+        output_base = f"Figure/PhaseDiagram_ablation/Fig_phase_diagram_{session['output_suffix']}"
 
         try:
-            # Create the phase diagram
-            create_phase_diagram(
-                plot_types,
-                plot_data1, plot_data2, plot_data3,
-                custom_x_ticks,
-                custom_x_labels,
-                output_filename=output_filename,
-                plot_boundary=False
-            )
+            for fmt in ['svg', 'png', 'pdf']:
+                output_filename = f"{output_base}.{fmt}"
+                # Create the phase diagram
+                create_phase_diagram(
+                    plot_types,
+                    plot_data1, plot_data2, plot_data3,
+                    custom_x_ticks,
+                    custom_x_labels,
+                    output_filename=output_filename,
+                    plot_boundary=False
+                )
 
-            print(f"  Created: {output_filename}")
+            print(f"  Created: {output_base}.[svg,png,pdf]")
             successful_plots += 1
 
             # Print statistics about the data
@@ -248,7 +250,7 @@ def plot_ablation_phase_diagrams():
             print(f"  Data points processed: {total_points}")
 
         except Exception as e:
-            print(f"  Failed to create {output_filename}: {e}")
+            print(f"  Failed to create {output_base}: {e}")
             import traceback
             traceback.print_exc()
             failed_plots += 1

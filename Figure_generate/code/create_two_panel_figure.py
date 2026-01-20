@@ -55,10 +55,10 @@ def load_ph_change_data():
         return pd.DataFrame()
 
 def create_two_panel_ph_figure(df_change, output_dir):
-    """Create two-panel figure with histogram on top and ASV positions below"""
-    
-    # Create figure with two subplots sharing x-axis
-    fig, (ax1, ax2) = plt.subplots(2, 1, figsize=(4, 2), height_ratios=[3, 1], 
+    """Create two-panel figure with histogram on top, ASV positions below, and taxa legend at bottom"""
+
+    # Create figure with three subplots: histogram, ASV positions, and legend
+    fig, (ax1, ax2) = plt.subplots(2, 1, figsize=(4, 2.5), height_ratios=[3, 1],
                                    sharex=True, gridspec_kw={'hspace': 0.1})
     
     # Define pH range and bins
@@ -94,24 +94,25 @@ def create_two_panel_ph_figure(df_change, output_dir):
     ax1.tick_params(labelbottom=False)
     
     # BOTTOM PANEL: ASV positions
-    # ASV data with exact pH values from the data
-    asv_wells = {
-        'ASV12': 'B5',  # pH 3.2
-        'ASV3': 'D7',   # pH 3.8  
-        'ASV8': 'A1',   # pH 4.2
-        'ASV9': 'B1',   # pH 5.5
-        'ASV11': 'A4'   # pH 6.8
+    # ASV data with exact pH values from the data and taxa information
+    asv_info = {
+        'ASV3':  {'well': 'D7', 'taxa': 'Enterobacter'},
+        'ASV8':  {'well': 'A1', 'taxa': 'Citrobacter'},
+        'ASV9':  {'well': 'B1', 'taxa': 'Pseudomonas'},
+        'ASV11': {'well': 'A4', 'taxa': 'Stenotrophomonas'},
+        'ASV12': {'well': 'B5', 'taxa': 'Serratia'},
     }
-    
+
     asv_data = []
-    for asv_name, well in asv_wells.items():
-        well_data = df_change[df_change['Well'] == well]
+    for asv_name, info in asv_info.items():
+        well_data = df_change[df_change['Well'] == info['well']]
         if not well_data.empty:
             ph_value = well_data['pH_final'].iloc[0]
             asv_data.append({
                 'name': asv_name,
                 'ph': ph_value,
-                'well': well
+                'well': info['well'],
+                'taxa': info['taxa']
             })
     
     # Define colors for each ASV
@@ -195,13 +196,35 @@ def create_two_panel_ph_figure(df_change, output_dir):
     for ax in [ax1, ax2]:
         ax.spines['top'].set_visible(False)
         ax.spines['right'].set_visible(False)
-    
+
+    # Add taxa legend at the bottom of the figure with colored dots
+    # Sort ASVs by pH for legend (acidifiers first, then alkalizers)
+    asv_data_sorted = sorted(asv_data, key=lambda x: x['ph'])
+
+    # Create legend with colored dots
+    from matplotlib.lines import Line2D
+
+    legend_elements = []
+    legend_labels = []
+    for asv in asv_data_sorted:
+        color = asv_colors[asv['name']]['color']
+        legend_elements.append(Line2D([0], [0], marker='o', color='w',
+                                       markerfacecolor=color, markersize=6))
+        legend_labels.append(f"{asv['name']}: {asv['taxa']}")
+
+    # Add legend below the figure
+    fig.legend(legend_elements, legend_labels, loc='lower center',
+               ncol=len(asv_data_sorted), fontsize=7, frameon=False,
+               bbox_to_anchor=(0.5, -0.02), handletextpad=0.3, columnspacing=1.0)
+
     plt.tight_layout()
-    
+    plt.subplots_adjust(bottom=0.15)  # Make room for legend
+
     # Save figure
     fig.savefig(f"{output_dir}/two_panel_ph_asv_figure.svg", bbox_inches='tight', dpi=300)
     fig.savefig(f"{output_dir}/two_panel_ph_asv_figure.png", bbox_inches='tight', dpi=300)
-    
+    fig.savefig(f"{output_dir}/two_panel_ph_asv_figure.pdf", bbox_inches='tight', dpi=300)
+
     return fig
 
 def main():

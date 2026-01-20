@@ -481,6 +481,7 @@ def create_phase_diagram(
     )
 
     ax1.set_ylabel('Fraction')
+    ax1.set_xlabel(r'Interaction Strength $\mu$')
     ax1.set_xlim([0, n_types])
     ax1.set_ylim([0, 1])
     ax1.set_xticks([])

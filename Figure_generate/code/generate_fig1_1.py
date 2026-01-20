@@ -437,7 +437,7 @@ def plot_timeseries_coal(Processed_sequences_synthetic, IDX_list, mask_1, mask_2
 
 def plot_timeseries_merged(Processed_sequences_synthetic, IDX_list_sub1, IDX_list_sub2,
                            IDX_list_coal, mask_1, species_1, species_2, filename):
-    """Plot merged time series with sub1 + sub2 -> coal layout with curly brace."""
+    """Plot merged time series with sub1 + sub2 -> coal layout with clean arrow."""
     np.random.seed(42)
     mask_2 = ~mask_1
     color_map = settingTheColor()
@@ -475,17 +475,16 @@ def plot_timeseries_merged(Processed_sequences_synthetic, IDX_list_sub1, IDX_lis
     n_sub2 = len(df_sub2)
     n_coal = len(df_coal)
 
-    # Create figure with GridSpec for layout
+    # Create figure with GridSpec for layout (increased size for labels)
     # Left side: sub1 (top) + sub2 (bottom), Right side: coal
-    fig = plt.figure(figsize=(20 * mm, 16 * mm), facecolor='w')
+    fig = plt.figure(figsize=(28 * mm, 22 * mm), facecolor='w')
 
     # Calculate widths based on number of bars
     left_width = max(n_sub1, n_sub2)
     right_width = n_coal
-    total_width = left_width + right_width + 2  # +2 for arrow space
 
-    gs = fig.add_gridspec(2, 3, width_ratios=[left_width, 1.5, right_width],
-                          height_ratios=[1, 1], wspace=0.1, hspace=0.15)
+    gs = fig.add_gridspec(2, 3, width_ratios=[left_width, 1.2, right_width],
+                          height_ratios=[1, 1], wspace=0.15, hspace=0.25)
 
     ax_sub1 = fig.add_subplot(gs[0, 0])
     ax_sub2 = fig.add_subplot(gs[1, 0])
@@ -502,12 +501,19 @@ def plot_timeseries_merged(Processed_sequences_synthetic, IDX_list_sub1, IDX_lis
         ax_sub1.bar(bar_l * x_scale, df_sub1[deg], width=0.9 * x_scale, bottom=bottom,
                    linewidth=0, color=color_map[i])
         bottom += df_sub1[deg].values
-    ax_sub1.set_xlim(-0.5, (n_sub1 - 0.5) * x_scale)
+    ax_sub1.set_xlim(-0.5 * x_scale, (n_sub1 - 0.5) * x_scale)
     ax_sub1.set_ylim(0, 1)
-    for spine in ax_sub1.spines.values():
-        spine.set_visible(False)
+    # Add y-axis label for sub1 (shared label for both parent panels)
+    ax_sub1.set_ylabel('Relative\nAbundance', fontsize=7, labelpad=2)
+    ax_sub1.set_yticks([0, 1])
+    ax_sub1.set_yticklabels(['0', '1'], fontsize=6)
+    ax_sub1.tick_params(axis='y', length=2, pad=1)
     ax_sub1.set_xticks([])
-    ax_sub1.set_yticks([])
+    # Only show left spine
+    ax_sub1.spines['top'].set_visible(False)
+    ax_sub1.spines['right'].set_visible(False)
+    ax_sub1.spines['bottom'].set_visible(False)
+    ax_sub1.spines['left'].set_linewidth(0.5)
 
     # Plot sub2 (bottom left)
     bar_l = np.array(range(n_sub2))
@@ -516,49 +522,34 @@ def plot_timeseries_merged(Processed_sequences_synthetic, IDX_list_sub1, IDX_lis
         ax_sub2.bar(bar_l * x_scale, df_sub2[deg], width=0.9 * x_scale, bottom=bottom,
                    linewidth=0, color=color_map[i])
         bottom += df_sub2[deg].values
-    ax_sub2.set_xlim(-0.5, (n_sub2 - 0.5) * x_scale)
+    ax_sub2.set_xlim(-0.5 * x_scale, (n_sub2 - 0.5) * x_scale)
     ax_sub2.set_ylim(0, 1)
-    for spine in ax_sub2.spines.values():
-        spine.set_visible(False)
-    ax_sub2.set_xticks([])
-    ax_sub2.set_yticks([])
+    # Add x-axis label for sub2
+    ax_sub2.set_xlabel('Cycle', fontsize=7, labelpad=2)
+    ax_sub2.set_xticks([i * x_scale for i in range(n_sub2)])
+    ax_sub2.set_xticklabels([str(i) for i in range(n_sub2)], fontsize=6)
+    ax_sub2.tick_params(axis='x', length=2, pad=1)
+    ax_sub2.set_yticks([0, 1])
+    ax_sub2.set_yticklabels(['0', '1'], fontsize=6)
+    ax_sub2.tick_params(axis='y', length=2, pad=1)
+    # Only show left and bottom spines
+    ax_sub2.spines['top'].set_visible(False)
+    ax_sub2.spines['right'].set_visible(False)
+    ax_sub2.spines['left'].set_linewidth(0.5)
+    ax_sub2.spines['bottom'].set_linewidth(0.5)
 
-    # Draw curly brace and arrow in middle panel
+    # Draw clean arrow in middle panel (replacing curly brace)
     ax_arrow.set_xlim(0, 1)
     ax_arrow.set_ylim(0, 1)
     ax_arrow.axis('off')
 
-    # Simple approach: draw a curly brace using lines and then an arrow
-    brace_left = 0.15
-    brace_tip = 0.35
-    brace_top = 0.82
-    brace_bottom = 0.18
-    brace_mid = 0.5
+    # Add "+" symbol between parent panels
+    ax_arrow.text(0.15, 0.5, '+', fontsize=12, ha='center', va='center',
+                  fontweight='bold')
 
-    # Draw the curly brace with simple lines
-    lw = 0.8
-    # Top vertical line
-    ax_arrow.plot([brace_left, brace_left], [brace_top, brace_mid + 0.06], 'k-', lw=lw)
-    # Top diagonal to tip
-    ax_arrow.plot([brace_left, brace_tip], [brace_mid + 0.06, brace_mid], 'k-', lw=lw)
-    # Bottom vertical line
-    ax_arrow.plot([brace_left, brace_left], [brace_bottom, brace_mid - 0.06], 'k-', lw=lw)
-    # Bottom diagonal to tip
-    ax_arrow.plot([brace_left, brace_tip], [brace_mid - 0.06, brace_mid], 'k-', lw=lw)
-
-    # Draw arrow: line + triangle arrowhead
-    arrow_start = brace_tip + 0.05
-    arrow_end = 0.88
-    arrow_y = 0.5
-    # Arrow shaft (thicker)
-    ax_arrow.plot([arrow_start, arrow_end - 0.12], [arrow_y, arrow_y], 'k-', lw=1.2)
-    # Arrowhead as filled triangle (larger)
-    from matplotlib.patches import Polygon
-    arrow_head = Polygon([[arrow_end, arrow_y],
-                          [arrow_end - 0.15, arrow_y + 0.12],
-                          [arrow_end - 0.15, arrow_y - 0.12]],
-                         closed=True, facecolor='black', edgecolor='black')
-    ax_arrow.add_patch(arrow_head)
+    # Draw clean horizontal arrow
+    ax_arrow.annotate('', xy=(0.92, 0.5), xytext=(0.35, 0.5),
+                      arrowprops=dict(arrowstyle='->', lw=1.5, color='black'))
 
     # Plot coal (right side, spanning both rows)
     bar_l = np.array(range(n_coal))
@@ -582,12 +573,21 @@ def plot_timeseries_merged(Processed_sequences_synthetic, IDX_list_sub1, IDX_lis
                    linewidth=0, color=color_map[i])
         bottom += df_coal[deg].values
 
-    ax_coal.set_xlim(-0.5, (n_coal - 0.5) * x_scale)
+    ax_coal.set_xlim(-0.5 * x_scale, (n_coal - 0.5) * x_scale)
     ax_coal.set_ylim(0, 1)
-    for spine in ax_coal.spines.values():
-        spine.set_visible(False)
-    ax_coal.set_xticks([])
-    ax_coal.set_yticks([])
+    # Add x-axis label for coalesced panel
+    ax_coal.set_xlabel('Cycle', fontsize=7, labelpad=2)
+    ax_coal.set_xticks([i * x_scale for i in range(n_coal)])
+    ax_coal.set_xticklabels([str(i) for i in range(n_coal)], fontsize=6)
+    ax_coal.tick_params(axis='x', length=2, pad=1)
+    ax_coal.set_yticks([0, 1])
+    ax_coal.set_yticklabels(['0', '1'], fontsize=6)
+    ax_coal.tick_params(axis='y', length=2, pad=1)
+    # Only show left and bottom spines
+    ax_coal.spines['top'].set_visible(False)
+    ax_coal.spines['right'].set_visible(False)
+    ax_coal.spines['left'].set_linewidth(0.5)
+    ax_coal.spines['bottom'].set_linewidth(0.5)
 
     plt.savefig(filename, bbox_inches='tight')
     plt.savefig(filename.replace('.svg', '.pdf'), bbox_inches='tight')

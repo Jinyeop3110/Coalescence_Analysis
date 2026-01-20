@@ -1,0 +1,31 @@
+% ============================================
+% Lotka-Volterra Simulations
+% ============================================
+\subsection*{E. Lotka-Volterra Simulations}
+\label{sec:suppl:simulations}
+
+Full details of the Lotka-Volterra simulation framework, including model formulation, parameter generation, and coalescence simulation procedures, are provided in the main text Methods section. Here we provide additional details on robustness analyses.
+
+% --------------------------------------------
+% E.1 Alternative Interaction Distributions
+% --------------------------------------------
+\subsubsection*{E.1 Alternative Interaction Distributions}
+
+To test the robustness of our simulation results to the choice of interaction coefficient distribution, we compared three distributions with matched mean interaction strength $\mu$:
+
+\begin{itemize}
+    \item \textbf{Uniform:} $I_{ij} \sim \text{Unif}(0, 2\mu)$ (primary analysis)
+    \item \textbf{Gaussian:} $I_{ij} \sim \mathcal{N}(\mu, (\mu/\sqrt{3})^2)$, truncated at 0
+    \item \textbf{Gamma:} $I_{ij} \sim \text{Gamma}(k=3, \theta=\mu/3)$
+\end{itemize}
+
+All three distributions were parameterized to have the same mean $\mu$ and similar coefficient of variation. The qualitative transition from mixing-dominated to CLS/Restructuring outcomes with increasing interaction strength was robust across all tested distributions (Supplementary Fig.~S11).
+
+% --------------------------------------------
+% E.2 Community Size Effects
+% --------------------------------------------
+\subsubsection*{E.2 Community Size Effects}
+
+% \jy{TODO: This section claims that larger communities show higher CLS frequencies - need to verify with actual simulation data or add supporting figure reference. The claim about "competitive exclusion cascades" may need justification.}
+We tested whether community size (number of species per parental community) affects the frequency of CLS outcomes. Simulations were performed with parental community sizes of 6, 12, and 24 species, matching the experimental design. The qualitative patterns were consistent across community sizes, though larger communities showed slightly higher CLS frequencies due to increased opportunity for competitive exclusion cascades.
+
