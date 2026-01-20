@@ -1,46 +1,46 @@
 This is BibTeX, Version 0.99d (TeX Live 2023)
 Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
 The top-level auxiliary file: main.aux
-The style file: abbrvnat.bst
+The style file: naturemag.bst
 Database file #1: references.bib
-You've used 41 entries,
-            2773 wiz_defined-function locations,
-            925 strings with 14538 characters,
-and the built_in function-call counts, 24752 in all, are:
-= -- 2158
-> -- 1908
-< -- 12
-+ -- 641
-- -- 600
-* -- 2384
-:= -- 3954
-add.period$ -- 163
-call.type$ -- 41
-change.case$ -- 322
-chr.to.int$ -- 41
-cite$ -- 82
-duplicate$ -- 847
-empty$ -- 1651
-format.name$ -- 651
-if$ -- 4995
-int.to.chr$ -- 1
-int.to.str$ -- 1
-missing$ -- 41
-newline$ -- 253
-num.names$ -- 164
-pop$ -- 533
+You've used 48 entries,
+            2348 wiz_defined-function locations,
+            1314 strings with 18700 characters,
+and the built_in function-call counts, 19310 in all, are:
+= -- 1405
+> -- 436
+< -- 0
++ -- 218
+- -- 109
+* -- 2426
+:= -- 2169
+add.period$ -- 143
+call.type$ -- 48
+change.case$ -- 47
+chr.to.int$ -- 0
+cite$ -- 48
+duplicate$ -- 1695
+empty$ -- 1812
+format.name$ -- 144
+if$ -- 3829
+int.to.chr$ -- 0
+int.to.str$ -- 48
+missing$ -- 395
+newline$ -- 247
+num.names$ -- 48
+pop$ -- 237
 preamble$ -- 1
-purify$ -- 281
+purify$ -- 0
 quote$ -- 0
-skip$ -- 703
+skip$ -- 253
 stack$ -- 0
-substring$ -- 1026
-swap$ -- 41
+substring$ -- 1147
+swap$ -- 1699
 text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 451
+type$ -- 0
 warning$ -- 0
-while$ -- 188
-width$ -- 0
-write$ -- 618
+while$ -- 125
+width$ -- 50
+write$ -- 531

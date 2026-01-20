@@ -4,11 +4,9 @@
 \subsection*{Supplementary Note 4: Pairwise Selection Correlation}
 \label{sec:suppl:note4}
 
-To quantify whether species from the same parental community exhibit correlated selection during coalescence, we developed a pairwise selection correlation metric. For each coalescence event, species were assigned to their parental community of origin (parent with higher abundance if present in both). For each species pair, we evaluated whether their presence/absence patterns in the offspring were concordant (both present or both absent) or discordant (one survives, one extinct).
+To quantify whether species from the same parental community exhibit correlated selection during coalescence, we developed a pairwise selection correlation metric. For each coalescence event, species were assigned to their parental community of origin (the parent with higher abundance if present in both). For each species pair, we evaluated whether their presence/absence patterns in the offspring were concordant (both present or both absent) or discordant (one survives, one extinct).
 
-The concordance rate was converted to a correlation metric: $\rho = 2 \times \text{Concordance rate} - 1$, yielding values from $-1$ (all discordant) to $+1$ (all concordant). We computed $\rho_{\text{same}}$ for same-origin pairs and $\rho_{\text{cross}}$ for cross-origin pairs, then averaged across coalescence events.
-
-To test significance, we generated null distributions by shuffling species origin labels (1,000 permutations) and computed permutation $p$-values for $\Delta = \bar{\rho}_{\text{same}} - \bar{\rho}_{\text{cross}}$.
+The concordance rate was converted to a correlation metric: $\rho = 2 \times \text{Concordance rate} - 1$, yielding values from $-1$ (all discordant) to $+1$ (all concordant). We computed $\rho_{\text{same}}$ for same-origin pairs and $\rho_{\text{cross}}$ for cross-origin pairs, then averaged across coalescence events. To test significance, we generated null distributions by shuffling species origin labels (1,000 permutations) and computed permutation $p$-values for $\Delta = \bar{\rho}_{\text{same}} - \bar{\rho}_{\text{cross}}$.
 
 Positive $\bar{\rho}_{\text{same}}$ indicates species from the same parent share fates (survive or go extinct together); negative $\bar{\rho}_{\text{cross}}$ indicates cross-parent species have opposite fates. In both simulations (Supplementary Fig. 10) and experiments (Supplementary Fig. 14), we observed $\bar{\rho}_{\text{same}} > 0$ and $\bar{\rho}_{\text{cross}} < 0$, with $\Delta$ increasing with interaction strength. This confirms that assembly history creates correlated selection among same-parent species, providing the mechanistic basis for CLS.
 
