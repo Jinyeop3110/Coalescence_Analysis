@@ -8,7 +8,7 @@
 \subsection*{Microbial Strain Library and Culture Conditions}
 \label{sec:methods:strains}
 
-We used a library of 54 bacterial isolates from environmental samples (soil, tree surface, and flower stamen) collected in Cambridge, MA, USA, spanning 29 families across three phyla (Proteobacteria, Firmicutes, and Bacteroidota; Supplementary Fig. 1). Isolates were purified by serial streaking and stored as glycerol stocks at $-80$~°C. Experiments were conducted in culture medium at three nutrient supplementation levels---Nutr$-$ (no supplementation), Base (5~g~L$^{-1}$ glucose, 4~g~L$^{-1}$ urea), and Nutr+ (20~g~L$^{-1}$ glucose, 16~g~L$^{-1}$ urea)---which produce different strengths of interspecific interactions. Communities were grown in 300~$\mu$L volumes in 96-well deep-well plates at 25~°C with shaking at 800~rpm. Full media composition and culture conditions are provided in Supplementary Methods.
+We used a library of 54 bacterial isolates from environmental samples (soil, tree surface, and flower stamen) collected in Cambridge, MA, USA, spanning 29 families across three phyla (Proteobacteria, Firmicutes, and Bacteroidota; Supplementary Fig. 1). Isolates were purified by serial streaking and stored as glycerol stocks at $-80$~°C. Experiments were conducted in culture medium containing 1~g~L$^{-1}$ yeast extract, 1~g~L$^{-1}$ soytone, 10~mM sodium phosphate, 0.1~mM CaCl$_2$, 2~mM MgCl$_2$, 4~mg~L$^{-1}$ NiSO$_4$, 50~mg~L$^{-1}$ MnCl$_2$ (pH~6.5), supplemented at three nutrient levels---Nutr$-$ (no added glucose/urea), Base (5~g~L$^{-1}$ glucose, 4~g~L$^{-1}$ urea), and Nutr+ (20~g~L$^{-1}$ glucose, 16~g~L$^{-1}$ urea)---which produce different strengths of interspecific interactions. Communities were grown in 300~$\mu$L volumes in 96-well deep-well plates at 25~°C with shaking at 800~rpm. Full media composition and culture conditions are provided in Supplementary Methods.
 
 
 % --------------------------------------------
@@ -29,28 +29,29 @@ Community composition was measured by 16S rRNA amplicon sequencing (V4 region). 
 \subsection*{Classification of Coalescence Outcomes}
 \label{sec:methods:classification}
 
-Coalescence outcomes were classified based on cosine similarity between the coalesced community and each parental community. Each community was represented as a normalized abundance vector (see Supplementary Methods for normalization details), and similarity was computed as the dot product between the coalesced community vector and each parental vector. These two similarity scores place each outcome in a two-dimensional similarity space. From the similarity scores, we derived: (1) retention magnitude, quantifying how much of the coalesced composition is explained by the parents; and (2) parental dominance index (PDI), quantifying selection preference toward one parent (0: parent B dominance, 0.5: equal contributions, 1: parent A dominance). Outcomes were categorized as restructuring (low retention; substantial ecological reorganization), mixture (high retention with PDI near 0.5; balanced parental contributions), or community-level selection (CLS) (high retention with PDI near 0 or 1; one parent dominates). Full mathematical framework is provided in Supplementary Methods.
+Coalescence outcomes were classified based on similarity between the coalesced community and each parental community. Each community was represented as a normalized abundance vector (see Supplementary Methods for normalization details), and similarity was computed as the dot product between the coalesced community vector and each parental vector. These two similarity scores place each outcome in a two-dimensional similarity space. From the similarity scores, we derived: (1) retention magnitude, quantifying how much of the coalesced composition is explained by the parental communities; and (2) parental dominance index (PDI), quantifying selection preference toward one parental community (0: parental community B dominance, 0.5: equal contributions, 1: parental community A dominance). Outcomes were categorized as Restructuring (low retention; substantial ecological reorganization), Mixture (high retention with PDI near 0.5; balanced parental contributions), or Dominance (high retention with PDI near 0 or 1; one parental community overwhelms the other). To assess whether Dominance reflects community-level selection, we computed pairwise selection correlations measuring whether species from the same parental community share selection outcomes during coalescence. Full mathematical framework is provided in Supplementary Methods.
 
 
 % --------------------------------------------
 \subsection*{Lotka--Volterra Simulations}
 \label{sec:methods:simulations}
 
-Community dynamics were modeled using generalized Lotka--Volterra (gLV) equations (Eq.~\ref{eq:glv}). We fixed growth rates to 1 and drew off-diagonal competition coefficients from a uniform distribution with mean $\mu$, which controls mean interaction strength. From a pool of 48 species, we randomly generated two parental communities of 12 species each with no shared species. Communities were equilibrated numerically (species below 0.1\% relative abundance threshold set to zero), then mixed pairwise at equal proportions to simulate coalescence. Each simulation used independently sampled interaction matrices to explore diverse ecological contexts. Full simulation parameters and robustness analyses are provided in Supplementary Methods.
+Community dynamics were modeled using generalized Lotka--Volterra (gLV) equations (Eq.~\ref{eq:glv}). We fixed growth rates to 1 and drew off-diagonal competition coefficients from a uniform distribution with mean $\mu$, which controls mean interaction strength. From a pool of 54 species, we randomly generated two parental communities of 12 species each with no shared species. Communities were equilibrated numerically (species below 0.1\% relative abundance threshold set to zero), then mixed pairwise at equal proportions to simulate coalescence. Each simulation used independently sampled interaction matrices to explore diverse ecological contexts. Full simulation parameters and robustness analyses are provided in Supplementary Methods.
 
 
 % --------------------------------------------
 \subsection*{Pairwise Invasion Assays}
 \label{sec:methods:invasion}
 
-To empirically estimate interaction strength, pairwise invasion experiments were performed among the 12 most abundant isolates. Isolate pairs were mixed at 95:5 ratio (resident:invader) and propagated through four daily dilution cycles ($\times$30) across all three nutrient conditions. Final compositions were determined by colony counting. Competitive outcomes were scored as coexistence (both $>$10\%), exclusion (one $<$1\%), or bistability. The fraction of exclusions served as a proxy for mean interaction strength (\figref{fig:fig4}B). Full experimental details are provided in Supplementary Methods.
+To empirically estimate interaction strength, we performed pairwise invasion assays among the 12 most abundant isolates. Each pair was tested in both directions (resident:invader = 95:5) and propagated through seven daily dilution cycles across all three nutrient conditions. Final compositions were determined by colony counting. An invasion was scored as failed if the invader remained below 1\% relative abundance. Pairwise outcomes were then classified as coexistence (both isolates above 10\% in both directions), exclusion (the same isolate drove its competitor below 1\% in both directions), or bistability (each isolate excluded the other when resident). The fraction of failed invasions served as a proxy for mean interaction strength (\figref{fig:fig4}B). Full experimental details are provided in Supplementary Methods.
+
 
 
 % --------------------------------------------
 \subsection*{Natural Sample-Derived Communities}
 \label{sec:methods:natural}
 
-To test generality, coalescence experiments were performed using communities derived from six natural environmental samples (soil, compost, decomposing matter) collected in Cambridge, MA. Unlike synthetic communities assembled from isolated strains, these communities retain complex species assemblages from their native habitats. Samples were enriched through seven serial dilution cycles to establish stable communities, then 16 pairwise coalescence events were conducted across all three nutrient conditions. Full experimental details are provided in Supplementary Methods.
+We performed coalescence experiments using communities derived from six natural environmental samples (soil, compost, decomposing matter) collected in Cambridge, MA. Unlike synthetic communities assembled from isolated strains, these communities retain complex species assemblages from their native habitats. Samples were enriched through seven serial dilution cycles to establish stable communities, then 15 pairwise coalescence events (each with two biological replicates, $n = 30$ per condition) were conducted across all three nutrient conditions. Full experimental details are provided in Supplementary Methods.
 
 
 % --------------------------------------------
@@ -64,7 +65,7 @@ Statistical significance was defined at $\alpha = 0.05$. Paired $t$-tests compar
 \subsection*{Data Availability}
 \label{sec:methods:data}
 
-Isolates and communities are available upon request. All data are available in the Supplementary Information and via Dryad at \url{http://datadryad.org/share/LINK_NOT_FOR_PUBLICATION/kQACU7LCmQclVZfGZk0bS5ZPUVL_grhwah2zvFY4m9s}.
+Isolates and communities are available upon request. All data are available in the Supplementary Information and via Dryad at \url{https://doi.org/10.5061/dryad.2z34tmq0z}.
 
 
 % --------------------------------------------
