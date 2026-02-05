@@ -237,6 +237,10 @@ def plot_clean_barplots(results_dict, save_dir):
         plt.savefig(save_path_png, dpi=300, bbox_inches='tight')
         print(f"Saved: {save_path_png}")
 
+        save_path_pdf = os.path.join(save_dir, f'correlation_barplot_{condition}.pdf')
+        plt.savefig(save_path_pdf, format='pdf', bbox_inches='tight')
+        print(f"Saved: {save_path_pdf}")
+
         save_path_svg = os.path.join(save_dir, f'correlation_barplot_{condition}.svg')
         plt.savefig(save_path_svg, format='svg', bbox_inches='tight')
         print(f"Saved: {save_path_svg}")

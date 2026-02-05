@@ -1,18 +1,19 @@
 #!/usr/bin/env python
 """
-48 Species Simulation with 1000 Repetitions and Super-Fine Intensity Intervals
+48 Species Simulation with Configurable Repetitions and Super-Fine Intensity Intervals
 PARALLELIZED VERSION - Direct parallelization of run_48species_200reps_fine_intervals.py
 
 This script runs Lotka-Volterra simulations with:
 - 48 total species
 - 12 species per community
-- 1000 independent repetitions per interaction strength
-- 47 interaction strengths: 0.05 to 1.2 in steps of 0.025
+- 400 independent repetitions per interaction strength (default)
+- 58 interaction strengths: 0.05 to 1.2 in steps of 0.02 (default)
 - Each repetition initializes a new species pool
 
 Usage:
 python run_48species_1000reps_superfine_parallel.py
-python run_48species_1000reps_superfine_parallel.py --n_cores 16
+python run_48species_1000reps_superfine_parallel.py --n_cores 8
+python run_48species_1000reps_superfine_parallel.py --n_reps 400 --u_step 0.02
 """
 
 import os
@@ -278,10 +279,10 @@ if __name__ == "__main__":
     parser = argparse.ArgumentParser(description='Run parallel LV simulations')
     parser.add_argument('--n_cores', type=int, default=None,
                         help='Number of CPU cores to use (default: all-1)')
-    parser.add_argument('--n_reps', type=int, default=1000,
-                        help='Number of repetitions per intensity (default: 1000)')
-    parser.add_argument('--u_step', type=float, default=0.025,
-                        help='Interaction strength step size (default: 0.025)')
+    parser.add_argument('--n_reps', type=int, default=400,
+                        help='Number of repetitions per intensity (default: 400)')
+    parser.add_argument('--u_step', type=float, default=0.02,
+                        help='Interaction strength step size (default: 0.02)')
     args = parser.parse_args()
 
     simulate_parallel(n_cores=args.n_cores, n_reps=args.n_reps, u_step=args.u_step)

@@ -263,7 +263,7 @@ def plot_barplot_u06_zoomed(results, save_dir):
     colors = ['#e74c3c', '#3498db']
 
     np.random.seed(42)
-    jitter_amount = 0.1
+    jitter_amount = 0.05  # Reduced to make points cluster tighter
 
     same_origin_corrs = results['same_origin_corrs']
     mixed_origin_corrs = results['mixed_origin_corrs']
@@ -303,8 +303,8 @@ def plot_barplot_u06_zoomed(results, save_dir):
     x_same = x[0] + np.random.normal(0, jitter_amount, len(same_corrs_display))
     x_mixed = x[1] + np.random.normal(0, jitter_amount, len(mixed_corrs_display))
 
-    ax.scatter(x_same, same_corrs_display, alpha=0.3, s=15, color=colors[0], edgecolors='none')
-    ax.scatter(x_mixed, mixed_corrs_display, alpha=0.3, s=15, color=colors[1], edgecolors='none')
+    ax.scatter(x_same, same_corrs_display, alpha=0.25, s=10, color=colors[0], edgecolors='none')
+    ax.scatter(x_mixed, mixed_corrs_display, alpha=0.25, s=10, color=colors[1], edgecolors='none')
 
     ax.errorbar(x[0], obs_same, yerr=sem_same,
                fmt='s', markersize=12, capsize=5, capthick=1.5,
@@ -346,13 +346,17 @@ def plot_barplot_u06_zoomed(results, save_dir):
     ax.spines['right'].set_visible(False)
 
     # ZOOMED y-axis range: -0.2 to 0.4
-    ax.set_ylim(-0.2, 0.4)
+    ax.set_ylim(-0.4, 0.4)
 
     plt.tight_layout()
 
     save_path_png = os.path.join(save_dir, 'correlation_barplot_simulation_u0.6_zoomed.png')
     plt.savefig(save_path_png, dpi=300, bbox_inches='tight')
     print(f"Saved: {save_path_png}")
+
+    save_path_pdf = os.path.join(save_dir, 'correlation_barplot_simulation_u0.6_zoomed.pdf')
+    plt.savefig(save_path_pdf, format='pdf', bbox_inches='tight')
+    print(f"Saved: {save_path_pdf}")
 
     save_path_svg = os.path.join(save_dir, 'correlation_barplot_simulation_u0.6_zoomed.svg')
     plt.savefig(save_path_svg, format='svg', bbox_inches='tight')

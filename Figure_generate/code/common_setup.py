@@ -519,7 +519,7 @@ def create_phase_diagram(
             ax1.text(x_mid, y_rest, 'Restructuring', ha='center', va='center', fontsize=font_size, color='black', weight='bold')
     '''
     fig.savefig(output_filename, bbox_inches='tight', dpi=300)
-    plt.show()
+    plt.close(fig)
 
 
 

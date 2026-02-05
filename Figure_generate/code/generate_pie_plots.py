@@ -474,6 +474,7 @@ def plot_coalescence_matrices(coal_matrices, colors, isolate_idx, output_dir):
             filename = f'coalescence_matrix_{medium}_s{species_pool}.png'
             filepath = os.path.join(output_dir, filename)
             plt.savefig(filepath, dpi=150, bbox_inches='tight')
+            plt.savefig(filepath.replace('.png', '.pdf'), bbox_inches='tight')
             plt.savefig(filepath.replace('.png', '.svg'), dpi=150, bbox_inches='tight')
             plt.close()
 

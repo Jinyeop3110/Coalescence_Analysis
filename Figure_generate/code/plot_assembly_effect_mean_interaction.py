@@ -346,6 +346,10 @@ def plot_assembly_effect(results, output_dir):
     plt.savefig(output_file_png, dpi=300, bbox_inches='tight')
     print(f"✓ Saved figure: {output_file_png}")
 
+    output_file_pdf = output_dir / "Assembly_effect_scatter_combined.pdf"
+    plt.savefig(output_file_pdf, format='pdf', bbox_inches='tight')
+    print(f"✓ Saved figure: {output_file_pdf}")
+
     # Save test version to verify changes
     output_file_test = output_dir / "Assembly_effect_scatter_combined_UPDATED.svg"
     plt.savefig(output_file_test, dpi=300, bbox_inches='tight')

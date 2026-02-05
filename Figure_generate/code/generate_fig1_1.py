@@ -475,21 +475,21 @@ def plot_timeseries_merged(Processed_sequences_synthetic, IDX_list_sub1, IDX_lis
     n_sub2 = len(df_sub2)
     n_coal = len(df_coal)
 
-    # Create figure with GridSpec for layout (increased size for labels)
+    # Create figure with GridSpec for layout
     # Left side: sub1 (top) + sub2 (bottom), Right side: coal
-    fig = plt.figure(figsize=(28 * mm, 22 * mm), facecolor='w')
+    # Use 2 columns with wide wspace for "+" and arrow in between
+    fig = plt.figure(figsize=(32 * mm, 22 * mm), facecolor='w')
 
     # Calculate widths based on number of bars
     left_width = max(n_sub1, n_sub2)
     right_width = n_coal
 
-    gs = fig.add_gridspec(2, 3, width_ratios=[left_width, 1.2, right_width],
-                          height_ratios=[1, 1], wspace=0.15, hspace=0.25)
+    gs = fig.add_gridspec(2, 2, width_ratios=[left_width, right_width],
+                          height_ratios=[1, 1], wspace=0.85, hspace=0.25)
 
     ax_sub1 = fig.add_subplot(gs[0, 0])
     ax_sub2 = fig.add_subplot(gs[1, 0])
-    ax_arrow = fig.add_subplot(gs[:, 1])
-    ax_coal = fig.add_subplot(gs[:, 2])
+    ax_coal = fig.add_subplot(gs[:, 1])
 
     x_scale = 0.5
 
@@ -503,8 +503,6 @@ def plot_timeseries_merged(Processed_sequences_synthetic, IDX_list_sub1, IDX_lis
         bottom += df_sub1[deg].values
     ax_sub1.set_xlim(-0.5 * x_scale, (n_sub1 - 0.5) * x_scale)
     ax_sub1.set_ylim(0, 1)
-    # Add y-axis label for sub1 (shared label for both parent panels)
-    ax_sub1.set_ylabel('Relative\nAbundance', fontsize=7, labelpad=2)
     ax_sub1.set_yticks([0, 1])
     ax_sub1.set_yticklabels(['0', '1'], fontsize=6)
     ax_sub1.tick_params(axis='y', length=2, pad=1)
@@ -538,18 +536,20 @@ def plot_timeseries_merged(Processed_sequences_synthetic, IDX_list_sub1, IDX_lis
     ax_sub2.spines['left'].set_linewidth(0.5)
     ax_sub2.spines['bottom'].set_linewidth(0.5)
 
-    # Draw clean arrow in middle panel (replacing curly brace)
-    ax_arrow.set_xlim(0, 1)
-    ax_arrow.set_ylim(0, 1)
-    ax_arrow.axis('off')
-
-    # Add "+" symbol between parent panels
-    ax_arrow.text(0.15, 0.5, '+', fontsize=12, ha='center', va='center',
-                  fontweight='bold')
-
-    # Draw clean horizontal arrow
-    ax_arrow.annotate('', xy=(0.92, 0.5), xytext=(0.35, 0.5),
-                      arrowprops=dict(arrowstyle='->', lw=1.5, color='black'))
+    # Draw arrow between left and right panels using figure coordinates
+    from matplotlib.patches import FancyArrow
+    left_right = ax_sub1.get_position().x1
+    right_left = ax_coal.get_position().x0
+    arrow_y = (ax_sub1.get_position().y0 + ax_sub1.get_position().y1 +
+               ax_sub2.get_position().y0 + ax_sub2.get_position().y1) / 4
+    gap_center = (left_right + right_left) / 2
+    arrow_half = (right_left - left_right) * 0.2  # shorter arrow, 40% of gap
+    arrow_x0 = gap_center - arrow_half
+    arrow_len = arrow_half * 2
+    arrow = FancyArrow(arrow_x0, arrow_y, arrow_len, 0,
+                        width=0.006, head_width=0.025, head_length=0.015,
+                        fc='black', ec='black', transform=fig.transFigure)
+    fig.patches.append(arrow)
 
     # Plot coal (right side, spanning both rows)
     bar_l = np.array(range(n_coal))
@@ -588,6 +588,13 @@ def plot_timeseries_merged(Processed_sequences_synthetic, IDX_list_sub1, IDX_lis
     ax_coal.spines['right'].set_visible(False)
     ax_coal.spines['left'].set_linewidth(0.5)
     ax_coal.spines['bottom'].set_linewidth(0.5)
+
+    # Add y-axis label centered between the two parent panels (sub1 and sub2)
+    label_mid_y = (ax_sub1.get_position().y0 + ax_sub1.get_position().y1 +
+                   ax_sub2.get_position().y0 + ax_sub2.get_position().y1) / 4
+    label_x = ax_sub1.get_position().x0 - 0.18
+    fig.text(label_x, label_mid_y, 'Relative\nAbundance', fontsize=7,
+             ha='center', va='center', rotation=90)
 
     plt.savefig(filename, bbox_inches='tight')
     plt.savefig(filename.replace('.svg', '.pdf'), bbox_inches='tight')

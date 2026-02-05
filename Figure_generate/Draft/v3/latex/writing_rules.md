@@ -14,15 +14,15 @@
 
 ### 3. Hyphenation
 - Always hyphenate: **"community-level selection"**
-- Always hyphenate: **"species-driven regime"**
+- Always hyphenate: **"top-down regime"**
 
 ### 4. Parent Communities
 - Use **"parental communities"** (not "parent communities")
 - Consistent: "parental community A", "parental community B"
 
 ### 5. Regime Naming
-- Two regimes: **"species-driven regime"** and **"emergent regime"**
-- Do NOT use: "top-down regime", "Strong as Species", "Strong as Communities"
+- Two regimes: **"top-down regime"** and **"emergent regime"**
+- Do NOT use: "species-driven regime", "Strong as Species", "Strong as Communities"
 
 ### 6. Experimental Parameters
 - Dilution factor: **×30 every 24 h** (not 1:100)

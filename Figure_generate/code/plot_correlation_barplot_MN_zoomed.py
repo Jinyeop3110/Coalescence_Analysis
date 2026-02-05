@@ -113,7 +113,7 @@ def plot_zoomed_barplot(results, save_dir, condition='MN'):
     """
     Create zoomed bar plot for MN with y-axis range -0.2 to 0.4
     """
-    fig, ax = plt.subplots(1, 1, figsize=(2.5, 2.5))
+    fig, ax = plt.subplots(1, 1, figsize=(2.1, 2.5))
 
     summary = results['summary']
     null_results = results['null_results']
@@ -141,7 +141,7 @@ def plot_zoomed_barplot(results, save_dir, condition='MN'):
 
     # Add jitter to plot individual event data points as shaded scatter
     np.random.seed(42)
-    jitter_amount = 0.1
+    jitter_amount = 0.05  # Reduced from 0.1 to make points cluster tighter
 
     # Get individual event correlations
     same_origin_corrs = results['same_origin_corrs']
@@ -151,8 +151,8 @@ def plot_zoomed_barplot(results, save_dir, condition='MN'):
     x_same = x[0] + np.random.normal(0, jitter_amount, len(same_origin_corrs))
     x_mixed = x[1] + np.random.normal(0, jitter_amount, len(mixed_origin_corrs))
 
-    ax.scatter(x_same, same_origin_corrs, alpha=0.3, s=15, color=colors[0], edgecolors='none')
-    ax.scatter(x_mixed, mixed_origin_corrs, alpha=0.3, s=15, color=colors[1], edgecolors='none')
+    ax.scatter(x_same, same_origin_corrs, alpha=0.25, s=10, color=colors[0], edgecolors='none')
+    ax.scatter(x_mixed, mixed_origin_corrs, alpha=0.25, s=10, color=colors[1], edgecolors='none')
 
     # Plot mean as squares with error bars
     ax.errorbar(x[0], obs_same, yerr=sem_same,
@@ -199,8 +199,8 @@ def plot_zoomed_barplot(results, save_dir, condition='MN'):
     ax.spines['top'].set_visible(False)
     ax.spines['right'].set_visible(False)
 
-    # ZOOMED y-axis range: -0.2 to 0.4
-    ax.set_ylim(-0.2, 0.4)
+    # ZOOMED y-axis range: -0.15 to 0.32
+    ax.set_ylim(-0.15, 0.32)
 
     plt.tight_layout()
 
