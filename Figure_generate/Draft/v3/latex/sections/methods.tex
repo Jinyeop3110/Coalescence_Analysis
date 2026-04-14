@@ -8,7 +8,7 @@
 \subsection*{Microbial Strain Library and Culture Conditions}
 \label{sec:methods:strains}
 
-We used a library of 54 bacterial isolates from environmental samples (soil, tree surface, and flower stamen) collected in Cambridge, MA, USA, spanning 29 families across three phyla (Proteobacteria, Firmicutes, and Bacteroidota; Supplementary Fig. 1). Isolates were purified by serial streaking and stored as glycerol stocks at $-80$~°C. Experiments were conducted in culture medium containing 1~g~L$^{-1}$ yeast extract, 1~g~L$^{-1}$ soytone, 10~mM sodium phosphate, 0.1~mM CaCl$_2$, 2~mM MgCl$_2$, 4~mg~L$^{-1}$ NiSO$_4$, 50~mg~L$^{-1}$ MnCl$_2$ (pH~6.5), supplemented at three nutrient levels---Nutr$-$ (no added glucose/urea), Base (5~g~L$^{-1}$ glucose, 4~g~L$^{-1}$ urea), and Nutr+ (20~g~L$^{-1}$ glucose, 16~g~L$^{-1}$ urea)---which produce different strengths of interspecific interactions. Communities were grown in 300~$\mu$L volumes in 96-well deep-well plates at 25~°C with shaking at 800~rpm. Full media composition and culture conditions are provided in Supplementary Methods.
+We used a library of 54 bacterial isolates from environmental samples (soil, tree surface, and flower stamen) collected in Cambridge, MA, USA, spanning 29 families across three phyla (Proteobacteria, Firmicutes, and Bacteroidota; Extended Data Fig.~1; Supplementary Fig.~1). Isolates were purified by serial streaking and stored as glycerol stocks at $-80$~°C. Experiments were conducted in culture medium containing 1~g~L$^{-1}$ yeast extract, 1~g~L$^{-1}$ soytone, 10~mM sodium phosphate, 0.1~mM CaCl$_2$, 2~mM MgCl$_2$, 4~mg~L$^{-1}$ NiSO$_4$, 50~mg~L$^{-1}$ MnCl$_2$ (pH~6.5), supplemented at three nutrient levels---Nutr$-$ (no added glucose/urea), Base (5~g~L$^{-1}$ glucose, 4~g~L$^{-1}$ urea), and Nutr+ (20~g~L$^{-1}$ glucose, 16~g~L$^{-1}$ urea)---which produce different strengths of interspecific interactions. Communities were grown in 300~$\mu$L volumes in 96-well deep-well plates at 25~°C with shaking at 800~rpm. Full media composition and culture conditions are provided in Supplementary Methods.
 
 
 % --------------------------------------------
@@ -22,7 +22,14 @@ Parental communities ($n = 30$) were assembled at three richness levels (6, 12, 
 \subsection*{16S rRNA Sequencing}
 \label{sec:methods:sequencing}
 
-Community composition was measured by 16S rRNA amplicon sequencing (V4 region). DNA was extracted using QIAGEN DNeasy PowerSoil kit, and sequencing was performed at Argonne National Laboratory. Amplicon sequence variants (ASVs) were identified using DADA2\citep{Callahan2016} with SILVA 138\citep{Quast2013} as reference. Species richness was defined as ASVs with $\geq$0.1\% relative abundance, corresponding to the extinction threshold used in simulations. Raw sequencing reads are available at Dryad (\url{https://doi.org/10.5061/dryad.2z34tmq0z}). Full sequencing and data processing details are provided in Supplementary Methods.
+Community composition was measured by 16S rRNA amplicon sequencing (V4 region). DNA was extracted using QIAGEN DNeasy PowerSoil kit, and sequencing was performed at Argonne National Laboratory. Amplicon sequence variants (ASVs) were identified using DADA2\citep{Callahan2016} with SILVA 138\citep{Quast2013} as reference. Species richness was defined as ASVs with $\geq$0.1\% relative abundance, corresponding to the extinction threshold used in simulations. Raw sequencing reads are available at Dryad (\url{http://datadryad.org/share/LINK_NOT_FOR_PUBLICATION/kQACU7LCmQclVZfGZk0bS5ZPUVL_grhwah2zvFY4m9s}). Full sequencing and data processing details are provided in Supplementary Methods.
+
+
+% --------------------------------------------
+\subsection*{Optical Density and pH Measurements}
+\label{sec:methods:od_ph}
+
+Optical density (OD$_{600}$) was measured after each 24-hour growth cycle using a plate reader (BioTek Synergy H1). Community pH was measured using a benchtop pH meter (Apera Instruments PH5500). These measurements were used to monitor community growth dynamics and to assess environmental modification by dominant species. Full measurement protocols are provided in Supplementary Methods.
 
 
 % --------------------------------------------
@@ -36,7 +43,7 @@ Coalescence outcomes were classified based on similarity between the coalesced c
 \subsection*{Lotka--Volterra Simulations}
 \label{sec:methods:simulations}
 
-Community dynamics were modeled using generalized Lotka--Volterra (gLV) equations (Eq.~\ref{eq:glv}). We fixed growth rates to 1 and drew off-diagonal competition coefficients from a uniform distribution with mean $\mu$, which controls mean interaction strength. From a pool of 54 species, we randomly generated two parental communities of 12 species each with no shared species. Communities were equilibrated numerically (species below 0.1\% relative abundance threshold set to zero), then mixed pairwise at equal proportions to simulate coalescence. Each simulation used independently sampled interaction matrices to explore diverse ecological contexts. Full simulation parameters and robustness analyses are provided in Supplementary Methods.
+Community dynamics were modeled using generalized Lotka--Volterra (gLV) equations (Eq.~\ref{eq:glv}). We fixed growth rates to 1 and self-interaction coefficients $\alpha_{ii} = 1$, and drew off-diagonal competition coefficients from a uniform distribution $\mathbb{U}(0, 2\mu)$ with mean $\mu$, which controls mean interaction strength. From a pool of 54 species, we randomly generated two parental communities of 12 species each with no shared species. Communities were equilibrated numerically (species below 0.1\% relative abundance threshold set to zero), then mixed pairwise at equal proportions to simulate coalescence. Each simulation used independently sampled interaction matrices to explore diverse ecological contexts. Full simulation parameters and robustness analyses are provided in Supplementary Methods.
 
 
 % --------------------------------------------
@@ -51,21 +58,21 @@ To empirically estimate interaction strength, we performed pairwise invasion ass
 \subsection*{Natural Sample-Derived Communities}
 \label{sec:methods:natural}
 
-We performed coalescence experiments using communities derived from six natural environmental samples (soil, compost, decomposing matter) collected in Cambridge, MA. Unlike synthetic communities assembled from isolated strains, these communities retain complex species assemblages from their native habitats. Samples were enriched through seven serial dilution cycles to establish stable communities, then 15 pairwise coalescence events (each with two biological replicates, $n = 30$ per condition) were conducted across all three nutrient conditions. Full experimental details are provided in Supplementary Methods.
+We performed coalescence experiments using communities derived from six natural environmental samples (soil, compost, decomposing organic matter) collected in Cambridge, MA. Unlike synthetic communities assembled from isolated strains, these communities retain complex species assemblages from their native habitats. Samples were enriched through seven serial dilution cycles to establish stable communities, then 15 pairwise coalescence events (each with two biological replicates, $n = 30$ per condition) were conducted across all three nutrient conditions. Full experimental details are provided in Supplementary Methods.
 
 
 % --------------------------------------------
 \subsection*{Statistical Analyses}
 \label{sec:methods:statistics}
 
-Statistical significance was defined at $\alpha = 0.05$. Paired $t$-tests compared mean interaction strengths before and after assembly. Permutation tests (1,000 permutations) assessed pairwise selection correlations. Mann-Whitney U tests compared experimental values against null distributions. Linear regression quantified predictability of coalescence outcomes from dominant-species competition ($R^2$ reported). For figures requiring error bars, the mean and s.e.m. are presented, with specific test details provided in each legend. Full statistical methods are provided in Supplementary Methods.
+Statistical significance was defined at $p < 0.05$. Paired $t$-tests compared mean interaction strengths before and after assembly. Permutation tests (1,000 permutations) assessed pairwise selection correlations. Mann-Whitney U tests compared experimental values against null distributions. Chi-square tests for trend assessed outcome fraction shifts across nutrient conditions. Fisher's exact test compared categorical outcomes between conditions. Linear regression quantified predictability of coalescence outcomes from dominant-species competition ($R^2$ reported). For figures requiring error bars, the mean and s.e.m. are presented, with specific test details provided in each legend. Full statistical methods are provided in Supplementary Methods.
 
 
 % --------------------------------------------
 \subsection*{Data Availability}
 \label{sec:methods:data}
 
-Isolates and communities are available upon request. All data are available in the Supplementary Information and via Dryad at \url{https://doi.org/10.5061/dryad.2z34tmq0z}.
+Isolates and communities are available upon request. All data are available in the Supplementary Information and via Dryad at \url{http://datadryad.org/share/LINK_NOT_FOR_PUBLICATION/kQACU7LCmQclVZfGZk0bS5ZPUVL_grhwah2zvFY4m9s}.
 
 
 % --------------------------------------------
