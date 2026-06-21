@@ -1,0 +1,112 @@
+% ============================================
+% Methods
+% ============================================
+\section{Methods}
+\label{sec:methods}
+
+% --------------------------------------------
+\subsection*{Microbial Strain Library and Culture Conditions}
+\label{sec:methods:strains}
+
+We used a library of 54 bacterial isolates from environmental samples (soil, tree surface, and flower stamen) collected in Cambridge, MA, USA, spanning 29 families across three phyla (Proteobacteria, Firmicutes, and Bacteroidota; Extended Data Fig.~1; Supplementary Fig.~1). Isolates were purified by serial streaking and stored as glycerol stocks at $-80$~°C. Experiments were conducted in culture medium containing 1~g~L$^{-1}$ yeast extract, 1~g~L$^{-1}$ soytone, 10~mM sodium phosphate, 0.1~mM CaCl$_2$, 2~mM MgCl$_2$, 4~mg~L$^{-1}$ NiSO$_4$, 50~mg~L$^{-1}$ MnCl$_2$ (pH~6.5), supplemented at three nutrient levels---Nutr$-$ (no added glucose/urea), Base (5~g~L$^{-1}$ glucose, 4~g~L$^{-1}$ urea), and Nutr$+$ (20~g~L$^{-1}$ glucose, 16~g~L$^{-1}$ urea)---which produce different strengths of interspecific interactions. Communities were grown in 300~$\mu$L volumes in 96-well deep-well plates at 25~°C with shaking at 800~rpm. Full media composition and culture conditions are provided in Supplementary Methods.
+
+
+% --------------------------------------------
+\subsection*{Community Assembly and Coalescence Experiments}
+\label{sec:methods:coalescence}
+
+Parental communities ($n = 30$) were assembled at three richness levels (6, 12, or 24 species) by sequential assignment of isolates from the strain library, each with two biological replicates. For 6-species and 12-species parental communities, non-overlapping sets were assembled (e.g., community 1: strains 1--6, community 2: strains 7--12). Communities were stabilized through seven daily serial dilutions ($\times$30) before coalescence. Coalescence experiments mixed two pre-stabilized parental communities at 1:1 volume ratio, followed by seven additional serial transfers to reach new steady states (\figref{fig:fig1}C). In total, 83 pairwise coalescence events were performed in Base medium, and additional experiments were conducted across all three nutrient conditions. Full experimental details are provided in Supplementary Methods.
+
+
+% --------------------------------------------
+\subsection*{16S rRNA Sequencing}
+\label{sec:methods:sequencing}
+
+Community composition was measured by 16S rRNA amplicon sequencing (V4 region). DNA was extracted using QIAGEN DNeasy PowerSoil kit, and sequencing was performed at Argonne National Laboratory. Amplicon sequence variants (ASVs) were identified using DADA2\citep{Callahan2016} with SILVA 138\citep{Quast2013} as reference. Species richness was defined as ASVs with $\geq$0.1\% relative abundance, corresponding to the extinction threshold used in simulations. Raw sequencing reads are available at Dryad (\url{http://datadryad.org/share/LINK_NOT_FOR_PUBLICATION/kQACU7LCmQclVZfGZk0bS5ZPUVL_grhwah2zvFY4m9s}). Full sequencing and data processing details are provided in Supplementary Methods.
+
+
+% --------------------------------------------
+\subsection*{Optical Density and pH Measurements}
+\label{sec:methods:od_ph}
+
+Optical density (OD$_{600}$) was measured after each 24-hour growth cycle using a plate reader (BioTek Synergy H1). \rev{Community pH was measured using a benchtop pH meter (Apera Instruments PH5500).} These measurements were used to monitor community growth dynamics and to assess environmental modification by dominant species. Full measurement protocols are provided in Supplementary Methods.
+
+
+% --------------------------------------------
+\subsection*{Classification of Coalescence Outcomes}
+\label{sec:methods:classification}
+
+Coalescence outcomes were classified based on similarity between the coalesced community and each parental community. \rev{Each community was represented by its relative-abundance vector and then normalized to unit Euclidean length for the similarity calculation; similarity was computed as the cosine similarity (equivalently, the dot product of the Euclidean-normalized vectors) between the coalesced community and each parental community (see Supplementary Methods for full normalization details).} These two similarity scores place each outcome in a two-dimensional similarity space. From the similarity scores, we derived: (1) retention magnitude $r$, quantifying how much of the coalesced composition is explained by the parental communities; and (2) parental dominance index (PDI), quantifying selection preference toward one parental community (0: parental community B dominance, 0.5: equal contributions, 1: parental community A dominance). \rev{The Restructuring boundary is defined by $r^2 \leq 0.5$, equivalently a retention radius $r \leq 1/\sqrt{2}$ in the similarity map.} Outcomes were categorized as Restructuring (low retention; substantial ecological reorganization), Mixture (high retention with PDI near 0.5; balanced parental contributions), or Dominance (high retention with PDI near 0 or 1; one parental community overwhelms the other). To assess whether Dominance reflects community-level selection, we computed pairwise selection correlations measuring whether species from the same parental community share selection outcomes during coalescence. Full mathematical framework is provided in Supplementary Methods.
+
+
+% --------------------------------------------
+\subsection*{Lotka--Volterra Simulations}
+\label{sec:methods:simulations}
+
+Community dynamics were modeled using generalized Lotka--Volterra (gLV) equations (Eq.~\ref{eq:glv}). We fixed growth rates to 1 and self-interaction coefficients $\alpha_{ii} = 1$, and drew off-diagonal competition coefficients from a uniform distribution $\mathbb{U}(0, 2\mu)$ with mean $\mu$, which controls mean interaction strength. From a pool of 54 species, we randomly generated two parental communities of 12 species each with no shared species. Communities were equilibrated numerically (species below 0.1\% relative abundance threshold set to zero), then mixed pairwise at equal proportions to simulate coalescence. Each simulation used independently sampled interaction matrices to explore diverse ecological contexts. Full simulation parameters and robustness analyses are provided in Supplementary Methods.
+
+
+% --------------------------------------------
+\subsection*{Pairwise Invasion Assays}
+\label{sec:methods:invasion}
+
+To empirically estimate interaction strength, we performed pairwise invasion assays among the 12 most abundant isolates. Each pair was tested in both directions (resident:invader = 95:5) and propagated through seven daily dilution cycles across all three nutrient conditions. Final compositions were determined by colony counting. An invasion was scored as failed if the invader remained below 1\% relative abundance. Pairwise outcomes were then classified as coexistence (both isolates above 10\% in both directions), exclusion (the same isolate drove its competitor below 1\% in both directions), or bistability (each isolate excluded the other when resident). \rev{We defined invasion resistance as the fraction of failed invasions and used it as a proxy for mean interaction strength} (\figref{fig:fig4}B). Full experimental details are provided in Supplementary Methods.
+
+
+
+% --------------------------------------------
+\subsection*{Natural Sample-Derived Communities}
+\label{sec:methods:natural}
+
+We performed coalescence experiments using communities derived from six natural environmental samples (soil, compost, decomposing organic matter) collected in Cambridge, MA. Unlike synthetic communities assembled from isolated strains, these communities retain complex species assemblages from their native habitats. Samples were enriched through seven serial dilution cycles to establish stable communities, then 15 pairwise coalescence events (each with two biological replicates, $n = 30$ per condition) were conducted across all three nutrient conditions. Full experimental details are provided in Supplementary Methods.
+
+
+% --------------------------------------------
+\subsection*{Statistical Analyses}
+\label{sec:methods:statistics}
+
+Statistical significance was defined at $p < 0.05$. Paired $t$-tests compared mean interaction strengths before and after assembly. Permutation tests (1,000 permutations) assessed pairwise selection correlations. Mann-Whitney U tests compared experimental values against null distributions. Chi-square tests for trend assessed outcome fraction shifts across nutrient conditions. Fisher's exact test compared categorical outcomes between conditions. Linear regression quantified predictability of coalescence outcomes from dominant-species competition ($R^2$ reported). For figures requiring error bars, the mean and s.e.m. are presented, with specific test details provided in each legend. Full statistical methods are provided in Supplementary Methods.
+
+
+% --------------------------------------------
+\subsection*{Data Availability}
+\label{sec:methods:data}
+
+Isolates and communities are available upon request. All data are available in the Supplementary Information and via Dryad at \url{http://datadryad.org/share/LINK_NOT_FOR_PUBLICATION/kQACU7LCmQclVZfGZk0bS5ZPUVL_grhwah2zvFY4m9s}.
+
+
+% --------------------------------------------
+\subsection*{Code Availability}
+\label{sec:methods:code}
+
+All codes used for simulation and analysis are available via GitHub at \url{https://github.com/Jinyeop3110/interspecies-interaction-derive-Community-Level-Selection}.
+
+
+% ============================================
+% End Matter (after Methods)
+% ============================================
+
+\section*{Acknowledgements}
+\label{sec:acknowledgements}
+
+J.G. acknowledges funding support from the Schmidt Polymath Award and the Sloan Foundation.
+
+
+\section*{Author Contributions}
+\label{sec:contributions}
+
+J.Y.S., J.H. and J.G. conceived the study. J.Y.S. and J.H. performed the experiments and the theoretical modeling. J.Y.S. analyzed the data. All authors wrote and edited the manuscript.
+
+
+\section*{Competing Interests}
+\label{sec:competing}
+
+The authors declare no competing interests.
+
+
+\section*{Additional Information}
+\label{sec:additional}
+
+Supplementary Information is available for this paper.
+
+\noindent Correspondence to Jeff Gore (gore@mit.edu).

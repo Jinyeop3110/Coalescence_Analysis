@@ -1,0 +1,19 @@
+Post-stabilization natural community taxonomic summary
+Input communities: /Users/jysong/Desktop/Gore_lab/Sequencing/Coalescence_session_20230404/Analyzed/processed_Communities_natural.xlsx
+Input ASV table: /Users/jysong/Desktop/Gore_lab/Sequencing/Coalescence_session_20230404/Postprocessed/processed_Sequences_natural.xlsx
+Richness threshold: 0.0010 relative abundance
+Natural parental communities analyzed: n = 36
+ASV richness, mean +/- SD: 13.69 +/- 7.23
+
+Pairwise similarity among stabilized natural parental communities:
+Nutr-, same source: Jaccard 0.413 +/- 0.151 (n=6); Bray-Curtis similarity 0.357 +/- 0.239 (n=6)
+Nutr-, different source: Jaccard 0.126 +/- 0.076 (n=60); Bray-Curtis similarity 0.140 +/- 0.127 (n=60)
+Base, same source: Jaccard 0.443 +/- 0.087 (n=6); Bray-Curtis similarity 0.606 +/- 0.275 (n=6)
+Base, different source: Jaccard 0.181 +/- 0.079 (n=60); Bray-Curtis similarity 0.080 +/- 0.153 (n=60)
+Nutr+, same source: Jaccard 0.351 +/- 0.124 (n=6); Bray-Curtis similarity 0.512 +/- 0.366 (n=6)
+Nutr+, different source: Jaccard 0.205 +/- 0.140 (n=60); Bray-Curtis similarity 0.341 +/- 0.282 (n=60)
+
+Limitation: the processed data contain only final stabilized communities
+and coalesced communities, not environmental inocula before stabilization.
+Therefore this analysis cannot measure taxonomic convergence during
+stabilization or functional guild convergence.

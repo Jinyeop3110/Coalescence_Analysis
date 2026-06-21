@@ -1,0 +1,56 @@
+Nature Ecology & Evolution Revision Upload Notes
+================================================
+
+Manuscript:
+- File: 01_manuscript/main_revised.pdf
+- Editable file if requested: 01_manuscript/main_revised.docx
+- TeX source bundle if requested: 09_latex_source_bundle/
+
+Supplementary Information:
+- File: 02_supplementary/supplementary_revised.pdf
+- Editable file if requested: 02_supplementary/supplementary_revised.docx
+
+Response to Reviewers:
+- File: 03_response_to_reviewers/response_to_reviewers.pdf
+
+Cover Letter:
+- File: 04_cover_letter/cover_letter.pdf
+
+Figures:
+- Main figures: 05_figures/main_figures/
+- Supplementary figures: 05_figures/supplementary_figures/
+- Fig. 2A Adobe/reference assets: 05_figures/Fig2A_reference_assets/
+
+Source Data:
+- Add source-data workbook or ZIP to: 07_source_data/
+- Source-data file name:
+- Notes:
+
+Reporting Summary:
+- Add completed Reporting Summary to: 06_reporting_and_metadata/
+- File name:
+
+Data Availability:
+- Raw sequencing repository:
+- Accession number(s):
+- Private reviewer-access link/token:
+- Processed abundance/taxonomy/metadata repository:
+- Repository DOI or URL:
+
+Code Availability:
+- Code repository:
+- DOI or archive URL:
+- Private reviewer-access link/token if needed:
+
+Declarations:
+- Competing interests:
+- Author contributions checked:
+- Funding/acknowledgements checked:
+- AI-use disclosure needed:
+
+Portal Checks:
+- File categories assigned correctly:
+- PDF preview checked:
+- Metadata checked:
+- Final confirmation downloaded/saved:
+

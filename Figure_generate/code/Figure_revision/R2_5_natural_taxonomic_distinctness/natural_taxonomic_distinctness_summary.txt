@@ -1,0 +1,117 @@
+Natural sample-derived taxonomic distinctness summary
+Richness threshold: 0.0010 relative abundance
+
+Richness:
+ASV:
+  Nutr-, parental: 28.33 +/- 13.09 (n=12)
+  Nutr-, coalesced: 25.70 +/- 8.47 (n=30)
+  Base, parental: 13.08 +/- 6.01 (n=12)
+  Base, coalesced: 15.33 +/- 6.00 (n=30)
+  Nutr+, parental: 11.08 +/- 6.59 (n=12)
+  Nutr+, coalesced: 12.70 +/- 8.46 (n=30)
+Genus:
+  Nutr-, parental: 22.50 +/- 10.56 (n=12)
+  Nutr-, coalesced: 20.80 +/- 6.32 (n=30)
+  Base, parental: 10.17 +/- 3.69 (n=12)
+  Base, coalesced: 12.17 +/- 4.02 (n=30)
+  Nutr+, parental: 9.17 +/- 5.90 (n=12)
+  Nutr+, coalesced: 10.57 +/- 7.02 (n=30)
+Family:
+  Nutr-, parental: 17.17 +/- 9.24 (n=12)
+  Nutr-, coalesced: 16.13 +/- 4.16 (n=30)
+  Base, parental: 8.67 +/- 2.92 (n=12)
+  Base, coalesced: 10.53 +/- 3.07 (n=30)
+  Nutr+, parental: 8.00 +/- 5.67 (n=12)
+  Nutr+, coalesced: 9.23 +/- 6.26 (n=30)
+Phylum:
+  Nutr-, parental: 4.50 +/- 1.85 (n=12)
+  Nutr-, coalesced: 4.57 +/- 1.28 (n=30)
+  Base, parental: 3.17 +/- 0.55 (n=12)
+  Base, coalesced: 3.43 +/- 0.50 (n=30)
+  Nutr+, parental: 3.25 +/- 1.53 (n=12)
+  Nutr+, coalesced: 3.37 +/- 1.43 (n=30)
+
+Post-stabilization parental pairwise similarities:
+ASV:
+  Nutr-, same source: Jaccard 0.347 +/- 0.186 (n=6); Bray-Curtis similarity 0.350 +/- 0.242
+  Nutr-, different source: Jaccard 0.085 +/- 0.048 (n=60); Bray-Curtis similarity 0.135 +/- 0.126
+  Base, same source: Jaccard 0.414 +/- 0.081 (n=6); Bray-Curtis similarity 0.602 +/- 0.275
+  Base, different source: Jaccard 0.168 +/- 0.075 (n=60); Bray-Curtis similarity 0.080 +/- 0.151
+  Nutr+, same source: Jaccard 0.316 +/- 0.130 (n=6); Bray-Curtis similarity 0.506 +/- 0.364
+  Nutr+, different source: Jaccard 0.186 +/- 0.135 (n=60); Bray-Curtis similarity 0.337 +/- 0.279
+Genus:
+  Nutr-, same source: Jaccard 0.469 +/- 0.177 (n=6); Bray-Curtis similarity 0.437 +/- 0.215
+  Nutr-, different source: Jaccard 0.173 +/- 0.089 (n=60); Bray-Curtis similarity 0.200 +/- 0.139
+  Base, same source: Jaccard 0.534 +/- 0.145 (n=6); Bray-Curtis similarity 0.633 +/- 0.254
+  Base, different source: Jaccard 0.253 +/- 0.105 (n=60); Bray-Curtis similarity 0.155 +/- 0.210
+  Nutr+, same source: Jaccard 0.492 +/- 0.255 (n=6); Bray-Curtis similarity 0.513 +/- 0.362
+  Nutr+, different source: Jaccard 0.282 +/- 0.190 (n=60); Bray-Curtis similarity 0.347 +/- 0.282
+Family:
+  Nutr-, same source: Jaccard 0.564 +/- 0.117 (n=6); Bray-Curtis similarity 0.539 +/- 0.191
+  Nutr-, different source: Jaccard 0.292 +/- 0.150 (n=60); Bray-Curtis similarity 0.272 +/- 0.175
+  Base, same source: Jaccard 0.548 +/- 0.207 (n=6); Bray-Curtis similarity 0.696 +/- 0.218
+  Base, different source: Jaccard 0.340 +/- 0.129 (n=60); Bray-Curtis similarity 0.182 +/- 0.217
+  Nutr+, same source: Jaccard 0.495 +/- 0.278 (n=6); Bray-Curtis similarity 0.610 +/- 0.336
+  Nutr+, different source: Jaccard 0.324 +/- 0.189 (n=60); Bray-Curtis similarity 0.432 +/- 0.297
+Phylum:
+  Nutr-, same source: Jaccard 0.611 +/- 0.216 (n=6); Bray-Curtis similarity 0.771 +/- 0.119
+  Nutr-, different source: Jaccard 0.521 +/- 0.176 (n=60); Bray-Curtis similarity 0.527 +/- 0.247
+  Base, same source: Jaccard 0.903 +/- 0.140 (n=6); Bray-Curtis similarity 0.862 +/- 0.144
+  Base, different source: Jaccard 0.840 +/- 0.155 (n=60); Bray-Curtis similarity 0.520 +/- 0.290
+  Nutr+, same source: Jaccard 0.722 +/- 0.229 (n=6); Bray-Curtis similarity 0.819 +/- 0.199
+  Nutr+, different source: Jaccard 0.735 +/- 0.238 (n=60); Bray-Curtis similarity 0.572 +/- 0.299
+
+Pairwise similarity among coalesced outcomes:
+ASV:
+  Nutr-: coalesced-coalesced Jaccard 0.167 +/- 0.149 (n=435); Bray-Curtis similarity 0.233 +/- 0.178
+  Base: coalesced-coalesced Jaccard 0.235 +/- 0.154 (n=435); Bray-Curtis similarity 0.210 +/- 0.227
+  Nutr+: coalesced-coalesced Jaccard 0.222 +/- 0.141 (n=435); Bray-Curtis similarity 0.363 +/- 0.250
+Genus:
+  Nutr-: coalesced-coalesced Jaccard 0.295 +/- 0.148 (n=435); Bray-Curtis similarity 0.360 +/- 0.205
+  Base: coalesced-coalesced Jaccard 0.336 +/- 0.169 (n=435); Bray-Curtis similarity 0.366 +/- 0.241
+  Nutr+: coalesced-coalesced Jaccard 0.292 +/- 0.159 (n=435); Bray-Curtis similarity 0.401 +/- 0.264
+Family:
+  Nutr-: coalesced-coalesced Jaccard 0.460 +/- 0.151 (n=435); Bray-Curtis similarity 0.472 +/- 0.171
+  Base: coalesced-coalesced Jaccard 0.439 +/- 0.187 (n=435); Bray-Curtis similarity 0.394 +/- 0.239
+  Nutr+: coalesced-coalesced Jaccard 0.356 +/- 0.184 (n=435); Bray-Curtis similarity 0.414 +/- 0.267
+Phylum:
+  Nutr-: coalesced-coalesced Jaccard 0.644 +/- 0.189 (n=435); Bray-Curtis similarity 0.737 +/- 0.165
+  Base: coalesced-coalesced Jaccard 0.862 +/- 0.131 (n=435); Bray-Curtis similarity 0.690 +/- 0.187
+  Nutr+: coalesced-coalesced Jaccard 0.674 +/- 0.214 (n=435); Bray-Curtis similarity 0.611 +/- 0.277
+
+Own-parent versus unrelated-parent similarity for coalesced outcomes:
+ASV:
+  Pooled Jaccard: own parents 0.309 +/- 0.094; unrelated same-medium parents 0.150 +/- 0.043; own > unrelated in 86/90 events; paired Wilcoxon p = 2.992e-16
+  Pooled Bray-Curtis similarity: own parents 0.396 +/- 0.148; unrelated same-medium parents 0.205 +/- 0.126; own > unrelated in 84/90 events; paired Wilcoxon p = 7.747e-16
+Genus:
+  Pooled Jaccard: own parents 0.389 +/- 0.109; unrelated same-medium parents 0.239 +/- 0.048; own > unrelated in 83/90 events; paired Wilcoxon p = 9.116e-16
+  Pooled Bray-Curtis similarity: own parents 0.437 +/- 0.142; unrelated same-medium parents 0.278 +/- 0.113; own > unrelated in 80/90 events; paired Wilcoxon p = 1.280e-14
+Family:
+  Pooled Jaccard: own parents 0.478 +/- 0.122; unrelated same-medium parents 0.345 +/- 0.065; own > unrelated in 79/90 events; paired Wilcoxon p = 3.441e-14
+  Pooled Bray-Curtis similarity: own parents 0.480 +/- 0.149; unrelated same-medium parents 0.335 +/- 0.121; own > unrelated in 79/90 events; paired Wilcoxon p = 3.689e-13
+Phylum:
+  Pooled Jaccard: own parents 0.759 +/- 0.172; unrelated same-medium parents 0.705 +/- 0.151; own > unrelated in 52/90 events; paired Wilcoxon p = 2.191e-04
+  Pooled Bray-Curtis similarity: own parents 0.683 +/- 0.164; unrelated same-medium parents 0.609 +/- 0.118; own > unrelated in 64/90 events; paired Wilcoxon p = 1.143e-05
+
+Per-medium own vs unrelated parent (paired, Jaccard):
+ASV:
+  Nutr-: own 0.289 +/- 0.070; unrelated same-medium 0.108 +/- 0.027; n=30 events; own > unrelated in 30/30; paired Wilcoxon p = 9.313e-10
+  Base: own 0.350 +/- 0.089; unrelated same-medium 0.174 +/- 0.037; n=30 events; own > unrelated in 29/30; paired Wilcoxon p = 4.657e-09
+  Nutr+: own 0.286 +/- 0.106; unrelated same-medium 0.167 +/- 0.029; n=30 events; own > unrelated in 27/30; paired Wilcoxon p = 3.455e-07
+Genus:
+  Nutr-: own 0.372 +/- 0.081; unrelated same-medium 0.217 +/- 0.033; n=30 events; own > unrelated in 29/30; paired Wilcoxon p = 1.863e-09
+  Base: own 0.432 +/- 0.093; unrelated same-medium 0.260 +/- 0.050; n=30 events; own > unrelated in 28/30; paired Wilcoxon p = 1.304e-08
+  Nutr+: own 0.364 +/- 0.132; unrelated same-medium 0.241 +/- 0.050; n=30 events; own > unrelated in 26/30; paired Wilcoxon p = 7.097e-07
+Family:
+  Nutr-: own 0.481 +/- 0.107; unrelated same-medium 0.362 +/- 0.050; n=30 events; own > unrelated in 26/30; paired Wilcoxon p = 4.163e-07
+  Base: own 0.514 +/- 0.122; unrelated same-medium 0.360 +/- 0.058; n=30 events; own > unrelated in 27/30; paired Wilcoxon p = 2.356e-07
+  Nutr+: own 0.438 +/- 0.125; unrelated same-medium 0.312 +/- 0.073; n=30 events; own > unrelated in 26/30; paired Wilcoxon p = 8.419e-07
+Phylum:
+  Nutr-: own 0.652 +/- 0.129; unrelated same-medium 0.564 +/- 0.067; n=30 events; own > unrelated in 20/30; paired Wilcoxon p = 2.495e-03
+  Base: own 0.886 +/- 0.099; unrelated same-medium 0.849 +/- 0.069; n=30 events; own > unrelated in 18/30; paired Wilcoxon p = 2.221e-03
+  Nutr+: own 0.739 +/- 0.185; unrelated same-medium 0.703 +/- 0.134; n=30 events; own > unrelated in 14/30; paired Wilcoxon p = 1.638e-01
+
+Limitation: all measurements are post-stabilization 16S profiles.
+The analysis tests for complete post-stabilization taxonomic collapse
+and retained parent-specific taxonomic signal, but cannot quantify
+pre-to-post enrichment convergence or functional convergence.

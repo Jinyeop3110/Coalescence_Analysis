@@ -1,0 +1,164 @@
+% ============================================
+% Response to Reviewer 1
+% ============================================
+\section*{Response to Reviewer 1}
+
+We thank the reviewer for their constructive feedback. Below we address each point in detail.
+
+% ============================================
+\subsection*{R1-1. Absolute biomass as an alternative explanation for Dominance}
+
+\reviewercomment{I found the Author's explanation of coalescence generally convincing. However, I wonder if a simple, alternative explanation for many of the results could be that parent communities attain very different absolute densities. For example, if community A reaches 10x the overall density of community B, then even relatively rare species in community A might be initially more abundant than the dominant species in community B (because communities are combined in equal volumes, line 119). This might lead to the final community being dominated by species from A simply because species survive proportionally to their initial \emph{absolute} abundance. If I understand correctly, this scenario is different from the one tested in ED Fig.~5. High heterogeneity in absolute densities could potentially explain both the prevalence of Dominance outcomes and the difference in pairwise selection correlation between same- and cross-parent pairs. In principle, heterogeneity in absolute densities could also increase with nutrient concentration. To be clear, I have no reason to expect this pattern, but I wonder if the Authors could do more to rule it out. Since ODs were measured throughout (line 379), could those data be used to check this possibility?}
+
+\responselabel
+We thank the reviewer for raising this important alternative explanation. We tested the suggested hypothesis by asking whether parental-community OD$_{600}$ correlates with the parental dominance direction or with pairwise selection correlation.
+If Dominance were primarily driven by unequal absolute biomass at mixing, the higher-OD parental community should win more frequently, and signed $\Delta\text{OD}_{A-B}$, the difference between the OD of parental community A and the OD of parental community B, should be positively associated with PDI. We observed the opposite pattern. In Base, the higher-OD parental community wins only $37\%$ of Dominance events, and the continuous relationship between signed $\Delta\text{OD}_{A-B}$ and PDI is weak. This opposite-to-prediction pattern becomes strongest in Nutr$+$, where Dominance is most frequent: the higher-OD parental community wins only $9/68 = 13.2\%$ of Dominance events ($p = 3.9 \times 10^{-10}$), and signed $\Delta\text{OD}_{A-B}$ is strongly negatively correlated with PDI ($\rho = -0.60$, $p = 4.0 \times 10^{-10}$; Response Fig.~R1-1A,B). Nutr$-$ is less informative for this directional test because both OD differences and Dominance frequency are smaller.
+
+This density-based explanation also predicts that higher-OD parental communities should show stronger within-community pairwise selection correlations. To test this, we binned parental communities into low, mid, and high OD tertiles within each medium and computed the pairwise selection correlation among species from the same parental community in each OD bin (Response Fig.~R1-1C). The cross-community correlation is not re-binned by OD and is shown as a medium-level reference. Within-community pairwise selection correlation does not show a consistent increase with parental-community OD; instead, the pattern is not consistent across media. In Nutr$+$, the slight negative OD trend mirrors the negative signed $\Delta\text{OD}_{A-B}$--PDI association in the directional analysis above, rather than the positive trend expected if higher biomass drove winning. Overall, this analysis implies that differences in parental-community biomass do not explain Dominance direction or the nutrient-dependent pattern of correlated species fates.
+
+We added a concise note to the Results and present the primary analysis in Supplementary Note~7 and Supplementary Figs.~35--36. The Results now state: \mschange{``We next tested whether nutrient-dependent changes in parental-community properties, including biomass heterogeneity and initial pool-size effects, could explain this trend; these factors did not account for the nutrient-dependent increase in Dominance or correlated species fates (Supplementary Note~7 and Supplementary Figs.~34--36).''}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=\textwidth]{Fig_R1_1A_winner_loser_OD.pdf}
+\caption*{\textbf{Response Fig.~R1-1A.} \textbf{Higher parental-community OD does not preferentially predict the winner in Dominance events.} Winner OD vs loser OD scatter is shown per medium; dashed line is $y=x$. Points above the line are cases where the winning parental community had higher OD than the losing parental community. The higher-OD parental community wins only $37\%$, $37\%$, and $13\%$ of Dominance events in Nutr$-$, Base, and Nutr$+$ respectively; the strongest opposite-to-prediction pattern occurs in Nutr$+$. The displayed $p$ value is from a two-sided binomial test against the null expectation that the higher-OD parental community wins $50\%$ of Dominance events.}
+\end{figure}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=\textwidth]{Fig_R1_1B_OD_vs_PDI.pdf}
+\caption*{\textbf{Response Fig.~R1-1B.} \textbf{Continuous OD differences do not support the prediction that the higher-OD parental community wins.} Signed $\Delta\text{OD}_{A-B}$ ($\text{OD}_{A} - \text{OD}_{B}$) vs PDI is shown per medium. PDI is the Parental Dominance Index defined in the manuscript, $\text{PDI} = (2/\pi)\arctan(u/v)$. Spearman $\rho$ is the rank correlation between signed $\Delta\text{OD}_{A-B}$ and PDI; the displayed $p$ value is from a two-sided Spearman rank-correlation test of the null hypothesis of no monotonic association. The relationship is weak in Base and strongly negative in Nutr$+$ ($\rho = -0.60$, $p = 4 \times 10^{-10}$), opposite the sign predicted if higher OD caused a parental community to win. Gray points are reflections included for symmetry.}
+\end{figure}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=\textwidth]{Fig_R1_1C_pairwise_corr_vs_OD.pdf}
+\caption*{\textbf{Response Fig.~R1-1C.} \textbf{Higher parental-community OD does not produce a consistent increase in within-community pairwise selection correlation.} Columns show Nutr$-$, Base, and Nutr$+$, respectively. \textbf{Top row:} parental communities are grouped into low, mid, and high within-medium OD tertiles; smaller text below the group labels shows the OD$_{600}$ range of each tertile. Bars show within-community pairwise selection correlation with bootstrap 95\% CIs; the dashed gray line and shaded band show the medium-level mean cross-community correlation and its bootstrap 95\% CI. \textbf{Bottom row:} per-event parental-community observations plotted by OD and within-community pairwise selection correlation; vertical dotted lines mark the low/mid/high OD boundaries used in the top row. Spearman $\rho$ and $p$ values are shown in each panel; p-values are from two-sided Spearman rank-correlation tests of the null hypothesis of no monotonic association between OD and within-community pairwise selection correlation.}
+\end{figure}
+
+% ============================================
+\subsection*{R1-2. Does pH mismatch predict Dominance?}
+
+\reviewercomment{It seems like an even more straightforward prediction would be that Dominance should become more likely when combining parent communities with qualitatively different pH (e.g.\ alkaline and acidic) compared to cases where both parents are either acidic or alkaline. Is this the case?}
+
+\responselabel
+We thank the reviewer for suggesting this direct test. Response Fig.~R1-2 shows that Dominance frequency is not significantly different between acid--alk and same-pH parental-community pairs. Here, acid--alk denotes the broader categorical comparison used for the reviewer's frequency-level question, whereas Extended Data Fig.~8 used a stricter pH-contrast subset (pH $< 6.5$ vs pH $> 7.5$), which accounts for the different sample sizes and percentages. Because Nutr$-$ contains no acidic parental communities, this per-medium analysis is restricted to Base and Nutr$+$. Comparing acid--alk to pooled same-pH pairs (acid--acid or alk--alk), Dominance frequency is slightly elevated in Nutr$+$ ($79.5\%$, 35/44 vs $71.7\%$, 33/46; OR $= 1.53$, Fisher $p = 0.47$) and slightly reduced in Base ($61.4\%$ vs $69.4\%$; OR $= 0.70$, $p = 0.49$). This result implies that pH mismatch alone is not sufficient to explain Dominance frequency: even in Nutr$+$, where Dominance is common across pH-pair types, the acid--alk enrichment is not statistically distinguishable from same-pH pairs.
+
+\reviewercomment{To support the hypothesis that the top-down regime emerges because dominant species strongly modify the pH of the ecosystem, the Authors show that the predictive power of the parent community pH increases in the Nutr+ condition when looking at coalescence between communities where one parent is acidic and one is alkaline (lines 261, ED Fig.~8).}
+
+Yes, considering only the pH-mismatched acid--alk group amplifies the dominance-direction signal. In Nutr$+$, the lower-pH parental community dominates 72\% of all pH-pair types (binomial $p = 3.0 \times 10^{-5}$), but the acidic parental community dominates 86.4\% of acid--alk events (38/44; binomial $p = 9.4 \times 10^{-7}$; Response Fig.~R1-2). In Base, the all-pair signal is weak (54\%, binomial $p = 0.58$), and the acid--alk-only signal remains statistically insignificant (63.6\%, 28/44; binomial $p = 0.096$). Fig.~5 and the associated predictability analysis remain based on all eligible events, including both same-pH and pH-mismatched pairs. The pH-mismatch-specific analysis is reported separately in Supplementary Note~7 and Supplementary Fig.~37.
+
+We therefore tuned the overall claim in Results \S2.5 to state that pH modification is one possible source of winner predictability in Nutr$+$, rather than a complete explanation for Dominance frequency. The revised Results paragraph states: \mschange{``We next asked whether environmental modification through pH could contribute to the top-down regime. In our system, dominant species are often strong pH modifiers that either acidify or alkalinize the medium (Supplementary Fig.~8). In both Base and Nutr$+$ media, when these pH-modifying species become dominant within a community, they are predictive of the community's overall pH; communities dominated by acidifiers become acidic, while those dominated by alkalizers become alkaline (Supplementary Fig.~9). In coalescence events between acidic (pH $<$ 6.5) and alkaline (pH $>$ 7.5) parental communities, the acidic community dominated in only 56\% of cases in Base medium ($n = 41$), but dominated in 91\% of cases in Nutr$+$ medium ($n = 32$, Fisher's exact test $p < 0.0001$; Extended Data Fig.~8), consistent with the hypothesis that high nutrients amplify metabolic activity, thereby intensifying pH modification and excluding pH-sensitive species. However, pH mismatch alone did not significantly increase Dominance frequency relative to same-pH parental-community pairs within either Base or Nutr$+$ medium (Fisher's exact tests, $p = 0.49$ and $p = 0.47$; Supplementary Fig.~37), indicating that pH does not explain all aspects of the Dominance pattern. Thus, in Nutr$+$ medium, pH modification by dominant taxa is best interpreted as one possible source of winner predictability in the top-down regime, rather than as a complete explanation for Dominance frequency.''}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=\textwidth]{Fig_R1_2_acidalk_per_medium.pdf}
+\caption*{\textbf{Response Fig.~R1-2.} \textbf{pH mismatch does not significantly predict Dominance frequency, but lower-pH parental communities preferentially dominate in Nutr$+$.} \textbf{(Left, Middle)} Stacked class-fraction bars (Dominance / Mixture / Restructuring) for the three pH-pair types in Base and Nutr$+$; pair types are ordered Acid--Alk, Acid--Acid, Alk--Alk, with Dominance \% labelled inside each bar. Reported class-frequency p-values are from two-sided Fisher exact tests on 2$\times$2 tables comparing Acid--Alk vs pooled same-pH (Acid--Acid or Alk--Alk) events and Dominance vs non-Dominance outcomes. \textbf{(All pairs)} Signed asymmetry for all pH-pair types: positive = lower-pH parental community dominated, negative = higher-pH parental community dominated. \textbf{(Acid-Alk pairs only)} Signed asymmetry restricted to acid--alk pairs: positive = acidic parental community dominated, negative = alkaline parental community dominated. Percentages above the signed-asymmetry panels report lower-pH or acidic parental-community dominance fractions; p-values above these panels are from two-sided binomial tests against the null expectation that the lower-pH or acidic parental community dominates 50\% of events. Dots = individual events; squares = mean $\pm$ s.e.m.}
+\end{figure}
+
+% ============================================
+\subsection*{R1-3. Circularity in Fig.~5C, PDI excluding dominant species}
+
+\reviewercomment{In Fig.~5C, it seems like there is some risk of circularity if the dominant species are included in the calculation of the PDI. Does the positive correlation under Nutr+ conditions hold up if the dominant species are excluded from this calculation?}
+
+\responselabel
+We agree that this is an important circularity check. We used two removal strategies to avoid biasing the result toward the mixed-community winner. In the first, we removed the most abundant species in the coalesced community from all three abundance vectors; in the second, stricter test, we removed the most abundant species from each parental community separately before recalculating PDI. We followed the same PDI calculation and filtering criteria as in the original Fig.~5C analysis: events are included if they are classified as Mixture or Dominance before dominant species removal.
+
+This analysis reveals that our core conclusion remains supported: dominant-species pairwise interactions predict the community-level winning direction in Nutr$^+$, but not in Base. In Base, $R^2$ drops from $0.11$ to $0.00 / 0.07$ and the slope from $0.49$ to $-0.02 / 0.33$ (Original / mix-winner removed / parental-community dominants removed). In Nutr$^+$, $R^2$ drops from $0.49$ to $0.24 / 0.18$ and the slope from $1.03$ to $0.64 / 0.56$ (Response Fig.~R1-3). Using independent, non-reflected events, the Spearman correlation between dominant-species pairwise score and community-level score remains significant after both removal strategies: $\rho = 0.41$ ($p = 8.2 \times 10^{-4}$) after removing the mix-winner species and $\rho = 0.42$ ($p = 1.3 \times 10^{-3}$) after removing the dominant species from both parental communities. The corresponding linear slopes are also positive and significant ($p = 1.1 \times 10^{-4}$ and $1.5 \times 10^{-4}$). Thus, the dominant species is the primary single contributor in Nutr$^+$, but the Nutr$^+$ trend does not disappear when dominant species are excluded. In contrast, Base does not retain a significant correlation after removal ($p = 0.94$ and $0.12$ for the two linear slopes; Spearman $p = 1.00$ and $0.21$).
+
+We added a concise note to Results \S2.5 and present the primary analysis in Supplementary Fig.~33. The Results now state: \mschange{``The Nutr$+$ predictability trend remained significant after recalculating PDI with dominant species excluded (Spearman rank-correlation tests: $p = 8.2 \times 10^{-4}$ after removing the coalesced-community dominant species and $p = 1.3 \times 10^{-3}$ after removing the two parental-community dominant species; Supplementary Fig.~33), indicating that it is not solely a PDI circularity artifact.''}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=\textwidth]{Fig_R1_3_per_medium_scatter.pdf}
+\caption*{\textbf{Response Fig.~R1-3.} \textbf{Nutr$+$ predictability persists after dominant-species removal, arguing against a PDI circularity artifact.} Per-medium PDI scatter is shown with no pooling between Base and Nutr$^+$. Rows: Base (MN, brown) and Nutr$^+$ (HN, orange). Columns: Original; Dom(mix) (zeroing argmax $c_{\text{mix}}$); Dom(parental) (zeroing argmax $c_1$ and argmax $c_2$; the stricter test). $R^2$ and slope annotations are computed on the reflected plotting data, as in Fig.~5C; any displayed slope p-values are from two-sided ordinary least-squares tests of slope $=0$. Spearman $\rho$ and $p$ are computed on the independent, non-reflected events; Spearman p-values are from two-sided rank-correlation tests of the null hypothesis of no monotonic association.}
+\end{figure}
+
+% ============================================
+\subsection*{R1-4. Pool-size effects}
+
+\reviewercomment{I wondered if the Authors could provide slightly more detail on the effect of the initial pool size. Is it similarly true that there is no significant effect of initial richness in the experimental communities? By eye, it looks like Dominance might be more likely for the 24 species pool, but it is hard to tell by squinting at Fig.~1E. It might also be interesting to see the survival ratio as a function of initial richness for the experimental communities.}
+
+\responselabel
+We do not detect a significant effect of pool size on Dominance frequency in the experiment, and we thank the reviewer for prompting this more direct check. Response Fig.~R1-4C shows Dominance frequency by initial pool size within each nutrient condition; the pool-size effect is not significant either when pooled across nutrient conditions ($\chi^2 = 2.24$, $p = 0.69$) or within individual nutrient conditions (Dominance vs non-Dominance tests: Nutr$-$ $p = 0.39$, Base $p = 0.82$, Nutr$+$ $p = 0.27$). Thus, although initial pool size affects realized richness and assembly survival ratio (panels A,B), these assembly effects do not translate into a significant change in Dominance frequency.
+
+\reviewercomment{I also wondered if the Authors could look more closely at why there is no effect in the model. Perhaps by plotting the realized richness and interaction strength in parent communities as a function of initial richness?}
+
+To address the model part of the comment, we performed a gLV pool-size ablation study at three representative interaction strengths ($\mu=0.30$, 0.60, and 0.80), varying the initial pool size from 4 to 48 species per parental community (100 replicate assemblies per $\mu$ and pool size). The model gives a consistent interpretation: at fixed $\mu$, Dominance frequency is comparatively insensitive to pool size (panel E), whereas the same-parental-community versus cross-parental-community pairwise-selection gap increases with pool size (panel F). Consistent with the assembly-filtering mechanism, post-assembly within-community interaction coefficients remain lower than between-community coefficients across pool sizes.
+
+We added this analysis to Supplementary Note 7, ``Alternative models and controls for community-level selection,'' and to Supplementary Fig.~34. The new supplementary text states that pool-size variation affects assembly richness but does not explain the Dominance-frequency pattern, and that the model pool-size ablation supports the same conclusion.
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=\textwidth]{pool_size_analysis.pdf}
+\caption*{\textbf{Response Fig.~R1-4.} \textbf{Dominance frequency is comparatively insensitive to initial pool size despite pool-size effects on richness and pairwise selection.} \textbf{A:} Realized parental richness. \textbf{B:} ASV-based assembly survival ratio, computed as realized parental ASV richness divided by inoculated species-pool size; this ratio can exceed one because the numerator is thresholded ASV richness rather than a count restricted to the inoculated isolates. \textbf{C:} Experimental Dominance fraction by medium and initial pool size. \textbf{D:} Experimental pairwise species selection grouped by initial pool size. \textbf{E:} Model Dominance fraction grouped by $\mu$. \textbf{F:} Model pairwise species selection across pool sizes $4$--$48$.}
+\end{figure}
+
+% ============================================
+\subsection*{R1-5. Similarity-metric robustness claim}
+
+\reviewercomment{The Authors write (line 134) that ``This pattern of Dominance as the most frequent outcome was robust across variants of similarity metrics''. I liked the Author's approach to measuring outcomes, and I don't advocate for changing it, but this claim seems a little misleading. Two of four alternative similarity metrics gave different results, with Dominance being the \emph{least} likely outcome under Jensen--Shannon and Jaccard.}
+
+\responselabel
+We agree that our original robustness claim was too broad and could be misleading: the Dominance pattern is recovered by Euclidean distance and Bray--Curtis dissimilarity, but not under Jaccard index or Jensen--Shannon divergence (Extended Data Fig.~2). This pattern is consistent with the fact that the metrics emphasize different aspects of community composition: abundance-weighted parental-similarity metrics such as vector decomposition, Euclidean distance, and Bray--Curtis dissimilarity are more sensitive to quantitative dominance in relative abundance, whereas Jaccard reflects presence/absence retention and Jensen--Shannon evaluates divergence across the full abundance distribution. Thus, a coalesced community can be skewed toward one parental community in abundance space while still retaining taxa from both parental communities, or while redistributing subdominant taxa in ways that make it less skewed toward one parental community under Jaccard or Jensen--Shannon.
+
+We revised Results \S2.1 to narrow the main-text claim to the two alternative metrics that recovered the same pattern: \mschange{``This pattern of Dominance as the most frequent outcome was robust under similarity metric choices including Euclidean distance and Bray--Curtis dissimilarity (Extended Data Fig.~2).''} We also revised the Extended Data Fig.~2 caption to explicitly discuss the divergent metrics: \mschange{``The primary Dominance pattern is recovered under similarity metric choices including Euclidean distance and Bray--Curtis dissimilarity, but not under Jensen--Shannon divergence or Jaccard index, for which the coalesced community is less often measured as skewed toward one parental community. This divergence reflects the fact that the metrics emphasize different aspects of community composition: vector decomposition, Euclidean distance, and Bray--Curtis dissimilarity capture quantitative similarity to each parental community, whereas Jaccard reflects presence/absence retention and Jensen--Shannon evaluates divergence across the full abundance distribution. Thus, Jaccard and Jensen--Shannon are best interpreted as complementary metrics rather than as failed robustness checks for the abundance-weighted Dominance classification.''}
+
+
+% ============================================
+\subsection*{R1-6. Gray reflected points in figures}
+
+\reviewercomment{It took me quite a while to realize that the gray points in Figs.~1E, 4C, 5C, and 6B are simply a reflection of the colored points. Please indicate this clearly, or perhaps just remove these.}
+
+\responselabel
+We retained the reflected points and updated the captions of Figs.~1E, 4C, 5C, and 6B to state explicitly that the gray points are reflections: \mschange{``Gray points represent the symmetric counterpart of each coalescence event (community B versus A).''}
+
+Revised the captions of Figs.~1E, 4C, 5C, and 6B as quoted above.
+
+
+% ============================================
+\subsection*{R1-7. Interaction matrix after assembly}
+
+\reviewercomment{In Fig.~2A, it might be helpful to show the matrix of interaction coefficients after assembly of the parent communities (with visible block structure).}
+
+\responselabel
+We have added the post-assembly interaction matrix as Supplementary Fig.~27, illustrating the block-diagonal structure with lower within-community than between-community competition coefficients at $\mu = 0.50$ (mean $0.389$ vs $0.500$; Mann--Whitney $U$, $p < 0.001$). This figure makes explicit the assembly-filtering structure underlying Fig.~2D.
+
+% ============================================
+\subsection*{R1-8. Fig.~2D visualization}
+
+\reviewercomment{Fig.~2D, I was somewhat confused by the relationship between point and squares (means?). Visually, the squares do not look like they are near the means of the points. Please clarify this for readers. Additionally, the gray horizontal bars are not explained in the main text unless I missed it.}
+
+\responselabel
+The previous Fig.~2D was unclear because the individual dots and summary markers represented different display levels. In the simulation panel, the dots show a stratified subset of per-event pairwise selection correlations for visual legibility, whereas the squares and error bars show the mean $\pm$ s.e.m.\ across all simulated coalescence events. This explains why the squares need not visually coincide with the apparent center of the displayed dots. We revised the Fig.~2D caption to state this distinction explicitly and to define the gray horizontal lines as the random-selection baseline from an origin-shuffle null model: \mschange{``Individual dots show per-event pairwise selection correlations; in the simulation panel, 50 stratified events per group are displayed for legibility. Squares with error bars show mean $\pm$ s.e.m.\ across all coalescence events ($n = 1{,}200$ per group in simulations and all valid experimental events in the experimental panel). Gray horizontal lines indicate the random selection baseline from a null model in which species origin labels are shuffled (see Supplementary Information).''}
+
+
+% ============================================
+\subsection*{R1-9. Emphasize ``cohesion without cooperation''}
+
+\reviewercomment{Discussion, lines 342--345: I think it is worth emphasizing how interesting and perhaps surprising it is to find ``community-level cohesion without cooperation'' as the paper by M.\ Tikhonov has it. This finding will be counterintuitive to many readers, even though the mechanism is made clear.}
+
+\responselabel
+We agree with the reviewer that this is a central and counterintuitive implication of the study. We added a dedicated short paragraph to the Discussion that frames the result in those terms, placed immediately after the paragraph reconciling community-level and species-level selection across prior studies. The new paragraph opens with ``Notably, and perhaps counterintuitively'' to signal the surprise in the topic clause, and situates Tikhonov's prediction within classical random Lotka--Volterra theory by citing May (1972) and Grilli et al.\ (2017) alongside Tikhonov (2016). The follow-up sentences articulating the assembly-filtering mechanism are retained verbatim from the prior wording.
+
+\mschange{``Notably, and perhaps counterintuitively, our results demonstrate that community-level cohesion can emerge without cooperative interactions between species, a prediction made by Tikhonov (2016) using resource-competition models and consonant with classical random Lotka--Volterra theory (May, 1972; Grilli et al., 2017). In our system, purely competitive interactions, when structured by assembly history, are sufficient to produce the correlated species fates that underlie Dominance. This `cohesion without cooperation' arises because assembly filters species into mutually weakly competing groups whose members face stronger competition from outsiders.''}
+
+
+% ============================================
+\subsection*{R1-10. Means missing in Extended Data Fig.~5C}
+
+\reviewercomment{In ED Fig.~5C, are means missing?}
+
+\responselabel
+We thank the reviewer for pointing this out. We inspected Extended Data Fig.~5C and found that the mean markers were not sufficiently visible because the panel's zoomed y-axis clipped the square mean markers. We regenerated Extended Data Fig.~5 with a wider y-axis in panel C so that the square mean markers and error bars are clearly visible. The caption already states that individual dots show per-event correlations, whereas squares with error bars show mean $\pm$ s.e.m.
+
+We revised Extended Data Fig.~5 accordingly.
+
+
+% ============================================
+\subsection*{R1-11. Incorrect Extended Data reference in the SI}
+
+\reviewercomment{On p.~9 in the SI, I believe the sentence ``Simulations were performed with parental community sizes ranging from 4 to 48 species per community (Extended Data Fig.~5)'' should refer to ED Fig.~4.}
+
+\responselabel
+We thank the reviewer for catching this error and corrected the SI reference.

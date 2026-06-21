@@ -13,6 +13,15 @@ from matplotlib import rcParams
 import os
 
 
+EXCEPTION_LIST = {
+    'P4-02', 'P4-03', 'P4-23', 'P4-24', 'P7-97', 'P8-12',
+    'P8-91',
+    'P5-73', 'P5-69', 'P5-64', 'P5-61', 'P5-59', 'P5-56',
+    'P5-47', 'P5-50',
+    'P5-39', 'P5-87', 'P5-54', 'P6-02', 'P6-47', 'P6-74', 'P6-57',
+}
+
+
 def set_academic_style():
     """Set matplotlib parameters for academic paper quality figures"""
     rcParams['font.family'] = 'Arial'
@@ -36,6 +45,8 @@ def load_coalescence_data():
     file_path = '../../Analyzed/processed_CoalescenceEvent_synthetic.xlsx'
     df = pd.read_excel(file_path)
     print(f"Loaded {len(df)} coalescence events")
+    df = df[~df['SampleIDX'].isin(EXCEPTION_LIST)].copy()
+    print(f"Retained {len(df)} valid coalescence events after excluding missing/invalid samples")
     return df
 
 

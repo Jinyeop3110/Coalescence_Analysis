@@ -2,11 +2,11 @@
 """
 plot_stacked_bar_class_fractions.py
 
-Purpose: Generate stacked bar plots for class fractions (CLS, Mixing, Restructuring)
+Purpose: Generate stacked bar plots for class fractions (Dominance, Mixture, Restructuring)
          replacing pie charts with a consistent format across all ablation/comparison figures.
 
 Generates:
-1. Fig S4: Robustness to metrics (5 bars: Vector Decomp, Euclidean, Bray-Curtis, Jensen-Shannon, Jaccard)
+1. Fig S4: Sensitivity to metrics (5 bars: Vector Decomp, Euclidean, Bray-Curtis, Jensen-Shannon, Jaccard)
 2. Fig S12: Species number ablation (6 bars: 4, 6, 9, 12, 24, 48 species per community)
 3. Fig S25: Assembly effect simulation (5 bars per row for interaction strengths)
 4. Fig S26: Assembly effect experimental (3 bars per row for nutrient conditions)
@@ -28,7 +28,7 @@ import pickle
 output_dir = Path("Figure/StackedBar_ClassFractions")
 output_dir.mkdir(parents=True, exist_ok=True)
 
-# Get consistent colors for CLS, Mixing, Restructuring
+# Get consistent colors for Dominance, Mixture, Restructuring
 COLORS = get_phase_diagram_colors()
 
 
@@ -68,7 +68,7 @@ def create_stacked_bar_plot(data_dict, labels, title, output_filename,
     mix_pcts = []
     rest_pcts = []
     totals = []
-    counts = {'CLS': [], 'Mixing': [], 'Restructuring': []}
+    counts = {'Dominance': [], 'Mixture': [], 'Restructuring': []}
 
     for label in labels:
         data = data_dict[label]
@@ -84,13 +84,13 @@ def create_stacked_bar_plot(data_dict, labels, title, output_filename,
             mix_pcts.append(0)
             rest_pcts.append(0)
 
-        counts['CLS'].append(data['Dominance'])
-        counts['Mixing'].append(data['Mixing'])
+        counts['Dominance'].append(data['Dominance'])
+        counts['Mixture'].append(data['Mixing'])
         counts['Restructuring'].append(data['Restructuring'])
 
     # Create stacked bars
-    bars_cls = ax.bar(x, cls_pcts, bar_width, label='CLS', color=COLORS[0], edgecolor='white', linewidth=0.5)
-    bars_mix = ax.bar(x, mix_pcts, bar_width, bottom=cls_pcts, label='Mixing', color=COLORS[1], edgecolor='white', linewidth=0.5)
+    bars_cls = ax.bar(x, cls_pcts, bar_width, label='Dominance', color=COLORS[0], edgecolor='white', linewidth=0.5)
+    bars_mix = ax.bar(x, mix_pcts, bar_width, bottom=cls_pcts, label='Mixture', color=COLORS[1], edgecolor='white', linewidth=0.5)
     bars_rest = ax.bar(x, rest_pcts, bar_width, bottom=np.array(cls_pcts) + np.array(mix_pcts),
                        label='Restructuring', color=COLORS[2], edgecolor='white', linewidth=0.5)
 
@@ -101,23 +101,23 @@ def create_stacked_bar_plot(data_dict, labels, title, output_filename,
         if total == 0:
             continue
 
-        # CLS annotation (bottom section)
+        # Dominance annotation (bottom section)
         if cls_pcts[i] > 8:  # Only show if section is large enough
             y_pos = cls_pcts[i] / 2
             if show_counts:
-                text = f"{cls_pcts[i]:.0f}%\n({counts['CLS'][i]}/{total})"
+                text = f"{cls_pcts[i]:.0f}%\n({counts['Dominance'][i]}/{total})"
             else:
                 text = f"{cls_pcts[i]:.0f}%"
-            ax.text(x[i], y_pos, text, ha='center', va='center', fontsize=annotation_fontsize, fontweight='bold', color='black')
+            ax.text(x[i], y_pos, text, ha='center', va='center', fontsize=annotation_fontsize, color='black')
 
-        # Mixing annotation (middle section)
+        # Mixture annotation (middle section)
         if mix_pcts[i] > 8:
             y_pos = cls_pcts[i] + mix_pcts[i] / 2
             if show_counts:
-                text = f"{mix_pcts[i]:.0f}%\n({counts['Mixing'][i]}/{total})"
+                text = f"{mix_pcts[i]:.0f}%\n({counts['Mixture'][i]}/{total})"
             else:
                 text = f"{mix_pcts[i]:.0f}%"
-            ax.text(x[i], y_pos, text, ha='center', va='center', fontsize=annotation_fontsize, fontweight='bold', color='black')
+            ax.text(x[i], y_pos, text, ha='center', va='center', fontsize=annotation_fontsize, color='black')
 
         # Restructuring annotation (top section)
         if rest_pcts[i] > 8:
@@ -126,7 +126,7 @@ def create_stacked_bar_plot(data_dict, labels, title, output_filename,
                 text = f"{rest_pcts[i]:.0f}%\n({counts['Restructuring'][i]}/{total})"
             else:
                 text = f"{rest_pcts[i]:.0f}%"
-            ax.text(x[i], y_pos, text, ha='center', va='center', fontsize=annotation_fontsize, fontweight='bold', color='black')
+            ax.text(x[i], y_pos, text, ha='center', va='center', fontsize=annotation_fontsize, color='black')
 
     # Formatting (fontsize x1.3)
     ax.set_ylabel(ylabel, fontsize=14.3)  # 11 * 1.3
@@ -145,7 +145,7 @@ def create_stacked_bar_plot(data_dict, labels, title, output_filename,
 
     # Title
     if title:
-        ax.set_title(title, fontsize=15.6, fontweight='bold', pad=10)  # 12 * 1.3
+        ax.set_title(title, fontsize=15.6, pad=10)  # 12 * 1.3
 
     # Legend
     ax.legend(loc=legend_loc, frameon=True, fontsize=11.7)  # 9 * 1.3
@@ -195,7 +195,7 @@ def create_two_row_stacked_bar_plot(data_row1, data_row2, labels,
         mix_pcts = []
         rest_pcts = []
         totals = []
-        counts = {'CLS': [], 'Mixing': [], 'Restructuring': []}
+        counts = {'Dominance': [], 'Mixture': [], 'Restructuring': []}
 
         for label in labels:
             data = data_dict[label]
@@ -211,13 +211,13 @@ def create_two_row_stacked_bar_plot(data_row1, data_row2, labels,
                 mix_pcts.append(0)
                 rest_pcts.append(0)
 
-            counts['CLS'].append(data['Dominance'])
-            counts['Mixing'].append(data['Mixing'])
+            counts['Dominance'].append(data['Dominance'])
+            counts['Mixture'].append(data['Mixing'])
             counts['Restructuring'].append(data['Restructuring'])
 
         # Create stacked bars
-        bars_cls = ax.bar(x, cls_pcts, bar_width, label='CLS', color=COLORS[0], edgecolor='white', linewidth=0.5)
-        bars_mix = ax.bar(x, mix_pcts, bar_width, bottom=cls_pcts, label='Mixing', color=COLORS[1], edgecolor='white', linewidth=0.5)
+        bars_cls = ax.bar(x, cls_pcts, bar_width, label='Dominance', color=COLORS[0], edgecolor='white', linewidth=0.5)
+        bars_mix = ax.bar(x, mix_pcts, bar_width, bottom=cls_pcts, label='Mixture', color=COLORS[1], edgecolor='white', linewidth=0.5)
         bars_rest = ax.bar(x, rest_pcts, bar_width, bottom=np.array(cls_pcts) + np.array(mix_pcts),
                            label='Restructuring', color=COLORS[2], edgecolor='white', linewidth=0.5)
 
@@ -227,26 +227,26 @@ def create_two_row_stacked_bar_plot(data_row1, data_row2, labels,
             if total == 0:
                 continue
 
-            # CLS annotation
+            # Dominance annotation
             if cls_pcts[i] > 10:
                 y_pos = cls_pcts[i] / 2
-                text = f"{cls_pcts[i]:.0f}%\n({counts['CLS'][i]}/{total})"
-                ax.text(x[i], y_pos, text, ha='center', va='center', fontsize=annotation_fontsize, fontweight='bold', color='black')
+                text = f"{cls_pcts[i]:.0f}%\n({counts['Dominance'][i]}/{total})"
+                ax.text(x[i], y_pos, text, ha='center', va='center', fontsize=annotation_fontsize, color='black')
 
-            # Mixing annotation
+            # Mixture annotation
             if mix_pcts[i] > 10:
                 y_pos = cls_pcts[i] + mix_pcts[i] / 2
-                text = f"{mix_pcts[i]:.0f}%\n({counts['Mixing'][i]}/{total})"
-                ax.text(x[i], y_pos, text, ha='center', va='center', fontsize=annotation_fontsize, fontweight='bold', color='black')
+                text = f"{mix_pcts[i]:.0f}%\n({counts['Mixture'][i]}/{total})"
+                ax.text(x[i], y_pos, text, ha='center', va='center', fontsize=annotation_fontsize, color='black')
 
             # Restructuring annotation
             if rest_pcts[i] > 10:
                 y_pos = cls_pcts[i] + mix_pcts[i] + rest_pcts[i] / 2
                 text = f"{rest_pcts[i]:.0f}%\n({counts['Restructuring'][i]}/{total})"
-                ax.text(x[i], y_pos, text, ha='center', va='center', fontsize=annotation_fontsize, fontweight='bold', color='black')
+                ax.text(x[i], y_pos, text, ha='center', va='center', fontsize=annotation_fontsize, color='black')
 
         # Formatting (fontsize x1.3)
-        ax.set_ylabel(row_title, fontsize=14.3, fontweight='bold')  # 11 * 1.3
+        ax.set_ylabel(row_title, fontsize=14.3)  # 11 * 1.3
         ax.set_ylim(0, 100)
         ax.set_xlim(-0.5, n_bars - 0.5)
         ax.yaxis.grid(True, linestyle='--', alpha=0.3)
@@ -256,7 +256,8 @@ def create_two_row_stacked_bar_plot(data_row1, data_row2, labels,
 
         # Legend only for first row
         if ax_idx == 0:
-            ax.legend(loc='upper right', frameon=True, fontsize=11.7)  # 9 * 1.3
+            ax.legend(loc='upper left', bbox_to_anchor=(1.01, 1.0),
+                      frameon=True, fontsize=11.7)  # 9 * 1.3
 
     # X-axis labels on bottom plot
     axes[1].set_xticks(x)
@@ -264,9 +265,9 @@ def create_two_row_stacked_bar_plot(data_row1, data_row2, labels,
 
     # Main title
     if main_title:
-        fig.suptitle(main_title, fontsize=16.9, fontweight='bold', y=0.98)  # 13 * 1.3
+        fig.suptitle(main_title, fontsize=16.9, y=0.98)  # 13 * 1.3
 
-    plt.tight_layout(rect=[0, 0, 1, 0.96])
+    plt.tight_layout(rect=[0, 0, 0.88, 0.96])
 
     # Save
     fig.savefig(output_filename, format='svg', dpi=300, bbox_inches='tight')
@@ -423,7 +424,7 @@ def classify_outcome(u, v, k):
     y = np.abs(np.abs(np.arctan(u / (v + 1e-8))) - np.pi/4) / (np.pi/4)
 
     if (x**2 > 0.5) * (y > 0.5):
-        return 0  # Dominance/CLS
+        return 0  # Dominance
     elif (x**2 > 0.5) * (y < 0.5):
         return 1  # Mixing
     elif (x**2 < 0.5):
@@ -514,7 +515,7 @@ def generate_fig_s4_robustness():
     labels = list(results.keys())
     output_file = output_dir / "Fig_S4_robustness_metrics_stacked_bar.svg"
     create_stacked_bar_plot(results, labels,
-                           "Robustness of Classification to Metric Choice (Base Medium)",
+                           "Sensitivity of Classification to Metric Choice (Base Medium)",
                            output_file, figsize=(8, 5))
 
     return results
@@ -587,7 +588,7 @@ def generate_fig_s12_species_ablation():
                     'Mixing': mixing,
                     'Restructuring': restructuring
                 }
-                print(f"    {n_species} species, μ={mu}: CLS={dominance}, Mix={mixing}, Rest={restructuring}")
+                print(f"    {n_species} species, μ={mu}: Dominance={dominance}, Mixture={mixing}, Restructuring={restructuring}")
             else:
                 print(f"    Warning: Data file not found: {data_file}")
                 results[str(n_species)] = {'Dominance': 0, 'Mixing': 0, 'Restructuring': 0}
@@ -612,7 +613,7 @@ def generate_fig_s12_species_ablation():
         mix_pcts = []
         rest_pcts = []
         totals = []
-        counts = {'CLS': [], 'Mixing': [], 'Restructuring': []}
+        counts = {'Dominance': [], 'Mixture': [], 'Restructuring': []}
 
         for label in labels:
             if label in results:
@@ -633,13 +634,13 @@ def generate_fig_s12_species_ablation():
                 mix_pcts.append(0)
                 rest_pcts.append(0)
 
-            counts['CLS'].append(data['Dominance'])
-            counts['Mixing'].append(data['Mixing'])
+            counts['Dominance'].append(data['Dominance'])
+            counts['Mixture'].append(data['Mixing'])
             counts['Restructuring'].append(data['Restructuring'])
 
         # Create stacked bars
-        ax.bar(x, cls_pcts, bar_width, label='CLS', color=COLORS[0], edgecolor='white', linewidth=0.5)
-        ax.bar(x, mix_pcts, bar_width, bottom=cls_pcts, label='Mixing', color=COLORS[1], edgecolor='white', linewidth=0.5)
+        ax.bar(x, cls_pcts, bar_width, label='Dominance', color=COLORS[0], edgecolor='white', linewidth=0.5)
+        ax.bar(x, mix_pcts, bar_width, bottom=cls_pcts, label='Mixture', color=COLORS[1], edgecolor='white', linewidth=0.5)
         ax.bar(x, rest_pcts, bar_width, bottom=np.array(cls_pcts) + np.array(mix_pcts),
                label='Restructuring', color=COLORS[2], edgecolor='white', linewidth=0.5)
 
@@ -651,23 +652,23 @@ def generate_fig_s12_species_ablation():
 
             if cls_pcts[i] > 12:
                 y_pos = cls_pcts[i] / 2
-                ax.text(x[i], y_pos, f"{cls_pcts[i]:.0f}%\n({counts['CLS'][i]}/{total})",
-                       ha='center', va='center', fontsize=annotation_fontsize, fontweight='bold', color='black')
+                ax.text(x[i], y_pos, f"{cls_pcts[i]:.0f}%\n({counts['Dominance'][i]}/{total})",
+                       ha='center', va='center', fontsize=annotation_fontsize, color='black')
 
             if mix_pcts[i] > 12:
                 y_pos = cls_pcts[i] + mix_pcts[i] / 2
-                ax.text(x[i], y_pos, f"{mix_pcts[i]:.0f}%\n({counts['Mixing'][i]}/{total})",
-                       ha='center', va='center', fontsize=annotation_fontsize, fontweight='bold', color='black')
+                ax.text(x[i], y_pos, f"{mix_pcts[i]:.0f}%\n({counts['Mixture'][i]}/{total})",
+                       ha='center', va='center', fontsize=annotation_fontsize, color='black')
 
             if rest_pcts[i] > 12:
                 y_pos = cls_pcts[i] + mix_pcts[i] + rest_pcts[i] / 2
                 ax.text(x[i], y_pos, f"{rest_pcts[i]:.0f}%\n({counts['Restructuring'][i]}/{total})",
-                       ha='center', va='center', fontsize=annotation_fontsize, fontweight='bold', color='black')
+                       ha='center', va='center', fontsize=annotation_fontsize, color='black')
 
-        ax.set_title(f'μ = {mu}', fontsize=14.3, fontweight='bold')  # 11 * 1.3
+        ax.set_title(f'μ = {mu}', fontsize=14.3)  # 11 * 1.3
         ax.set_xticks(x)
         ax.set_xticklabels(labels, fontsize=11.7)  # 9 * 1.3
-        ax.set_xlabel('Species per community', fontsize=13)  # 10 * 1.3
+        ax.set_xlabel('Parental-community richness', fontsize=13)  # 10 * 1.3
         ax.set_ylim(0, 100)
         ax.yaxis.grid(True, linestyle='--', alpha=0.3)
         ax.set_axisbelow(True)

@@ -1,0 +1,100 @@
+\documentclass[11pt,a4paper]{article}
+
+% ============================================
+% Packages
+% ============================================
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{amsmath,amssymb,amsfonts}
+\usepackage{graphicx}
+\usepackage[margin=1in]{geometry}
+\usepackage[numbers,super,sort&compress]{natbib}
+\usepackage{hyperref}
+\usepackage{xcolor}
+\usepackage{booktabs}
+\usepackage{float}
+\usepackage{caption}
+\usepackage{subcaption}
+\usepackage{lineno}
+\usepackage{setspace}
+\usepackage{authblk}
+
+% ============================================
+% Document Settings
+% ============================================
+\doublespacing
+
+% Hyperref settings
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue,
+    citecolor=blue,
+    urlcolor=blue
+}
+
+% ============================================
+% Custom Commands
+% ============================================
+\newcommand{\todo}[1]{\textcolor{red}{[TODO: #1]}}
+\newcommand{\rev}[1]{\textcolor{red}{#1}}
+\newcommand{\rollback}[1]{\textcolor{green!50!black}{#1}}
+\newcommand{\figref}[1]{Fig.~\ref{#1}}
+\newcommand{\eqnref}[1]{Eq.~(\ref{#1})}
+\newcommand{\secref}[1]{Section~\ref{#1}}
+\newcommand{\tabref}[1]{Table~\ref{#1}}
+\newcommand{\jy}[1]{\textcolor{red}{#1}}
+
+% Graphics path
+\graphicspath{{figures/}}
+
+% Supplementary figure/table numbering (no S prefix for Nature E&E)
+\setcounter{figure}{0}
+\setcounter{table}{0}
+
+% ============================================
+% Document Begin
+% ============================================
+\begin{document}
+
+% Title
+\begin{center}
+{\LARGE \textbf{Supplementary Information}}\\[1em]
+{\large Interspecies Interactions Drive Community-Level Selection in Microbial Coalescence}\\[0.5em]
+\end{center}
+
+% ============================================
+% Supplementary Information Content
+% ============================================
+
+% Supplementary Methods (consolidated)
+\input{supplementary_sections/supplementary_methods}
+
+% Supplementary Note 1: Null Models and Statistical Controls
+\input{supplementary_sections/skewness_null_model}
+
+% Supplementary Note 2: Assembly Effect Analysis
+\input{supplementary_sections/assembly_effect}
+
+% Supplementary Note 3: Simulation Robustness
+\input{supplementary_sections/simulations}
+
+% Supplementary Note 4: Pairwise Selection Correlation
+\input{supplementary_sections/pairwise_selection_correlation}
+
+% Supplementary Note 5: Pairwise Invasion Experiments
+\input{supplementary_sections/invasion}
+
+% Supplementary Note 7: Alternative Models and Controls for Community-Level Selection
+\input{supplementary_sections/alternative_models_controls}
+
+% Extended Data Figures
+\input{supplementary_sections/extended_data}
+
+% Supplementary Figures
+\input{supplementary_sections/figures}
+
+% References (if needed for supplementary)
+\bibliographystyle{naturemag}
+\bibliography{references}
+
+\end{document}

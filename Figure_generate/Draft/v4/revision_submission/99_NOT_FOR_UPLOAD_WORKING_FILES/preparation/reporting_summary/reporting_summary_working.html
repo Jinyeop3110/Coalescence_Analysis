@@ -1,0 +1,360 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Nature Reporting Summary Working Copy</title>
+  <style>
+    :root {
+      --bg: #f7f7f4;
+      --panel: #ffffff;
+      --ink: #1d2528;
+      --muted: #5a666b;
+      --line: #d7dddf;
+      --accent: #0f6a70;
+      --warn: #9a5b00;
+      --warn-bg: #fff6df;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--ink);
+      font: 15px/1.5 -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    }
+
+    main {
+      max-width: 1120px;
+      margin: 0 auto;
+      padding: 32px 20px 64px;
+    }
+
+    header {
+      margin-bottom: 28px;
+      border-bottom: 2px solid var(--line);
+      padding-bottom: 18px;
+    }
+
+    h1,
+    h2,
+    h3 {
+      line-height: 1.2;
+      margin: 0;
+      letter-spacing: 0;
+    }
+
+    h1 {
+      font-size: 28px;
+      margin-bottom: 8px;
+    }
+
+    h2 {
+      font-size: 21px;
+      margin: 34px 0 14px;
+      padding-bottom: 8px;
+      border-bottom: 1px solid var(--line);
+    }
+
+    h3 {
+      font-size: 16px;
+      margin: 18px 0 8px;
+      color: var(--accent);
+    }
+
+    p {
+      margin: 0 0 10px;
+    }
+
+    .meta {
+      color: var(--muted);
+    }
+
+    .section {
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-radius: 6px;
+      padding: 18px;
+      margin-bottom: 18px;
+    }
+
+    .copyblock {
+      background: #f9fbfb;
+      border: 1px solid var(--line);
+      border-left: 4px solid var(--accent);
+      border-radius: 4px;
+      padding: 12px 14px;
+      margin: 8px 0 16px;
+      white-space: pre-wrap;
+    }
+
+    .need {
+      background: var(--warn-bg);
+      border-color: #e1bf75;
+      border-left-color: var(--warn);
+    }
+
+    table {
+      border-collapse: collapse;
+      width: 100%;
+      margin: 8px 0 18px;
+      background: var(--panel);
+    }
+
+    th,
+    td {
+      border: 1px solid var(--line);
+      padding: 9px 10px;
+      vertical-align: top;
+      text-align: left;
+    }
+
+    th {
+      background: #eef4f4;
+      font-weight: 650;
+    }
+
+    ul {
+      margin: 8px 0 16px 22px;
+      padding: 0;
+    }
+
+    li {
+      margin: 4px 0;
+    }
+
+    code {
+      font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+      font-size: 0.94em;
+    }
+  </style>
+</head>
+<body>
+<main>
+  <header>
+    <h1>Nature Reporting Summary Working Copy</h1>
+    <p class="meta">Working file for copy-ready Reporting Summary text. Last updated: June 16, 2026.</p>
+    <p class="meta">Prepared from the manuscript Methods, Supplementary Methods, reporting-summary notes, and data/code availability draft. Items marked <code>NEED_USER_INPUT</code> require confirmation before final portal submission.</p>
+  </header>
+
+  <section class="section" id="paper-information">
+    <h2>Paper Information</h2>
+    <h3>Title</h3>
+    <div class="copyblock">Interspecies Interactions Drive Community-Level Selection in Microbial Coalescence</div>
+
+    <h3>Corresponding Author</h3>
+    <div class="copyblock">Jeff Gore</div>
+
+    <h3>Authors</h3>
+    <div class="copyblock">Jinyeop Song, Jiliang Hu, Jeff Gore</div>
+
+    <h3>Affiliation</h3>
+    <div class="copyblock">Department of Physics, Massachusetts Institute of Technology, Cambridge, MA, USA</div>
+  </section>
+
+  <section class="section" id="field-selection">
+    <h2>Field Selection</h2>
+    <h3>Field-specific section</h3>
+    <div class="copyblock">Ecological, evolutionary &amp; environmental sciences</div>
+
+    <h3>Study involved field work</h3>
+    <div class="copyblock">Yes. The study uses bacterial isolates and natural communities derived from environmental samples collected in Cambridge, MA, USA. Most experiments were controlled laboratory microcosm experiments, but the source material included field-collected environmental samples.</div>
+  </section>
+
+  <section class="section" id="statistics-checklist">
+    <h2>Statistics Checklist</h2>
+    <h3>Statistical reporting summary</h3>
+    <div class="copyblock">Statistical significance was defined as p &lt; 0.05. All tests were two-sided unless explicitly stated otherwise. The manuscript reports paired t-tests for simulated interaction-strength summaries before and after assembly; a one-sided paired Wilcoxon signed-rank test for the Base-medium additive-null parental-asymmetry comparison; permutation tests with 1,000 permutations for pairwise selection correlations; Mann-Whitney U tests for comparisons with null distributions; chi-square tests for trend for outcome-fraction shifts across nutrient conditions; Fisher exact tests for categorical outcome comparisons; linear regression for prediction of coalescence outcomes from dominant-species competition; Spearman rank correlations for revision controls; and mixed-effects models in R/lme4 to control for parental richness and community identity where relevant. No Bayesian analyses were performed. No formal multiple-comparison correction was applied.</div>
+
+    <table>
+      <thead>
+        <tr>
+          <th>Checklist item</th>
+          <th>Working response</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Sample sizes</td>
+          <td>Sample sizes are stated for the major analyses in the manuscript, Supplementary Methods, and statistical reporting table. Biological replicates were retained as separate event-level observations where stated.</td>
+        </tr>
+        <tr>
+          <td>Effect sizes and uncertainty</td>
+          <td>Reported outputs include p values, R2 values, correlation coefficients, outcome fractions, odds ratios where relevant, and mean plus s.e.m. for error bars where shown.</td>
+        </tr>
+        <tr>
+          <td>Covariates and complex designs</td>
+          <td>Mixed-effects models were used in R/lme4 to control for parental community richness and community identity effects when quantifying nutrient dependence.</td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+
+  <section class="section" id="software-code">
+    <h2>Software And Code</h2>
+    <h3>Data collection</h3>
+    <div class="copyblock need">Experimental data were collected using standard laboratory instruments and associated acquisition workflows. OD600 was measured with a BioTek Synergy H1 plate reader. Community pH was measured with an Apera Instruments PH5500 pH meter. 16S rRNA amplicon sequencing was performed by Argonne National Laboratory on an Illumina MiSeq platform. Final compositions in pairwise invasion assays were determined by colony counting. NEED_USER_INPUT: What instrument-control software, if any, should be reported for the BioTek plate reader, pH meter workflow, or sequencing facility?</div>
+
+    <h3>Data analysis and code availability</h3>
+    <div class="copyblock need">16S rRNA amplicon reads were demultiplexed and denoised using QIIME2 and DADA2, and ASVs were taxonomically classified against the SILVA v138 database. Most analyses were performed in Python 3.11 using NumPy, pandas, SciPy, and scikit-learn. Mixed-effects models were fit in R using lme4. Custom scripts were used for generalized Lotka-Volterra simulations, coalescence outcome classification, statistical analyses, and figure generation. All code used for simulation and analysis is available via GitHub at https://github.com/Jinyeop3110/interspecies-interaction-derive-Community-Level-Selection. NEED_USER_INPUT: What exact package versions should be reported for QIIME2, DADA2, NumPy, pandas, SciPy, scikit-learn, R, and lme4? NEED_USER_INPUT: Will the GitHub repository be archived with Zenodo or another DOI-minting service?</div>
+  </section>
+
+  <section class="section" id="data-availability">
+    <h2>Data Availability</h2>
+    <h3>Revision-stage statement</h3>
+    <div class="copyblock need">Isolates and communities are available upon request. All data are available in the Supplementary Information and via Dryad at http://datadryad.org/share/LINK_NOT_FOR_PUBLICATION/kQACU7LCmQclVZfGZk0bS5ZPUVL_grhwah2zvFY4m9s. Raw sequencing reads are stated in the Methods as available via Dryad. NEED_USER_INPUT: Confirm that the private Dryad reviewer link works and contains raw 16S reads, processed abundance tables, metadata, taxonomy tables, simulation outputs, and figure source data. NEED_USER_INPUT: Are raw 16S reads deposited only in Dryad, or also in SRA/ENA/DDBJ? NEED_USER_INPUT: What public Dryad DOI/accession should replace the private reviewer link before publication?</div>
+  </section>
+
+  <section class="section" id="eee-study-design">
+    <h2>Ecological, Evolutionary &amp; Environmental Sciences Study Design</h2>
+    <h3>Study description</h3>
+    <div class="copyblock">This is a quantitative experimental and theoretical study of microbial community coalescence. Synthetic parental communities were assembled from a 54-isolate environmental bacterial library, stabilized by serial transfer, mixed pairwise at a 1:1 volume ratio, and propagated to post-coalescence endpoints under three nutrient conditions: Nutr-, Base, and Nutr+. Treatment factors included nutrient condition, inoculated richness, parental-community identity, and, in simulations, the generalized Lotka-Volterra interaction-strength parameter mu. Community composition was measured from V4 16S rRNA amplicon sequencing and analyzed as ASV relative-abundance profiles. Coalescence outcomes were classified as Dominance, Mixture, or Restructuring using predefined similarity-based criteria. Pairwise invasion assays and generalized Lotka-Volterra simulations were used to test interaction-dependent mechanisms, and natural sample-derived communities provided an additional test in taxonomically richer environmental assemblages.</div>
+
+    <h3>Research sample</h3>
+    <div class="copyblock">The synthetic-community experiments used a library of 54 bacterial isolates derived from environmental samples collected in Cambridge, MA, USA, including soil, tree surface, and flower stamen environments. The isolate library spans 29 families across Proteobacteria, Firmicutes, and Bacteroidota. Natural sample-derived communities were generated from six additional environmental samples from soil, compost, and decomposing organic matter collected in Cambridge, MA, USA. These samples provided environmentally derived bacterial communities with broad taxonomic, growth, and environmental-modification diversity. The study did not involve human participants, human data, vertebrate animals, or clinical samples.</div>
+
+    <h3>Sampling strategy</h3>
+    <div class="copyblock need">No formal statistical sample-size calculation is described in the available methods or statistical reporting table. Experimental sample sizes were chosen based on the 54-isolate library size, the combinatorial design of non-overlapping or partially overlapping parental communities, 96-well plate capacity, and feasibility of serial-transfer coalescence experiments. Synthetic parental communities were assembled at inoculated richness levels of 6, 12, or 24 species, yielding 30 parental communities. Forty-seven synthetic coalescence pairs were planned with two biological replicates each, yielding 94 total Base-medium events before exclusions and 83 valid Base-medium events after sequencing failures or contamination were removed. Nutrient-perturbation coalescence experiments included Nutr- n = 90, Base n = 83, and Nutr+ n = 90 events. Pairwise invasion assays tested the 12 most abundant isolates in both directions, corresponding to 132 directional assays per medium. Natural sample-derived experiments used 15 pairwise coalescence events with two biological replicates per event, yielding n = 30 events per nutrient condition. Main generalized Lotka-Volterra simulation panels used n = 1,200 coalescence simulations per condition where stated. NEED_USER_INPUT: Confirm that no formal statistical sample-size or power calculation was performed.</div>
+
+    <h3>Data collection</h3>
+    <div class="copyblock">Jinyeop Song and Jiliang Hu performed the experiments. Isolates and communities were grown in 300 microliter volumes in 96-well deep-well plates at 25 C with shaking at 800 rpm. Parental communities were stabilized through seven daily 30-fold serial dilutions before coalescence. Coalescence experiments mixed two pre-stabilized parental communities at equal volume ratio and propagated the mixtures through seven additional daily serial transfers. Community composition was measured by V4-region 16S rRNA amplicon sequencing after DNA extraction with the QIAGEN DNeasy PowerSoil kit. OD600 was measured with a BioTek Synergy H1 plate reader, and pH was measured with an Apera Instruments PH5500 pH meter. Pairwise invasion endpoints were measured by colony counting after seven daily dilution cycles.</div>
+
+    <h3>Timing and spatial scale</h3>
+    <div class="copyblock need">Environmental samples and isolates were collected in Cambridge, MA, USA, and experiments were performed as laboratory microcosms in 300 microliter wells. Synthetic and natural communities were propagated by daily 30-fold serial transfer, with seven transfers before coalescence and seven transfers after coalescence for endpoint measurements. The spatial scale of the experiments was the microplate well, and the spatial scale of environmental sampling was local Cambridge, MA microhabitats. NEED_USER_INPUT: What were the exact collection dates or date ranges?</div>
+
+    <h3>Data exclusions</h3>
+    <div class="copyblock need">ASV tables were filtered to retain taxa with at least 0.1% relative abundance in any sample, matching the extinction threshold used in simulations. In the Base synthetic coalescence experiment, 47 planned coalescence pairs with two biological replicates yielded 94 total events; 11 events were excluded due to sequencing failures or contamination, resulting in 83 valid Base-medium events. Simulated species with relative abundance below 0.1% were set to zero at assembly and coalescence endpoints. The available evidence identifies sequencing failures, contamination, and predefined abundance thresholds as exclusion or filtering criteria. NEED_USER_INPUT: Were any additional samples or events excluded in Nutr-, Nutr+, natural-community, pairwise-invasion, or revision-control analyses? NEED_USER_INPUT: Confirm that exclusions were not based on the observed coalescence outcome.</div>
+
+    <h3>Reproducibility</h3>
+    <div class="copyblock">Synthetic coalescence pairs were performed with two biological replicates where planned, and natural sample-derived coalescence events were performed with two biological replicates per pair. Communities were stabilized through repeated serial-transfer cycles before coalescence and propagated through repeated serial transfers after coalescence before endpoint sequencing. Pairwise invasion assays tested each isolate pair in reciprocal resident-invader directions across media. Simulation results were reproduced across independent random interaction matrices and randomized parental-community assignments, with robustness analyses using alternative model assumptions. Failed or invalid samples are described under Data exclusions.</div>
+
+    <h3>Randomization</h3>
+    <div class="copyblock need">Synthetic parental communities were assembled by predefined design-based assignment of isolates from the strain library into non-overlapping or partially overlapping species pools rather than by random allocation. Pairwise coalescence events were constructed systematically from stabilized parental communities according to the experimental design. Pairwise invasion assays tested all pairwise combinations among the 12 most abundant isolates in both resident-invader directions. In generalized Lotka-Volterra simulations, species identities were randomly permuted and assigned to parental communities after permutation, and independent interaction matrices were sampled for each replicate. NEED_USER_INPUT: Were plate positions, sample processing order, or sequencing order randomized or blocked?</div>
+
+    <h3>Blinding</h3>
+    <div class="copyblock need">No blinding is described in the available methods. Outcome classification and statistical analyses were computed from sequencing-derived ASV relative-abundance tables, colony-count thresholds, and predefined quantitative criteria. Because the primary outcomes were algorithmic or threshold-based rather than subjective visual classifications, blinding was not central to outcome assignment. NEED_USER_INPUT: Confirm whether any experimental, manual colony-counting, sample-handling, or data-processing steps were performed blind to treatment condition.</div>
+  </section>
+
+  <section class="section" id="field-work">
+    <h2>Field Work, Collection And Transport</h2>
+    <h3>Field conditions</h3>
+    <div class="copyblock need">Environmental material was collected from local microhabitats in Cambridge, MA, USA, including soil, tree surface, flower stamen, compost, and decomposing organic matter. Field conditions were not experimental treatment variables, and subsequent experiments were performed under controlled laboratory conditions. NEED_USER_INPUT: Should temperature, weather, season, or other field-condition metadata be reported?</div>
+
+    <h3>Location</h3>
+    <div class="copyblock need">Samples were collected in Cambridge, MA, USA, from local soil, tree surface, flower stamen, compost, and decomposing organic matter microhabitats. NEED_USER_INPUT: Should exact GPS coordinates or site descriptions be included?</div>
+
+    <h3>Access and import/export</h3>
+    <div class="copyblock need">Samples were collected locally in Cambridge, MA, USA; no international import/export is described in the available methods. NEED_USER_INPUT: Confirm whether any permits were required, whether any protected habitats or protected species were sampled, and whether any international import/export or regulated sample transfer occurred.</div>
+
+    <h3>Disturbance</h3>
+    <div class="copyblock need">Environmental sampling was limited to collecting material or surface-associated microbial samples for laboratory enrichment and isolate recovery; no large-scale habitat manipulation is described in the available methods. NEED_USER_INPUT: Confirm whether any field disturbance beyond small sample collection should be reported.</div>
+  </section>
+
+  <section class="section" id="life-sciences-study-design">
+    <h2>Optional Life Sciences Study Design</h2>
+    <h3>Sample size</h3>
+    <div class="copyblock need">No formal statistical sample-size calculation is described in the available methods or statistical reporting table. Sample sizes were determined by the 54-isolate library, the predefined community-assembly design, 96-well plate capacity, and the feasible number of serial-transfer coalescence experiments. Synthetic analyses included 30 parental communities and 83 valid Base-medium coalescence events after exclusions. Nutrient-perturbation experiments included Nutr- n = 90, Base n = 83, and Nutr+ n = 90 events. Natural sample-derived experiments used n = 30 events per nutrient condition. Pairwise invasion assays used 132 directional assays per medium. Main generalized Lotka-Volterra simulation panels used n = 1,200 coalescence simulations per condition where stated. NEED_USER_INPUT: Confirm that no formal statistical sample-size or power calculation was performed.</div>
+
+    <h3>Data exclusions</h3>
+    <div class="copyblock need">ASV tables were filtered at a 0.1% relative-abundance threshold. In Base synthetic coalescence experiments, 11 of 94 planned events were excluded because of sequencing failures or contamination, leaving 83 valid events. Simulated taxa below the 0.1% relative-abundance threshold were set to zero. The available evidence identifies sequencing failures, contamination, and predefined abundance thresholds as exclusion or filtering criteria. NEED_USER_INPUT: Were any additional samples or events excluded in Nutr-, Nutr+, natural-community, pairwise-invasion, or revision-control analyses? NEED_USER_INPUT: Confirm that exclusions were not based on the observed coalescence outcome.</div>
+
+    <h3>Replication</h3>
+    <div class="copyblock">Synthetic and natural sample-derived coalescence experiments used biological replicates where planned, with natural sample-derived events performed as two biological replicates per pair. Communities were stabilized before coalescence and propagated after coalescence through repeated serial-transfer cycles. Pairwise invasion assays tested reciprocal resident-invader directions. Simulation results were repeated across independently sampled interaction matrices and parental-community assignments.</div>
+
+    <h3>Randomization</h3>
+    <div class="copyblock need">Laboratory community assembly used predefined design-based assignment of isolates and parental communities rather than random allocation. Pairwise coalescence and invasion assays followed systematic experimental designs. Simulations used randomized species permutations, random parental-community assignment after permutation, and independently sampled interaction matrices. NEED_USER_INPUT: Were plate positions, sample processing order, or sequencing order randomized or blocked?</div>
+
+    <h3>Blinding</h3>
+    <div class="copyblock need">No blinding is described in the available methods. Outcome classification and statistical analyses were computed from sequencing-derived abundance tables, colony-count thresholds, and predefined quantitative criteria. NEED_USER_INPUT: Confirm whether any experimental, manual colony-counting, sample-handling, or data-processing steps were performed blind to treatment condition.</div>
+  </section>
+
+  <section class="section" id="specific-materials">
+    <h2>Specific Materials, Systems And Methods</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>Module</th>
+          <th>Working response</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Antibodies</td>
+          <td>This study did not use antibodies.</td>
+        </tr>
+        <tr>
+          <td>Cell lines</td>
+          <td>This study did not use cell lines.</td>
+        </tr>
+        <tr>
+          <td>Palaeontology</td>
+          <td>This study did not involve palaeontological specimens.</td>
+        </tr>
+        <tr>
+          <td>Vertebrate animals</td>
+          <td>This study did not involve vertebrate animals or regulated animal experiments.</td>
+        </tr>
+        <tr>
+          <td>Other organisms / microbial isolates</td>
+          <td>The study used environmental bacterial isolates and microbial communities. Their source, culture conditions, and experimental use are described under the Ecological, evolutionary &amp; environmental sciences study design section.</td>
+        </tr>
+        <tr>
+          <td>Human participants / human data</td>
+          <td>This study did not involve human participants, human data, or human biological material.</td>
+        </tr>
+        <tr>
+          <td>Clinical data</td>
+          <td>This study did not involve clinical data.</td>
+        </tr>
+        <tr>
+          <td>Dual use research of concern</td>
+          <td class="need">This study does not report experiments expected to constitute dual use research of concern. NEED_USER_INPUT: Confirm that institutional review did not identify dual use research of concern.</td>
+        </tr>
+        <tr>
+          <td>Plants</td>
+          <td>This study did not involve plant genotypes, seed stocks, plant transformation, or plant growth experiments. Some environmental microbial isolates were derived from plant-associated or decomposing organic material, as described under field collection.</td>
+        </tr>
+        <tr>
+          <td>ChIP-seq</td>
+          <td>This study did not use ChIP-seq.</td>
+        </tr>
+        <tr>
+          <td>Flow cytometry</td>
+          <td>This study did not use flow cytometry.</td>
+        </tr>
+        <tr>
+          <td>MRI</td>
+          <td>This study did not use MRI.</td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+
+  <section class="section" id="remaining-user-input">
+    <h2>Remaining User-input Checklist</h2>
+    <ul>
+      <li>NEED_USER_INPUT: What instrument-control software, if any, should be reported for the BioTek plate reader, pH meter workflow, or sequencing facility?</li>
+      <li>NEED_USER_INPUT: What exact package versions should be reported for QIIME2, DADA2, NumPy, pandas, SciPy, scikit-learn, R, and lme4?</li>
+      <li>NEED_USER_INPUT: Will the GitHub repository be archived with Zenodo or another DOI-minting service?</li>
+      <li>NEED_USER_INPUT: Confirm that the private Dryad reviewer link works and contains raw 16S reads, processed abundance tables, metadata, taxonomy tables, simulation outputs, and figure source data.</li>
+      <li>NEED_USER_INPUT: Are raw 16S reads deposited only in Dryad, or also in SRA/ENA/DDBJ?</li>
+      <li>NEED_USER_INPUT: What public Dryad DOI/accession should replace the private reviewer link before publication?</li>
+      <li>NEED_USER_INPUT: What were the exact collection dates or date ranges?</li>
+      <li>NEED_USER_INPUT: Confirm that no formal statistical sample-size or power calculation was performed.</li>
+      <li>NEED_USER_INPUT: Were any additional samples or events excluded in Nutr-, Nutr+, natural-community, pairwise-invasion, or revision-control analyses?</li>
+      <li>NEED_USER_INPUT: Confirm that exclusions were not based on the observed coalescence outcome.</li>
+      <li>NEED_USER_INPUT: Were plate positions, sample processing order, or sequencing order randomized or blocked?</li>
+      <li>NEED_USER_INPUT: Confirm whether any experimental, manual colony-counting, sample-handling, or data-processing steps were performed blind to treatment condition.</li>
+      <li>NEED_USER_INPUT: Should temperature, weather, season, or other field-condition metadata be reported?</li>
+      <li>NEED_USER_INPUT: Should exact GPS coordinates or site descriptions be included?</li>
+      <li>NEED_USER_INPUT: Confirm whether any permits were required, whether any protected habitats or protected species were sampled, and whether any international import/export or regulated sample transfer occurred.</li>
+      <li>NEED_USER_INPUT: Confirm whether any field disturbance beyond small sample collection should be reported.</li>
+      <li>NEED_USER_INPUT: Confirm that institutional review did not identify dual use research of concern.</li>
+    </ul>
+  </section>
+</main>
+</body>
+</html>

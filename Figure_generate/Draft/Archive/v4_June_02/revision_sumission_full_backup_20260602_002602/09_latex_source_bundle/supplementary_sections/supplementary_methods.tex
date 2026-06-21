@@ -1,0 +1,108 @@
+% ============================================
+% Supplementary Methods
+% ============================================
+\subsection*{Supplementary Methods}
+\label{sec:suppl:methods}
+
+% ============================================
+% Microbial Strain Library, Media, and Culture
+% ============================================
+\subsubsection*{Microbial Strain Library, Media, and Culture}
+\label{sec:suppl:strains}
+
+We obtained a library of 54 bacterial isolates derived from soil, tree surface, and flower stamen environments collected in Cambridge, MA, USA. Each isolate was purified by serial streaking and stored as glycerol stocks (25\% glycerol, $-80^\circ$C). Phylogenetic identities were determined by full-length 16S rRNA gene sequencing and V4 region amplicon sequencing with BLAST alignment to the SILVA 138 database; the 54 isolates corresponded to 50 unique amplicon sequence variants (ASVs) spanning 29 families across three phyla (Proteobacteria, Firmicutes, and Bacteroidota) (Extended Data Fig.~1; Supplementary Fig.~1). Monoculture growth characteristics were measured for all 54 isolates prior to community assembly experiments. Growth yield ranged from OD$_{600}$ = 0.1 to 1.2 after 24~h, and final pH in unbuffered medium ranged from 4.5 to 8.5, indicating substantial phenotypic diversity in growth rate and environmental modification potential (Supplementary Figs.~8, 20).
+
+The culture medium (CM) for isolates was composed of 1~g~L$^{-1}$ yeast extract and 1~g~L$^{-1}$ soytone (both from Becton Dickinson), 10~mM sodium phosphate buffer adjusted to pH~6.5, 0.1~mM CaCl$_2$, 2~mM MgCl$_2$, 4~mg~L$^{-1}$ NiSO$_4$, and 50~mg~L$^{-1}$ MnCl$_2$. All media were filter sterilized using bottle-top filtration units (VWR), and all chemicals were purchased from Sigma--Aldrich unless otherwise noted.
+
+Our coalescence experiments were conducted in three media conditions with varying nutrient supplementation, which produce different strengths of pairwise interactions: (1) Nutr$-$, the culture medium without additional carbon or nitrogen supplementation; (2) Base, CM supplemented with 5~g~L$^{-1}$ glucose and 4~g~L$^{-1}$ urea; and (3) Nutr$+$, CM supplemented with 20~g~L$^{-1}$ glucose and 16~g~L$^{-1}$ urea. Both parental community assembly and coalescence experiments were performed in the same media condition throughout each experimental series.
+
+Both monocultures and communities were grown in 300~$\mu$L volumes in 96-well deep-well plates (Deepwell plate 96/1000~$\mu$L; Eppendorf) covered with AeraSeal adhesive sealing films (Excel Scientific). Plates were incubated aerobically at 25$^\circ$C and shaken at 800~r.p.m. on Titramax shakers (Heidolph). To minimize pre-adaptation, all isolates from frozen stocks were preconditioned for two serial growth--dilution cycles prior to assembling parental communities.
+
+
+% ============================================
+% Construction of Parental Communities and Coalescence
+% ============================================
+\subsubsection*{Construction of Parental Communities and Community Coalescence}
+\label{sec:suppl:coalescence}
+
+Parental communities were constructed at three richness levels: 6, 12, or 24 members (P6, P12, P24), with 30 total communities (9 $\times$ P6, 9 $\times$ P12, 12 $\times$ P24). For P24 communities, 12 partially overlapping communities were assembled because only two non-overlapping sets of 24 species can be drawn from 54 isolates. Coalescence pairs were composed systematically: P6 included 14 pairs, P12 included 27 pairs, and P24 included 6 non-overlapping pairs, resulting in 47 total coalescence pairs for synthetic communities. Some coalescence events were excluded due to sequencing failures. After seven daily growth--dilution cycles, parental communities in Base medium retained a mean species survival ratio of $74 \pm 2$\% (mean $\pm$ s.e.m.) of their initial species pool, indicating that Base medium supports high species coexistence under moderate interaction strength.
+
+Coalescence experiments were conducted by mixing two pre-stabilized parental communities (A and B) at equal volume ratio (1:1) after seven daily dilution cycles. The resulting mixtures were cultured for another seven serial transfers ($\times$30 dilutions every 24~h) under identical media conditions to reach new steady states (Fig.~1c). Each of the 47 coalescence pairs was performed with two biological replicates, yielding 94 total coalescence events; 11 events were excluded due to sequencing failures or contamination, resulting in 83 coalescence events for synthetic community analyses.
+
+
+% ============================================
+% 16S rRNA Sequencing and Data Processing
+% ============================================
+\subsubsection*{16S rRNA Sequencing and Data Processing}
+\label{sec:suppl:methods:sequencing}
+
+Genomic DNA was extracted using QIAGEN DNeasy PowerSoil HTP 96 Kit following the manufacturer's protocol, with bead-beating for cell lysis. The V4 region of the 16S rRNA gene was amplified using 515F/806R primers containing Illumina overhang adapters and sequenced on an Illumina MiSeq platform (2$\times$250~bp). Raw reads were demultiplexed and denoised using QIIME2 and DADA2, generating amplicon sequence variants (ASVs). ASVs were taxonomically classified against the SILVA v138 database.
+
+Relative abundances were normalized by total read depth. ASV tables were filtered to retain only taxa representing $\geq$0.1\% relative abundance in any sample, which corresponds to the 0.1\% extinction threshold used in simulations. The phylogenetic tree (Supplementary Fig.~1) was constructed using Simple Phylogeny by EMBL's European Bioinformatics Institute\citep{Madeira2022}.
+
+
+% ============================================
+% Lotka--Volterra Simulations
+% ============================================
+\subsubsection*{Lotka--Volterra Simulations}
+\label{sec:suppl:methods:simulations}
+
+We modeled species-abundance dynamics with the generalized Lotka--Volterra (gLV) system:
+\begin{equation}
+\frac{dn_i}{dt} = n_i \left( r_i - \sum_{j=1}^{S} \alpha_{ij} n_j \right)
+\label{eq:glv}
+\end{equation}
+where $n_i$ is the abundance of species $i$, $r_i$ is its intrinsic growth rate, $S$ is the total number of species, and $\alpha_{ij}$ is the interaction coefficient describing how strongly species $j$ inhibits the growth of species $i$ (with self-regulation $\alpha_{ii} = 1$). \rev{Biologically, each $\alpha_{ij}$ is an effective per-capita term for the effect of species $j$ on species $i$ within the coarse-grained gLV model. It can absorb the net inhibitory consequences of direct mechanisms (e.g., resource competition, interference) and indirect mechanisms (e.g., metabolite-mediated inhibition, pH modification) at steady state, but it does not identify the underlying biochemical mechanism and the model does not dynamically represent pH or other environmental state variables.} Because we restrict $\alpha_{ij} \geq 0$, the model captures only competitive (growth-inhibiting) interactions; facilitative interactions such as cross-feeding are not represented. To isolate the role of interaction strength, we set all growth rates $r_i = 1$. Off-diagonal interaction coefficients ($i \neq j$) were drawn randomly from a uniform distribution $U[0, 2\mu]$ with coefficient mean $\mu$ and variance $\mu^2/3$. \rev{Thus, in the baseline competitive ensemble, $\mu$ sets the range of sampled competitive interaction coefficients and thereby controls both their mean and variance. Increasing $\mu$ simultaneously increases the average competitive inhibition and the heterogeneity of pairwise coefficients, rather than isolating either effect.} \rev{This distribution is a phenomenological ensemble of heterogeneous effective competitive effects rather than a fitted empirical distribution of biochemical mechanisms; robustness analyses across alternative coefficient distributions and a separate mean-vs-variance sweep test which aspects of interaction heterogeneity are required for the qualitative coalescence transition.}
+
+Each simulation used a pool of $N = 54$ species partitioned into four non-overlapping parental communities of 12 species. For each replicate, we randomly permuted the 54 species and assigned them sequentially (1--12, 13--24, 25--36, 37--48) to form the four communities, ensuring no species were shared across parental communities, analogous to the experimental design. A fresh interaction matrix was independently sampled for every replicate so that coalescence dynamics were explored across diverse ecological contexts rather than a single fixed species pool.
+
+For single-community assembly, we numerically integrated the gLV equations from random initial conditions $N_i(0) \sim \text{Unif}(0, 0.1)$ to ecological steady state. We solved the ODEs with the adaptive Runge--Kutta method RK23 implemented in \texttt{scipy.integrate.solve\_ivp}, integrating from $t = 0$ to $t = 5000$, which was sufficient for all communities to equilibrate. Following integration, species with relative abundances below an extinction threshold of 0.1\% were set to zero, yielding four parental-community steady states per replicate.
+
+Community coalescence was simulated by mixing pre-equilibrated parental communities at equal proportions, mirroring the experimental 1:1 volume protocol. For each of the $\binom{4}{2} = 6$ parental community pairs, we retrieved the steady-state community composition vectors $\mathbf{y}^{(1)}$ and $\mathbf{y}^{(2)}$, formed the equal mixture $\mathbf{y}_{\text{mix}} = (\mathbf{y}^{(1)} + \mathbf{y}^{(2)})/2$, and zeroed species falling below the extinction threshold in this initial mixture. We then re-integrated the gLV system from $\mathbf{y}_{\text{mix}}$ using the same interaction matrix over $t \in [0, 5000]$ until a new steady state was reached, and reapplied the 0.1\% threshold to the final abundances. This procedure captures the ecological relaxation after mixing and allows competitive exclusion, coexistence, or the emergence of previously rare species to arise from the underlying interaction structure.
+
+
+% ============================================
+% Pairwise Invasion Assays
+% ============================================
+\subsubsection*{Pairwise Invasion Assays}
+\label{sec:suppl:methods:invasion}
+
+To operationally estimate invasion resistance across nutrient conditions, we performed pairwise invasion experiments among the 12 most abundant isolates. Isolate pairs were mixed at a 95:5 ratio (resident:invader) by colony count and propagated in Nutr$-$, Base, and Nutr$+$ media under daily dilution ($\times$30) for 7 cycles. Final compositions were determined by colony counting on agar plates. Competitive outcomes were scored as coexistence, exclusion, or bistability based on final relative abundances (coexistence if both $>$10\%; exclusion if one $<$1\%). \rev{The fraction of failed invasions was used as an empirical proxy for net interaction intensity and invasion resistance under each nutrient condition. In the gLV calibration this readout corresponds to stronger effective competitive suppression, but it is not interpreted as a direct measurement of a single biochemical mechanism or of all pairwise Lotka--Volterra coefficients.}
+
+
+% ============================================
+% Natural Sample-Derived Communities
+% ============================================
+\subsubsection*{Natural Sample-Derived Communities}
+\label{sec:suppl:natural}
+
+Six environmental samples were collected from diverse microhabitats in Cambridge, MA, USA (soil, compost, decomposing organic matter). Each sample was homogenized and inoculated into culture medium, then subjected to seven serial growth-dilution cycles ($\times$30 dilution every 24~h) to establish stable communities. After stabilization, 15 pairwise coalescence events (each with two biological replicates, $n = 30$ per condition) were performed across all three media conditions following the same protocol as synthetic communities. Community composition was characterized via 16S rRNA amplicon sequencing.
+
+
+% ============================================
+% Statistical Analyses
+% ============================================
+\subsubsection*{Statistical Analyses}
+\label{sec:suppl:statistics}
+
+All analyses were performed in Python 3.11 using NumPy, pandas, and scikit-learn, with statistical significance defined at $p < 0.05$ unless otherwise noted.
+
+\begin{itemize}
+    \item Paired $t$-tests were used to compare interaction strength values before and after community assembly.
+    \item Permutation tests (1,000 permutations) were used to assess whether pairwise selection correlations differed between same-parental-community and cross-parental-community species pairs. The null distribution was generated by shuffling species origin labels within each coalescence event.
+    \item Mann-Whitney U tests were used to compare experimental parental-asymmetry values against null model distributions.
+    \item Linear regression was used to quantify the predictability of coalescence outcomes from dominant-species pairwise competition, with $R^2$ reported as the coefficient of determination.
+    \item $\chi^2$ tests were used to compare observed vs.\ expected counts of Dominance, Mixture, and Restructuring events.
+    \item Mixed-effects models (lme4 package in R) were used to control for parental community richness and community identity effects when quantifying nutrient dependence.
+\end{itemize}
+
+
+% ============================================
+% Optical Density Measurements and Monoculture Characterization
+% ============================================
+\subsubsection*{Optical Density Measurements and Monoculture Characterization}
+\label{sec:suppl:od}
+
+Optical density (OD) was measured at 600~nm using a plate reader (BioTek Synergy H1) to monitor community growth. Coalescence experiments were initiated by mixing equal volumes of the two stabilized parental communities without normalizing parental OD$_{600}$, so endpoint parental OD$_{600}$ provides an estimate of potential biomass-loading differences at mixing. Post-coalescence samples were measured at each serial dilution cycle to track growth dynamics. All OD measurements were blanked against sterile media controls.
+
+To characterize the phenotypic diversity of isolates prior to community assembly, we measured growth rate and pH modification potential for each of the 54 bacterial isolates in monoculture. OD$_{600}$ was recorded at 24-hour intervals during a 7-day serial dilution regime ($\times$30 dilution every 24~h) in the culture medium (CM), and growth rate was estimated from the exponential phase. Final pH was measured using a microplate pH meter after 24~h of growth in unbuffered medium to assess each isolate's capacity to acidify or alkalinize the environment. \rev{Community-level pH measurements were endpoint measurements on culture supernatant rather than continuous measurements during growth; replicate-to-replicate variability is represented by the biological replicates shown in the pH-based analyses.} The 54 isolates exhibited broad variation in both growth yield (OD$_{600}$ range: 0.1--1.2) and pH modification potential (final pH range: 4.5--8.5), providing the phenotypic diversity necessary for diverse coalescence outcomes (Supplementary Figs.~8, 20).

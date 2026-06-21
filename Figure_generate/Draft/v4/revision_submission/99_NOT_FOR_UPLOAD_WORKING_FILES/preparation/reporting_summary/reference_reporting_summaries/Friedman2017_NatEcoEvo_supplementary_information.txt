@@ -1,0 +1,431 @@
+                                                                           SUPPLEMENTARY                 INFORMATIONARTICLES
+                                                                                PUBLISHED: XX XX 0000 | VOLUME: 1 | ARTICLE NUMBER: 0109
+                                                                                                                              VOLUME: 1 | ARTICLE NUMBER: 0109
+
+In the format provided by the authors and unedited.
+
+
+Community structure follows simple assembly
+rules in structure
+        microbial
+  Community            microcosms
+                   follows simple assembly rules in microbial microcosms
+
+Jonathan Friedman1*, Logan
+                      1*
+                           M. Higgins1,2 and
+                                          1,2
+                                              Jeff Gore1* 1*
+    Jonathan Friedman , Logan M. Higgins & Jeff Gore
+       1
+Microbes   typically
+         Physics  of form diverse
+                      Living      communities
+                              Systems,          of interacting
+                                          Department            species, whose
+                                                          of Physics,            activities have
+                                                                         Massachusetts            tremendous
+                                                                                            Institute of       impact on the plants,
+                                                                                                          Technology,
+animals   and humans MA
+       Cambridge,      they 02139,
+                            associateUSA
+                                      with. The ability to predict the structure of these complex communities is crucial to under-
+standing and managing them. Here, we propose a simple, qualitative assembly rule that predicts community structure from the
+outcomes
+       2    of competitions
+         Microbiology       between small
+                          Graduate         sets of species,
+                                     Program,               and experimentally
+                                                 Massachusetts       Institute ofassess its  predictive power
+                                                                                   Technology,      Cambridge,using synthetic micro-
+bial communities composed of up to eight soil bacterial species. Nearly all competitions resulted in a unique, stable community,
+       Massachusetts, 02139, USA
+whose composition was independent of the initial species fractions. Survival in three-species competitions was predicted by
+the pairwise outcomes with an accuracy of ~90%. Obtaining a similar level of accuracy in competitions between sets of seven
+or all eight species required incorporating additional information regarding the outcomes of the three-species competitions.
+Our results   demonstrate authors:
+       *Corresponding      experimentally the  ability of a simple
+                                      yonatanf@mit.edu,             bottom-up approach to predict community structure. Such an
+                                                               gore@mit.edu
+approach is key for anticipating the response of communities to changing environments, designing interventions to steer exist-
+ing communities to more desirable states and, ultimately, rationally designing communities de novo.
+
+
+
+
+V
+        irtually every environment on Earth is teeming with micro-                    small sets of species (for example, pairwise competitions) is used to
+        Thislife,
+        bial   SI from
+                   includes:
+                         the human digestive tract to hydrothermal                    predict survival in more diverse multispecies competitions (Fig. 1).
+        vents miles beneath the ocean’s surface. These microbes are                   While this approach forgoes the ability to predict exact species
+             • Supplementary
+vital components     of natural ecosystems: Figures    1-8 activity drives
+                                                  microbial                           abundances, it does not require specification and parameterization
+Earth’s biogeochemical     cycles
+             • Supplementary Tables 1-3and directly influ-
+                                  1
+                                    , fertilizes crops 2
+                                                                                      of the exact form of interactions. Therefore, it is robust to model
+ences human health and well-being3. Those functions are typically                     misspecification, and requires only survival data, which can be
+performed not by a single species, but rather by a diverse com-                       more readily obtained than exact parameter values.
+munity composed of numerous interacting species. For example,                             Intuitively, competitions typically result in the survival of a set
+there is growing realization that numerous human illnesses, such as                   of coexisting species, which cannot be invaded by any of the spe-
+inflammatory bowel disease, are associated with an altered micro-                     cies that went extinct during the competition. To identify sets of
+bial community, rather than with any single pathogen4. The ability                    species that are expected to coexist and exclude additional species,
+to predict the structure of these complex, multispecies communi-                      we first use the outcomes of pairwise competitions. We propose the
+ties is crucial for understanding how such communities form and                       following assembly rule: in a multispecies competition, species that
+function, managing natural communities and rationally designing                       all coexist with each other in pairs will survive, whereas species that
+functional communities de novo5–7.                                                    are excluded by any of the surviving species will go extinct. This
+    Modelling and predicting microbial community structure is                         rule formalizes an intuitive expectation regarding how communities
+often pursued using bottom-up approaches that assume that species                     may assemble, and can be used to systemically predict community
+interact in a pairwise manner8–11. However, pair interactions may be                  structure from pairwise outcomes (Methods and Supplementary
+modulated by the presence of additional species12,13, an effect that can              Fig. 1). Importantly, the rule predicts the likely outcomes of compe-
+significantly alter community structure14 and may be common in                        tition, rather than the only possible ones. For example, for limited
+microbial communities15. While it has been shown that such models                     parameter values, even the simple gLV model can generate out-
+can provide a reasonable fit to sequencing data of intestinal micro-                  comes that are inconsistent with this assembly rule24.
+biomes16,17, their predictive power remains uncertain, as it has rarely
+been directly tested experimentally (refs 18,19 are notable exceptions).              Results
+    Current approaches to modelling microbial communities                             To directly assess the predictive power of this approach, we used
+commonly employ a specific parametric model, such as the general-                     a set of eight heterotrophic soil-dwelling bacterial species as a
+ized Lotka–Volterra (gLV) model20–22. Generating predictions from                     model system (Fig. 2a and Methods). Competition experiments
+such models requires fitting a large number of parameter values                       were performed by co-inoculating species at varying initial frac-
+from empirical data, which is often challenging and prone to over-                    tions, and propagating them through five growth–dilution cycles
+fitting. In addition, the exact form of the interactions needs to be                  (Supplementary Fig. 2). During each cycle, cells were cultured for
+assumed, and a failure of the model can reflect a misspecification of                 48 h and then diluted by a factor of 1,500 into fresh media, which
+the type of pairwise interaction, rather than the presence of higher-                 corresponds to ~10.6 cellular divisions per growth cycle and ~53
+order interactions23.                                                                 cellular divisions over the entire competition period. The overall
+    Here, we take an alternative approach in which qualitative infor-                 competition time was chosen such that species extinctions would
+mation regarding the survival of species in competitions between                      have sufficient time to occur, while new mutants would typically
+
+
+Physics of Living Systems, Department of Physics, Massachusetts Institute of Technology, Cambridge, Massachusetts 02139, USA. 2Microbiology
+1
+
+Graduate Program, Massachusetts Institute of Technology, Cambridge, Massachusetts 02139, USA. *e-mail: yonatanf@mit.edu; gore@mit.edu
+
+NATURE ECOLOGY & EVOLUTION 1, 0109 (2017) | DOI: 10.1038/s41559-017-0109 | www.nature.com/natecolevol                                                        1
+NATURE ECOLOGY & EVOLUTION | DOI: 10.1038/s41559-017-0109 | www.nature.com/natecolevol                                                                      1
+                                        © 2017 Macmillan Publishers Limited, part of Springer Nature. All rights reserved.
+                                         © 2017 Macmillan Publishers Limited, part of Springer Nature. All rights reserved.
+                                                                               SUPPLEMENTARY INFORMATION
+  Supplementary Figure 1: Simple examples of applying the assembly rule. We consider three
+  examples of competing species and their pairwise and trio (in panel c) competitive outcomes. In
+  each example, we enumerate all possible candidate sets of surviving species. For each such set we
+  denote whether all species within the set coexist, and whether all species not included in the set are
+  excluded by at least one surviving species. Sets that fulfill both of these conditions are predicted to
+  be feasible outcomes of the competition. (a) The most common pattern of pairwise outcomes among
+  three species observed experimentally. C not expected to survive along with A, and A and B are
+  both predicted to survive, since they are not excluded by any other species. Therefore, in this simple
+  case, the only predicted outcome is survival of A and B, and exclusion of C. (b) A trio involving a
+  bistability between species A and C. This case is predicted to have two possible competitive
+  outcomes: A being the sole survivor, since it excludes B and cannot be invaded by C; or exclusion
+  of A and coexistence of B and C. The latter can be a stable outcome since A cannot invade in the
+  presence of C. (c) An example including unexpected trio outcomes. Species C is excluded in the trio
+  ABC, despite coexisting with A and excluding B in pairs. Additionally, species A survives in trio
+  ABD despite being excluding by D in isolation. The only predicted outcome in this case is survival
+  of A, B, and D, and exclusion of C. Survival of A, C, and D, and exclusion of B in not a predicted
+  outcome since C, rather than B, is excluded in the presence of A.
+
+
+
+
+NATURE ECOLOGY & EVOLUTION | DOI: 10.1038/s41559-017-0109 | www.nature.com/natecolevol                                         2
+                                          © 2017 Macmillan Publishers Limited, part of Springer Nature. All rights reserved.
+                                                                               SUPPLEMENTARY INFORMATION
+    Supplementary Figure 2. Competition experiments were performed by co-inoculating species
+    and propagating them through five growth-dilution cycles. During each cycle, cells were
+    cultured for 48 hours and then diluted by a factor of 1500 into fresh M9 media supplemented with
+    Galacturonic acid and Serine as sole carbon sources. Community compositions were assessed by
+    measuring the culture optical density (OD), as well as by plating on solid agar media and counting
+    colonies, which are distinct for each species. Community composition was quantified at the end of
+    the fifth cycle for all competitions, or at the end of every cycle in cases where the dynamics of
+    competitions were investigated (Fig. 2c, Fig. 3b,c,e,f).
+
+
+
+
+NATURE ECOLOGY & EVOLUTION | DOI: 10.1038/s41559-017-0109 | www.nature.com/natecolevol                                         3
+                                          © 2017 Macmillan Publishers Limited, part of Springer Nature. All rights reserved.
+                                                                               SUPPLEMENTARY INFORMATION
+  Supplementary Figure 3. Growth rate in monoculture is correlated with competitive ability,
+  but does not predict pairwise competitive outcomes. (a) Faster growing species tend to survive
+  pairwise competitions more often than slow growers. (b) The probability that a fast-growing species
+  will exclude a slow-growing species in pairwise competition increased with the difference between
+  their growth rates. Nonetheless, even pairs which had a big discrepancy in growth rates where
+  roughly as likely to coexist as they were to result in exclusion of the slow grower. To estimate
+  growth rates, growth curves were measured for each species in a Tecan Infinite 200 Pro plate reader.
+  Growth rates were estimated as the exponential growth rate which corresponds to the measured time
+  it took each species to reach a given optical density (10-2) from a known initial density (~10-4).
+  These growth rates account for any initial lag time, or slower growth period, which may impact
+  species' competitive performance.
+
+
+
+
+NATURE ECOLOGY & EVOLUTION | DOI: 10.1038/s41559-017-0109 | www.nature.com/natecolevol                                         4
+                                          © 2017 Macmillan Publishers Limited, part of Springer Nature. All rights reserved.
+                                                                               SUPPLEMENTARY INFORMATION
+  Supplementary Figure 4. Inconsistent trio outcomes are likely due to rapid evolution. (a,b) In
+  two trios we observed high variability in competitive outcomes between initial conditions, as well
+  as between replicates. Both of these cases involved a common pair of species: Ea-Pv. The triangle
+  are simplex plots, with edges indicating the pairwise outcomes, and dots denoting the fractions of
+  species at the end of competitions. Dot colors indicate the initial condition of the competition: at the
+  beginning of competition, the species with the corresponding color was present at 90% of the total
+  cell density, and the other two species were at 5% each. Competitions starting from each initial
+  condition were done in duplicate. (c) To test whether this variability could arise during the
+  experiment, we performed additional competitions between Ea and Pv, involving eight biological
+  replicates and six initial fractions for each replicate. For each biological replicate, a colony of each
+  species was picked at the beginning of the experiment and grown in rich media and subsequently in
+  the experimental media prior to the beginning of competitions (Methods). While all competitions
+  resulted in the coexistence of both species, the coexistence fraction varied significantly. Most of this
+  variability occurred across the biological replicates, potentially indicating adaptation during the
+  growth prior to the beginning of competitions. (d) Fraction trajectories for two initial conditions of
+  three of the biological replicates, highlighting the variability between biological replicates.
+
+
+
+
+NATURE ECOLOGY & EVOLUTION | DOI: 10.1038/s41559-017-0109 | www.nature.com/natecolevol                                         5
+                                          © 2017 Macmillan Publishers Limited, part of Springer Nature. All rights reserved.
+                                                                               SUPPLEMENTARY INFORMATION
+    Supplementary Figure 5. Inter-species interactions included interference competition and
+    facilitation (a) Several species grew to a higher density in the presence of an additional species than
+    in monoculture. The impact of each competitor on each focal species was quantified by calculating
+    its relative yield, defined as: (density in coculture - density in monoculture)/(density in coculture +
+    density in monoculture). A negative relative yield indicates growth hindrance, whereas positive
+    values indicated facilitation. (b) Interference competition was detected by growing species on
+    supernatant media in all pairwise combinations. Supernatant was obtained by filter sterilizing
+    experimental media in which monocultures were grown for 48hr. The supernatant media was
+    composed of supernatant supplemented with carbon sources and nutrients to minimize the effect of
+    resource depletion. Species were grown in the supernatant media, and their final density when
+    grown of supernatant obtained from other species was compared to the density achieved when
+    grown on their own supernatant by calculating a relative yield defined as: (density on other
+    supernatant - density on self supernatant)/(density on other supernatant + density on self
+    supernatant).
+
+
+
+
+NATURE ECOLOGY & EVOLUTION | DOI: 10.1038/s41559-017-0109 | www.nature.com/natecolevol                                         6
+                                          © 2017 Macmillan Publishers Limited, part of Springer Nature. All rights reserved.
+                                                                               SUPPLEMENTARY INFORMATION
+   Supplementary Figure 6. The gLV model, fitted to experimental data, does not improve
+   predictability over the assembly rule. gLV model parameters were inferred from time trajectories
+   of monocultures and pairwise competitions (Supplementary Fig. 8). The inferred parameter values
+   were used to simulate trio competitions (a) or competitions between sets of seven and eight species
+   (b), and predict species survival.
+
+
+
+
+NATURE ECOLOGY & EVOLUTION | DOI: 10.1038/s41559-017-0109 | www.nature.com/natecolevol                                         7
+                                          © 2017 Macmillan Publishers Limited, part of Springer Nature. All rights reserved.
+    Supplementary Figure 7. gLV simulations recapitulate the experimentally observed
+                                                           SUPPLEMENTARY
+    proportions of pair outcomes, and yield a distribution of trio                           INFORMATION
+                                                                              layouts similar to the    observed
+    one. (a) gLV simulations included only pairs displaying competitive exclusion or coexistence, in
+    proportions
+    Supplementarytmatching
+                      Figure the7. gLV
+                                  experimentally
+                                        simulationsobserved    ones. the
+                                                       recapitulate  Bistable pairs  that were
+                                                                           experimentally       generated in the
+                                                                                             observed
+    simulation
+    proportions were  discarded.
+                  of pair outcomes,(b) The   majority
+                                        and yield   a of trio layoutsofthat
+                                                      distribution       trioccurred
+                                                                              layoutsin the   simulations
+                                                                                       similar to          were
+                                                                                                   the observed
+    one. (a)
+    also      gLV simulations
+         observed                included
+                   experimentally,     with aonly pairsof ~4/56
+                                               median   displaying  competitive
+                                                                 novel trio      exclusion
+                                                                             layouts          or in the
+                                                                                      occurring  coexistence, in
+    proportions  tmatchingand
+    simulations. Medians     the interquartile
+                                  experimentally   observed
+                                                ranges        ones.
+                                                        (IQR) of     Bistable pairs
+                                                                   occurrences  in that   were are
+                                                                                   simulations  generated  in the
+                                                                                                     computed
+    simulation  were  discarded.   (b) The   majority of trio layouts  that occurred  in the  simulations
+    using 100 independent simulations. For each simulation, we created a set of eight species with         were
+    also observed
+    random         experimentally,
+             interactions strengths (with) a median    of ~4/56
+                                             independently       novel
+                                                             drawn  fromtrio layouts
+                                                                           normal     occurring in
+                                                                                   distribution  withea mean of
+    simulations.  Medians   and   interquartile ranges  (IQR)   of occurrences  in simulations
+    0.6 and a standard deviation of 0.46. Pairwise outcomes and trio layouts were determined     are computed
+                                                                                                         from the
+    using 100 strengths.
+    interactionindependent simulations. For each simulation, we created a set of eight species with
+    random interactions strengths ( ) independently drawn from normal distribution with a mean of
+    0.6 and a standard deviation of 0.46. Pairwise outcomes and trio layouts were determined from the
+    interaction strengths.
+
+
+
+
+NATURE ECOLOGY & EVOLUTION | DOI: 10.1038/s41559-017-0109 | www.nature.com/natecolevol                                         8
+                                          © 2017 Macmillan Publishers Limited, part of Springer Nature. All rights reserved.
+                                                                               SUPPLEMENTARY INFORMATION
+          Supplementary Figure 8. gLV model parameters were fitted to the trajectories of
+          monocultures and pair competitions. (a) A growth rates ( ) and carrying capacity ( ) was fitted
+          to each monoculture trajectories, using eight replicates per species (Supplementary Table 2). (b)
+          Interaction coefficients ( ) where fitted to trajectories of pair competitions, using the inferred
+          growth rates and carrying capacities (Supplementary Table 3). Each pair was competed in duplicate
+          from two initial conditions where one species constituted 95% of the community and the other 5%.
+          Some data are missing due to contamination or failed plating. Each species' OD was determined
+          from the total culture OD and the species fractions, as measured by colony counting. Fits were done
+          by simulating the growth and dilution cycles with gLV dynamics within a cycle, and minimizing the
+          root-mean-square difference between the simulated dynamics and observed ones. The minimization
+          was done using the Nelder-Mead method, as implemented in the minimize function from the python
+          scipy package (v 0.16.0).
+
+
+
+
+NATURE ECOLOGY & EVOLUTION | DOI: 10.1038/s41559-017-0109 | www.nature.com/natecolevol                                         9
+                                          © 2017 Macmillan Publishers Limited, part of Springer Nature. All rights reserved.
+                                                                                 SUPPLEMENTARY INFORMATION
+    Supplementary Table 1. Trio competitions typically resulted in a stable community whose
+    composition is independent of the starting fractions. Only a single trio (Pp, Pch, Sm) showed
+    consistent bistability, with species survival depending on the initial community composition. Trios
+    are sorted by layout and competitive outcomes. Species are ordered to match the layouts shown in
+    Fig. 3. Survival (extinction) is indicated by a value of 1 (0). Survival values are not indicated for the
+    two trios that did not display reproducible outcomes (Supplementary Fig. 4).
+
+
+                               Competitors                                                                           Survival
+         species A               species B                   species C                   species A                  species B    species C
+              Ea                       Pa                         Sm                            1                          1        0
+              Ea                      Pch                          Pa                           1                          1        0
+              Ea                      Pch                         Sm                            1                          1        0
+              Ea                       Pf                         Sm                            1                          1        0
+              Pa                      Ea                          Pci                           1                          1        0
+              Pa                       Pf                         Pci                           1                          1        0
+              Pa                      Sm                          Pci                           1                          1        0
+             Pch                      Ea                          Pci                           1                          1        0
+             Pch                      Ea                           Pf                           1                          1        0
+             Pch                      Pp                           Pf                           1                          1        0
+             Pch                      Sm                          Pci                           1                          1        0
+              Pp                      Ea                           Pv                           1                          1        0
+              Pp                       Pa                          Pv                           1                          1        0
+              Pp                       Pa                         Sm                            1                          1        0
+              Pp                      Pch                          Pa                           1                          1        0
+              Pp                       Pf                         Pci                           1                          1        0
+              Pp                       Pf                          Pv                           1                          1        0
+              Pp                       Pf                         Sm                            1                          1        0
+              Pv                      Pch                          Pa                           1                          1        0
+              Pv                       Pf                         Pci                           1                          1        0
+              Pv                      Sm                          Pci                           1                          1        0
+              Sm                      Pch                          Pa                           1                          1        0
+              Ea                      Pci                         Sm                            1                          1        1
+             Pch                      Pv                           Pf                           1                          1        1
+             Pch                      Sm                           Pf                           1                          1        1
+              Pp                      Ea                          Pci                           1                          1        1
+              Pp                      Pch                          Pv                           0                          1        1
+                                                                                                1                          1        0
+              Pp                      Pch                         Sm
+                                                                                                0                          1        1
+NATURE ECOLOGY & EVOLUTION | DOI: 10.1038/s41559-017-0109 | www.nature.com/natecolevol                                                       10
+                                            © 2017 Macmillan Publishers Limited, part of Springer Nature. All rights reserved.
+                                                                               SUPPLEMENTARY INFORMATION
+              Ea                       Pv                         Sm                           na                          na      na
+              Pv                       Ea                         Pci                          na                          na      na
+               Pf                      Pa                         Sm                            1                              1   1
+               Pf                      Pci                        Ea                            1                              1   1
+               Pf                      Pp                         Ea                            1                              1   1
+               Pf                      Pv                         Ea                            1                              1   1
+               Pf                      Sm                         Pci                           1                              1   1
+              Pp                       Pa                         Ea                            1                              1   1
+              Pv                       Pa                         Ea                            1                              1   1
+              Pv                      Pch                         Ea                            1                              1   1
+               Pf                      Pa                         Ea                            0                              1   1
+               Pf                      Pa                         Pp                            0                              1   1
+               Pf                      Pa                         Pv                            0                              1   1
+               Pf                      Sm                         Pv                            0                              1   1
+              Pp                      Pch                         Ea                            0                              1   1
+              Sm                       Pa                         Pv                            0                              1   1
+              Sm                       Pv                        Pch                            0                              1   1
+              Pci                      Pp                         Pa                            0                              1   1
+              Pci                      Pp                        Pch                            0                              1   1
+              Pci                      Pv                         Pa                            0                              1   1
+              Pci                      Pv                        Pch                            0                              1   1
+              Sm                       Pp                         Ea                            0                              1   1
+              Pch                      Pf                         Pci                           1                              0   0
+               Pf                     Pch                         Pa                            1                              0   0
+              Pp                       Sm                         Pci                           1                              0   0
+              Pp                       Sm                         Pv                            1                              1   1
+              Pci                     Pch                         Pa                            0                              1   0
+              Pv                       Pp                         Pci                           0                              1   0
+
+
+
+
+NATURE ECOLOGY & EVOLUTION | DOI: 10.1038/s41559-017-0109 | www.nature.com/natecolevol                                                  11
+                                          © 2017 Macmillan Publishers Limited, part of Springer Nature. All rights reserved.
+                                                                               SUPPLEMENTARY INFORMATION
+   Supplementary Table 2. Inferred growth rates and carrying capacities. Growth rates and
+   carrying capacities were found by fitting the time trajectories of each species to the gLV model
+   (Supplementary Fig. 8). Note that in the case of single species, the gLV model simplifies to the
+   logistic growth model. Given values were found by jointly fitting the data from all replicates. Errors
+   indicate the standard-deviation of parameter values when fitted to each replicate separately.
+
+
+                                                                         r                                                          k
+                   Ea                                            0.46 ± 0.02                                                   0.13 ± 0.007
+                    Pa                                           0.55 ± 0.07                                                   0.07 ± 0.007
+                   Pch                                           0.18 ± 0.07                                                   0.11 ± 0.006
+                   Pci                                           0.16 ± 0.03                                                   0.01 ± 0.0005
+                    Pf                                           0.25 ± 0.08                                                   0.05 ± 0.007
+                   Pp                                            0.65 ± 0.09                                                   0.14 ± 0.009
+                    Pv                                           0.57 ± 0.06                                                   0.11 ± 0.005
+                   Sm                                            0.34 ± 0.03                                                   0.15 ± 0.006
+
+
+
+
+NATURE ECOLOGY & EVOLUTION | DOI: 10.1038/s41559-017-0109 | www.nature.com/natecolevol                                                         12
+                                          © 2017 Macmillan Publishers Limited, part of Springer Nature. All rights reserved.
+                                                                               SUPPLEMENTARY INFORMATION
+    Supplementary Table 3. Inferred interspecies interaction parameters. Note that these are
+    interaction parameters ( ) which are not normalized by the carrying capacity. The corresponding
+    gLV equations are:
+
+                                                                                                           .
+
+
+
+
+                      Ea               Pa               Pch                 Pci                 Pf                  Pp          Pv     Sm
+        Ea             1              0.69              1.09               0.55                1.53               0.82         1.09    0.72
+        Pa          -0.18               1               2.44              -2.58                1.13               0.43         0.01    0.21
+       Pch          -0.11             -0.8                1              -15.75                0.29               -0.04        -0.05   -0.03
+       Pci          -0.32               0               0.18                 1                -3.39                  0         0.05    -0.3
+        Pf          -0.02             0.28               1.2               0.83                  1                0.01         0.07    -0.1
+        Pp           0.87             1.58              1.24               0.24                  1                   1         1.01    0.84
+        Pv           0.83             0.28              0.47                 0                -0.02               0.79          1       0.7
+       Sm            0.96             1.23              1.42               1.21                1.31               0.91         0.98     1
+
+
+
+
+NATURE ECOLOGY & EVOLUTION | DOI: 10.1038/s41559-017-0109 | www.nature.com/natecolevol                                                         13
+                                          © 2017 Macmillan Publishers Limited, part of Springer Nature. All rights reserved.
+

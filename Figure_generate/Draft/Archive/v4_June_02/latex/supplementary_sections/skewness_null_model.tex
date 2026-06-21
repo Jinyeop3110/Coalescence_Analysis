@@ -1,0 +1,46 @@
+% ============================================
+% Supplementary Note 1: Outcome Classification, Metric Sensitivity, and Null Models
+% ============================================
+
+\subsection*{Supplementary Note 1: Outcome classification, metric sensitivity, and null models}
+\label{sec:suppl:note1}
+
+\paragraph{Outcome classification.}
+\rev{To characterize coalescence outcomes, we quantified the compositional similarity between the post-coalescence community and each parental community using cosine similarity:}
+\begin{equation}
+\rev{\text{Sim}(C, A) = \frac{\vec{x}_C \cdot \vec{x}_A}{\|\vec{x}_C\|_2 \|\vec{x}_A\|_2}, \quad
+\text{Sim}(C, B) = \frac{\vec{x}_C \cdot \vec{x}_B}{\|\vec{x}_C\|_2 \|\vec{x}_B\|_2},}
+\end{equation}
+\rev{where $\vec{x}_A$, $\vec{x}_B$, and $\vec{x}_C$ denote community composition vectors, and $\|\cdot\|_2$ denotes the Euclidean norm. Because cosine similarity is invariant to multiplying either vector by a positive scalar, sample-wise total-abundance normalization does not change the similarity score. These two similarity scores place each coalescence outcome in a two-dimensional similarity space, where the position reflects how strongly the coalesced community resembles each parental community.}
+
+Because parental communities may share species (overlapping ASVs), we used a linear decomposition approach to determine how much of the coalesced community's composition can be attributed to each parental community. We computed contribution coefficients $(u, v)$ representing the weighted combination of parental compositions that best reconstructs the coalesced community. When parental communities share no species, these coefficients equal the cosine similarities. Negative coefficients were set to zero since negative contributions are biologically meaningless. The residual (the portion of composition not explained by either parental community) quantifies novel restructuring.
+
+From these coefficients, we derived two classification metrics:
+
+Retention magnitude ($r$): The overall contribution from both parental communities, calculated as $r = \sqrt{u^2 + v^2}$. Values close to 1 indicate high retention of parental composition; values close to 0 indicate extensive restructuring.
+
+Parental Dominance Index (PDI): A measure of selection preference toward one parental community over the other, ranging from 0 (complete dominance by parental community B) through 0.5 (equal contributions) to 1 (complete dominance by parental community A). PDI is computed from the angular position in similarity space relative to the diagonal where both parental communities contribute equally:
+\begin{equation}
+\text{PDI} = \frac{2}{\pi} \arctan\left(\frac{u}{v}\right)
+\label{eq:pdi}
+\end{equation}
+where $u$ and $v$ are the contribution coefficients for parental communities A and B, respectively. When $u \gg v$, PDI approaches 1 (parental community A dominance); when $v \gg u$, PDI approaches 0 (parental community B dominance); when $u = v$, PDI equals 0.5 (equal contributions).
+
+Based on these metrics, each coalescence event was classified into one of three outcome categories. Restructuring occurs when $r^2 \leq 0.5$, \rev{equivalently when the retention radius satisfies $r \leq 1/\sqrt{2}$ in the two-parental-community similarity map,} meaning less than half of the coalesced community composition is explained by the parental communities, indicating substantial ecological reorganization. Mixture occurs when $r^2 > 0.5$ and PDI is near 0.5 (i.e., $0.25 \leq \text{PDI} \leq 0.75$), indicating high retention with balanced contributions from both parental communities and coexistence of parental lineages. Dominance occurs when $r^2 > 0.5$ and PDI is near 0 or 1 (i.e., $\text{PDI} < 0.25$ or $\text{PDI} > 0.75$), indicating high retention but with one parental community dominating, reflecting selection for one parental community over the other.
+
+We chose the classification thresholds based on two considerations. \rev{First, the retention threshold $r^2 = 0.5$ (radius $r = 1/\sqrt{2}$, not $r = 1/2$) marks the point at which the best linear combination of the two parental-community composition vectors accounts for half of the coalesced community's composition in the normalized similarity space.} Values below this indicate that novel species combinations dominate over parental contributions. Second, the PDI thresholds of 0.25 and 0.75 correspond to contribution ratios of approximately 3:1 between parental communities, a level of asymmetry that represents clear dominance of one parental community over the other while allowing for minor contributions from the subordinate parental community.
+
+\rev{To make the boundary dependence explicit, we report the continuous PDI/retention distributions and a boundary-sensitivity analysis (Supplementary Figs.~29--32); these analyses show that the nutrient-dependent increase in Dominance is visible in the continuous similarity measures and remains evident when either the PDI boundary or retention boundary is varied around the manuscript baseline.}
+
+\paragraph{Metric sensitivity.}
+We compared coalescence outcome classifications using five different metrics: vector decomposition (primary method), Euclidean distance, Bray-Curtis dissimilarity, Jensen-Shannon divergence, and Jaccard index. The alternative relative-abundance metrics, Euclidean distance and Bray-Curtis dissimilarity, produced outcome distributions broadly consistent with vector decomposition, with Dominance as the most frequent outcome. However, Jensen-Shannon divergence and Jaccard index did not recover this pattern (Extended Data Fig.~2), reflecting the sensitivity of boundary assignments to the choice of metric. We interpret this divergence as biologically informative rather than solely technical: vector decomposition, Euclidean distance, and Bray-Curtis retain quantitative abundance information, whereas Jaccard collapses the data to presence/absence and therefore measures species-identity retention rather than abundance-weighted parental dominance.
+
+\paragraph{Abundance-skew null models.}
+A potential concern is that Dominance could arise from skewed abundance distributions rather than ecological interactions. To address this, we compared experimental parental-asymmetry values against two null models.
+
+In Null Model 1 (abundance-weighted random selection), species survival probability is proportional to abundance in the combined parental-community pool, testing whether high-abundance species simply survive regardless of parental-community origin. In Null Model 2 (shuffled abundance), abundances are randomly permuted among species within each parental community before neutral mixing, testing whether the overall skewness structure alone drives Dominance.
+
+We generated 500 null offspring communities per model and calculated parental asymmetry, $|2\mathrm{PDI}-1|$. Experimental data showed mean parental asymmetry of 0.698 ($n = 83$). Both null models produced significantly lower values: abundance-weighted null mean = 0.476 ($p < 10^{-18}$), shuffled null mean = 0.557 ($p < 10^{-11}$; Mann-Whitney U tests). These results indicate that abundance skewness alone cannot explain the observed patterns; ecological interactions beyond simple abundance-weighted survival determine which parental community dominates.
+
+\paragraph{\rev{Event-matched additive null model.}}
+\rev{We also tested a stricter event-matched additive null model, $n_{C,\mathrm{null}} = n_A+n_B$, in which each null coalesced community was constructed from the same two parental communities as the corresponding experimental event using raw 16S read-count vectors (Extended Data Fig.~3). Under this additive null, an apparent Dominance classification can arise when the two parental-community vectors have substantially different Euclidean norms: for non-overlapping parental-community vectors, $\mathrm{Sim}(A,A+B)$ and $\mathrm{Sim}(B,A+B)$ are proportional to $\|n_A\|_2$ and $\|n_B\|_2$, respectively. This norm-imbalance effect is possible in principle, especially when richness is low and vector norms are sensitive to abundance unevenness among a small number of taxa. In the experimental data, the event-matched additive null was usually classified as Mixture, including 66/83 Base medium events (79.5\%), although it produced Dominance in a subset of events. Critically, the observed Base medium outcomes were shifted further toward direction-independent parental asymmetry, $y = |2\mathrm{PDI}-1|$, than their matched additive nulls (77/83 events; one-sided paired Wilcoxon test, $p = 5.9 \times 10^{-14}$). Thus, the simple additive-mixture model can contribute to apparent asymmetry in some cases but does not by itself explain the observed Dominance tendency.}

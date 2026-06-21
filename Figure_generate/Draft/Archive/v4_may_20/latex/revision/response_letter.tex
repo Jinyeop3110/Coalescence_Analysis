@@ -1,0 +1,55 @@
+\documentclass[11pt]{article}
+
+\usepackage[margin=1in]{geometry}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{bm}
+\usepackage{float}
+\usepackage{hyperref}
+\usepackage{xcolor}
+\usepackage{setspace}
+\usepackage{enumitem}
+\usepackage{caption}
+
+\singlespacing
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0.45em plus 0.1em minus 0.05em}
+\graphicspath{{revision_figure_folder/}}
+
+\definecolor{ReviewerSkyBlue}{RGB}{0,150,220}
+\definecolor{ManuscriptEditRed}{RGB}{150,0,0}
+\definecolor{TodoBrightRed}{RGB}{255,0,0}
+\definecolor{StatusGray}{RGB}{90,90,90}
+
+\newcommand{\mschange}[1]{%
+  \par\smallskip
+  \noindent{\color{ManuscriptEditRed}#1}\par
+  \smallskip
+}
+\newcommand{\statusnote}[1]{\noindent{\color{StatusGray}\textit{#1}}\par\smallskip}
+\newenvironment{reviewercommentenv}{\par\smallskip\noindent\color{ReviewerSkyBlue}\itshape\ignorespaces}{\par\normalfont\color{black}\smallskip}
+\newcommand{\reviewercomment}[1]{\begin{reviewercommentenv}#1\end{reviewercommentenv}}
+\newcommand{\responselabel}{\par\smallskip\noindent\color{black}}
+\newcommand{\comment}[1]{{\color{StatusGray}\textit{[comment: #1]}}}
+\newcommand{\todo}[1]{\noindent{\color{TodoBrightRed}[TODO: #1]}\par\smallskip}
+
+\begin{document}
+
+\begin{center}
+{\Large \textbf{Draft Response to Reviewers}}\\[0.5em]
+{\large Interspecies Interactions Drive Community-Level Selection in Microbial Coalescence}
+\end{center}
+
+Dear Editor and Reviewers,
+
+We thank the reviewers for their careful, rigorous, and constructive feedback. The comments substantially improved both the framing and the technical clarity of the manuscript. Below, we respond point by point and summarize the analyses and text revisions undertaken in response to the major concerns.
+
+\input{response/reviewer2_response.tex}
+\clearpage
+\input{response/reviewer3_response.tex}
+\clearpage
+\input{response/reviewer1_response.tex}
+
+\end{document}

@@ -180,12 +180,12 @@ def plot_clean_barplots(results_dict, save_dir):
 
         # Plot mean as squares with error bars
         ax.errorbar(x[0], obs_same, yerr=sem_same,
-                   fmt='s', markersize=12, capsize=5, capthick=1.5,
+                   fmt='s', markersize=6, capsize=5, capthick=1.5,
                    color=colors[0], ecolor='black', linewidth=1.5,
                    markeredgecolor='black', markeredgewidth=0.5, zorder=10)
 
         ax.errorbar(x[1], obs_mixed, yerr=sem_mixed,
-                   fmt='s', markersize=12, capsize=5, capthick=1.5,
+                   fmt='s', markersize=6, capsize=5, capthick=1.5,
                    color=colors[1], ecolor='black', linewidth=1.5,
                    markeredgecolor='black', markeredgewidth=0.5, zorder=10)
 
@@ -218,8 +218,8 @@ def plot_clean_barplots(results_dict, save_dir):
         ax.set_xticks(x)
         ax.set_xticklabels(['Same\nParent', 'Cross\nParents'], fontsize=10)
 
-        # Make y-axis ticks at 0.1 intervals
-        ax.yaxis.set_major_locator(plt.MultipleLocator(0.1))
+        # Make y-axis ticks at 0.2 intervals
+        ax.yaxis.set_major_locator(plt.MultipleLocator(0.2))
         ax.yaxis.set_major_formatter(plt.FuncFormatter(lambda x, p: f'{x:.1f}'))
         ax.tick_params(axis='y', labelsize=10)
 

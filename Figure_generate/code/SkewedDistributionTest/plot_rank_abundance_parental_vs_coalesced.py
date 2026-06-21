@@ -19,8 +19,10 @@ import sys
 sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
 from common_setup import (
+    Coalescence_data,
     Communities_data,
     Processed_sequences_synthetic,
+    exception_list,
 )
 from COLORMAP import get_medium_color
 
@@ -44,29 +46,42 @@ def get_community_abundances_by_type(medium='M'):
         parental_data: list of abundance arrays for parental communities
         coalesced_data: list of abundance arrays for coalesced communities
     """
-    # Filter for synthetic communities
-    communities = Communities_data[Communities_data['CommunityOrigin'] == 'S']
-    communities = communities[communities['Medium'] == medium]
-
     # Get abundance columns
     abundance_cols = [c for c in Processed_sequences_synthetic.columns if 'NormalizedAbundance' in c]
+    seq_lookup = {
+        row['SampleIDX']: row[abundance_cols].values.astype(float)
+        for _, row in Processed_sequences_synthetic.iterrows()
+    }
 
     parental_data = []
     coalesced_data = []
 
-    for _, row in communities.iterrows():
-        sample_idx = row['SampleIDX']
-        coal_type = row['CoalescenceType']
+    # Parental panel: one representative replicate for each assembled
+    # parental community identity, matching the n=30 convention in the SI.
+    parental_communities = Communities_data[
+        (Communities_data['CommunityOrigin'] == 'S') &
+        (Communities_data['Medium'] == medium) &
+        (Communities_data['CoalescenceType'] == 'S')
+    ].sort_values(['CommunityIDX', 'Replicate', 'SampleIDX'])
 
-        # Get abundance vector
-        seq_row = Processed_sequences_synthetic[Processed_sequences_synthetic['SampleIDX'] == sample_idx]
-        if len(seq_row) > 0:
-            abundances = seq_row[abundance_cols].values[0].astype(float)
+    for _, row in parental_communities.groupby('CommunityIDX', sort=True).first().iterrows():
+        abundances = seq_lookup.get(row['SampleIDX'])
+        if abundances is not None:
+            parental_data.append(abundances)
 
-            if coal_type == 'S':  # Subcommunity = Parental
-                parental_data.append(abundances)
-            elif coal_type == 'C':  # Coalesced
-                coalesced_data.append(abundances)
+    # Coalesced panel: only valid coalescence events used in the final
+    # manuscript analyses, excluding missing or otherwise invalid samples.
+    coalesced_events = Coalescence_data[
+        (Coalescence_data['CommunityOrigin'] == 'S') &
+        (Coalescence_data['Medium'] == medium) &
+        (Coalescence_data['CoalescenceType'] == 'C') &
+        (~Coalescence_data['SampleIDX'].isin(exception_list))
+    ]
+
+    for sample_idx in coalesced_events['SampleIDX']:
+        abundances = seq_lookup.get(sample_idx)
+        if abundances is not None:
+            coalesced_data.append(abundances)
 
     return parental_data, coalesced_data
 

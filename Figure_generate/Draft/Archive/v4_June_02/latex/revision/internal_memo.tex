@@ -1,0 +1,849 @@
+\documentclass[11pt]{article}
+
+\usepackage[margin=1in]{geometry}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{bm}
+\usepackage{float}
+\usepackage{hyperref}
+\usepackage{xcolor}
+\usepackage{setspace}
+\usepackage{enumitem}
+\usepackage{caption}
+\usepackage{booktabs}
+
+\onehalfspacing
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0.45em plus 0.1em minus 0.05em}
+\graphicspath{{revision_figure_folder/}}
+
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue,
+    citecolor=blue,
+    urlcolor=blue
+}
+
+% Style matched (loosely) to response_letter.tex, but simplified because this is an
+% internal planning memo and not a submission-facing file.
+\newcommand{\question}[1]{%
+    \par\vspace{0.4em}\noindent%
+    {\color{blue!70!black}\textbf{Q. #1}}\par\smallskip%
+}
+\newcommand{\answerlabel}{\par\noindent\textbf{A.}\ }
+\newcommand{\todomark}[1]{{\color{red}\textbf{[TODO: #1]}}}
+\newcommand{\placeholder}[1]{{\color{gray}\textit{[placeholder: #1]}}}
+\newcommand{\statusmark}[1]{{\color{red!70!black}\textbf{Status:} #1}\par}
+
+% Shim \figref for drafts that mimic main manuscript references; in the real
+% manuscript this is defined in main.tex, so draft text here compiles identically.
+\providecommand{\figref}[1]{Fig.~\ref{#1}}
+
+\begin{document}
+
+\begin{center}
+    {\Large \textbf{Internal Memo}}\\[0.4em]
+    {\large Open questions for the gLV-scope rebuttal}\\[0.6em]
+    {\small Working document — not reviewer-facing}
+\end{center}
+
+\noindent\textbf{Purpose.} This memo collects the analysis and framing questions raised during the R2 / R3-4 discussion about the scope and failure modes of the gLV-based interpretation. Each item is structured as a \textbf{question} followed by the current working answer. When an answer is backed by a specific figure or analysis, the corresponding generating script is noted below the figure.
+
+\tableofcontents
+\vspace{1em}
+\hrule
+\vspace{1em}
+
+% =============================================================================
+\section{New analysis: does community OD explain PDI, per medium?}
+\label{sec:q1_LN_OD_PDI}
+
+\question{In Nutr$-$ (LN), can community OD explain PDI?}
+\statusmark{Answered, zoomed figure generated (Fig.~LN-zoom). Companion per-medium figures for Base (Fig.~MN-zoom) and Nutr$+$ (Fig.~HN-zoom) are provided below for completeness.}
+
+\answerlabel
+\textbf{Short answer: no, not usefully.} In Nutr$-$, parental OD$_{600}$ at day~7 spans a very narrow window, $[0.346, 0.574]$, i.e.\ less than $0.23$ units of total range. Within that window:
+
+\begin{enumerate}[itemsep=0pt]
+    \item \textbf{Winner-vs-loser asymmetry (Dominance events only).} In $13/35$ Dominance events the denser parent is the winner ($37.1\%$; binomial $p = 0.18$), indistinguishable from the null expectation of $50\%$. There is no ``denser parent wins'' signal, but there is also no ``denser parent loses'' signal, because the two OD distributions are almost entirely overlapping.
+    \item \textbf{Signed $\Delta$OD vs PDI (all events, $n = 90$).} Spearman $\rho = -0.24$ ($p = 0.021$) and Pearson $r = -0.24$ ($p = 0.021$), with a linear slope of $-0.79$ PDI per unit OD. The correlation is statistically significant but weak in magnitude, and, crucially, carries the \emph{same sign} as Base and Nutr$+$: the denser parent tends to lose, not win. This rules out the simple ``more biomass at mixing $\Rightarrow$ more species retained'' prediction.
+    \item \textbf{Dynamic range limitation.} Because the LN OD window is tight ($\sim 0.23$ units vs.\ $\sim 2$ units in Nutr$+$), even the $-0.24$ correlation translates into at most $\sim 18\%$ swing in predicted PDI across the full observed range, which is not enough to drive Dominance on its own. The mechanism described in R2-1 (interaction-driven exclusion, not biomass displacement) is therefore the simplest reading consistent with the data.
+\end{enumerate}
+
+\noindent\textbf{Takeaway for the rebuttal:} the Nutr$-$ panel is not a missing piece of evidence; it is a negative control that confirms the R2-1 story. The current shared-axes Fig.~R1-1A underplays this because the Nutr$-$ cluster is visually squashed by the Nutr$+$ range; the zoomed figure below makes the trend (and its small magnitude) visible. The companion per-medium MN-zoom and HN-zoom panels share the same rendering recipe and are scaled to each medium's own OD window.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.92\textwidth]{internal_LN_OD_PDI_zoom.pdf}
+    \caption*{\textbf{Fig.~LN-zoom.} \textbf{Nutr$-$ shows no denser-parent-wins signal.} Zoomed Nutr$-$ version of Response
+    Fig.~R1-1A/B, auto-scaled to the LN OD window. \textbf{(a)} Winner vs.\
+    loser OD for the 35 LN Dominance events; dashed line is $y = x$. The
+    winner is denser in only $13/35$ ($37\%$; binomial $p = 0.18$). \textbf{(b)}
+    Signed $\Delta$OD vs PDI for all $n = 90$ LN events, with linear fit
+    overlaid. Spearman $\rho = -0.24$ ($p = 0.021$); the small negative slope
+    matches the sign seen in Base and Nutr$+$ but with much reduced
+    dynamic range. Gray points are reflections included for symmetry. Dotted
+    horizontal lines at PDI~$= 0.25$ and $0.75$ are auxiliary Dominance /
+    Mixture reference boundaries (round-number guides; the exact classifier
+    cut in PDI units is $\sim\!0.29$ / $0.71$). Generating script:
+    \texttt{Figure\_generate/code/Figure\_revision/R1\_1\_OD\_density/analyze\_per\_medium\_OD\_PDI\_zoom.py}.}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.92\textwidth]{internal_MN_OD_PDI_zoom.pdf}
+    \caption*{\textbf{Fig.~MN-zoom.} \textbf{Base also shows no denser-parent-wins signal.} Zoomed Base (MN) version of Response
+    Fig.~R1-1A/B, auto-scaled to the MN OD window
+    $[0.061, 1.692]$. \textbf{(a)} Winner vs.\ loser OD for the $54$ MN
+    Dominance events; the winner is denser in only $20/54$ ($37\%$;
+    binomial $p = 0.076$), i.e.\ the denser parent loses more often than
+    chance, though the effect does not quite pass $\alpha=0.05$.
+    \textbf{(b)} Signed $\Delta$OD vs PDI for all $n = 83$ MN events with
+    linear fit overlaid. Spearman $\rho = -0.14$ ($p = 0.19$); a weak
+    negative slope consistent in sign with LN and HN but not statistically
+    significant on its own. Gray points are reflections included for
+    symmetry; dotted horizontal lines at PDI~$= 0.25$ and $0.75$ are
+    auxiliary Dominance / Mixture reference boundaries. Generating script:
+    \texttt{Figure\_generate/code/Figure\_revision/R1\_1\_OD\_density/analyze\_per\_medium\_OD\_PDI\_zoom.py}.}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.92\textwidth]{internal_HN_OD_PDI_zoom.pdf}
+    \caption*{\textbf{Fig.~HN-zoom.} \textbf{Nutr$+$ shows the strongest opposite-to-biomass pattern.} Zoomed Nutr$+$ (HN) version of
+    Response Fig.~R1-1A/B, auto-scaled to the HN OD window
+    $[0.051, 2.033]$. \textbf{(a)} Winner vs.\ loser OD for the $68$ HN
+    Dominance events; the winner is denser in only $9/68$ ($13\%$;
+    binomial $p = 3.9 \times 10^{-10}$) --- strongly the \emph{less}
+    dense parent wins. \textbf{(b)} Signed $\Delta$OD vs PDI for all
+    $n = 90$ HN events with linear fit overlaid. Spearman
+    $\rho = -0.60$ ($p = 4.0 \times 10^{-10}$); the large negative slope
+    dominates the across-media trend in Fig.~R1-1B and, together with
+    the winner-OD asymmetry in panel (a), is the R2-1-style signature
+    of interaction- rather than biomass-driven exclusion (the denser
+    parent, typically an acid producer, loses). Gray points are
+    reflections included for symmetry; dotted horizontal lines at
+    PDI~$= 0.25$ and $0.75$ are auxiliary Dominance / Mixture reference
+    boundaries. Generating script:
+    \texttt{Figure\_generate/code/Figure\_revision/R1\_1\_OD\_density/analyze\_per\_medium\_OD\_PDI\_zoom.py}.}
+\end{figure}
+
+\subsection*{gLV-simulation counterpart (Figs.~LN-sim, MN-sim, HN-sim)}
+
+To ask whether the experimental LN/MN/HN patterns are what a baseline
+competition-only gLV would produce, we replay the same two-panel
+rendering on the canonical 48-species, 100-rep main-text simulation
+(\texttt{Simulation\_Data/48species\_100reps\_final/Community\_100reps\_final.json},
+generated by \texttt{run\_48species\_100reps\_final.py}). The natural
+simulation analogue of community OD is total final-day biomass
+$\sum_i y_i$ of each parent. The vector-decomposition, PDI, and
+Dom/Mix/Rest classification are applied through the same
+\texttt{common\_setup} helpers used for the experimental panels, so the
+pipeline difference between experiment and simulation is purely the
+data source. Each medium pools $100\text{ reps}\times 6\text{ pairs} = 600$
+coalescence events.
+
+\noindent\textbf{Key contrast with experiment.} In all three gLV media,
+the denser parent \emph{wins} (winner-denser $86\%$ at $\mu=0.3$, $65\%$
+at $\mu=0.6$, $65\%$ at $\mu=0.8$; binomial $p \le 10^{-8}$ in each),
+and the signed $\Delta$biomass--PDI correlation is \emph{positive}
+(Spearman $\rho = +0.42 / +0.29 / +0.30$). This is the opposite sign
+from the experimental HN zoom (winner-denser $13\%$, $\rho = -0.60$),
+and directly supports the R2-1 interpretation: the empirical
+``denser-parent-loses'' pattern in Nutr$+$ is \emph{not} reproducible by
+random competitive gLV and must therefore originate from a
+species-identity-dependent mechanism (the pH-mediated acid-producer
+asymmetry in R1-2, Q3), not from biomass displacement.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.92\textwidth]{internal_LN_biomass_PDI_zoom_simulation.pdf}
+    \caption*{\textbf{Fig.~LN-sim.} \textbf{The baseline gLV produces positive biomass--PDI coupling even at weak interaction strength.} gLV simulation analogue of
+    Fig.~LN-zoom at $\mu = 0.3$ (the main-paper Nutr$-$ reference
+    point). \textbf{(a)} Winner vs.\ loser total biomass
+    $\sum_i y_i$ for the $111$ Dominance events (of $n = 600$); the
+    winner is denser in $96/111$ ($86\%$; binomial
+    $p = 1.2 \times 10^{-15}$). \textbf{(b)} Signed $\Delta$biomass vs
+    PDI for all $n = 600$ events, linear fit overlaid; Spearman
+    $\rho = +0.42$ ($p = 5.5 \times 10^{-27}$), slope $+0.35$. Even at
+    the weak-interaction reference point, the baseline gLV links higher
+    parental biomass to higher PDI for that parent. Data source:
+    \texttt{Simulation\_Data/48species\_100reps\_final/Community\_100reps\_final.json}.
+    Generating script:
+    \texttt{Figure\_generate/code/Figure\_revision/R1\_1\_OD\_density/analyze\_per\_medium\_biomass\_PDI\_zoom\_simulation.py}.}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.92\textwidth]{internal_MN_biomass_PDI_zoom_simulation.pdf}
+    \caption*{\textbf{Fig.~MN-sim.} \textbf{The Base-like gLV point keeps the biomass--PDI sign positive, unlike experimental Base.} gLV simulation analogue of
+    Fig.~MN-zoom at $\mu = 0.6$ (Base). \textbf{(a)} Winner vs.\ loser
+    total biomass for the $357$ Dominance events (of $n = 600$); the
+    winner is denser in $233/357$ ($65\%$; binomial
+    $p = 8.4 \times 10^{-9}$). \textbf{(b)} Signed $\Delta$biomass vs
+    PDI for all $n = 600$ events, linear fit overlaid; Spearman
+    $\rho = +0.29$ ($p = 1.2 \times 10^{-12}$), slope $+0.41$. The
+    key contrast is directional: the signed biomass--PDI relationship is
+    positive in the Base-like gLV simulation but weakly negative in the
+    experimental MN zoom. Data source and generating script: see
+    Fig.~LN-sim.}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.92\textwidth]{internal_HN_biomass_PDI_zoom_simulation.pdf}
+    \caption*{\textbf{Fig.~HN-sim.} \textbf{The high-$\mu$ gLV has the opposite sign from experimental Nutr$+$.} gLV simulation analogue of
+    Fig.~HN-zoom at $\mu = 0.8$ (Nutr$+$). \textbf{(a)} Winner vs.\
+    loser total biomass for the $418$ Dominance events (of $n = 600$);
+    the winner is denser in $271/418$ ($65\%$; binomial
+    $p = 1.4 \times 10^{-9}$). \textbf{(b)} Signed $\Delta$biomass vs
+    PDI for all $n = 600$ events, linear fit overlaid; Spearman
+    $\rho = +0.30$ ($p = 2.7 \times 10^{-14}$), slope $+0.41$.
+    \textbf{This is the central contrast.} Experimentally, HN shows
+    winner-denser $= 13\%$ and $\rho = -0.60$; the baseline gLV
+    produces the \emph{exact opposite} sign on both diagnostics.
+    Whatever mechanism drives the experimental HN pattern (denser
+    parent loses) is therefore not captured by the random
+    $\alpha_{ij}$ competition-only gLV, and is consistent with the
+    pH-mediated acid-producer asymmetry argued in R1-2 and analysed
+    in Q3. Data source and generating script: see Fig.~LN-sim.}
+\end{figure}
+
+\subsection*{K/r heterogeneity stress test (all-media variants)}
+
+We next asked whether the gLV sign mismatch is simply caused by fixing
+carrying capacities and intrinsic growth rates to one. We introduced positive
+species-level heterogeneity, $K_i \sim \mathrm{Normal}^+(1,\sigma_K^2)$ or
+$r_i \sim \mathrm{Normal}^+(1,\sigma_r^2)$, using
+$\sigma \in \{0,0.5,1.0\}$ at $\mu=0.3,0.6,0.8$.
+
+\textbf{Result.} The sign does not flip. Across all valid rows,
+$\Delta$biomass--PDI Spearman correlations remain positive
+($\rho=+0.51$--$+0.80$, $+0.26$--$+0.69$, and $+0.26$--$+0.73$ for
+$\mu=0.3,0.6,0.8$), and the denser parent wins more than half of Dominance
+events in every row. Thus, simple positive $K_i$ or $r_i$ heterogeneity does
+not reproduce the experimental Nutr$+$ denser-parent-loses pattern.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.98\textwidth,height=0.76\textheight,keepaspectratio]{Fig_Q6_Kr_Kstd_all_media.pdf}
+    \caption*{\textbf{Fig.~K-std.} \textbf{Carrying-capacity heterogeneity does not flip the biomass--PDI sign.} Carrying-capacity heterogeneity only
+    ($r$ sd $=0$), shown for LN/MN/HN in one figure. Rows vary
+    $K$ sd $=0,0.5,1.0$; each medium repeats the same two-panel rendering as
+    Figs.~LN-sim/MN-sim/HN-sim: winner vs.\ loser total biomass for Dominance
+    events and signed $\Delta$biomass vs PDI for all valid events. Increasing
+    $K$ heterogeneity does not create a denser-parent-loses signature in any
+    medium.}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.98\textwidth,height=0.76\textheight,keepaspectratio]{Fig_Q6_Kr_Rstd_all_media.pdf}
+    \caption*{\textbf{Fig.~r-std.} \textbf{Growth-rate heterogeneity also does not flip the biomass--PDI sign.} Intrinsic-growth-rate heterogeneity only
+    ($K$ sd $=0$), shown for LN/MN/HN in one figure. Rows vary
+    $r$ sd $=0,0.5,1.0$; each medium repeats the same winner-biomass and
+    signed-biomass--PDI diagnostics. Growth-rate heterogeneity also leaves the
+    biomass--PDI sign positive across media.}
+\end{figure}
+
+% =============================================================================
+\section{Failure modes of the gLV model}
+\label{sec:q2_gLV_failures}
+
+We want to be explicit about where the competition-only gLV model does \emph{not} match the data, both to improve scientific honesty and to scope how much of the rebuttal the gLV machinery can actually carry. The language below treats these as \emph{scope limits} of the baseline model, not as refutations of the interaction-strength claim. The detailed item-by-item triage is in \S\ref{sec:q6_unexplained}; this section records the mechanistic reading.
+
+\subsection{Scope limit 1 --- negative OD--Dominance relation in Base / Nutr$+$}
+\label{sec:q2_failure_1}
+
+\question{Why does the denser parent tend to \emph{lose} in Base / Nutr$+$ Dominance events, and is this a failure of the competition-only gLV?}
+\statusmark{Answered as a baseline-gLV scope limit, not a refutation.}
+
+\answerlabel
+R1-1B shows signed $\Delta$OD is \emph{negatively} correlated with PDI in every medium, and strongly so in Nutr$+$ ($\rho = -0.60$, $p = 4 \times 10^{-10}$). The matching gLV diagnostic in Figs.~LN-sim/MN-sim/HN-sim has the opposite sign: the denser parent tends to win and the signed biomass--PDI correlation is positive. Thus the experimental OD direction is not a prediction of the random-$\alpha_{ij}$ competition-only baseline.
+
+Mechanistic reading: this points to an environment- or identity-mediated winner-direction axis that the baseline gLV does not encode. Plausible routes are (i) acid-producer biomass modifying the shared environment before competitive exclusion completes, and (ii) effective carrying capacities or interaction coefficients being coupled to pH tolerance/species identity rather than drawn iid. This is exactly the axis captured by the pH-rule analysis in \S\ref{sec:q3_pH_vs_gLV}: the pH rule helps with \emph{which parent wins}, while gLV explains the \emph{frequency of outcome classes}.
+
+\subsection{Scope limit 2 --- natural-community Restructuring and non-competitive interactions}
+\label{sec:q2_failure_2}
+
+\question{Which second baseline-gLV limitation is worth foregrounding after the OD/winner-direction axis?}
+\statusmark{Answered. Natural-community Restructuring is the main second scope limit; R3-4 partially addresses it.}
+
+\answerlabel
+The clean second limitation is the Restructuring excess in natural communities. The competition-only baseline was designed for the synthetic system, where pairwise CFU data support a competition-dominated regime, but natural communities plausibly include stronger facilitative and higher-order structure. The R3-4 mixed-sign/higher-order extension partially closes this gap by increasing Restructuring in facilitative-tail regimes while preserving the core $\mu$-dependent Dominance trend.
+
+This should be framed carefully: not ``gLV fails,'' but ``the baseline competition-only gLV is intentionally minimal and does not exhaust the natural-community regime.'' The rebuttal value is strongest if we say that the baseline captures the main synthetic-community transition, while the natural-community Restructuring excess motivates the cooperative extension and future mechanism-rich models.
+
+% =============================================================================
+\section{Pure pH model vs.\ gLV}
+\label{sec:q3_pH_vs_gLV}
+
+\question{A pure-pH rule (``the more acidic parent wins'') predicts the Nutr$+$ Dominance direction well (R1-2: acidic parent wins 38/44 acid--alk events, $p < 10^{-6}$). Does this \emph{contradict} the gLV interpretation, or is it consistent?}
+\statusmark{Answered. Not in contradiction; the two models answer orthogonal questions.}
+
+\answerlabel
+\textbf{Short answer: they are not in contradiction.} A minimal ``acidic parent wins'' rule and the gLV framework make predictions on \emph{different axes of the outcome}, so one cannot refute the other; together they cover more of the data than either alone.
+
+\begin{enumerate}[itemsep=2pt]
+    \item \textbf{The two models are defined on orthogonal axes.} Given a coalescence event, gLV (at the calibrated $\mu$) makes a class-frequency prediction: $P(\text{Dominance})$, $P(\text{Mixture})$, $P(\text{Restructuring})$. It is entirely \emph{silent on which parent wins} in a Dominance event, because the framework's $\alpha_{ij}$ draws are species-agnostic (they do not know which parent is acidic). The pH rule is the mirror image: it takes $(\mathrm{pH}_1, \mathrm{pH}_2)$ and predicts \emph{who wins} (the acidic parent, in acid-alk pairs) but says nothing about whether any given event is Dominance, Mixture, or Restructuring. Refuting one therefore cannot refute the other; they are complementary, not competing.
+
+    \item \textbf{Empirical check on the winner-direction axis (Fig.~Q3, panel~a).} In acid-alk Dominance events the acidic parent wins $30/35$ in Nutr$+$ ($85.7\%$, binomial $p = 2.2 \times 10^{-5}$) and $19/27$ in Base ($70.4\%$, $p = 0.052$); in Nutr$-$ there are no acid-alk pairs by construction. These acid-win fractions exceed the gLV-implicit $50\%$ baseline, so the pH rule has real signal where gLV is silent. This is not a contradiction of gLV; it is a free axis of prediction that the baseline gLV does not use.
+
+    \item \textbf{Empirical check on the class-frequency axis (Fig.~Q3, panel~b).} Observed Dominance fraction per medium is $38.9\%$ (Nutr$-$), $65.0\%$ (Base), $75.6\%$ (Nutr$+$); the comp-regime gLV at the nearest simulated $\mu$ values ($\mu = 0.3 / 0.6 / 0.8$, the closest set available to us without re-running; true calibrated $\mu$ is $\sim 0.5/0.7/0.9$) gives $22.2\% / 59.7\% / 73.0\%$. Base and Nutr$+$ match within a few percentage points; the Nutr$-$ mismatch is explained by the $\mu = 0.3$ comparison point being below the calibrated $\mu \approx 0.5$. The pH rule has nothing to say about this axis.
+
+    \item \textbf{Reading.} The pH rule is best understood as a \emph{feature that a richer gLV could absorb} by making $\alpha_{ij}$ depend on pH mismatch (consistent with the $\alpha_{ij}$ interpretation in R2-1 / R2-6: effective coefficients absorbing direct and indirect mechanisms including pH modification). Equivalently, the pH rule is one axis of a future ``pH-augmented gLV'' model, not a standalone competitor to gLV. This connects directly to Q5 (alternative frameworks) and Q2.1 (the negative OD-Dominance sign in Base / Nutr$+$, which is another pH-dependent signature not in the baseline gLV).
+
+    \item \textbf{Caveats.}
+    (i)~The gLV reference points are at $\mu \in \{0.3, 0.6, 0.8\}$ from the R3-4 comp regime, not at the calibrated $\{0.5, 0.7, 0.9\}$. A proper per-$\mu$ sweep at the calibrated values would tighten Nutr$-$; the qualitative point (pH rule and gLV on orthogonal axes) does not depend on this.
+    (ii)~The pH rule is trivially calibrated against the same R1-2 acid-wins rate it is evaluated on in Nutr$+$, so its in-sample accuracy is not a legitimate test. The legitimate content of the rule is that acid-vs-alk pH is a categorical predictor of winner direction, which is an empirical fact recoverable from the pH data, not from gLV.
+\end{enumerate}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.95\textwidth]{internal_Q3_pH_rule_vs_gLV.pdf}
+    \caption*{\textbf{Fig.~Q3.} \textbf{The pH rule and gLV predict on orthogonal
+    axes, so pH-dependent winner identity does not contradict the gLV class-frequency result.} \textbf{(a)} pH-rule axis (winner direction): acid parent wins in
+    $30/35$ ($86\%$) of acid-alk Dominance events in Nutr$+$ and $19/27$
+    ($70\%$) in Base, both exceeding the gLV-implicit $50\%$ baseline
+    (dashed). Nutr$-$ has no acid-alk pairs. Error bars: Wilson $95\%$
+    CI; $p$ values: binomial test vs.\ $50\%$. \textbf{(b)} gLV axis
+    (Dominance class frequency): observed (solid) vs.\ comp-regime gLV
+    prediction at the nearest simulated $\mu$ (hatched). Base and
+    Nutr$+$ match within a few percentage points; Nutr$-$ undershoots
+    because $\mu = 0.3$ is below the calibrated $\mu \approx 0.5$.
+    Generating script:
+    \texttt{Figure\_generate/code/Figure\_revision/Q3\_pH\_rule\_vs\_gLV/analyze\_pH\_rule\_vs\_gLV.py}.}
+\end{figure}
+
+% =============================================================================
+\section{Simulation of the geometric / asymmetric factor}
+\label{sec:q4_geometric_factor}
+
+\question{Can we directly simulate the geometric effect of dimensionality on the asymmetry coordinate $y$, independent of any ecological mechanism, and overlay it on the observed outcomes?}
+\statusmark{Superseded by existing rebuttal coverage (see table below).}
+
+\answerlabel
+\textbf{Short answer: already covered, five ways over.} The geometric/dimensionality null for the asymmetry coordinate has been implemented in the rebuttal package under several complementary parameterisations; a sixth per-medium $y$-CDF overlay would repackage rather than extend the existing evidence. The concrete mapping is:
+
+\begin{center}
+\small
+\begin{tabular}{p{0.44\textwidth} p{0.24\textwidth} p{0.24\textwidth}}
+\toprule
+\textbf{Q4 plan component} & \textbf{Already delivered in} & \textbf{What it provides} \\
+\midrule
+Pure geometric null on $y$, support-size preserving, tunable unevenness, under the L$_2$/cosine pipeline &
+Response Fig.~R3-2.0a/b &
+Reviewer's three toy constructions at $N = 2, 4, 6, 8$ under both L$_2$ and L$_1$; unevenness tuned by $U(0,1)$ vs $10^{U(-3,0)}$. \\
+Per-event richness-matched geometric null &
+R3-1 Option E &
+Identity-permuted null preserving $n_C$'s rank-abundance vector; obs Dom $59.7\%$ vs null $12.3\%$. \\
+Per-$\mu$ geometric null preserving unevenness &
+Response Fig.~R3-3B \newline (\texttt{richness\_mu\_analysis.pdf}) &
+Composition-shuffling null; $\sim 35\%$ vs observed $\sim 77\%$ at high $\mu$ ($r = 0.695$, $p = 1.65 \times 10^{-4}$). \\
+Direct richness manipulation (pool-size ablation) &
+Response Fig.~R3-3C / R1-4 \newline + Extended Data Fig.~4 &
+Dominance flat across pool sizes $6/12/24$ (experiment, $\chi^2 = 2.24$, $p = 0.69$) and $4$--$48$ (simulation). \\
+Classifier-level richness-aware version &
+Response Fig.~R3-2E (joint-axis threshold) &
+$y_{\mathrm{adj}} / x^2_{\mathrm{adj}}$ joint sweep; Nutr$+$ signal survives moderate joint tightening. \\
+Bulk skewness nulls on the classifier &
+Extended Data Fig.~3 + Supp.~Note 1 &
+Abundance-weighted and shuffled-abundance nulls, in manuscript. \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\noindent\textbf{Why this closes Q4 without new work.}
+R3-2.0a implements exactly the asked-for pipeline (pure-geometry, support-size-preserving, tunable unevenness, L$_2$/cosine) at finer $N$ granularity than the Q4 plan proposed; R3-3B is the simulation equivalent of the per-medium $y$ distribution sweep, and R3-3C / Extended Data Fig.~4 directly varies the richness that the dimensionality argument appeals to and shows Dominance frequency does not shift. The only thing Q4's plan would add uniquely is a per-medium observed-$y$ vs null-$y$ CDF with a KS statistic, which is a reporting shape rather than new evidence, and is already communicated by Fig.~R3-1J (all-nulls summary) and R3-3B.
+
+\noindent\textbf{Residual gap (noted, not addressed).} R3-2.0a is on synthetic $N$-series and the Supplementary Note 1 nulls are Base-only; there is no per-medium (Nutr$-$ / Base / Nutr$+$) experimental $y$-CDF against a pure-geometric null. We deliberately do not add one, because R3-2E (per-medium, joint-axis, classifier-level) plus R3-3B (per-$\mu$, null-vs-observed gap widening with $\mu$) plus R3-3C (pool-size ablation per medium, directly varying richness) cover the per-medium concern on stronger ground than a $y$-CDF comparison would.
+
+% =============================================================================
+\section{Beyond the pairwise model: alternative frameworks}
+\label{sec:q5_alt_models}
+
+\question{The fact that the pairwise-gLV model can \emph{explain} most of the results does not mean it is the \emph{only} framework consistent with them. Which alternative model(s) should we show, at what depth?}
+\statusmark{Answered. Three models implemented; after original-code-like pH update, pure pH feedback can generate a clean intermediate-strength Dominance regime but the original-grid high end collapses.}
+
+\answerlabel
+\textbf{Short answer: after updating the pure-pH model to match the public Ratzke simulation more closely, pH feedback alone is no longer a plausible replacement for gLV on either Dominance frequency or pairwise selection correlation $|\phi|$.} We implemented three coalescence models that share the exact same outcome-classification pipeline (\texttt{common\_setup.metric\_VectorDecomposition\_onlyPositive} $\to$ \texttt{calculate\_assymetricity} $\to$ \texttt{characterize\_case}) so that cross-model comparisons are apples-to-apples.
+
+\begin{enumerate}[itemsep=6pt]
+    \item \textbf{Model 1 --- gLV baseline (the paper's model).}
+    \begin{equation*}
+        \dot n_i \;=\; n_i \left(\, 1 - \frac{(A\, n)_i}{K} \,\right),
+        \qquad A_{ii} = 1,\ \ A_{ij} \sim \mathbb{U}(0,\, 2\mu) \text{ for } i \neq j.
+    \end{equation*}
+    Knob: $\mu$. Code: the competition regime of \texttt{R3\_3\_nonCompetitive\_gLV}, reproduced self-contained in the Q5 driver.
+
+    \item \textbf{Model 2 --- Ratzke--Gore pH feedback (pure alternative).}
+    \begin{align*}
+        g_i(p) &\;=\; \exp\!\left[-\frac{(p - p_{o,i})^2}{2p_c^2}\right], \\[2pt]
+        \dot n_i &\;=\; n_i(1-n_i)\left[g_i(p)(k_{\mathrm{growth}}+k_{\mathrm{death}})-k_{\mathrm{death}}\right], \\[2pt]
+        \dot p   &\;=\; K\sum_i c_i\,n_i
+        + \lambda_{\mathrm{dil}}\,(p_{\mathrm{fresh}}-p).
+    \end{align*}
+    Here $p$ is the shared environmental proton-concentration coordinate, not pH itself: larger $p$ corresponds to a more acidic environment and smaller $p$ to a more alkaline environment. We now match the public \texttt{Interaction-biodiversity-stability} code for the growth kernel and species parameterization: $p_{o,i}\sim U(4.5,9.5)$, $p_c=2.5$, $k_{\mathrm{growth}}=k_{\mathrm{death}}=10$, $K=10^{10}$, and $c_i\sim U(-c_{\max},c_{\max})$ with $c_{\max}=10^{-10}\tau$. The only deliberate change is replacing the original daily dilution and partial reset of $p$ toward 7 by a continuous additive plain relaxation term with $p_{\mathrm{fresh}}=7$. Code: \texttt{pH\_feedback\_model.py}.
+
+    \item \textbf{Model 3 --- pH+LV hybrid (original-form; faithful port of \texttt{gLV\_pH\_set1}).}
+    \begin{align*}
+        \dot n_i       &\;=\; g_i\, n_i \left[\, 1 - \frac{(I\, n)_i}{k_i} + q_i\, \mathrm{env} \,\right], \\[2pt]
+        \dot{\mathrm{env}} &\;=\; \delta_{\mathrm{env}} \!\left[\, -\,\mathrm{env} + \sum_i p_i\, n_i - 0.001\, \mathrm{env}^3 \,\right].
+    \end{align*}
+    Interaction matrix: $I_{ii} = 1$, $\ I_{ij} \sim \mathbb{U}(0,\, 2\alpha)$ for $i \neq j$, with $\alpha$ \emph{fixed} at $0.3$. Species-level pH coupling uses two \emph{independent} preference vectors,
+    \begin{equation*}
+        p_i = \tau\, \omega_{p,i}, \qquad q_i = \tau\, \omega_{q,i},
+        \qquad \omega_{p,i},\ \omega_{q,i} \overset{\mathrm{i.i.d.}}{\sim}
+            \begin{cases}
+                \mathbb{U}(-1,\,1)  & \text{(continuous mode),} \\
+                \{-1,\, +1\}        & \text{(binary mode),}
+            \end{cases}
+    \end{equation*}
+    sampled independently across species \emph{and} across the two vectors (no symmetry link between production and response). Fixed constants: $g_i = k_i = 1$, $\delta_{\mathrm{env}} = 0.1$. $\tau = 0$ reduces exactly to pure gLV. This is the lab's \emph{originally intended} hybrid (working form in the \texttt{main\_simulation.ipynb} cell of \texttt{/Users/jysong/Desktop/Codes/pH\_model\_Simulation/}) rather than a Ratzke-regrounded variant; pH enters species growth \emph{additively} (not through a Gaussian niche) and does \emph{not} modulate $I_{ij}$. Code: \texttt{hybrid\_original\_model.py}; sweep driver \texttt{simulate\_hybrid\_original.py}; merge into the unified summary JSON via \texttt{merge\_hybrid\_original\_into\_Q5.py}.
+\end{enumerate}
+
+Models~1 and~2 use $N_{\mathrm{pool}}{=}24$, $12$ species per parent, $2$ parents per pool, and $40$ pools per cell. Model~2 uses the original-code-like pH parameterization above and a coalescence step that inherits pH from the parents, $p_0^{\mathrm{coal}} = (p_A^{\mathrm{eq}} + p_B^{\mathrm{eq}})/2$. Model~3 uses the same pool geometry with $100$ pool seeds per cell and $\mathrm{env}_0 = 0$ (neutral initial condition; the env variable is an abstract scalar, not a pH in physical units). The Ratzke-grounded variant of the hybrid used in the previous draft of this memo is retained in \texttt{pH\_plus\_LV\_model.py} for historical comparison but is no longer the reference Model~3.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=\textwidth]{internal_Q5_phase_gLV.pdf}
+    \caption*{\textbf{Fig.~Q5-gLV.} \textbf{The gLV baseline produces the clearest monotone shift from Mixture toward Dominance as interaction strength increases.} Across $\mu=0.3 \to 0.6 \to 0.9$, events move from the interior of the similarity map toward the parental axes, and Dominance rises from $\sim 8\%$ to $\sim 57\%$ to $\sim 68\%$.}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=\textwidth]{internal_Q5_phase_pH.pdf}
+    \caption*{\textbf{Fig.~Q5-pH.} \textbf{Pure pH feedback can generate asymmetric replacement, but it does not reproduce the gLV-like monotone high-interaction trend.} In the non-degenerate plotted range, Dominance rises from $0\%$ to $52\%$ to $56\%$, showing that pH feedback can create asymmetric outcomes but with a response shape distinct from the gLV baseline.}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=\textwidth]{internal_Q5_phase_hybrid_original_continuous.pdf}
+    \caption*{\textbf{Fig.~Q5-hybrid (continuous).} \textbf{The continuous pH+LV hybrid increases Dominance, but less strongly than the gLV baseline.} Dominance rises monotonically from $20\%$ to $30\%$ to $49\%$ across the weak/mid/strong pH-coupling sweep, with all three plotted cells stable. This keeps environmental feedback as a plausible contributor, but not the strongest reproduction of the gLV-like trend.}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=\textwidth]{internal_Q5_phase_hybrid_original_binary.pdf}
+    \caption*{\textbf{Fig.~Q5-hybrid (binary).} \textbf{The binary pH+LV hybrid can raise Dominance, but the strong point is too sampling-limited to claim a reversal.} Dominance is $34\% \to 50\% \to 42\%$ across the weak/mid/strong sweep, but the strong cell retains only 53/100 stable pools after the blow-up filter. The apparent drop at the strong point should therefore be read as uncertainty, not evidence against the broader Dominance-increase pattern.}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=\textwidth]{internal_Q5_three_models_per_model.pdf}
+    \caption*{\textbf{Fig.~Q5-summary.} \textbf{Among the tested mechanisms, gLV most directly reproduces the monotone Dominance and pairwise-correlation increases.} Dominance rises most strongly in the gLV baseline ($18\% \to 60\% \to 88\%$), while pH feedback and pH+LV hybrids can also increase Dominance but with weaker, more parameter-dependent responses. The pairwise selection-correlation summary shows the same hierarchy: gLV has the largest increase ($|\phi|=0.21 \to 0.47 \to 0.86$), whereas the pH and hybrid variants rise more modestly.}
+\end{figure}
+
+\noindent\textbf{Load-bearing conclusions.}
+
+\begin{enumerate}[itemsep=2pt]
+    \item \emph{On Dominance, original-code-like pH feedback with plain relaxation has a clean intermediate-strength range.} Once empty-parent or empty-coalescence events are excluded rather than called Restructuring, pure pH feedback rises from mostly Mixture at $c_{\max}=10^{-10}$ to $52$--$58\%$ Dominance at $10^{-8}$--$3\times10^{-8}$ in the 100-pool summary run. However, the original public-code high end ($c_{\max}\ge10^{-6}$) is dominated by invalid boundary-collapse events, so it should not be interpreted as an ordinary high-strength coalescence regime.
+    \item \emph{Pairwise selection correlation $|\phi|$ points the same way, with caveats at extreme pH strength.} The pH-only model reaches high $|\phi|$ in the same clean range that produces its Dominance peak ($0.59$ at $c_{\max}=10^{-9}$ and $0.79$ at $3\times10^{-8}$), but the original-grid high-end cells are mostly excluded boundary-collapse events. gLV reaches $|\phi| \approx 0.86$ while also producing high Dominance at the high-strength end. The original-form hybrid is intermediate, especially in binary mode ($0.27 \to 0.48 \to 0.53$), which keeps the broader environmental-feedback interpretation alive.
+    \item \emph{The R2-1 framing is quantitatively supported.} R2-1 argues $\alpha_{ij}$ is an effective coefficient that can absorb pH-mediated and other indirect effects. Fig.~Q5 now sharpens that point: pH feedback alone, when implemented close to the public Ratzke code with plain relaxation, can organize a mid-strength asymmetric-replacement regime but does not reproduce the monotone high-strength Dominance trend. A pairwise effective-interaction framework remains the minimal model that reproduces both high Dominance and strong same-parent selection correlation at the high-interaction end.
+    \item \emph{Honest concession.} The pure-pH model tested here is deliberately not calibrated to the lab's 12-isolate pH phenotypes, and the continuous relaxation term is a coalescence-compatible substitute for daily dilution rather than a literal serial-transfer model. The current test shows that pH feedback alone can generate substantial Dominance over a clean intermediate interaction-strength range; what it does not provide is a validated mapping from the experimental nutrient axis to that pH-strength range, or an interpretable high end of the original public-code grid without boundary collapse.
+\end{enumerate}
+
+\noindent\textbf{Plumbing note.} All three simulators produce JSON in the same schema as \texttt{R3\_3\_nonCompetitive\_gLV/non\_competitive\_results.json}. The unified driver \texttt{simulate\_Q5\_all\_models.py} runs all three on a shared grid and writes \texttt{Q5\_all\_models\_results.json}; the per-model summary figure is rendered by \texttt{make\_Q5\_comparison\_per\_model.py}.
+
+\noindent\textbf{Open calibration questions (flag for PI review).}
+(i)~Model~2 species parameters $p_{\mathrm{pref},i}$ and $c_i$ are Ratzke 2018 defaults, not fit to the lab's 12-isolate pH phenotype. A rebuttal-grade Q5 figure should calibrate these from single-species growth-vs-pH data if available.
+(ii)~Mapping between our experimental nutrient axis and the pH interaction-strength axis is open; overlaying observed $|\phi|$ at Nutr$-$/Base/Nutr$+$ onto Fig.~Q5D requires choosing matched knob values per medium. The current weak/mid/strong pH display uses representative points from the original public-code sweep ($c_{\max}=10^{-10},10^{-8},10^{-2}$), not a fitted LN/Base/HN calibration.
+(iii)~In the original-form hybrid (Model~3) species preferences $\omega_p, \omega_q$ are drawn \emph{independently} (no symmetry link between pH-production and pH-response), matching \texttt{gLV\_pH\_set1}'s independent \texttt{f\_p} / \texttt{f\_q} callables. The binary mode at $\tau=1.0$ shows $\sim 49\%$ pool blow-ups (n=51/100 stable); the trend is included for monotonicity but the top-$\tau$ cell is underpowered and should be resampled ($\ge 300$ pools) if a precise strong-$\tau$ point is required. Continuous mode is stable across the whole $\tau$ sweep.
+
+% =============================================================================
+\section{Trait-based environmental filtering model for nutrient-dependent niche availability}
+\label{sec:q5_trait_filtering}
+
+\question{Can we add a fourth alternative model in which nutrient condition changes the available niche space, so higher nutrient imposes a stronger environmental filter and reduces survivor diversity?}
+\statusmark{Implemented as an interaction-free trait-filtering null; Fig.~Q5-filter generated.}
+
+\answerlabel
+\textbf{Short answer: yes, and the first implementation gives a useful null.} The cleanest version is a trait-based environmental filtering null model. It asks whether nutrient-dependent niche availability alone, without pairwise interactions and without explicit pH feedback, can generate the observed shift from Mixture toward Dominance as nutrients increase. This model is directly motivated by trait-based community assembly by environmental filtering: species have traits, environments select trait values, and species whose traits match the local filter become more abundant. CATS and Traitspace are useful precedents because they formalize the same idea at the statistical-assembly level: community relative abundance is predicted from trait-environment matching rather than from pairwise interaction coefficients.
+
+\noindent\textbf{Ecological premise.}
+Each species has one or more latent traits that determine its fit to a medium. In this experiment, plausible traits include preferred nutrient niche, nutrient uptake strategy, pH tolerance, metabolic specialization, stress tolerance, or growth preference. Each medium exposes a different region of trait space. The key experimental fact to encode is that higher nutrient is more selective: Nutr$+$ communities have reduced diversity and stronger dominance by a smaller set of survivors. The model should therefore make the nutrient gradient act primarily through filter breadth or filter strength:
+
+\begin{equation*}
+    \sigma_{\mathrm{Nutr}-} > \sigma_{\mathrm{Base}} > \sigma_{\mathrm{Nutr}+},
+    \qquad
+    \beta_{\mathrm{Nutr}-} < \beta_{\mathrm{Base}} < \beta_{\mathrm{Nutr}+},
+\end{equation*}
+
+\noindent where $\sigma_m$ is the breadth of niches available in medium $m$, and $\beta_m$ is the strength of trait-based selection imposed by that medium.
+
+\noindent\textbf{Minimal one-trait model.}
+Let species $i$ have a scalar latent trait $z_i$, and let medium $m$ have a filter center $\theta_m$ and filter breadth $\sigma_m$. The medium-specific fitness or carrying capacity is
+
+\begin{equation*}
+    w_{i,m}
+    =
+    \exp\!\left[
+        -\frac{(z_i-\theta_m)^2}{2\sigma_m^2}
+    \right],
+\end{equation*}
+
+\noindent equivalently,
+
+\begin{equation*}
+    w_{i,m}
+    =
+    \exp\!\left[-\beta_m (z_i-\theta_m)^2\right],
+    \qquad
+    \beta_m = \frac{1}{2\sigma_m^2}.
+\end{equation*}
+
+\noindent This is the simplest Gaussian trait-response curve: species near the medium's preferred niche have high expected abundance, and species far from it are filtered out. A more CATS/Traitspace-like multidimensional version replaces $(z_i-\theta_m)^2$ with a trait-space distance,
+
+\begin{equation*}
+    w_{i,m}
+    =
+    \exp\!\left[
+        -\frac{1}{2}
+        (\mathbf{z}_i-\boldsymbol{\theta}_m)^{T}
+        \Sigma_m^{-1}
+        (\mathbf{z}_i-\boldsymbol{\theta}_m)
+    \right],
+\end{equation*}
+
+\noindent where $\Sigma_m$ encodes both the breadth and orientation of available niche space in each medium. For a first rebuttal-facing simulation, the one-trait version is preferable because every parameter has an obvious interpretation.
+
+\noindent\textbf{Assembly and coalescence pipeline.}
+The model should use the same synthetic-pool geometry and the same outcome classifier as the gLV and pH models, so that any difference in outcome distributions is due to mechanism rather than measurement.
+
+\begin{enumerate}[itemsep=2pt]
+    \item Draw a regional pool of $N=24$ species with latent traits, e.g.\ $z_i \sim \mathcal{N}(0,1)$.
+    \item Randomly assign $12$ species to parent A and $12$ species to parent B.
+    \item Assemble each parent in medium $m$ by applying the medium filter:
+    \begin{equation*}
+        a_{i,m}^{(A)}
+        \propto
+        a_{i,0}^{(A)}\, w_{i,m}^{\gamma_m},
+    \end{equation*}
+    with zeros outside parent A's species set; parent B is assembled analogously. Here $\gamma_m$ is an optional extra filter-strength exponent. The simplest choice is $\gamma_m=1$ and extinction below a fixed abundance threshold.
+    \item Coalesce the parents by 50/50 mixing:
+    \begin{equation*}
+        a_{i,0}^{(C)}
+        =
+        \frac{1}{2} a_{i,m}^{(A)}
+        +
+        \frac{1}{2} a_{i,m}^{(B)}.
+    \end{equation*}
+    \item Re-apply the same medium filter to the coalesced mixture:
+    \begin{equation*}
+        a_{i,m}^{(C)}
+        \propto
+        a_{i,0}^{(C)}\, w_{i,m}^{\gamma_m},
+    \end{equation*}
+    normalize, threshold extinctions, then classify the event with the existing L$_2$/cosine similarity pipeline.
+\end{enumerate}
+
+\noindent This is a deliberately interaction-free null: species do not directly affect one another. The only way one parent dominates is if its assembled species set happens to contain more taxa near the medium's available niche than the other parent.
+
+\noindent\textbf{Nutrient mapping.}
+The current calibration fixes the filter center and breadth, then varies only the selection-strength exponent $\gamma_m$. This is the clean one-knob version of the environmental-filtering null: $\theta_m=0$ and $\sigma_m=1$ for every medium, while $\gamma_m$ is chosen so the model's mean coalesced richness numerically matches the observed P12 coalesced-community means. The observed targets are Nutr$-$ mean coalesced richness $13.44$, Base $9.62$, and Nutr$+$ $8.85$ ASVs; the model retains its existing relative-abundance threshold of $0.02$ for this comparison.
+
+\begin{center}
+\small
+\begin{tabular}{p{0.18\textwidth} p{0.16\textwidth} p{0.16\textwidth} p{0.16\textwidth} p{0.22\textwidth}}
+\toprule
+\textbf{Medium} & $\boldsymbol{\theta_m}$ & $\boldsymbol{\sigma_m}$ & $\boldsymbol{\gamma_m}$ & \textbf{Matched target} \\
+\midrule
+Nutr$-$ & $0$ & $1.0$ & $2.80$ & mean $C$ richness $13.44$ \\
+Base & $0$ & $1.0$ & $7.95$ & mean $C$ richness $9.62$ \\
+Nutr$+$ & $0$ & $1.0$ & $10.15$ & mean $C$ richness $8.85$ \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\noindent This calibration intentionally does not shift the preferred trait value or narrow the niche breadth. The only medium-dependent parameter is $\gamma_m$, so any change in outcome structure is attributable to stronger environmental selection rather than to a moving niche optimum.
+
+\noindent\textbf{Expected predictions.}
+If the environmental-filtering null is sufficient, it should reproduce four patterns:
+
+\begin{enumerate}[itemsep=2pt]
+    \item survivor richness decreases along Nutr$-$ $\to$ Base $\to$ Nutr$+$;
+    \item Dominance frequency increases as the filter narrows;
+    \item Mixture is enriched under the broad Nutr$-$ filter;
+    \item the nutrient ordering persists without pairwise interactions.
+\end{enumerate}
+
+\noindent The richness-matched simulation gives a sharper answer. A purely species-level filter can reproduce the target coalesced richness values, but it does not reproduce the observed Dominance frequencies. Nutr$-$ gives $100\%$ Mixture at mean coalesced richness $13.5$; Base gives $98.8\%$ Mixture and $1.2\%$ Dominance at mean richness $9.8$; Nutr$+$ gives $99.0\%$ Mixture and $1.0\%$ Dominance at mean richness $8.8$. Thus environmental filtering alone, when constrained to the observed P12 coalesced richness scale, is not sufficient to explain the nutrient-dependent Dominance pattern.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=\textwidth]{internal_Q5_phase_filter.pdf}
+    \caption*{\textbf{Fig.~Q5-filter.} \textbf{A richness-matched trait-filtering null remains overwhelmingly Mixture and does not explain the nutrient-dependent Dominance pattern.}
+    The filter strengths are calibrated to match observed P12 coalesced richness
+    in Nutr$-$, Base, and Nutr$+$, but Dominance remains $0\%$, $1.2\%$, and
+    $1.0\%$, respectively. Thus richness loss from filtering alone is
+    insufficient to reproduce the observed Dominance trend.}
+\end{figure}
+
+\noindent\textbf{Implementation status.}
+Implemented under \texttt{Figure\_generate/code/Figure\_revision/Q5\_pH\_feedback\_model/}. The reusable model is \texttt{environmental\_filter\_model.py}; the event-level driver is \texttt{simulate\_Q5\_phase\_environmental\_filter.py}; the figure renderer is \texttt{make\_Q5\_phase\_environmental\_filter.py}. The simulation writes \texttt{Q5\_phase\_events\_filter.csv} with the same event-level fields used by the other Q5 phase diagrams plus richness and filter-parameter columns. The rendered figure is copied into the memo figure folder as \texttt{internal\_Q5\_phase\_filter.pdf}.
+
+\noindent\textbf{Interpretation for R2-2.}
+The filter model is now a stronger alternative-mechanism control. It shows that nutrient-dependent environmental filtering can reproduce the P12 coalesced richness scale without explicit pairwise interactions, but the richness-matched filter remains overwhelmingly Mixture. This supports a balanced response: environmental filtering is a plausible contributor to richness loss, especially under higher nutrient, but by itself it does not explain the observed Dominance trend.
+
+\noindent\textbf{Parent rank-abundance calibration.}
+Because richness alone does not capture abundance skew, we also fit the interaction-free filter to the observed P12 parental rank-abundance curves. This parent-first calibration fixes $\theta=0$, $\sigma=1$, threshold $0.001$, and global $n_{0,\mathrm{CV}}=1.25$; the fitted strengths are Nutr$-$ $\gamma=5.0$, Base $\gamma=11.5$, and Nutr$+$ $\gamma=40.5$.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=\textwidth]{internal_Q5_filter_rank_abundance_parentfit.pdf}
+    \caption*{\textbf{Fig.~Q5-filter-rank.} \textbf{Abundance skew plus filtering can raise Dominance, but remains incomplete as an explanation.}
+    The rank-abundance-calibrated filter increases Dominance with filter
+    strength ($8.4\% \to 15.1\% \to 29.6\%$), but remains well below the
+    experimental Dominance scale and generates almost no Restructuring
+    ($0.03\%$, $0\%$, $0.23\%$).}
+\end{figure}
+
+\noindent\textbf{Useful sources.}
+The relevant precedents are CATS (Community Assembly by Trait Selection), which predicts relative abundance from trait-environment matching, and Traitspace, which translates trait-based filtering into a probabilistic model that includes trait variation. The specific implementation above is a minimal simulation analogue, not a full CATS or Traitspace inference model. Source links: \href{https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0206787}{CATS experimental test}; \href{https://rdrr.io/cran/Traitspace/}{Traitspace R package}; \href{https://researchcommons.waikato.ac.nz/entities/publication/28c56b7b-8a0c-4a4c-93ab-47dd3f1240ed}{Traitspace theoretical consequences}.
+
+% =============================================================================
+\section{Aspects of the data the gLV model does not explain}
+\label{sec:q6_unexplained}
+
+\question{For scientific honesty and compatibility with other models, which specific observations does the baseline gLV \emph{not} reproduce, and which of them matter for the central claim?}
+\statusmark{Triage complete; four items listed, each classified as a scope statement rather than a refutation.}
+
+\answerlabel
+\textbf{Short answer: four observations sit outside the baseline gLV; all four are scope statements, none are refutations of the central claim.} The central claim of the paper, that interspecies interactions drive community-level selection in coalescence, is made at the level of outcome-class frequency (Dominance / Mixture / Restructuring) and of within-community selection correlation. Finer predictions, such as which \emph{specific} parent wins a Dominance event, or absolute biomass dynamics, lie on axes the baseline gLV does not use and are therefore not legitimate targets of refutation. The triage below is structured accordingly.
+
+\begin{center}
+\small
+\begin{tabular}{p{0.24\textwidth} p{0.22\textwidth} p{0.22\textwidth} p{0.22\textwidth}}
+\toprule
+\textbf{Unexplained feature} & \textbf{(i) Captured by an extension we ran?} & \textbf{(ii) Limitation or refutation?} & \textbf{(iii) Central-claim impact} \\
+\midrule
+\textbf{1. Negative sign of $\Delta$OD--PDI in Base / Nutr$+$} \newline (R1-1B; $\rho = -0.60$, $p = 4 \times 10^{-10}$ in Nutr$+$; \S\ref{sec:q2_failure_1}) &
+No. Baseline gLV predicts a positive or flat $\Delta$OD--PDI relation (denser parent at mixing more likely to push its species above invasion thresholds). The R3-4 cooperative/exploitative extensions shift \emph{outcome-class} frequencies but do not change the $\Delta$OD--PDI sign. &
+Limitation. Points to an environment-mediated ``who modifies the shared resource or pH first'' mechanism that is orthogonal to $\alpha_{ij}$ magnitude (candidate mechanisms in \S\ref{sec:q2_failure_1}). &
+Scope statement. The central claim is about outcome-class frequency, not winner direction on the $\Delta$OD axis. The pH-rule (\S\ref{sec:q3_pH_vs_gLV}) and Q2.1 mechanistic list address this axis separately. \\
+
+\textbf{2. Restructuring excess in natural communities} \newline (main Fig.~6C; Supplementary Figs.~22--25) &
+Partially. The competition-only baseline underproduces Restructuring; the R3-4 gLV extension with $15\%$ cooperative pairs at $\mu = 0.30$ raises Restructuring from $\sim 10\%$ to $\sim 25\%$, closing part of the gap with the observed natural-community level. &
+Limitation (addressed). Baseline scope is competition-dominated communities (as validated by R3-4 panels A--D for our synthetic system); natural communities evidently include mutualistic components. &
+Scope statement. Framed in the Discussion as a direction for extension (R3-4 cooperative regime), not a failure of the framework. \\
+
+\textbf{3. Acidic-parent bias in Nutr$+$ Dominance events} \newline (R1-2; acid wins 38/44 acid--alk events, $p < 10^{-6}$; Extended Data Fig.~8) &
+Conditionally. Captured if one accepts that $\alpha_{ij}$ absorbs pH-mediated coupling (R2-1 / R2-6 framing: effective coefficients absorbing direct and indirect mechanisms). \emph{Not} captured by a species-agnostic baseline with i.i.d.\ $\alpha_{ij}$ draws. &
+Limitation. Baseline has no species identity, so it cannot predict \emph{which} parent wins; a pH-aware extension (or interpretation) is consistent. &
+Scope statement. The claim is class-level, not species-identity-level. Winner direction is a free, complementary axis (\S\ref{sec:q3_pH_vs_gLV}). \\
+
+\textbf{4. Sub-additive pairwise CFU} \newline (R3-4 panels A--D; $80/93/90\%$ sub-additive for Nutr$-$ / Base / Nutr$+$) &
+Partially. Sub-additivity is \emph{consistent with} the competition-dominated regime that baseline gLV represents, but our simulation predicts survival (presence/weighted abundance), not absolute biomass; the quantitative sub-additivity magnitude is therefore not a direct model output. &
+Limitation by construction (absolute biomass is not a direct output of the baseline outcome-class simulation). Not a refutation; it is validating evidence for the competition assumption underlying the framework. &
+Supportive. Shores up the competition-regime assumption. No threat to the central claim. \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\noindent\textbf{Not on the list, by design.}
+(a)~\emph{PDI bimodality at low $\mu$.} Baseline gLV predicts unimodal PDI near $0.5$ at $\mu = 0.3$, which matches Nutr$-$ (Mixture-dominated, PDI clustered at $\sim 0.5$); no bimodality mismatch.
+(b)~\emph{pH$\Delta$--PDI slope asymmetry across media} (Extended Data Fig.~8: Base n.s., Nutr$+$ $p = 0.002$). Subsumed under item~3: baseline has no pH axis, so the scale-asymmetry is a finer prediction on the pH-rule axis rather than an independent failure.
+(c)~\emph{LN OD dynamic range limitation} (Q1). Not a gLV failure; the environment provides insufficient dynamic range to test the OD prediction in Nutr$-$, which is the interpretation already written in \S\ref{sec:q1_LN_OD_PDI}.
+
+\noindent\textbf{Rebuttal framing takeaway.} The four items above become a single honest scope paragraph in the Discussion: ``The baseline gLV is silent on winner direction within Dominance events (items 1, 3), on absolute biomass (item 4), and on mutualism-driven Restructuring (item 2). These are complementary axes, not refutations; we have shown that one of them (item 2) is partially closed by a cooperative extension, and another (item 3) is captured by the pH rule as a complementary predictor.'' This is the honest scope statement that pairs with the Q7 ``why gLV'' paragraph.
+
+% =============================================================================
+\section{Why did we pick the gLV model?}
+\label{sec:q7_why_gLV}
+
+\question{Very clearly: why did we pick the generalized Lotka--Volterra framework, as opposed to a consumer-resource model, a pH/environment-feedback model, or a neutral model?}
+\statusmark{Draft complete; awaiting PI sign-off and placement decision before insertion in \texttt{results.tex}.}
+
+\answerlabel
+\textbf{Short answer: three reasons, one paragraph.} The current Results \S2.2 already contains a partial framing sentence at the end of the intro paragraph of \texttt{results.tex} line~42 (``The gLV model serves as a phenomenological framework\ldots''). That sentence covers reason~(ii) but is silent on (i) the single-scalar-axis motivation and (iii) the calibration compatibility. The draft below is written so it can either \emph{replace} the existing sentence or be \emph{inserted before it}; the placement decision is a PI call.
+
+\paragraph{Proposed \texttt{\textbackslash rev\{\}}-ready draft paragraph.}
+\begin{quote}
+\color{blue!70!black}
+We chose the gLV framework for three reasons. First, it reduces the question of how interactions shape coalescence to a single scalar $\mu$, the mean interspecific competition coefficient, which is the axis we can directly tune experimentally via nutrient concentration through the frequency of failed pairwise invasions (\figref{fig:fig4}). Second, its parameters are phenomenological: the effective $\alpha_{ij}$ absorbs diverse biochemical mechanisms, including direct resource competition, pH modification, and metabolite cross-feeding, without committing to any one source, so the framework's conclusions apply to competition-dominated communities regardless of the specific mechanism. Third, the failed-invasion observable we use to calibrate $\mu$ has no natural analogue in neutral models and requires additional mapping assumptions in consumer-resource models, which makes gLV the minimal framework consistent with our experimental calibration.
+\end{quote}
+
+\paragraph{Placement options (PI decision).}
+\begin{itemize}[itemsep=0pt]
+    \item \textbf{Option A (replacement).} Delete the existing ``phenomenological framework'' sentence at \texttt{results.tex}:42 and insert the draft paragraph (wrapped in \texttt{\textbackslash rev\{\}}) in its place. Cleaner narrative; one rationale in one location.
+    \item \textbf{Option B (insertion before equation).} Insert the draft paragraph (wrapped in \texttt{\textbackslash rev\{\}}) immediately after the \S2.2 heading at \texttt{results.tex}:36, leaving the existing sentence in place. Preserves current phrasing; slightly redundant.
+    \item \textbf{Option C (split).} Move reason~(ii) into the existing sentence (keeping it unmarked as baseline framing) and put only reasons (i) and (iii) into a new \texttt{\textbackslash rev\{\}} paragraph. Minimizes the visible change in the diff; retains maximum existing text.
+\end{itemize}
+
+\paragraph{Gate.} Before inserting into \texttt{results.tex}: (a) PI sign-off on tone (especially reason~(iii)'s ``minimal framework'' claim, which is defensible but leans on the Duan~2025 mapping argument); (b) choice among A/B/C; (c) verification that the \figref{fig:fig4} cross-reference resolves in context. No manuscript edit is applied until these three gates clear.
+
+\paragraph{Style compliance.} Rule 2 (`\textbackslash rev\{\}` wrap): will be applied at insertion time. Rule 11 in the response-letter style (``bold sparingly'', ``no em-dashes''): draft above is compliant. No existing response-letter section cites this paragraph, so no downstream cross-references need updating.
+
+% =============================================================================
+\section{R3-4 follow-up: non-competitive regime parameterisation}
+\label{sec:r3_4_param}
+
+\question{For the R3-4 figure that extends the gLV to non-competitive regimes, what is the right axis? The discrete ``comp / exp15 / coop15'' buckets + fixed 15\% conversion fraction + fixed magnitude cap $f=0.4$ in \texttt{simulate\_non\_competitive.py} are arbitrary. How do other authors parameterise non-competitive pairs in random gLV models, and what is the most defensible continuous axis for this paper?}
+\statusmark{Version A mixed-sign facilitative-tail simulation complete; response integration pending. Version B correlation-structure figure remains available as a secondary robustness check.}
+
+\answerlabel
+\textbf{Short answer.} The relevant literature gives four principled axes: (i)~pair correlation $\rho = \mathrm{Corr}(\alpha_{ij}, \alpha_{ji})$ in the Allesina-Tang sense; (ii)~sign-type composition $(P_C, P_M, P_E)$ in the Mougi-Kondoh / Coyte style; (iii)~net-mean shift $\bar\alpha$ in a signed marginal; (iv)~fraction of pairs converted to each non-competitive type. For R3-4 we adopt a single signed-$p$ axis that fuses (i) and (iv): $p \in [-1, +1]$ controls both the fraction of non-competitive pairs (via $|p|$) and their direction (cooperation for $p > 0$, exploitation for $p < 0$). Full derivation and tables below.
+
+\subsection*{Revised two-version model comparison}
+
+\noindent\textbf{Reason for splitting the extensions.}
+The current signed-$p$ figure changes the \emph{structure} of reciprocal pairwise couplings, but under the $U[0,2\mu]$ marginal its $p>0$ side is still symmetric competition rather than true facilitation. To answer Reviewer~3's facilitation concern cleanly, the response should separate two model versions that test different claims:
+
+\begin{enumerate}[itemsep=5pt]
+    \item \textbf{Version A --- mixed-sign facilitation/exploitation gLV with density-dependent self-limitation.}
+    This is the direct test of whether weak positive ecological interactions change the qualitative coalescence outcome. In the paper's sign convention, facilitation corresponds to negative off-diagonal $\alpha_{ij}$ values. The planned dynamics are
+    \begin{equation*}
+        \dot n_i
+        =
+        n_i
+        \left(
+            1
+            - \sum_j \alpha_{ij} n_j
+            - \gamma n_i^2
+        \right),
+    \end{equation*}
+    where $\alpha_{ii}=1$ and $\gamma n_i^2$ is a density-dependent self-limitation term (cubic self-regulation in abundance dynamics) representing crowding or finite-resource limitation. This term is included to prevent unbounded growth when facilitative feedbacks are present, not to claim a new mechanism.
+
+    Candidate marginal and pair types:
+    \begin{itemize}[itemsep=2pt]
+        \item baseline competition: $\alpha_{ij}\sim U[0,2\mu]$;
+        \item iid mixed-sign: $\alpha_{ij}\sim U[-\epsilon,2\mu]$, with $\epsilon$ small;
+        \item mutual facilitation: a fraction $q$ of unordered pairs has both directions sampled from $U[-\epsilon,0]$;
+        \item exploitation: a fraction $q$ of unordered pairs has one direction sampled from $U[-\epsilon,0]$ and the opposite direction from $U[0,2\mu]$.
+    \end{itemize}
+    Initial safe grid: $\epsilon \in \{0.1\mu,0.2\mu\}$, $q \in \{0.15,0.30\}$, $\gamma \in \{0.05,0.10,0.20\}$, and $\mu \in \{0.30,0.60,0.80\}$. Load-bearing readouts: outcome fractions, $|\phi|$, richness after assembly, rejection/blow-up rate, and whether facilitation increases Restructuring in a way relevant to natural-community excess Restructuring.
+
+    \item \textbf{Version B --- reciprocal-correlation / pair-coupling gLV.}
+    This keeps the original all-competitive marginal $\alpha_{ij}\sim U[0,2\mu]$ and changes only the relationship between reciprocal coefficients. It is therefore a test of network-structure robustness, not a facilitation model. The planned dynamics remain the original pairwise gLV,
+    \begin{equation*}
+        \dot n_i
+        =
+        n_i
+        \left(
+            1
+            - \sum_j \alpha_{ij} n_j
+        \right),
+    \end{equation*}
+    with reciprocal-pair coupling varied along $p$ or $\rho$: iid competition at $p=0$, symmetric competition at $p>0$, and antisymmetric/exploitative coupling at $p<0$ if one direction is sign-flipped. Because the $p>0$ side remains competitive under the non-negative marginal, this version should be described as ``correlated/symmetric competition'', not cooperation.
+
+    Load-bearing readout: whether the central $\mu$-dependent Dominance trend is robust to reciprocal-correlation structure.
+\end{enumerate}
+
+\noindent\textbf{Implementation plan.}
+Implement Version~A as a new script rather than modifying \texttt{simulate\_p\_axis.py}, because the right-hand side changes when the self-limitation term is added. Reuse the existing assembly, coalescence, classification, and $|\phi|$ bookkeeping where possible, but introduce a new \texttt{run\_gLV\_higher\_order()} helper with the per-capita term $-\gamma n_i^2$. Keep Version~B in \texttt{simulate\_p\_axis.py} or a renamed successor, but update names and captions so it is not presented as facilitation.
+
+\begin{itemize}[itemsep=2pt]
+    \item[\textbf{B1.}] Create \texttt{simulate\_mixed\_sign\_higher\_order.py} under \texttt{Figure\_generate/code/Figure\_revision/R3\_3\_nonCompetitive\_gLV/}.
+    \item[\textbf{B2.}] Add a sampler with regimes \texttt{comp}, \texttt{mixed\_iid}, \texttt{mutual\_facilitation}, and \texttt{exploitation}; store $\mu$, $\epsilon$, $q$, $\gamma$, seed, event counts, and rejection counts in JSON.
+    \item[\textbf{B3.}] Run a pilot grid with small pools or fewer seeds to find stable $\epsilon$ and $\gamma$ ranges. Promote only cells with acceptable blow-up/rejection rates to the final grid.
+    \item[\textbf{B4.}] Run the final grid at the same geometry as the current R3-4 response figure: 48 species, four 12-species parents per pool, 200 pools per cell where computationally feasible.
+    \item[\textbf{B5.}] Render a two-row figure: row A for Version~A true facilitation/exploitation, row B for Version~B correlation structure. Use consistent stacked bars for Dominance / Mixture / Restructuring and annotate rejection rates when non-negligible.
+    \item[\textbf{B6.}] Update \texttt{revision\_figure\_folder/source.md}, then rewrite R3-4 so the primary facilitation answer is Version~A and Version~B is framed as a separate robustness check.
+\end{itemize}
+
+\noindent\textbf{Response-writing rule after implementation.}
+Only Version~A should be called a facilitation or cooperation model. Version~B should be called reciprocal-correlation structure or symmetric/antisymmetric pair coupling unless its marginal is changed to include negative $\alpha_{ij}$ values.
+
+\noindent\textbf{Version A result (2026-04-30).}
+The mixed-sign facilitative-tail sweep has been run and rendered as \texttt{R3\_4\_mixed\_sign\_higher\_order.pdf}. The final grid used $\mu \in \{0.30,0.60,0.80\}$, $f \in \{0,0.10,0.20,0.40,0.80\}$, $\gamma=0.10$, and 200 pools per cell. The off-diagonal marginal was $\alpha_{ij}\sim U[-f\mu,(2+f)\mu]$, so $E[\alpha_{ij}]=\mu$ while $P(\alpha<0)$ increased from 0 to 22.2\%. Dominance still rises with $\mu$ at every $f$. At low $\mu$, increasing the facilitative tail shifts outcomes away from Mixture toward both Dominance and Restructuring: Dom/Mix/Res at $\mu=0.30$ changes from 18/73/9\% at $f=0$ to 43/33/24\% at $f=0.8$. At high $\mu$, Dominance remains high across the facilitative tail (about 70--76\%). Rejection and coalescence-failure counts remain modest under the stabilizing self-limitation term. This figure is the preferred replacement for the current R3-4b if the response is reframed around true facilitation rather than reciprocal-correlation structure.
+
+\subsection*{Literature conventions for modelling non-competitive pair interactions}
+\begin{center}
+\small
+\begin{tabular}{p{0.21\textwidth} p{0.36\textwidth} p{0.35\textwidth}}
+\toprule
+\textbf{Source} & \textbf{Parameterisation} & \textbf{Pros / cons for our use} \\
+\midrule
+May 1972 &
+$\alpha_{ij} \sim \mathcal{N}(0, \sigma^2)$, pairs independent; stability via $\sigma\sqrt{NC}$ vs self-regulation $d$. &
+Purely random-matrix; no ecology in the sign structure. Not directly useful. \\
+Allesina \& Tang 2012 &
+Pair correlation $\rho = \mathrm{Corr}(\alpha_{ij},\alpha_{ji})$ at fixed mean and variance. Three canonical regimes: $\rho=0$ random, $\rho>0$ competition+mutualism mixture, $\rho<0$ predator-prey. &
+Standard continuous RMT axis; matches our "what happens when pairs are not symmetric?" question. Requires a signed marginal. \\
+Mougi \& Kondoh 2012 &
+Fix sign structure $(P_C, P_M, P_E)$ at fixed connectance; vary composition at fixed magnitude. &
+Ecologically transparent. Discrete buckets per pair type. \\
+Coyte, Schluter \& Foster 2015 &
+Ternary axis $(P_C, P_M, P_E)$ with $P_C + P_M + P_E = 1$; Dominance / stability plotted on the triangle. &
+Most interpretable to a microbial-ecology reviewer. 2-D phase diagram. \\
+Barbier et al.\ 2018 &
+Continuous $(\bar\mu, \bar\sigma, \bar\gamma)$ where $\bar\gamma$ is the pair correlation; mean-field stability phase diagram in $(\bar\mu, \bar\gamma)$. &
+Clean continuous parameterisation, matches gLV mean-field theory. \\
+MacArthur / consumer-resource &
+$\alpha$ emerges from metabolic niche overlap; negatives from cross-feeding. &
+Mechanistic but requires a much heavier model; out of scope for a revision-letter figure. \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\subsection*{Options considered for the R3-4 axis}
+\begin{center}
+\small
+\begin{tabular}{p{0.04\textwidth} p{0.21\textwidth} p{0.20\textwidth} p{0.22\textwidth} p{0.19\textwidth}}
+\toprule
+\# & \textbf{Axis} & \textbf{Marginal of $\alpha$} & \textbf{What it answers} & \textbf{Figure shape} \\
+\midrule
+A & $\rho \in [-1,+1]$, Allesina-Tang pair correlation & Normal or U[$-\mu,\mu$], signed & Does pair (a)symmetry alone break Dominance? & 1-D sweep over $\rho$ \\
+B & Ternary $(P_C,P_M,P_E)$, Coyte-style & Fixed magnitude, sign assigned per pair & Direct reviewer question: how much mutualism/exploitation breaks it? & Ternary heatmap of Dominance \\
+C & Mean $\bar\alpha$ of signed marginal & Normal$(\bar\alpha,\sigma^2)$, pairs independent & Net competition-to-mutualism shift & 1-D sweep of $\bar\alpha$ \\
+D & 2-D $(\mu_{\mathrm{comp}}, \mu_{\mathrm{mut}})$ & Two independent positive tails & Separates competition strength from mutualism strength & 2-D heatmap \\
+E & Fraction $p_M$ / $p_E$ of converted pairs & Current bucketed marginal & Smooth version of current code & Two 1-D lines \\
+F & Connectance $C$ + sign structure & U[$-a,b$] with prob $C$ & Interaction of sparsity with mutualism & 2-D heatmap \\
+G & $\rho$ with positive-only marginal & U[$0,2\mu$], copula & Asymmetry only, no sign change & Does not address reviewer --- rejected \\
+\midrule
+\textbf{Chosen} & Signed $p \in [-1,+1]$: fraction of non-competitive pairs ($|p|$) $\times$ direction (sign of $p$) & U[$0,2\mu$] at $p=0$; U[$-\mu,\mu$] for the converted fraction when $p \neq 0$ & Fuses A and E; gives exploitation ($p<0$) and cooperation ($p>0$) as limits of one signed axis & 1-D sweep (1 panel per $\mu$) \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\subsection*{Chosen parameterisation (operational definition, as executed)}
+Signed axis $p \in \{-1, -0.5, 0, +0.5, +1\}$, \textbf{single marginal $U[0, 2\mu]$ throughout}. For each unordered pair $(i,j)$ with $i<j$:
+\begin{itemize}[itemsep=0pt]
+  \item With probability $1 - |p|$: draw $\alpha_{ij}, \alpha_{ji} \stackrel{\mathrm{iid}}{\sim} U[0, 2\mu]$ (paper's baseline competitive draw).
+  \item With probability $|p|$, draw $\alpha \sim U[0, 2\mu]$ and set
+    \begin{itemize}[itemsep=0pt]
+      \item $\alpha_{ij} = \alpha_{ji} = \alpha$ if $p > 0$ (symmetric competition, both positive);
+      \item $\alpha_{ij} = \alpha$, $\alpha_{ji} = -\alpha$ if $p < 0$ (antisymmetric exploitation, one positive, one negative).
+    \end{itemize}
+\end{itemize}
+Diagonal $I_{ii} = 1$ throughout (= self-regulation in the codebase's flipped sign convention).
+
+\paragraph{Stability screening.} For $p \geq 0$ the matrix is strictly non-negative, so the community-level row-sum check passes trivially and is retained to mirror the paper's Fig.~4 recipe. For $p < 0$ the antisymmetric off-diagonals introduce negatives whose row-sums violate Gershgorin for any $\mu \gtrsim 0.05$ even though the dynamics themselves remain bounded. We therefore \textbf{disable the row-sum pre-filter for $p < 0$} and retain the dynamical $\texttt{BLOWUP\_CAP}=10$ screen only. This matches standard practice for mixed-sign / antisymmetric gLV matrices (Allesina \& Tang 2012; Dougoud et al.\ 2018), where Gershgorin is recognised as sufficient but far too conservative.
+
+\paragraph{Sweep grid (as executed).} $p \in \{-1, -0.5, 0, +0.5, +1\}$, $\mu \in \{0.30, 0.60, 0.80\}$, 200 pools per cell of 48 species / 4 communities / 12 species each, yielding $\sim 1200$ coalescence events per cell. Pool-level rejection rate was $\leq 45\%$ across all 15 cells.
+
+\paragraph{Figure layout (as rendered).} Response Fig.~R3-4b is a 1$\times$5 panel row in the Q5-summary (\texttt{Fig\_Q5\_three\_models\_per\_model}) convention: one subplot per $p$ value, $x$-axis = $\mu \in \{0.30, 0.60, 0.80\}$, stacked Dom/Mix/Res bars with Dominance fraction annotated in white. Panels ordered baseline-first-then-direction: \textbf{A}~i.i.d.\ baseline ($p=0$), \textbf{B}~cooperation ($p=+0.5$), \textbf{C}~cooperation ($p=+1$), \textbf{D}~exploitation ($p=-0.5$), \textbf{E}~exploitation ($p=-1$). The ``cooperation'' label for $p>0$ reflects aligned pair structure ($\alpha_{ij} = \alpha_{ji}$) rather than strict mutualism --- since both entries remain positive under the $U[0, 2\mu]$ marginal --- noted explicitly in the caption.
+
+\paragraph{Result.} Dominance rises monotonically with $\mu$ at every $p$ (paper claim survives), and is U-shaped in $p$ at each fixed $\mu$ (lowest at $p = 0$, rising on both sides). Both increasingly symmetric competition and increasingly antisymmetric exploitation raise Dominance relative to the iid baseline; Restructuring correspondingly drops toward $|p| = 1$.
+
+\paragraph{Note on earlier exploratory variants (superseded).} Earlier drafts of this memo proposed (i) a 4-case version with a $U[-\mu, \mu]$ signed marginal for three of the cases, and (ii) an $f=0.5$ magnitude cap to make the signed marginal satisfy row-sum stability. Both proved either unstable at $\mu \geq 0.60$ or required further magnitude shrinkage. The final chosen design drops the signed marginal entirely, keeps $U[0, 2\mu]$, and instead relaxes the Gershgorin pre-filter for $p < 0$. This is the mainstream Allesina-Tang-style approach.
+
+\paragraph{Action items (status).}
+\begin{itemize}[itemsep=0pt]
+  \item[\textbf{A1.}] \emph{Done.} Sampler implemented in \texttt{Figure\_generate/code/Figure\_revision/R3\_3\_nonCompetitive\_gLV/simulate\_p\_axis.py}.
+  \item[\textbf{A2.}] \emph{Done.} Grid complete; rejection $\leq 45\%$ per cell.
+  \item[\textbf{A3.}] \emph{Done.} Three-panel figure written by \texttt{Figure\_generate/code/Figure\_revision/R3\_3\_pair\_additivity/make\_R3\_3\_figure.py}; installed as \texttt{R3\_4\_simulation.pdf}.
+  \item[\textbf{A4.}] \emph{Done.} \texttt{reviewer3\_response.tex} body text and Fig.~R3-4b caption updated to describe the signed-$p$ axis and the per-side stability-screen choice.
+  \item[\textbf{A5.}] \emph{Open.} PI sign-off on the signed-$p$ framing and on the asymmetric-stability-screen note in the caption.
+\end{itemize}
+
+% =============================================================================
+\section*{Summary of pending deliverables}
+\addcontentsline{toc}{section}{Summary of pending deliverables}
+
+\begin{itemize}[itemsep=0pt]
+    \item \textbf{Q1:} \emph{Done.} Zoomed Nutr$-$ figure generated at \texttt{Figure\_generate/code/Figure\_revision/R1\_1\_OD\_density/analyze\_LN\_OD\_PDI\_zoom.py}; imported as \texttt{internal\_LN\_OD\_PDI\_zoom.pdf}. Answer written (see \S\ref{sec:q1_LN_OD_PDI}).
+    \item \textbf{Q2.1:} 1-paragraph mechanistic candidate list for the negative OD--Dominance sign.
+    \item \textbf{Q2.2:} decide the second failure mode and supply evidence.
+    \item \textbf{Q3:} \emph{Done.} Fig.~Q3 and analysis at \texttt{Figure\_generate/code/Figure\_revision/Q3\_pH\_rule\_vs\_gLV/analyze\_pH\_rule\_vs\_gLV.py}; answer written (\S\ref{sec:q3_pH_vs_gLV}). Follow-up: run gLV sweep at the exact calibrated $\mu$ if needed; connect to Q5.
+    \item \textbf{Q4:} \emph{Closed as superseded.} The geometric/dimensionality null for the asymmetry coordinate is already addressed by Response Figs.~R3-2.0a/b (reviewer-style constructions, L$_2$/L$_1$), R3-1 Option E (richness-matched identity-permuted null), R3-3B (composition-shuffling null per $\mu$), R3-3C / R1-4 and Extended Data Fig.~4 (pool-size ablation), R3-2E (joint-axis richness-adjusted classifier), and Extended Data Fig.~3 / Supp.~Note 1 (event-matched additive and abundance nulls). See \S\ref{sec:q4_geometric_factor} for the full mapping; no new analysis planned.
+    \item \textbf{Q5:} \emph{Done.} Three models (gLV / pH-feedback / pH+LV hybrid) under \texttt{Figure\_generate/code/Figure\_revision/Q5\_pH\_feedback\_model/}; Fig.~Q5 + answer written (\S\ref{sec:q5_alt_models}). Follow-ups: calibrate species params to lab's 12-isolate pH phenotype; map $\tau \leftrightarrow$ medium for per-medium overlays.
+    \item \textbf{Q5b:} \emph{Implemented.} Trait-based environmental filtering model and Fig.~Q5-filter added in \S\ref{sec:q5_trait_filtering}. Current result: gamma-only, richness-matched filtering reproduces the P12 coalesced richness scale but remains overwhelmingly Mixture, so filtering alone does not explain the observed Dominance trend.
+    \item \textbf{Q6:} \emph{Done.} Four items triaged in \S\ref{sec:q6_unexplained}; all four classified as scope statements rather than refutations, with one item (Restructuring excess in natural communities) already partially addressed by the R3-4 cooperative-extension simulation. No remaining analysis owed. The Discussion ``honest scope'' paragraph noted at the end of \S\ref{sec:q6_unexplained} is the downstream deliverable, to be drafted alongside the Q7 integration.
+    \item \textbf{Q7:} \emph{Drafted, awaiting PI sign-off.} \texttt{\textbackslash rev\{\}}-ready paragraph written in \S\ref{sec:q7_why_gLV}; three placement options (A/B/C) listed. Gates before insertion: (a) PI approval on tone, (b) A/B/C choice, (c) \figref{fig:fig4} cross-reference check. No manuscript edit applied yet.
+\end{itemize}
+
+\end{document}

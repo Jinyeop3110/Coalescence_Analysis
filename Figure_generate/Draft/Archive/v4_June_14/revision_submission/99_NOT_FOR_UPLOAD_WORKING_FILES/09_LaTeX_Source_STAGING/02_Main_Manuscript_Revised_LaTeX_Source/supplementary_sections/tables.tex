@@ -1,0 +1,98 @@
+% ============================================
+% Supplementary Tables
+% ============================================
+\newpage
+\subsection*{\rev{Supplementary Tables}}
+\captionsetup[table]{labelformat=empty,labelsep=none}
+\newcolumntype{L}[1]{>{\raggedright\arraybackslash}p{#1}}
+
+\begingroup
+\scriptsize
+\setlength{\tabcolsep}{2.5pt}
+\renewcommand{\arraystretch}{1.18}
+\color{red}
+\begin{longtable}{L{0.16\textwidth}L{0.18\textwidth}L{0.18\textwidth}L{0.22\textwidth}L{0.18\textwidth}}
+\caption{\textbf{Supplementary Table~1.} Statistical reporting summary for the main inferential and control analyses. This table centralizes statistical details that are distributed across the main text, Methods, figure captions, and Supplementary Notes.}\label{tab:stat_reporting}\\
+\toprule
+Analysis and location & Sample size and analysis unit & Test and sidedness & Estimate or effect size & Statistical output \\
+\midrule
+\endfirsthead
+\toprule
+Analysis and location & Sample size and analysis unit & Test and sidedness & Estimate or effect size & Statistical output \\
+\midrule
+\endhead
+\midrule
+\multicolumn{5}{r}{Continued on next page}\\
+\endfoot
+\bottomrule
+\multicolumn{5}{L{0.94\textwidth}}{\textit{Notes:} All tests were two-sided unless explicitly stated otherwise. ``n.s.'' denotes not significant. For permutation tests using 1,000 label permutations, values below the permutation resolution are reported as $p < 0.001$. Simulation sweeps described as sensitivity or descriptive analyses were not assigned additional null-hypothesis tests.} \\
+\endlastfoot
+
+Base coalescence versus coalescence-pair-specific additive null (Fig.~1E, Extended Data Fig.~3, Supplementary Note~1) &
+$n = 83$ Base-medium coalescence events; observed and null outcomes were paired within event &
+One-sided paired Wilcoxon signed-rank test testing observed parental asymmetry greater than the matched null &
+Observed outcomes shifted toward higher direction-independent parental asymmetry than matched additive-null outcomes; additive null was classified as Mixture in 66/83 events (79.5\%) &
+$W = 3377$, $p = 5.9 \times 10^{-14}$ \\
+
+Assembly filtering of interaction coefficients (Fig.~2C, Supplementary Figs.~3 and 32) &
+Supplementary Fig.~3: 10 full-matrix simulations at $\mu = 0.50$, 60 parental-community pairs; coefficient summaries were 120 within-community and 60 between-community means &
+Two-sided Mann--Whitney $U$ test for within- versus between-community coefficients in Supplementary Fig.~3; paired $t$-tests for pre- versus post-assembly summaries in Fig.~2C and Supp.~Fig.~32 &
+Mean within-community coefficient among survivors = 0.389; mean between-community coefficient = 0.500 &
+Supplementary Fig.~3: $U = 624$, $p = 1.72 \times 10^{-19}$; Fig.~2C and Supp.~Fig.~32 paired $t$-test: $p < 0.001$ \\
+
+Pairwise selection correlation (Fig.~2D, Extended Data Figs.~5--6, Supplementary Fig.~36) &
+Event-level fate-concordance summaries; simulations: $n = 1{,}200$ coalescence events per displayed $\mu$; experiments: all valid synthetic coalescence events (Nutr$-$ $n=90$, Base $n=83$, Nutr$+$ $n=90$) &
+Permutation tests with 1,000 parental-affiliation label permutations; auxiliary $\mu$-sweep summarized by Pearson correlation &
+Simulation same-minus-cross concordance gap $\Delta = 0.05$, 0.58, and 0.94 at $\mu = 0.3$, 0.6, and 0.8; auxiliary excess same-parent shared fate tracked $\mu$ &
+Experimental Base and Nutr$+$ same-vs-cross differences: $p < 0.001$; Nutr$-$: n.s.; Supplementary Fig.~36 full-sweep excess-concordance statistic: Pearson $r = 0.870$, $p = 3.2 \times 10^{-8}$ \\
+
+Nutrient-dependent invasion resistance and coalescence outcomes (Fig.~4B,D, Supplementary Figs.~7--9) &
+Pairwise invasion assays: $n = 132$ directed assays per medium; synthetic coalescence outcomes: Nutr$-$ $n=90$, Base $n=83$, Nutr$+$ $n=90$ &
+Chi-square test for trend for outcome-fraction shifts across nutrient conditions; failed-invasion panel reports descriptive mean $\pm$ s.e.m. &
+Failed invasion increased from Nutr$-$ to Base to Nutr$+$: $2 \pm 1\%$, $33 \pm 4\%$, and $48 \pm 4\%$; Dominance fractions increased from 39\% to 65\% to 76\% &
+Outcome-fraction trend: $p < 0.001$ \\
+
+Dominant-species predictability and removal control (Fig.~5C, Supplementary Fig.~16) &
+Independent, non-reflected coalescence events with valid dominant-isolate pairwise-assay lookup; original Base $n=34$, Nutr$+$ $n=63$; removal-control Base $n=34/34$, Nutr$+$ $n=62/55$ for mix-dominant and parental-dominant removal, respectively &
+Linear regression for Fig.~5C; two-sided Spearman rank-correlation tests for independent-event removal controls &
+Fig.~5C: $R^2 = 0.00$ in Nutr$-$, $R^2 = 0.11$ in Base, and $R^2 = 0.49$ in Nutr$+$; after removal, Nutr$+$ retained $R^2 = 0.24/0.18$, whereas Base was $R^2 = 0.00/0.07$ &
+Fig.~5C: Base $p = 0.03$, Nutr$+$ $p < 0.001$; Nutr$+$ removal controls: Spearman $\rho = 0.41$, $p = 8.2 \times 10^{-4}$ and $\rho = 0.42$, $p = 1.3 \times 10^{-3}$; Base removal controls: $\rho = 0.00$, $p = 0.999$ and $\rho = 0.22$, $p = 0.209$ \\
+
+Strict acidic--alkaline pH contrast (Extended Data Fig.~7, Supplementary Fig.~46) &
+Strict acidic--alkaline coalescence events: Base $n=41$, Nutr$+$ $n=32$; strict same-pH comparators: Base $n=32$, Nutr$+$ $n=34$ &
+Two-sided Fisher exact tests for categorical comparisons; linear regression for pH-difference versus acidic-parent contribution in Extended Data Fig.~7 &
+Acidic parent dominated 23/41 Base events (56.1\%) and 29/32 Nutr$+$ events (90.6\%); acid--alk versus same-pH Dominance comparisons were 24/41 versus 23/32 in Base and 29/32 versus 22/34 in Nutr$+$ &
+Winner-direction comparison: OR = 7.57, Fisher $p = 0.0015$; acid--alk enrichment: Base OR = 0.55, $p = 0.33$, Nutr$+$ OR = 5.27, $p = 0.018$; Extended Data Fig.~7 regressions: Base $R^2 = 0.02$, $p = 0.42$; Nutr$+$ $R^2 = 0.29$, $p = 0.002$ \\
+
+Biomass/OD loading controls (Supplementary Figs.~14--15 and 45, Supplementary Note~5) &
+Signed OD--PDI tests used all synthetic events with OD and decomposition (Nutr$-$ $n=90$, Base $n=83$, Nutr$+$ $n=90$); winner-OD tests used Dominance events (Nutr$-$ $n=35$, Base $n=54$, Nutr$+$ $n=68$) &
+Two-sided Spearman rank-correlation tests; two-sided binomial tests against a 50\% higher-OD-wins expectation; bootstrap 95\% CIs for OD-tertile bars in Supplementary Fig.~15 &
+Higher-OD parental community won 13/35 Nutr$-$ events (37.1\%), 20/54 Base events (37.0\%), and 9/68 Nutr$+$ events (13.2\%); signed $\Delta$OD--PDI Spearman $\rho = -0.24$, $-0.14$, and $-0.60$ &
+Binomial $p = 0.18$, 0.076, and $3.9 \times 10^{-10}$; Spearman $p = 0.021$, 0.19, and $4.0 \times 10^{-10}$ for Nutr$-$, Base, and Nutr$+$, respectively \\
+
+Initial inoculated pool-size controls (Supplementary Fig.~13, Supplementary Note~5) &
+Synthetic coalescence outcomes grouped by initial inoculated isolate richness (6, 12, or 24 isolates); simulations varied parental-community richness from 4 to 48 species &
+Chi-square test of independence for the full three-category experimental outcome distribution across pool sizes; Dominance versus non-Dominance tests within each medium &
+No significant effect of inoculated isolate richness on the experimental three-category outcome distribution; simulation Dominance frequency was primarily set by $\mu$ &
+$\chi^2_{4} = 2.24$, $p = 0.69$; within-medium Dominance versus non-Dominance tests: Nutr$-$ $p = 0.39$, Base $p = 0.82$, Nutr$+$ $p = 0.27$ \\
+
+Abundance-skew null models (Supplementary Note~1, Supplementary Fig.~44) &
+$n = 83$ Base-medium coalescence events; 500 null offspring communities per null model &
+Two-sided Mann--Whitney $U$ tests comparing experimental parental asymmetry to each null distribution &
+Mean direction-independent parental asymmetry: experimental = 0.698; abundance-weighted null = 0.476; shuffled-abundance null = 0.557 &
+Abundance-weighted null: $p < 10^{-18}$; shuffled-abundance null: $p < 10^{-11}$; Supplementary Fig.~44 annotation denotes $p < 0.001$ \\
+
+Natural sample-derived coalescence outcomes (Fig.~6, Supplementary Note~6) &
+15 pairwise coalescence events with two biological replicates each, $n = 30$ coalescence events per nutrient condition &
+Descriptive outcome-fraction comparison; no formal null-hypothesis test reported for this figure &
+Dominance increased from 37\% in Nutr$-$ to 70\% in Base and 77\% in Nutr$+$ &
+Not applicable; replicate-level measurements were retained as separate observations \\
+
+Simulation sensitivity and parameter sweeps (Fig.~3, Extended Data Figs.~4 and 8, Supplementary Figs.~4--6 and 39--42) &
+Baseline simulations used $n = 1{,}200$ coalescence events per displayed condition unless otherwise stated; sensitivity-analysis cells generally used 200 pools with six coalescence events per pool &
+Descriptive simulation sweeps; no additional null-hypothesis tests assigned unless specified in the relevant caption or note &
+Outcome-class transitions persisted under growth-rate variation, carrying-capacity variation, coefficient-distribution choice, parental-community richness, facilitative tails, reciprocal pair coupling, weak mutualistic pairs, and coefficient mean/variance sweeps &
+No additional NHST; error bars are s.e.m. where shown \\
+
+\end{longtable}
+\endgroup

@@ -1,0 +1,5 @@
+# Comment Response Map Row
+
+| reviewer | point ID | reviewer concern | response file/location | evidence source | manuscript/SI source or proposed patch | audit status | unresolved issue |
+|---|---|---|---|---|---|---|---|
+| Reviewer 2 | Q6 mathematical model | Frame gLV as phenomenological, acknowledge competitive-only and missing pH/environment feedbacks, and interpret interaction coefficient distributions and mean interaction strength `\mu` biologically. | `response_fragment.tex` | Reviewer source `converted/reviewer2.txt` lines 93-99; model and results evidence from `sections/results.tex` lines 42, 44, 46, 64, 79, 102; `sections/methods.tex` lines 43-53; `sections/discussion.tex` lines 16, 18, 22; `supplementary_sections/supplementary_methods.tex` lines 78-83 and 149; `supplementary_sections/simulations.tex` lines 7-9; `supplementary_sections/figures.tex` lines 62-74, 354-366, and 424. | No additional patch proposed. Relevant v4 changes already present: Results model framing, Supplementary Methods coefficient and `\mu` interpretation, and Discussion caveats on approximate nutrient-to-`\mu` mapping and competitive-only limitations. | Pass | None. |

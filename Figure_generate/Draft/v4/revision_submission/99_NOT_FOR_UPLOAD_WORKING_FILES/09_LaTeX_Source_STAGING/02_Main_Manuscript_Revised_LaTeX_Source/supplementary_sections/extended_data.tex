@@ -1,0 +1,72 @@
+% ============================================
+% Extended Data Figures
+% ============================================
+\newpage
+\subsection*{Extended Data Figures}
+
+% Remove automatic "Figure N:" prefix since we label manually in captions
+\captionsetup[figure]{name={},labelsep=none,labelformat=empty}
+
+% Extended Data Fig. 1 - Taxonomy color map
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.9\textwidth]{figures/extended_data/ED_Fig1_combined.pdf}
+\caption{\textbf{Extended Data Fig.~1. Taxonomic classification of bacterial isolates.} Table showing the 54 bacterial isolates used in the experiment, of which 4 pairs share identical ASV sequences. Each row shows the ASV identifier and its full taxonomic classification (Kingdom, Phylum, Class, Order, Family, Genus). This isolate set spans broad taxonomic diversity used to construct the synthetic communities in the coalescence experiments. Colors match those used in pie charts and composition figures throughout the manuscript.}
+\label{fig:ed1}
+\end{figure}
+
+% Extended Data Fig. 2 - Sensitivity of outcome classification to metric choice
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.9\textwidth]{figures/extended_data/ED_Fig2_combined.pdf}
+\caption{\textbf{Extended Data Fig.~2. Sensitivity of outcome classification to metric choice.} Stacked bar plot showing the distribution of coalescence outcomes (Dominance, Mixture, Restructuring) in Base medium using the primary similarity-map classification and four alternative metrics: Euclidean distance, Bray--Curtis dissimilarity, Jensen--Shannon divergence, and Jaccard index. Percentages and counts (n/total) are shown for each category. \rev{Dominance is recovered by abundance-weighted parental-similarity metrics, including the primary similarity-map classification, Euclidean distance, and Bray--Curtis dissimilarity, but not by Jaccard index or Jensen--Shannon divergence. This divergence reflects the different biological questions asked by each metric: abundance-weighted metrics quantify whether the coalesced community quantitatively resembles one parent more than the other, whereas Jaccard index measures presence/absence retention and Jensen--Shannon divergence measures differences across the full abundance distribution. Thus, Jaccard and Jensen--Shannon are best interpreted as complementary metric choices that emphasize different features of community composition.}}
+\label{fig:ed2}
+\end{figure}
+
+% Extended Data Fig. 3 - Simple additive model
+\begin{figure}[H]
+\centering
+\includegraphics[width=\textwidth]{figures/extended_data/ED_Fig3_combined.pdf}
+\caption{\textbf{Extended Data Fig.~3. Simple additive model for Base medium coalescence outcomes.} This event-matched null model tests whether Dominance can arise from a simple additive null process or parental-community norm imbalance rather than correlated competitive selection. \textbf{a}, Similarity map comparing simple additive null-model outcomes (orange open points; $n_{C,\mathrm{null}}=n_A+n_B$, constructed by summing each coalescence pair's two parental-community raw ASV count vectors before cosine/vector-decomposition normalization) with observed coalesced communities (blue filled points); arrows show example null-to-observed pairs. \textbf{b}, Paired shifts in direction-independent parental asymmetry, $|2\mathrm{PDI}-1|$, from each simple additive null-model outcome to the corresponding observed coalesced community for all 83 Base medium events. \textbf{c}, Class transitions from simple additive null-model outcomes (columns) to observed coalesced communities (rows). The simple additive null model is usually classified as Mixture, and the observed Base medium outcomes are shifted further toward parental asymmetry than their corresponding null model outcomes (one-sided paired Wilcoxon test, $p = 5.9 \times 10^{-14}$). See Supplementary Note~1 for full analysis and additional null models.}
+\label{fig:ed3}
+\end{figure}
+
+% Extended Data Fig. 4 - Species number ablation
+\begin{figure}[H]
+\centering
+\includegraphics[width=\textwidth]{figures/extended_data/ED_Fig4_combined.pdf}
+\caption{\textbf{Extended Data Fig.~4. Effect of parental-community richness on coalescence outcomes.} \textbf{(a--e)} Similarity maps showing coalescence outcomes for simulated parental communities with initial richness of 4, 6, 12, 24, and 48 species at $\mu = 0.6$. The qualitative pattern of Dominance-dominated outcomes is consistent across parental-community richness values. \textbf{(f)} Stacked bar plots showing outcome fractions (Dominance, Mixture, Restructuring) across parental-community richness values at three interaction-strength parameter values ($\mu=0.3, 0.6, 0.8$). Dominance frequency remains relatively stable across parental-community richness values, while Mixture decreases and Restructuring increases with richer communities. Simulations used four non-overlapping parental communities per replicate, so total species-pool size scaled with parental-community richness ($N=16$--$192$), with 200 independent replicates per condition and uniform interaction coefficients $\alpha_{ij} \sim U[0,2\mu]$. See Supplementary Note~3 for the full sensitivity analysis.}
+\label{fig:ed4}
+\end{figure}
+
+% Extended Data Fig. 5 - Pairwise selection correlation vs interaction strength (simulation)
+\begin{figure}[H]
+\centering
+\includegraphics[width=\textwidth]{figures/extended_data/ED_Fig5_combined.pdf}
+\caption{\textbf{Extended Data Fig.~5. Pairwise selection correlation increases with the interaction-strength parameter in simulations.} \textbf{(a--c)} Pairwise selection correlation metric, computed from species-pair fate concordance, for species pairs from the same parental community (red, ``Same parental community'') versus cross-community pairs (blue, ``Cross-community'') at three representative interaction-strength parameter values. Gray horizontal lines indicate the random-selection baseline from a parental-affiliation-shuffle null model. Individual dots show per-event concordance values (100 stratified events displayed for legibility); squares with error bars show mean $\pm$ s.e.m. At low interaction-strength parameter value ($\mu = 0.3$), both within-community and cross-community pairs show positive concordance with a small difference ($\Delta = 0.05$). As $\mu$ increases ($\mu = 0.6$, $0.8$), within-community pairs maintain positive concordance while cross-community pairs become increasingly negative ($\Delta = 0.59$ and $0.94$), consistent with stronger parental-affiliation-correlated species fates. Two-sided permutation tests with 1,000 parental-affiliation label permutations gave $p < 0.001$ for $\Delta$ at all three displayed $\mu$ values. \textbf{(d)} Mean pairwise selection correlation across all simulated coalescence events as a function of the interaction-strength parameter $\mu$. Species pairs from the same parental community (red circles) show positive concordance that increases with $\mu$, while cross-community pairs (blue squares) show negative concordance that becomes more negative with $\mu$. Error bars represent event-level s.e.m.\ across $n = 1{,}200$ coalescence events per interaction-strength parameter value generated from 200 independent replicates, with six pairwise coalescence events per replicate.}
+\label{fig:ed5}
+\end{figure}
+
+% Extended Data Fig. 6 - Pairwise selection correlation (experimental)
+\begin{figure}[H]
+\centering
+\includegraphics[width=\textwidth]{figures/extended_data/ED_Fig6_combined.pdf}
+\caption{\textbf{Extended Data Fig.~6. Pairwise selection correlation in experimental coalescence across nutrient conditions.} Mean pairwise selection correlation metric, computed from species-pair fate concordance, for species pairs from the same parental community (red) versus cross-community pairs (blue). Gray horizontal line indicates the random-selection baseline from a parental-affiliation-shuffle null model. Individual dots show per-event concordance values; squares with error bars show mean $\pm$ s.e.m. \textbf{(a)} In Nutr$-$ medium, where failed-invasion frequency among the assayed abundant isolates is low, within-community and cross-community pairs show no significant difference in fate concordance ($n = 90$ valid events; $\Delta = 0.016$; two-sided permutation test with 1,000 parental-affiliation label permutations, $p = 0.307$), consistent with species-level dynamics and no detectable community-level selection by this metric. \textbf{(b)} In Base medium, the same-versus-cross separation is significant and largest among the three media ($n = 83$; $\Delta = 0.235$; $p < 0.001$). \textbf{(c)} In Nutr$+$ medium, where failed-invasion frequency and environmental feedbacks are higher, within-community species pairs exhibit significantly higher selection correlation than cross-community pairs ($n = 83$; $\Delta = 0.141$; $p < 0.001$), consistent with parental-affiliation-correlated species fates associated with community-level selection.}
+\label{fig:ed6}
+\end{figure}
+
+% Extended Data Fig. 7 - pH difference vs coalescence outcome
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.85\textwidth]{figures/extended_data/ED_Fig8_combined.pdf}
+\caption{\textbf{Extended Data Fig.~7. Parental-community pH difference is associated with Dominance direction in Nutr$+$.} In the strict acidic--alkaline subset used for this PDI-regression analysis, where one parental community is acidic (pH $<$ 6.5) and the other alkaline (pH $>$ 7.5), pH difference is associated with the identity of the dominant parental community in Nutr$+$ but not in Base medium. \textbf{(a)} Base medium ($n = 41$; acidic community dominated in 23/41 events, 56.1\%; $R^2 = 0.02$, $p = 0.42$, n.s.) and \textbf{(b)} Nutr$+$ medium ($n = 32$; acidic community dominated in 29/32 events, 90.6\%; $R^2 = 0.29$, $p = 0.002$). X-axis: pH difference (alkaline parental community pH $-$ acidic parental community pH). Y-axis: PDI transformed so larger values indicate greater contribution from the acidic parental community. Red shaded region indicates acidic community dominance (PDI $>$ 0.6). Blue shaded region indicates alkaline community dominance (PDI $<$ 0.4).}
+\label{fig:ed7}
+\end{figure}
+
+% Extended Data Fig. 8 - Assembly effect simulation
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.95\textwidth]{figures/extended_data/ED_Fig7_combined.pdf}
+\caption{\textbf{Extended Data Fig.~8. Assembly history promotes Dominance in simulations.} This comparison tests whether assembly history itself, not the interaction-strength parameter alone, promotes Dominance by pre-filtering species before coalescence. Stacked bar plots comparing outcome distributions between coalescence of pre-assembled parental communities (top row) and direct assembly from the mixed species pool (bottom row) across five interaction-strength parameter values ($\mu = 0.2, 0.4, 0.6, 0.8, 1.0$). Percentages and counts (n/total) are shown for each category. Coalescence consistently produces higher Dominance and lower Restructuring compared to direct assembly, supporting the interpretation that assembly history contributes to parental-affiliation-correlated persistence.}
+\label{fig:ed8}
+\end{figure}

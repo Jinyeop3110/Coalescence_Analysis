@@ -11,13 +11,20 @@ import matplotlib.pyplot as plt
 import matplotlib
 matplotlib.use('Agg')
 from scipy import stats
+import csv
 import os
 import sys
 
 sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
+from common_setup import (
+    Coalescence_data,
+    Processed_sequences_synthetic,
+    exception_list,
+)
 from skewed_distribution_null_models import (
     load_coalescence_data,
+    normalize_vector,
     calculate_vector_asymmetricity,
     generate_abundance_weighted_null_batch,
     generate_shuffled_abundance_null_batch,
@@ -53,8 +60,8 @@ def plot_merged_comparison(exp_asymm, null_aw, null_sh, save_path=None):
     null_sh_clean = null_sh[~np.isnan(null_sh)]
 
     # Statistical tests
-    _, p_aw = stats.mannwhitneyu(exp_clean, null_aw_clean, alternative='two-sided')
-    _, p_sh = stats.mannwhitneyu(exp_clean, null_sh_clean, alternative='two-sided')
+    u_aw, p_aw = stats.mannwhitneyu(exp_clean, null_aw_clean, alternative='two-sided')
+    u_sh, p_sh = stats.mannwhitneyu(exp_clean, null_sh_clean, alternative='two-sided')
 
     stars_aw = get_significance_stars(p_aw)
     stars_sh = get_significance_stars(p_sh)
@@ -115,20 +122,20 @@ def plot_merged_comparison(exp_asymm, null_aw, null_sh, save_path=None):
     y_line1 = y_max + 0.06
     ax.plot([0, 1], [y_line1, y_line1], 'k-', linewidth=0.8)
     ax.text(0.5, y_line1 + 0.01, stars_aw, ha='center', va='bottom',
-           fontsize=9, fontweight='bold')
+           fontsize=9)
 
     # Exp vs Shuffled
     y_line2 = y_max + 0.16
     ax.plot([0, 2], [y_line2, y_line2], 'k-', linewidth=0.8)
     ax.text(1.0, y_line2 + 0.01, stars_sh, ha='center', va='bottom',
-           fontsize=9, fontweight='bold')
+           fontsize=9)
 
     # Labels
     ax.set_xticks(positions)
     ax.set_xticklabels(['Exp', 'Abund.\nweight.', 'Shuffled'], fontsize=9)
 
     # Y-axis label with equation
-    ylabel = r'One-sided selection $\left|\frac{\arctan(a/b)}{\pi/4} - 1\right|$'
+    ylabel = r'Parental asymmetry $|2\mathrm{PDI} - 1|$'
     ax.set_ylabel(ylabel, fontsize=9)
 
     # Set limits
@@ -156,14 +163,119 @@ def plot_merged_comparison(exp_asymm, null_aw, null_sh, save_path=None):
     print(f"  Experimental: mean = {exp_mean:.3f}, n = {len(exp_clean)}")
     print(f"  Abundance-weighted: mean = {null_aw_mean:.3f}, n = {len(null_aw_clean)}")
     print(f"  Shuffled: mean = {null_sh_mean:.3f}, n = {len(null_sh_clean)}")
-    print(f"  Exp vs Abund-weight: p = {p_aw:.2e} ({stars_aw})")
-    print(f"  Exp vs Shuffled: p = {p_sh:.2e} ({stars_sh})")
+    print(f"  Exp vs Abund-weight: U = {u_aw:.1f}, p = {p_aw:.2e} ({stars_aw})")
+    print(f"  Exp vs Shuffled: U = {u_sh:.1f}, p = {p_sh:.2e} ({stars_sh})")
+
+    return [
+        {
+            'comparison': 'experimental_vs_abundance_weighted_null',
+            'n_experimental': len(exp_clean),
+            'n_null': len(null_aw_clean),
+            'experimental_mean': exp_mean,
+            'experimental_sem': exp_sem,
+            'null_mean': null_aw_mean,
+            'null_sem': null_aw_sem,
+            'mann_whitney_u': u_aw,
+            'p_value': p_aw,
+        },
+        {
+            'comparison': 'experimental_vs_shuffled_abundance_null',
+            'n_experimental': len(exp_clean),
+            'n_null': len(null_sh_clean),
+            'experimental_mean': exp_mean,
+            'experimental_sem': exp_sem,
+            'null_mean': null_sh_mean,
+            'null_sem': null_sh_sem,
+            'mann_whitney_u': u_sh,
+            'p_value': p_sh,
+        },
+    ]
 
 
-def main(data_type='synthetic', n_permutations=500):
+def load_base_medium_coalescence_data(threshold=1e-3):
+    """Load Base-medium synthetic coalescence events after manuscript exclusions."""
+    offspring_list = []
+    parent1_list = []
+    parent2_list = []
+    sample_ids = []
+
+    for _, row in Coalescence_data.iterrows():
+        if row['CommunityOrigin'] != 'S' or row['CoalescenceType'] != 'C':
+            continue
+        if row['Medium'] != 'M':
+            continue
+        if row['SampleIDX'] in exception_list:
+            continue
+
+        vectors = []
+        for sample_id in [row['SampleIDX'], row['SampleIDX_Sub1'], row['SampleIDX_Sub2']]:
+            sequence_rows = Processed_sequences_synthetic[
+                Processed_sequences_synthetic['SampleIDX'] == sample_id
+            ]
+            if sequence_rows.empty:
+                break
+            vector = sequence_rows.iloc[0, 1:].values.astype(float)
+            vector = np.nan_to_num(vector, nan=0.0)
+            vector = vector * (vector > threshold)
+            if np.sum(vector) <= 0:
+                break
+            vectors.append(normalize_vector(vector))
+
+        if len(vectors) != 3:
+            continue
+        if np.sum(vectors[0] > 0) < 3:
+            continue
+
+        offspring_list.append(vectors[0])
+        parent1_list.append(vectors[1])
+        parent2_list.append(vectors[2])
+        sample_ids.append(row['SampleIDX'])
+
+    metadata = {
+        'nutrient_conditions': ['MN'] * len(offspring_list),
+        'sample_ids': sample_ids,
+        'n_events': len(offspring_list),
+        'analysis_scope': 'Base-medium synthetic coalescence events after manuscript exclusions',
+    }
+
+    print(f"Loaded {len(offspring_list)} Base-medium coalescence events")
+    return offspring_list, parent1_list, parent2_list, metadata
+
+
+def write_summary(summary_rows, save_path, metadata, n_permutations):
+    fieldnames = [
+        'analysis_scope',
+        'n_permutations',
+        'comparison',
+        'n_experimental',
+        'n_null',
+        'experimental_mean',
+        'experimental_sem',
+        'null_mean',
+        'null_sem',
+        'mann_whitney_u',
+        'p_value',
+    ]
+    with open(save_path, 'w', newline='') as handle:
+        writer = csv.DictWriter(handle, fieldnames=fieldnames)
+        writer.writeheader()
+        for row in summary_rows:
+            writer.writerow({
+                'analysis_scope': metadata['analysis_scope'],
+                'n_permutations': n_permutations,
+                **row,
+            })
+    print(f"Saved summary: {save_path}")
+
+
+def main(data_type='synthetic_base', n_permutations=500):
     """Generate the single comparison plot."""
     print("Loading data...")
-    offspring_list, parent1_list, parent2_list, metadata = load_coalescence_data(data_type)
+    if data_type == 'synthetic_base':
+        offspring_list, parent1_list, parent2_list, metadata = load_base_medium_coalescence_data()
+    else:
+        offspring_list, parent1_list, parent2_list, metadata = load_coalescence_data(data_type)
+        metadata['analysis_scope'] = f'{data_type} coalescence events passing sequence filters'
 
     print("Calculating experimental asymmetricity...")
     exp_asymm = []
@@ -182,6 +294,7 @@ def main(data_type='synthetic', n_permutations=500):
     mean_retention = np.mean(retention_rates)
 
     print("Generating null models...")
+    np.random.seed(42)
     null_off_aw, null_p1_aw, null_p2_aw = generate_abundance_weighted_null_batch(
         parent1_list, parent2_list, n_permutations=n_permutations,
         retention_rate=mean_retention
@@ -205,11 +318,17 @@ def main(data_type='synthetic', n_permutations=500):
     os.makedirs(save_dir, exist_ok=True)
 
     print("Generating plot...")
-    plot_merged_comparison(
+    summary_rows = plot_merged_comparison(
         exp_asymm, null_asymm_aw, null_asymm_sh,
         save_path=os.path.join(save_dir, f"skewness_null_comparison_{data_type}.png")
+    )
+    write_summary(
+        summary_rows,
+        os.path.join(save_dir, f"skewness_null_comparison_{data_type}_summary.csv"),
+        metadata,
+        n_permutations,
     )
 
 
 if __name__ == "__main__":
-    main(data_type='synthetic', n_permutations=500)
+    main(data_type='synthetic_base', n_permutations=500)

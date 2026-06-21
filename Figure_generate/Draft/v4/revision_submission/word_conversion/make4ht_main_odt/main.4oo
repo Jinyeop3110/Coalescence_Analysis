@@ -1,0 +1,1347 @@
+<?xml version='1.0' encoding='UTF-8' ?> 
+ 
+
+<office:document-content office:version='1.0' xmlns:anim='urn:oasis:names:tc:opendocument:xmlns:animation:1.0' xmlns:chart='urn:oasis:names:tc:opendocument:xmlns:chart:1.0' xmlns:dc='http://purl.org/dc/elements/1.1/' xmlns:dom='http://www.w3.org/2001/xml-events' xmlns:dr3d='urn:oasis:names:tc:opendocument:xmlns:dr3d:1.0' xmlns:draw='urn:oasis:names:tc:opendocument:xmlns:drawing:1.0' xmlns:fo='http://www.w3.org/1999/XSL/Format' xmlns:form='urn:oasis:names:tc:opendocument:xmlns:form:1.0' xmlns:math='http://www.w3.org/1998/Math/MathML' xmlns:meta='urn:oasis:names:tc:opendocument:xmlns:meta:1.0' xmlns:number='urn:oasis:names:tc:opendocument:xmlns:datastyle:1.0' xmlns:office='urn:oasis:names:tc:opendocument:xmlns:office:1.0' xmlns:ooo='http://openoffice.org/2004/office' xmlns:oooc='http://openoffice.org/2004/calc' xmlns:ooow='http://openoffice.org/2004/writer' xmlns:presentation='urn:oasis:names:tc:opendocument:xmlns:presentation:1.0' xmlns:script='urn:oasis:names:tc:opendocument:xmlns:script:1.0' xmlns:smil='urn:oasis:names:tc:opendocument:xmlns:smil-compatible:1.0' xmlns:style='urn:oasis:names:tc:opendocument:xmlns:style:1.0' xmlns:svg='http://www.w3.org/2000/svg' xmlns:table='urn:oasis:names:tc:opendocument:xmlns:table:1.0' xmlns:text='urn:oasis:names:tc:opendocument:xmlns:text:1.0' xmlns:xforms='http://www.w3.org/2002/xforms' xmlns:xlink='http://www.w3.org/1999/xlink' xmlns:xsd='http://www.w3.org/2001/XMLSchema' xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance'> 
+<office:automatic-styles> <style:style style:family='text' style:name='ecss-0800x-x-75'><style:text-properties fo:font-family='sans-serif'></style:text-properties></style:style><style:style style:family='text' style:name='cmbsy-10x-x-109'><style:text-properties fo:font-weight='bold'></style:text-properties></style:style><style:style style:family='text' style:name='cmbsy-8'><style:text-properties fo:font-size='7.2pt' fo:font-weight='bold'></style:text-properties></style:style><style:style style:family='text' style:name='cmbsy-6'><style:text-properties fo:font-size='5.4pt' fo:font-weight='bold'></style:text-properties></style:style><style:style style:family='text' style:name='cmex-8'><style:text-properties fo:font-size='7.2pt'></style:text-properties></style:style><style:style style:family='text' style:name='cmex-7x-x-85'><style:text-properties fo:font-size='5.4pt'></style:text-properties></style:style><style:style style:family='text' style:name='msam-10x-x-80'><style:text-properties fo:font-size='7.2pt'></style:text-properties></style:style><style:style style:family='text' style:name='msam-7x-x-85'><style:text-properties fo:font-size='5.4pt'></style:text-properties></style:style><style:style style:family='text' style:name='msbm-10x-x-80'><style:text-properties fo:font-size='7.2pt'></style:text-properties></style:style><style:style style:family='text' style:name='msbm-7x-x-85'><style:text-properties fo:font-size='5.4pt'></style:text-properties></style:style><style:style style:family='text' style:name='cmr-8'><style:text-properties fo:font-size='7.2pt'></style:text-properties></style:style><style:style style:family='text' style:name='cmr-6'><style:text-properties fo:font-size='5.4pt'></style:text-properties></style:style><style:style style:family='text' style:name='cmmi-10x-x-109'><style:text-properties fo:font-style='italic'></style:text-properties></style:style><style:style style:family='text' style:name='cmmi-8'><style:text-properties fo:font-size='7.2pt' fo:font-style='italic'></style:text-properties></style:style><style:style style:family='text' style:name='cmmi-6'><style:text-properties fo:font-size='5.4pt' fo:font-style='italic'></style:text-properties></style:style><style:style style:family='text' style:name='cmsy-8'><style:text-properties fo:font-size='7.2pt'></style:text-properties></style:style><style:style style:family='text' style:name='cmsy-6'><style:text-properties fo:font-size='5.4pt'></style:text-properties></style:style><style:style style:family='text' style:name='ecrm-1728'><style:text-properties fo:font-size='15.4pt'></style:text-properties></style:style><style:style style:family='text' style:name='ecrm-1200'><style:text-properties fo:font-size='10.9pt'></style:text-properties></style:style><style:style style:family='text' style:name='ecrm-1000'><style:text-properties fo:font-size='9.0pt'></style:text-properties></style:style><style:style style:family='text' style:name='ecbx-1000'><style:text-properties fo:font-size='9.0pt' fo:font-weight='bold'></style:text-properties></style:style><style:style style:family='text' style:name='ectt-1095'><style:text-properties fo:font-family='monospace,monospace'></style:text-properties></style:style><style:style style:family='text' style:name='ecti-1095'><style:text-properties fo:font-style='italic'></style:text-properties></style:style><style:style style:family='text' style:name='ecbx-1095'><style:text-properties fo:font-weight='bold'></style:text-properties></style:style> <style:style style:family='section' style:name='Figure'> 
+<style:section-properties fo:margin-left='0.25in' fo:margin-right='0.25in' style:editable='true'> 
+<style:columns fo:column-count='0' fo:column-gap='0in'></style:columns> </style:section-properties> </style:style> 
+<style:page-layout style:name='Standard-page-layout'> 
+<style:page-layout-properties fo:margin-bottom='0.7874in' fo:margin-left='0.7874in' fo:margin-right='0.7874in' fo:margin-top='0.7874in' fo:page-height='845.04684pt' fo:page-width='597.50787pt' style:footnote-max-height='0in' style:num-format='1' style:print-orientation='portrait' style:writing-mode='lr-tb'> 
+<style:footnote-sep style:adjustment='left' style:color='#000000' style:distance-after-sep='0.0398in' style:distance-before-sep='0.0398in' style:rel-width='25%' style:width='0.0071in'></style:footnote-sep> 
+</style:page-layout-properties> 
+<style:header-style></style:header-style> <style:footer-style></style:footer-style> </style:page-layout> 
+ 
+</office:automatic-styles>     <office:body><office:text>
+<!--  begin maketitle 
+ -->
+                                                                                      
+                                                                                      
+                                                                                      
+                                                                                      
+<text:p text:style-name='Title'><text:span text:style-name='ecrm-1728'>Interspecies Interactions Drive Community-Level Selection in</text:span>
+<text:span text:style-name='ecrm-1728'>Microbial Coalescence</text:span></text:p>
+<text:p text:style-name='author'><text:span text:style-name='ecrm-1200'>Jinyeop Song</text:span><text:span text:style-name='textsuperscript'><text:span text:style-name='ecrm-1200'>1</text:span></text:span><text:span text:style-name='ecrm-1200'>, Jiliang Hu</text:span><text:span text:style-name='textsuperscript'><text:span text:style-name='ecrm-1200'>1</text:span></text:span><text:span text:style-name='ecrm-1200'>, and Jeff Gore</text:span><text:span text:style-name='textsuperscript'><text:span text:style-name='ecrm-1200'>1</text:span></text:span><text:line-break></text:line-break>
+<text:span text:style-name='textsuperscript'><text:span text:style-name='ecrm-1200'>1</text:span></text:span><text:span text:style-name='ecrm-1200'>Department of Physics, Massachusetts Institute of Technology, Cambridge, MA, USA</text:span></text:p>
+<text:p text:style-name='date'></text:p>
+   <!--  end maketitle 
+ -->
+<text:p text:style-name='abstract-title'>
+<text:span text:style-name='ecbx-1000'>Abstract</text:span></text:p>
+     <text:p text:style-name='abstract'>    <text:span text:style-name='ecrm-1000'>It  has  long  been  debated  in  ecology  whether  communities  behave  as  cohesive</text:span>
+     <text:span text:style-name='ecrm-1000'>units  or  as  loose  collections  of  independent  species.  Here,  we  study  this  question  in</text:span>
+     <text:span text:style-name='ecrm-1000'>the  context  of  community  coalescence,  the  mixing  of  previously  isolated  communities,</text:span>
+     <text:span text:style-name='ecrm-1000'>using  bacterial  microcosm  experiments  combined  with  ecological  modeling.  Our  results</text:span>
+     <text:span text:style-name='ecrm-1000'>demonstrate  that  effective  interaction  intensity  and  environmental  feedbacks  determine</text:span>
+     <text:span text:style-name='ecrm-1000'>whether communities or species are the units of selection during coalescence. When effective</text:span>
+     <text:span text:style-name='ecrm-1000'>interactions  are  moderate  to  strong,  one  parental  community  consistently  outcompetes</text:span>
+     <text:span text:style-name='ecrm-1000'>the  other,  indicating  community-level  selection.  In  contrast,  under  weak  interactions,</text:span>
+     <text:span text:style-name='ecrm-1000'>species fates are uncorrelated and the two communities contribute equally to the coalesced</text:span>
+     <text:span text:style-name='ecrm-1000'>outcome, indicating the absence of community-level selection. </text:span><text:span text:style-name='textcolor1'><text:span text:style-name='ecrm-1000'>A similar nutrient-dependent</text:span>
+     <text:span text:style-name='ecrm-1000'>shift toward Dominance also appears in taxonomically richer communities derived from</text:span>
+     <text:span text:style-name='ecrm-1000'>natural environmental samples.</text:span></text:span> <text:span text:style-name='ecrm-1000'>Furthermore, we identify two distinct regimes underlying</text:span>
+     <text:span text:style-name='ecrm-1000'>community-level  selection  in  experiments  with  different  media  conditions:  an  emergent</text:span>
+     <text:span text:style-name='ecrm-1000'>regime in which collective dynamics shape outcomes that cannot be predicted from species</text:span>
+                                                                                      
+                                                                                      
+     <text:span text:style-name='ecrm-1000'>traits  alone,  and  a  top-down  regime  where  dominant  species  determine  the  winning</text:span>
+     <text:span text:style-name='ecrm-1000'>community. Together, these results reconcile conflicting observations on community-level</text:span>
+     <text:span text:style-name='ecrm-1000'>selection  during  community  coalescence  by  demonstrating  that  communities  behave  as</text:span>
+     <text:span text:style-name='ecrm-1000'>cohesive units only when effective interactions and feedbacks are sufficiently strong.</text:span>
+</text:p>
+   <text:p text:style-name='newpage'></text:p>
+<!--  l. 32 
+ --><text:p text:style-name='First-line-indent'>
+                                                                                      
+                                                                                      
+   </text:p> 
+<!--  start of section 
+ --><text:h text:outline-level='2' text:style-name='Heading-2'><text:span text:style-name='section'>1    </text:span><text:bookmark text:name='x1-10001'></text:bookmark>Introduction</text:h> 
+
+<!--  l. 7 
+ --><text:p text:style-name='Text-body'>In nature, species coexist and interact within complex communities, yet whether these assemblages
+function as cohesive, integrated units or merely as loose collections of independently acting species
+remains a fundamental question in ecology. Historically, this tension has been framed through two
+influential paradigms. Clements’ “superorganism” view treats communities as discrete biological
+entities with emergent properties arising from species interdependencies, potentially as
+a result of coevolution<text:span text:style-name='textsuperscript'><text:a xlink:href='#bibitem1' xlink:type='simple'>1</text:a>,<text:a xlink:href='#bibitem2' xlink:type='simple'>2</text:a>,<text:a xlink:href='#bibitem3' xlink:type='simple'>3</text:a>,<text:a xlink:href='#bibitem4' xlink:type='simple'>4</text:a>,<text:a xlink:href='#bibitem5' xlink:type='simple'>5</text:a></text:span>. In contrast, Gleason’s individualistic hypothesis posits
+that species independently occupy niches, with community composition emerging from the
+coincidental overlap of species ranges<text:span text:style-name='textsuperscript'><text:a xlink:href='#bibitem6' xlink:type='simple'>6</text:a>,<text:a xlink:href='#bibitem7' xlink:type='simple'>7</text:a>,<text:a xlink:href='#bibitem8' xlink:type='simple'>8</text:a>,<text:a xlink:href='#bibitem9' xlink:type='simple'>9</text:a></text:span>. Despite decades of research, the conditions that
+determine when communities behave as cohesive units versus loose species assemblages remain
+unclear.
+</text:p> 
+<!--  l. 9 
+ --><text:p text:style-name='First-line-indent'>   These contrasting frameworks make distinct predictions in the context of community coalescence,
+the mixing of previously isolated communities<text:span text:style-name='textsuperscript'><text:a xlink:href='#bibitem10' xlink:type='simple'>10</text:a>,<text:a xlink:href='#bibitem11' xlink:type='simple'>11</text:a></text:span>. Coalescence occurs across diverse contexts and
+scales: environmental disturbances trigger microbial community mixing in soils<text:span text:style-name='textsuperscript'><text:a xlink:href='#bibitem12' xlink:type='simple'>12</text:a>,<text:a xlink:href='#bibitem13' xlink:type='simple'>13</text:a></text:span>, flooding events
+promote coalescence in aquatic and estuarine habitats<text:span text:style-name='textsuperscript'><text:a xlink:href='#bibitem14' xlink:type='simple'>14</text:a></text:span>, skin microbiomes undergo exchange through
+daily social contact<text:span text:style-name='textsuperscript'><text:a xlink:href='#bibitem15' xlink:type='simple'>15</text:a></text:span>, and gut microbiomes are subject to wholesale community transfer through fecal
+microbiota transplantation<text:span text:style-name='textsuperscript'><text:a xlink:href='#bibitem16' xlink:type='simple'>16</text:a>,<text:a xlink:href='#bibitem17' xlink:type='simple'>17</text:a></text:span>. Coalescence brings species with distinct interaction histories into
+contact, creating novel cross-community interactions that can reshape the resulting assemblage<text:span text:style-name='textsuperscript'><text:a xlink:href='#bibitem10' xlink:type='simple'>10</text:a></text:span>.
+Thus, it provides a natural test for the individualistic versus holistic paradigms: The holistic view
+predicts that species within a community have correlated persistence, making the community
+the primary unit of selection, termed community-level selection. The individualistic view
+predicts species-level selection, yielding outcomes shaped by individual fitness regardless of
+community origin, with no systematic correlation in species persistence within parental
+communities.
+</text:p> 
+<!--  l. 11 
+ --><text:p text:style-name='First-line-indent'>   Substantial theoretical and empirical evidence supports the holistic prediction that
+communities act as cohesive units during coalescence. Early theoretical work by Gilpin<text:span text:style-name='textsuperscript'><text:a xlink:href='#bibitem18' xlink:type='simple'>18</text:a></text:span>
+suggested that pre-assembled communities, having already undergone internal competitive
+exclusion, possess structured interaction patterns that differ fundamentally from randomly
+assembled communities. Because species within such communities have been filtered to
+coexist, their survival outcomes become coupled, producing asymmetric post-coalescence
+communities dominated by one parental community<text:span text:style-name='textsuperscript'><text:a xlink:href='#bibitem19' xlink:type='simple'>19</text:a></text:span>. Notably, this structured interaction
+                                                                                      
+                                                                                      
+can arise due to ecological exclusion alone, even in the absence of long-term coevolution,
+as demonstrated in synthetic microbial communities<text:span text:style-name='textsuperscript'><text:a xlink:href='#bibitem20' xlink:type='simple'>20</text:a>,<text:a xlink:href='#bibitem21' xlink:type='simple'>21</text:a></text:span>. Building on this foundation,
+resource-consumer models formalized the mechanism by which such selection occurs, demonstrating
+that communities with superior collective fitness through resource consumption outcompete others in
+ways not predictable from individual species performance alone<text:span text:style-name='textsuperscript'><text:a xlink:href='#bibitem11' xlink:type='simple'>11</text:a>,<text:a xlink:href='#bibitem22' xlink:type='simple'>22</text:a>,<text:a xlink:href='#bibitem23' xlink:type='simple'>23</text:a>,<text:a xlink:href='#bibitem24' xlink:type='simple'>24</text:a></text:span>. Empirically,
+correlated selection between dominant and subdominant taxa has been observed across 100
+coalescence experiments, confirming that species retention within communities is indeed
+correlated<text:span text:style-name='textsuperscript'><text:a xlink:href='#bibitem25' xlink:type='simple'>25</text:a></text:span>.
+</text:p> 
+<!--  l. 13 
+ --><text:p text:style-name='First-line-indent'>   However, opposing evidence supports the individualistic prediction that species respond
+independently to coalescence events, with outcomes primarily determined by environmental sorting
+rather than collective community dynamics. Empirical work reports that coexistence between species
+from different source communities is common through niche partitioning rather than competitive
+exclusion during macro-scale biogeographic interchange in marine and terrestrial biomes<text:span text:style-name='textsuperscript'><text:a xlink:href='#bibitem26' xlink:type='simple'>26</text:a></text:span>; similar
+patterns have been observed in microbial systems where closely related species coexist via resource
+partitioning<text:span text:style-name='textsuperscript'><text:a xlink:href='#bibitem27' xlink:type='simple'>27</text:a></text:span>. Paleontological evidence further indicates that species responded individually to past
+climatic shifts, relocating to favorable habitats rather than persisting as fixed assemblages, consistent
+with the view that ecological communities are largely chance associations of species<text:span text:style-name='textsuperscript'><text:a xlink:href='#bibitem28' xlink:type='simple'>28</text:a></text:span>. In microbial
+systems, local environmental factors explain more variation than the presence of constantly
+interchanging neighboring communities<text:span text:style-name='textsuperscript'><text:a xlink:href='#bibitem29' xlink:type='simple'>29</text:a></text:span>. Strain-resolved metagenomic analyses of <text:span text:style-name='textit'><text:span text:style-name='ecti-1095'>in vitro</text:span></text:span> gut
+microbial communities showed species-level dynamics rather than community-level selection, with
+surviving species originating from both parental communities<text:span text:style-name='textsuperscript'><text:a xlink:href='#bibitem30' xlink:type='simple'>30</text:a>,<text:a xlink:href='#bibitem31' xlink:type='simple'>31</text:a></text:span>. These findings suggest that
+selection during coalescence acts on species-level traits rather than on emergent community
+properties.
+</text:p> 
+<!--  l. 15 
+ --><text:p text:style-name='First-line-indent'>   Together, these contrasting lines of evidence indicate that communities behave as units of selection
+in some coalescence events but not others; however, the governing factors of these transitions remain
+poorly understood. Here, we combine empirical and theoretical approaches to investigate how effective
+interaction intensity and environmental feedbacks drive these contrasting outcomes. Using randomly
+assembled synthetic microbial communities across different interaction regimes, we classify
+post-coalescence outcomes into three types: Dominance (one community wins), Mixture
+(both persist), and Restructuring (a novel state emerges). Under weak interactions, Mixture
+prevails and species persistence is uncorrelated, consistent with individualistic dynamics. As
+effective interaction intensity increases, the system shifts toward Dominance, where species
+                                                                                      
+                                                                                      
+persistence becomes correlated, indicating community-level selection. <text:span text:style-name='textcolor2'>A phenomenological
+generalized Lotka–Volterra (gLV) model with randomly sampled pairwise competitive interactions
+recapitulates the observed Dominance/Mixture transition, and a similar nutrient-dependent
+shift toward Dominance also appears in taxonomically richer communities derived from
+natural environmental samples.</text:span> Further analysis reveals two mechanistic regimes underlying
+community-level selection: one where a few dominant taxa largely determine the winner,
+and another where collective multi-species dynamics shape the outcome. These results
+reconcile conflicting observations by identifying effective interaction intensity, environmental
+feedbacks, and assembly-generated interaction structure as key determinants of community-level
+selection.
+   </text:p> 
+<!--  end of section 
+ --><!--  start of section 
+ --><text:h text:outline-level='2' text:style-name='Heading-2'><text:span text:style-name='section'>2    </text:span><text:bookmark text:name='x1-20002'></text:bookmark>Results</text:h> 
+
+<!--  l. 10 
+ --><text:p text:style-name='Text-body'>
+   </text:p> 
+<!--  start of subsection 
+ --><text:h text:outline-level='3' text:style-name='Heading-3'><text:span text:style-name='subsection'>2.1    </text:span><text:bookmark text:name='x1-30002.1'></text:bookmark>Community-level selection is prevalent in microbial coalescence</text:h> 
+
+<!--  l. 13 
+ --><text:p text:style-name='Text-body'>Our central question is whether selection acts primarily on whole communities as cohesive units during
+community coalescence. To address this, we asked how often coalescence outcomes are represented
+primarily by one parental community versus blending of both or forming a novel community. Consider
+a coalescence event where communities A and B merge to produce community C (Fig. <text:a xlink:href='#x1-3002r1' xlink:type='simple'>1<!--  tex4ht:ref: fig:fig1  
+ --></text:a>A). <text:span text:style-name='textcolor3'>We
+represent each community by a community composition vector and compute the cosine
+similarity between the coalesced community C and each parental community (Fig. <text:a xlink:href='#x1-3002r1' xlink:type='simple'>1<!--  tex4ht:ref: fig:fig1  
+ --></text:a>B):</text:span>
+</text:p> 
+<table:table table:style-name='equation'><table:table-column table:style-name='equ-col'></table:table-column> 
+<table:table-column table:style-name='equ-num-col'></table:table-column> 
+<table:table-row><table:table-cell table:style-name='equ-cell'><text:p text:style-name='equ-p'>
+<!--  l. 14 
+ --><draw:frame draw:name='mobj-2' draw:style-name='mml-display' draw:z-index='0' text:anchor-type='paragraph'><draw:object xlink:actuate='onLoad' xlink:href='./main-m2' xlink:show='embed' xlink:type='simple'></draw:object></draw:frame></text:p></table:table-cell> 
+<table:table-cell table:style-name='equ-num-cell'><text:p text:style-name='equ-num-p'>(1)</text:p></table:table-cell></table:table-row></table:table>
+<!--  l. 17 
+ --><text:p text:style-name='Like-Text-body'><text:span text:style-name='textcolor5'>where <!--  l. 18 
+ --><draw:frame draw:name='mobj-3' draw:style-name='mml-inline' draw:z-index='0' text:anchor-type='as-char'><draw:object xlink:actuate='onLoad' xlink:href='./main-m3' xlink:show='embed' xlink:type='simple'></draw:object></draw:frame>, <!--  l. 18 
+ --><draw:frame draw:name='mobj-4' draw:style-name='mml-inline' draw:z-index='0' text:anchor-type='as-char'><draw:object xlink:actuate='onLoad' xlink:href='./main-m4' xlink:show='embed' xlink:type='simple'></draw:object></draw:frame>, and <!--  l. 18 
+ --><draw:frame draw:name='mobj-5' draw:style-name='mml-inline' draw:z-index='0' text:anchor-type='as-char'><draw:object xlink:actuate='onLoad' xlink:href='./main-m5' xlink:show='embed' xlink:type='simple'></draw:object></draw:frame> denote community composition vectors for the two parental communities and the coalesced community,
+and <!--  l. 18 
+ --><draw:frame draw:name='mobj-6' draw:style-name='mml-inline' draw:z-index='0' text:anchor-type='as-char'><draw:object xlink:actuate='onLoad' xlink:href='./main-m6' xlink:show='embed' xlink:type='simple'></draw:object></draw:frame> denotes the Euclidean norm.</text:span> These two similarity scores yield a two-dimensional similarity map in
+which the location of C reflects how strongly it resembles each parental community. We
+partition this map into three coalescence outcome classes (see Methods): Dominance, where C
+closely resembles one parental community but not the other; Mixture, where C similarly
+resembles both parental communities; and Restructuring, where C diverges from both parental
+communities into a novel configuration. <text:span text:style-name='textcolor6'>Restructuring denotes low parental retention: the coalesced
+community is not well explained by the parental communities or their combination, and may
+reflect a new stable composition produced by previously unseen cross-community species
+interactions.</text:span> <text:span text:style-name='textcolor7'>Crucially, Dominance provides outcome-level evidence for community-level
+selection: one parental community largely displaces the other while preserving its compositional
+structure.</text:span>
+</text:p> 
+<!--  l. 20 
+ --><text:p text:style-name='First-line-indent'>   To quantify the occurrence of outcome types experimentally, we assembled random <text:span text:style-name='textcolor8'><text:span text:style-name='textit'><text:span text:style-name='ecti-1095'>in vitro</text:span></text:span></text:span>
+communities and subjected them to pairwise coalescence (Fig. <text:a xlink:href='#x1-3002r1' xlink:type='simple'>1<!--  tex4ht:ref: fig:fig1  
+ --></text:a>C). We first curated a strain library of
+54 bacterial isolates collected from diverse environments (soil, tree surface, and flower stamen). The
+library is phylogenetically broad, spanning 29 families across three phyla: Proteobacteria,
+Firmicutes, and Bacteroidota (Extended Data Fig. 1; Supplementary Fig. 1). From this
+library, we assembled 30 parental communities with varying initial richness (6, 12, or 24
+species; see Methods) and stabilized them for 7 days under daily growth–dilution cycles (<!--  l. 20 
+ --><draw:frame draw:name='mobj-7' draw:style-name='mml-inline' draw:z-index='0' text:anchor-type='as-char'><draw:object xlink:actuate='onLoad' xlink:href='./main-m7' xlink:show='embed' xlink:type='simple'></draw:object></draw:frame>30 every 24 h) (Fig. <text:a xlink:href='#x1-3002r1' xlink:type='simple'>1<!--  tex4ht:ref: fig:fig1  
+ --></text:a>C). Our initial experiments were done in Base medium (1 g L<!--  l. 20 
+ --><draw:frame draw:name='mobj-8' draw:style-name='mml-inline' draw:z-index='0' text:anchor-type='as-char'><draw:object xlink:actuate='onLoad' xlink:href='./main-m8' xlink:show='embed' xlink:type='simple'></draw:object></draw:frame> yeast extract, 1 g L<!--  l. 20 
+ --><draw:frame draw:name='mobj-9' draw:style-name='mml-inline' draw:z-index='0' text:anchor-type='as-char'><draw:object xlink:actuate='onLoad' xlink:href='./main-m9' xlink:show='embed' xlink:type='simple'></draw:object></draw:frame>  soytone, 10 mM sodium phosphate, 0.1 mM CaCl<!--  l. 20 
+ --><draw:frame draw:name='mobj-10' draw:style-name='mml-inline' draw:z-index='0' text:anchor-type='as-char'><draw:object xlink:actuate='onLoad' xlink:href='./main-m10' xlink:show='embed' xlink:type='simple'></draw:object></draw:frame>, 2 mM MgCl<!--  l. 20 
+ --><draw:frame draw:name='mobj-11' draw:style-name='mml-inline' draw:z-index='0' text:anchor-type='as-char'><draw:object xlink:actuate='onLoad' xlink:href='./main-m11' xlink:show='embed' xlink:type='simple'></draw:object></draw:frame>, 4 mg L<!--  l. 20 
+ --><draw:frame draw:name='mobj-12' draw:style-name='mml-inline' draw:z-index='0' text:anchor-type='as-char'><draw:object xlink:actuate='onLoad' xlink:href='./main-m12' xlink:show='embed' xlink:type='simple'></draw:object></draw:frame> NiSO<!--  l. 20 
+ --><draw:frame draw:name='mobj-13' draw:style-name='mml-inline' draw:z-index='0' text:anchor-type='as-char'><draw:object xlink:actuate='onLoad' xlink:href='./main-m13' xlink:show='embed' xlink:type='simple'></draw:object></draw:frame>, 50 mg L<!--  l. 20 
+ --><draw:frame draw:name='mobj-14' draw:style-name='mml-inline' draw:z-index='0' text:anchor-type='as-char'><draw:object xlink:actuate='onLoad' xlink:href='./main-m14' xlink:show='embed' xlink:type='simple'></draw:object></draw:frame> MnCl<!--  l. 20 
+ --><draw:frame draw:name='mobj-15' draw:style-name='mml-inline' draw:z-index='0' text:anchor-type='as-char'><draw:object xlink:actuate='onLoad' xlink:href='./main-m15' xlink:show='embed' xlink:type='simple'></draw:object></draw:frame>, 5 g L<!--  l. 20 
+ --><draw:frame draw:name='mobj-16' draw:style-name='mml-inline' draw:z-index='0' text:anchor-type='as-char'><draw:object xlink:actuate='onLoad' xlink:href='./main-m16' xlink:show='embed' xlink:type='simple'></draw:object></draw:frame> glucose and 4 g L<!--  l. 20 
+ --><draw:frame draw:name='mobj-17' draw:style-name='mml-inline' draw:z-index='0' text:anchor-type='as-char'><draw:object xlink:actuate='onLoad' xlink:href='./main-m17' xlink:show='embed' xlink:type='simple'></draw:object></draw:frame> urea; pH 6.5), a buffered complex medium that we have previously determined has moderate interaction
+strength and supports high species coexistence (Supplementary Information, mean species survival ratio = <!--  l. 20 
+ --><draw:frame draw:name='mobj-18' draw:style-name='mml-inline' draw:z-index='0' text:anchor-type='as-char'><draw:object xlink:actuate='onLoad' xlink:href='./main-m18' xlink:show='embed' xlink:type='simple'></draw:object></draw:frame>
+%). We then performed 83 pairwise coalescence events by mixing stabilized parental communities in
+equal volumes and restabilizing for an additional 7 days. Community compositions of parental and
+coalesced communities were measured at the end of stabilization by 16S rRNA amplicon
+sequencing (Amplicon Sequence Variants, ASVs), and we also recorded the optical density (OD<!--  l. 20 
+ --><draw:frame draw:name='mobj-19' draw:style-name='mml-inline' draw:z-index='0' text:anchor-type='as-char'><draw:object xlink:actuate='onLoad' xlink:href='./main-m19' xlink:show='embed' xlink:type='simple'></draw:object></draw:frame>) and pH of the communities to contextualize assembly and post-coalescence dynamics.
+</text:p> 
+<!--  l. 22 
+ --><text:p text:style-name='First-line-indent'>   Representative time series illustrate the spectrum of post-coalescence dynamics (Fig. <text:a xlink:href='#x1-3002r1' xlink:type='simple'>1<!--  tex4ht:ref: fig:fig1  
+ --></text:a>D). In
+outcomes classified as Dominance, one parental lineage rapidly displaces the other after mixing and the
+coalesced community converges to a composition closely matching that parental community, while
+largely preserving its internal relative-abundance structure over serial dilution cycles. In the
+Restructuring case, the merged community converges toward a novel state distinct from both parental
+communities. Among three representative time-series trajectories, we did not observe Mixture cases in
+which both parental communities remained comparably represented after coalescence (see
+Supplementary Fig. 2).
+</text:p> 
+<!--  l. 24 
+ --><text:p text:style-name='First-line-indent'>   Projecting all outcomes into the similarity space based on stabilized compositions (Fig. <text:a xlink:href='#x1-3002r1' xlink:type='simple'>1<!--  tex4ht:ref: fig:fig1  
+ --></text:a>E)
+revealed that Dominance is the most frequent empirical outcome. Of the 83 coalescence events, 54 were
+classified as Dominance, 26 as Restructuring, and 3 as Mixture (Fig. <text:a xlink:href='#x1-3002r1' xlink:type='simple'>1<!--  tex4ht:ref: fig:fig1  
+ --></text:a>E). <text:span text:style-name='textcolor9'>Alternative metric analysis
+revealed that Dominance remained the most frequent outcome under abundance-weighted
+compositional metrics, including Euclidean distance and Bray–Curtis dissimilarity, but not under
+Jaccard index or Jensen–Shannon divergence, which emphasize species-identity retention and
+full-distribution divergence, respectively (Extended Data Fig. 2).</text:span> <text:span text:style-name='textcolor10'>To test whether Base-medium
+Dominance could arise from a compositional artifact of parental abundance structure, we compared
+observed outcomes with matched additive-null expectations constructed from the same
+parental-community pairs. Observed outcomes were more strongly biased toward one parental
+community than their matched additive-null expectations (one-sided paired Wilcoxon test, <!--  l. 24 
+ --><draw:frame draw:name='mobj-20' draw:style-name='mml-inline' draw:z-index='0' text:anchor-type='as-char'><draw:object xlink:actuate='onLoad' xlink:href='./main-m20' xlink:show='embed' xlink:type='simple'></draw:object></draw:frame>; Extended Data Fig. 3), and additional abundance-skew null models also produced weaker
+parental bias than the data (Supplementary Note 1). Together, these null-model controls support a
+community-level selection interpretation.</text:span>
+   </text:p> 
+<text:section text:name='fig' text:style-name='Figure'><text:p text:style-name='bigskip'></text:p>
+                                                                                      
+                                                                                      
+                                                                                      
+                                                                                      
+<!--  l. 29 
+ --><text:p text:style-name='Text-body'> <draw:frame draw:name='figure_main_1_experimental_overview-.png' draw:z-index='0' text:anchor-type='as-char'><draw:image xlink:actuate='onLoad' xlink:href='Pictures/figure_main_1_experimental_overview-.png' xlink:show='embed' xlink:type='simple'></draw:image><!--  draw:name="IMG"  
+svg:width="452.9679pt" svg:height="453.09233pt"  
+ --><svg:title>ALT</svg:title></draw:frame> <text:bookmark text:name='x1-3002r1'></text:bookmark>
+</text:p> 
+<!--  l. 30 
+ --><text:p text:style-name='Text-body'></text:p> 
+
+<!--  l. 30 
+ --><text:p text:style-name='Text-body'> 
+<text:span text:style-name='caption'><text:span text:style-name='caption-title'><text:a xlink:href='#x1-3002r1' xlink:type='simple'>Figure 1<text:bookmark text:name='x1-3002r1'></text:bookmark></text:a>:  </text:span><text:span text:style-name='textbf'><text:span text:style-name='ecbx-1095'>Fig.</text:span><text:span text:style-name='ecbx-1095'> 1.  Coalescence  of  synthetic  microbial  communities  frequently</text:span>
+<text:span text:style-name='ecbx-1095'>yields Dominance.</text:span></text:span> <text:span text:style-name='textbf'><text:span text:style-name='ecbx-1095'>a</text:span></text:span>, Schematic of coalescence: parental communities A and B are mixed
+to  produce  C.  Outcomes  are  classified  as  Dominance  (<text:span text:style-name='textcolor13'>one  parental  community  wins</text:span>),
+Mixture  (both  persist),  or  Restructuring  (novel  state).  <text:span text:style-name='textbf'><text:span text:style-name='ecbx-1095'>b</text:span></text:span>,  We  use  similarity  to  quantify
+compositional  resemblance  between  communities  and  define  a  two-dimensional  similarity
+map  for  classifying  outcomes.  <text:span text:style-name='textbf'><text:span text:style-name='ecbx-1095'>c</text:span></text:span>,  Experimental  workflow:  30  parental  communities  (initial
+richness 6, 12, or 24) were assembled from 54 bacterial isolates, stabilized, mixed pairwise (<!--  l. 30 
+ --><draw:frame draw:name='mobj-22' draw:style-name='mml-inline' draw:z-index='0' text:anchor-type='as-char'><draw:object xlink:actuate='onLoad' xlink:href='./main-m22' xlink:show='embed' xlink:type='simple'></draw:object></draw:frame>),
+and  restabilized.  <text:span text:style-name='textbf'><text:span text:style-name='ecbx-1095'>d</text:span></text:span>,  Representative  time  courses  showing  Dominance  (left,  center)  and
+Restructuring  (right).  <text:span text:style-name='textbf'><text:span text:style-name='ecbx-1095'>e</text:span></text:span>,  Dominance  is  the  most  frequent  outcome  in  Base  medium.  Of  83
+coalescence events, 54 (65%) were classified as Dominance, 26 (31%) as Restructuring, and 3
+(4%) as Mixture. Different symbols indicate initial richness (circles: 6; squares: 12; triangles: 24
+species). <text:span text:style-name='textcolor14'>Gray points represent the symmetric counterpart of each coalescence event (community
+B versus A).</text:span>                                                                           </text:span>
+                                                                                      
+                                                                                      
+   </text:p> 
+<text:p text:style-name='bigskip'></text:p></text:section>
+   <!--  end of subsection 
+ --><!--  start of subsection 
+ --><text:h text:outline-level='3' text:style-name='Heading-3'><text:span text:style-name='subsection'>2.2    </text:span><text:bookmark text:name='x1-40002.2'></text:bookmark>Theoretical model with random interactions reproduces community-level selection</text:h> 
+
+<!--  l. 37 
+ --><text:p text:style-name='Text-body'>To gain insight into why Dominance is the prevalent outcome, we introduced a generalized
+Lotka–Volterra (gLV) model<text:span text:style-name='textsuperscript'><text:a xlink:href='#bibitem32' xlink:type='simple'>32</text:a>,<text:a xlink:href='#bibitem33' xlink:type='simple'>33</text:a></text:span> that mirrors the experimental protocol (Fig. <text:a xlink:href='#x1-4002r2' xlink:type='simple'>2<!--  tex4ht:ref: fig:fig2  
+ --></text:a>A). In this classic
+model, species grow logistically and compete pairwise: </text:p> 
+<table:table table:style-name='equation'><table:table-column table:style-name='equ-col'></table:table-column> 
+<table:table-column table:style-name='equ-num-col'></table:table-column> 
+<table:table-row><table:table-cell table:style-name='equ-cell'><text:p text:style-name='equ-p'>
+<!--  l. 38 
+ --><draw:frame draw:name='mobj-23' draw:style-name='mml-display' draw:z-index='0' text:anchor-type='paragraph'><draw:object xlink:actuate='onLoad' xlink:href='./main-m23' xlink:show='embed' xlink:type='simple'></draw:object></draw:frame></text:p></table:table-cell> 
+<table:table-cell table:style-name='equ-num-cell'><text:p text:style-name='equ-num-p'>(2)</text:p></table:table-cell></table:table-row></table:table>
+<!--  l. 41 
+ --><text:p text:style-name='Like-Text-body'>where <!--  l. 42 
+ --><draw:frame draw:name='mobj-24' draw:style-name='mml-inline' draw:z-index='0' text:anchor-type='as-char'><draw:object xlink:actuate='onLoad' xlink:href='./main-m24' xlink:show='embed' xlink:type='simple'></draw:object></draw:frame> is abundance, <!--  l. 42 
+ --><draw:frame draw:name='mobj-25' draw:style-name='mml-inline' draw:z-index='0' text:anchor-type='as-char'><draw:object xlink:actuate='onLoad' xlink:href='./main-m25' xlink:show='embed' xlink:type='simple'></draw:object></draw:frame> is growth rate, and <!--  l. 42 
+ --><draw:frame draw:name='mobj-26' draw:style-name='mml-inline' draw:z-index='0' text:anchor-type='as-char'><draw:object xlink:actuate='onLoad' xlink:href='./main-m26' xlink:show='embed' xlink:type='simple'></draw:object></draw:frame>  is the competition coefficient between species <!--  l. 42 
+ --><draw:frame draw:name='mobj-27' draw:style-name='mml-inline' draw:z-index='0' text:anchor-type='as-char'><draw:object xlink:actuate='onLoad' xlink:href='./main-m27' xlink:show='embed' xlink:type='simple'></draw:object></draw:frame> and <!--  l. 42 
+ --><draw:frame draw:name='mobj-28' draw:style-name='mml-inline' draw:z-index='0' text:anchor-type='as-char'><draw:object xlink:actuate='onLoad' xlink:href='./main-m28' xlink:show='embed' xlink:type='simple'></draw:object></draw:frame> (with self-interaction <!--  l. 42 
+ --><draw:frame draw:name='mobj-29' draw:style-name='mml-inline' draw:z-index='0' text:anchor-type='as-char'><draw:object xlink:actuate='onLoad' xlink:href='./main-m29' xlink:show='embed' xlink:type='simple'></draw:object></draw:frame>). We fixed <!--  l. 42 
+ --><draw:frame draw:name='mobj-30' draw:style-name='mml-inline' draw:z-index='0' text:anchor-type='as-char'><draw:object xlink:actuate='onLoad' xlink:href='./main-m30' xlink:show='embed' xlink:type='simple'></draw:object></draw:frame> and drew off-diagonal competition coefficients from a uniform distribution <!--  l. 42 
+ --><draw:frame draw:name='mobj-31' draw:style-name='mml-inline' draw:z-index='0' text:anchor-type='as-char'><draw:object xlink:actuate='onLoad' xlink:href='./main-m31' xlink:show='embed' xlink:type='simple'></draw:object></draw:frame>, <text:span text:style-name='textcolor15'>so increasing <!--  l. 42 
+ --><draw:frame draw:name='mobj-32' draw:style-name='mml-inline' draw:z-index='0' text:anchor-type='as-char'><draw:object xlink:actuate='onLoad' xlink:href='./main-m32' xlink:show='embed' xlink:type='simple'></draw:object></draw:frame> expands the sampled coefficient range and increases both the mean and spread of competitive
+effects</text:span><text:span text:style-name='textsuperscript'><text:a xlink:href='#bibitem34' xlink:type='simple'>34</text:a>,<text:a xlink:href='#bibitem35' xlink:type='simple'>35</text:a></text:span>. From a pool of 54 species, we generated two parental communities of 12 species each
+with no shared species, allowed each to reach equilibrium, then mixed them equally to
+simulate coalescence (Fig. <text:a xlink:href='#x1-4002r2' xlink:type='simple'>2<!--  tex4ht:ref: fig:fig2  
+ --></text:a>A; see Methods for details). Post-coalescence compositions were
+analyzed using the same similarity metrics as in the experiments. <text:span text:style-name='textcolor16'>The gLV model serves as a
+phenomenological framework to explore how the statistical properties of interaction coefficients
+shape coalescence outcomes, rather than as a mechanistic model of the specific biochemical
+interactions (e.g., pH modification, metabolic cross-feeding) underlying our experimental
+observations.</text:span>
+</text:p> 
+<!--  l. 44 
+ --><text:p text:style-name='First-line-indent'>   We simulated 1,200 random coalescence events at <text:span text:style-name='textcolor17'>an interaction-strength parameter value of</text:span> <!--  l. 44 
+ --><draw:frame draw:name='mobj-33' draw:style-name='mml-inline' draw:z-index='0' text:anchor-type='as-char'><draw:object xlink:actuate='onLoad' xlink:href='./main-m33' xlink:show='embed' xlink:type='simple'></draw:object></draw:frame> and analyzed the similarity of each coalescence outcome to the two parental communities. At this
+<text:span text:style-name='textcolor18'>parameter value</text:span>, the random-interaction model quantitatively reproduces the high frequency of
+Dominance observed in the experiments. Outcomes concentrate near the axes rather than the diagonal,
+indicating asymmetric dominance by one parental community (Fig. <text:a xlink:href='#x1-4002r2' xlink:type='simple'>2<!--  tex4ht:ref: fig:fig2  
+ --></text:a>B). Quantitatively, Dominance
+accounts for 61% of all outcomes, far more frequent than Restructuring (26%) or Mixture (13%;
+Fig. <text:a xlink:href='#x1-4002r2' xlink:type='simple'>2<!--  tex4ht:ref: fig:fig2  
+ --></text:a>B, right). This observation suggests that, within this competitive gLV framework, interspecies
+competitive interactions are sufficient to reproduce the high frequency of Dominance observed in
+coalescence.
+</text:p> 
+<!--  l. 46 
+ --><text:p text:style-name='First-line-indent'>   To understand how Dominance emerges in the model and whether it reflects
+community-level selection, we examined the role of the assembly process. During assembly,
+competitive exclusion filters out species with strong competitive interactions, leaving
+communities with reduced <text:span text:style-name='textcolor19'>interaction strength</text:span> compared to the initial pool (paired <!--  l. 46 
+ --><draw:frame draw:name='mobj-34' draw:style-name='mml-inline' draw:z-index='0' text:anchor-type='as-char'><draw:object xlink:actuate='onLoad' xlink:href='./main-m34' xlink:show='embed' xlink:type='simple'></draw:object></draw:frame>-test, <!--  l. 46 
+ --><draw:frame draw:name='mobj-35' draw:style-name='mml-inline' draw:z-index='0' text:anchor-type='as-char'><draw:object xlink:actuate='onLoad' xlink:href='./main-m35' xlink:show='embed' xlink:type='simple'></draw:object></draw:frame>; Fig. <text:a xlink:href='#x1-4002r2' xlink:type='simple'>2<!--  tex4ht:ref: fig:fig2  
+ --></text:a>C; Supplementary Fig. 3). Because surviving species compete weakly with each other but
+face stronger competition from outsiders, their fates become coupled during coalescence: they tend to
+persist or go extinct together. <text:span text:style-name='textcolor20'>We quantified this effect using pairwise selection correlation, which tests
+across coalescence events whether species pairs from the same parental community share
+survival outcomes (both persist or both go extinct) more strongly than species pairs from
+different parental communities (Supplementary Information; Fig. <text:a xlink:href='#x1-4002r2' xlink:type='simple'>2<!--  tex4ht:ref: fig:fig2  
+ --></text:a>D).</text:span> Species from the same
+parental community showed strongly positive correlations, while cross-community pairs showed
+negative correlations, a pattern observed in both simulations and experiments (Fig. <text:a xlink:href='#x1-4002r2' xlink:type='simple'>2<!--  tex4ht:ref: fig:fig2  
+ --></text:a>D). This
+supports the interpretation that species within an assembled parental community have coupled
+fates during coalescence. Together, the prevalence of Dominance combined with positive
+within-community selection correlation provides evidence for community-level selection in this
+system.
+   </text:p> 
+<text:section text:name='fig' text:style-name='Figure'><text:p text:style-name='bigskip'></text:p>
+                                                                                      
+                                                                                      
+                                                                                      
+                                                                                      
+<!--  l. 52 
+ --><text:p text:style-name='Text-body'> <draw:frame draw:name='figure_main_2_simulation_framework-.png' draw:z-index='0' text:anchor-type='as-char'><draw:image xlink:actuate='onLoad' xlink:href='Pictures/figure_main_2_simulation_framework-.png' xlink:show='embed' xlink:type='simple'></draw:image><!--  draw:name="IMG"  
+svg:width="452.9679pt" svg:height="453.09233pt"  
+ --><svg:title>ALT</svg:title></draw:frame> <text:bookmark text:name='x1-4002r2'></text:bookmark>
+</text:p> 
+<!--  l. 53 
+ --><text:p text:style-name='Text-body'></text:p> 
+
+<!--  l. 53 
+ --><text:p text:style-name='Text-body'> 
+<text:span text:style-name='caption'><text:span text:style-name='caption-title'><text:a xlink:href='#x1-4002r2' xlink:type='simple'>Figure 2<text:bookmark text:name='x1-4002r2'></text:bookmark></text:a>:     </text:span><text:span text:style-name='textbf'><text:span text:style-name='ecbx-1095'>Fig.</text:span><text:span text:style-name='ecbx-1095'> 2.     Generalized     Lotka–Volterra     model     of     community</text:span>
+<text:span text:style-name='ecbx-1095'>coalescence.</text:span></text:span>     <text:span text:style-name='textbf'><text:span text:style-name='ecbx-1095'>a</text:span></text:span>,     Simulation     workflow:     species     grow     according     to     the
+generalized    Lotka–Volterra    (gLV)    equations,    where    interaction    coefficients    <!--  l. 53 
+ --><draw:frame draw:name='mobj-45' draw:style-name='mml-inline' draw:z-index='0' text:anchor-type='as-char'><draw:object xlink:actuate='onLoad' xlink:href='./main-m45' xlink:show='embed' xlink:type='simple'></draw:object></draw:frame>
+are drawn from a uniform distribution <!--  l. 53 
+ --><draw:frame draw:name='mobj-46' draw:style-name='mml-inline' draw:z-index='0' text:anchor-type='as-char'><draw:object xlink:actuate='onLoad' xlink:href='./main-m46' xlink:show='embed' xlink:type='simple'></draw:object></draw:frame>.
+<text:span text:style-name='textcolor24'>The interaction-strength parameter <!--  l. 53 
+ --><draw:frame draw:name='mobj-47' draw:style-name='mml-inline' draw:z-index='0' text:anchor-type='as-char'><draw:object xlink:actuate='onLoad' xlink:href='./main-m47' xlink:show='embed' xlink:type='simple'></draw:object></draw:frame>
+sets  the  sampled  coefficient  range,  increasing  both  mean  and  spread.</text:span>  Two  equilibrated
+parental communities are mixed and simulated to steady state. <text:span text:style-name='textbf'><text:span text:style-name='ecbx-1095'>b</text:span></text:span>, Outcome density map (<!--  l. 53 
+ --><draw:frame draw:name='mobj-48' draw:style-name='mml-inline' draw:z-index='0' text:anchor-type='as-char'><draw:object xlink:actuate='onLoad' xlink:href='./main-m48' xlink:show='embed' xlink:type='simple'></draw:object></draw:frame>,
+<!--  l. 53 
+ --><draw:frame draw:name='mobj-49' draw:style-name='mml-inline' draw:z-index='0' text:anchor-type='as-char'><draw:object xlink:actuate='onLoad' xlink:href='./main-m49' xlink:show='embed' xlink:type='simple'></draw:object></draw:frame>
+simulations).     The     model     reproduces     the     high     frequency     of     Dominance
+(61%)       observed       experimentally.       <text:span text:style-name='textbf'><text:span text:style-name='ecbx-1095'>c</text:span></text:span>,       Community       assembly       significantly
+reduces      <text:span text:style-name='textcolor25'>interaction      strength</text:span>      among      surviving      species      (paired      <!--  l. 53 
+ --><draw:frame draw:name='mobj-50' draw:style-name='mml-inline' draw:z-index='0' text:anchor-type='as-char'><draw:object xlink:actuate='onLoad' xlink:href='./main-m50' xlink:show='embed' xlink:type='simple'></draw:object></draw:frame>-test,
+<!--  l. 53 
+ --><draw:frame draw:name='mobj-51' draw:style-name='mml-inline' draw:z-index='0' text:anchor-type='as-char'><draw:object xlink:actuate='onLoad' xlink:href='./main-m51' xlink:show='embed' xlink:type='simple'></draw:object></draw:frame>).
+<text:span text:style-name='textbf'><text:span text:style-name='ecbx-1095'>d</text:span></text:span>,     Pairwise     selection     correlation.     <text:span text:style-name='textcolor26'>Individual     dots     show     per-event     pairwise
+selection     correlations;     in     the     simulation     panel,     100     stratified     events     per
+group    are    displayed    for    legibility.    Squares    with    error    bars    show    mean    <!--  l. 53 
+ --><draw:frame draw:name='mobj-52' draw:style-name='mml-inline' draw:z-index='0' text:anchor-type='as-char'><draw:object xlink:actuate='onLoad' xlink:href='./main-m52' xlink:show='embed' xlink:type='simple'></draw:object></draw:frame>
+s.e.m. across all coalescence events (<!--  l. 53 
+ --><draw:frame draw:name='mobj-53' draw:style-name='mml-inline' draw:z-index='0' text:anchor-type='as-char'><draw:object xlink:actuate='onLoad' xlink:href='./main-m53' xlink:show='embed' xlink:type='simple'></draw:object></draw:frame>
+per  group  in  simulations  and  all  valid  experimental  events  in  the  experimental  panel).
+Gray  horizontal  lines  indicate  the  random  selection  baseline  from  a  null  model  in  which
+parental-affiliation labels are shuffled (see Supplementary Information).</text:span> Within-community pairs
+(species pairs from the same parental community; red) show positive correlation (co-survival),
+while  cross-community  pairs  (blue)  show  negative  correlation,  indicating  community-level
+selection. This pattern holds for both simulations (left) and experiments (right).             </text:span>
+                                                                                      
+                                                                                      
+   </text:p> 
+<text:p text:style-name='bigskip'></text:p></text:section>
+   <!--  end of subsection 
+ --><!--  start of subsection 
+ --><text:h text:outline-level='3' text:style-name='Heading-3'><text:span text:style-name='subsection'>2.3    </text:span><text:bookmark text:name='x1-50002.3'></text:bookmark>Interaction strength controls coalescence outcome type and degree of community-level
+selection</text:h> 
+
+<!--  l. 62 
+ --><text:p text:style-name='Text-body'>Having established that random interspecies interactions can recapitulate Dominance with correlated
+pairwise selection, we next investigated how the interaction-strength parameter alters coalescence outcomes.
+We simulated 1,200 coalescence events at each of three representative <text:span text:style-name='textcolor27'>values of the interaction-strength
+parameter</text:span> (<!--  l. 62 
+ --><draw:frame draw:name='mobj-54' draw:style-name='mml-inline' draw:z-index='0' text:anchor-type='as-char'><draw:object xlink:actuate='onLoad' xlink:href='./main-m54' xlink:show='embed' xlink:type='simple'></draw:object></draw:frame>) and mapped outcomes into the similarity space (Fig. <text:a xlink:href='#x1-5001r3' xlink:type='simple'>3<!--  tex4ht:ref: fig:fig3  
+ --></text:a>A). At weak interactions (<!--  l. 62 
+ --><draw:frame draw:name='mobj-55' draw:style-name='mml-inline' draw:z-index='0' text:anchor-type='as-char'><draw:object xlink:actuate='onLoad' xlink:href='./main-m55' xlink:show='embed' xlink:type='simple'></draw:object></draw:frame>), outcomes clustered in the interior of the map, indicating Mixture; as <!--  l. 62 
+ --><draw:frame draw:name='mobj-56' draw:style-name='mml-inline' draw:z-index='0' text:anchor-type='as-char'><draw:object xlink:actuate='onLoad' xlink:href='./main-m56' xlink:show='embed' xlink:type='simple'></draw:object></draw:frame> increased, outcomes shifted toward the axes, indicating Dominance. We quantified
+this shift using the Parental Dominance Index (PDI), which captures the relative
+contribution of each parental community (0: parental community B, 0.5: equal, 1: parental
+community A; see Methods). PDI distributions shifted from unimodal near 0.5 at <!--  l. 62 
+ --><draw:frame draw:name='mobj-57' draw:style-name='mml-inline' draw:z-index='0' text:anchor-type='as-char'><draw:object xlink:actuate='onLoad' xlink:href='./main-m57' xlink:show='embed' xlink:type='simple'></draw:object></draw:frame> to bimodal at higher <!--  l. 62 
+ --><draw:frame draw:name='mobj-58' draw:style-name='mml-inline' draw:z-index='0' text:anchor-type='as-char'><draw:object xlink:actuate='onLoad' xlink:href='./main-m58' xlink:show='embed' xlink:type='simple'></draw:object></draw:frame> (Fig. <text:a xlink:href='#x1-5001r3' xlink:type='simple'>3<!--  tex4ht:ref: fig:fig3  
+ --></text:a>A), reflecting a transition in which Dominance becomes increasingly frequent, indicating
+community-level selection.
+</text:p> 
+<!--  l. 64 
+ --><text:p text:style-name='First-line-indent'>   Across <text:span text:style-name='textcolor28'>interaction-strength parameter values</text:span> from <!--  l. 64 
+ --><draw:frame draw:name='mobj-59' draw:style-name='mml-inline' draw:z-index='0' text:anchor-type='as-char'><draw:object xlink:actuate='onLoad' xlink:href='./main-m59' xlink:show='embed' xlink:type='simple'></draw:object></draw:frame> to <!--  l. 64 
+ --><draw:frame draw:name='mobj-60' draw:style-name='mml-inline' draw:z-index='0' text:anchor-type='as-char'><draw:object xlink:actuate='onLoad' xlink:href='./main-m60' xlink:show='embed' xlink:type='simple'></draw:object></draw:frame>, we observed a systematic shift in coalescence outcomes (Fig. <text:a xlink:href='#x1-5001r3' xlink:type='simple'>3<!--  tex4ht:ref: fig:fig3  
+ --></text:a>B), with Mixture predominating at
+weak interactions and Dominance at strong interactions. Restructuring emerged at moderate to high
+interaction strengths. <text:span text:style-name='textcolor29'>These patterns were robust to variation in growth rates, carrying capacities,
+interaction-coefficient distributions, parental-community species richness, and model extensions
+allowing beneficial interactions or varying reciprocal pair-coupling structure (Supplementary
+Figs. 4–6 and 39–41; Extended Data Fig. 4). Further analysis separating the mean and
+variance of the interaction-coefficient distribution showed that both average inhibitory
+effect and coefficient heterogeneity contribute to the Dominance regime (Supplementary
+Fig. 42).</text:span> Notably, the frequency of Dominance remained relatively stable across parental
+communities ranging from 4 to 48 species, spanning our experimental species pool range. To
+determine whether this transition from Mixture to Dominance corresponds to the degree of
+co-selection, we examined pairwise selection correlation across <text:span text:style-name='textcolor30'>interaction-strength parameter
+values</text:span>. Notably, within-community pairwise selection correlation emerged only at high
+interaction strengths, indicating that species fates become coupled only when interactions are
+sufficiently strong (Extended Data Fig. 5). These findings indicate that interaction strength
+simultaneously determines both coalescence outcome type and the level at which selection
+operates.
+   </text:p> 
+<text:section text:name='fig' text:style-name='Figure'><text:p text:style-name='bigskip'></text:p>
+                                                                                      
+                                                                                      
+                                                                                      
+                                                                                      
+<!--  l. 69 
+ --><text:p text:style-name='Text-body'> <draw:frame draw:name='figure_main_3_interaction_strength-.png' draw:z-index='0' text:anchor-type='as-char'><draw:image xlink:actuate='onLoad' xlink:href='Pictures/figure_main_3_interaction_strength-.png' xlink:show='embed' xlink:type='simple'></draw:image><!--  draw:name="IMG"  
+svg:width="452.9679pt" svg:height="453.09233pt"  
+ --><svg:title>ALT</svg:title></draw:frame> <text:bookmark text:name='x1-5001r3'></text:bookmark>
+</text:p> 
+<!--  l. 70 
+ --><text:p text:style-name='Text-body'></text:p> 
+
+<!--  l. 70 
+ --><text:p text:style-name='Text-body'> 
+<text:span text:style-name='caption'><text:span text:style-name='caption-title'><text:a xlink:href='#x1-5001r3' xlink:type='simple'>Figure 3<text:bookmark text:name='x1-5001r3'></text:bookmark></text:a>:    </text:span><text:span text:style-name='textbf'><text:span text:style-name='ecbx-1095'>Fig.</text:span><text:span text:style-name='ecbx-1095'> 3.    Interaction    strength    controls    the    transition    between</text:span>
+<text:span text:style-name='ecbx-1095'>coalescence   outcome   types   in   simulation.</text:span></text:span>   <text:span text:style-name='textbf'><text:span text:style-name='ecbx-1095'>a</text:span></text:span>,   Simulated   coalescence   outcome
+maps    at    three    representative    <text:span text:style-name='textcolor33'>values    of    the    interaction-strength    parameter</text:span>:    <!--  l. 70 
+ --><draw:frame draw:name='mobj-71' draw:style-name='mml-inline' draw:z-index='0' text:anchor-type='as-char'><draw:object xlink:actuate='onLoad' xlink:href='./main-m71' xlink:show='embed' xlink:type='simple'></draw:object></draw:frame>,
+<!--  l. 70 
+ --><draw:frame draw:name='mobj-72' draw:style-name='mml-inline' draw:z-index='0' text:anchor-type='as-char'><draw:object xlink:actuate='onLoad' xlink:href='./main-m72' xlink:show='embed' xlink:type='simple'></draw:object></draw:frame>,
+<!--  l. 70 
+ --><draw:frame draw:name='mobj-73' draw:style-name='mml-inline' draw:z-index='0' text:anchor-type='as-char'><draw:object xlink:actuate='onLoad' xlink:href='./main-m73' xlink:show='embed' xlink:type='simple'></draw:object></draw:frame>;
+<!--  l. 70 
+ --><draw:frame draw:name='mobj-74' draw:style-name='mml-inline' draw:z-index='0' text:anchor-type='as-char'><draw:object xlink:actuate='onLoad' xlink:href='./main-m74' xlink:show='embed' xlink:type='simple'></draw:object></draw:frame>
+simulations  per  condition.  Outcomes  shift  from  central  Mixtures  at  weak  interactions  (<!--  l. 70 
+ --><draw:frame draw:name='mobj-75' draw:style-name='mml-inline' draw:z-index='0' text:anchor-type='as-char'><draw:object xlink:actuate='onLoad' xlink:href='./main-m75' xlink:show='embed' xlink:type='simple'></draw:object></draw:frame>)
+to axis-aligned Dominance at strong interactions (<!--  l. 70 
+ --><draw:frame draw:name='mobj-76' draw:style-name='mml-inline' draw:z-index='0' text:anchor-type='as-char'><draw:object xlink:actuate='onLoad' xlink:href='./main-m76' xlink:show='embed' xlink:type='simple'></draw:object></draw:frame>).
+Histograms   show   the   Parental   Dominance   Index   (PDI)   transitioning   from   unimodal
+to   bimodal.   <text:span text:style-name='textbf'><text:span text:style-name='ecbx-1095'>b</text:span></text:span>,   Outcome   fractions   across   <text:span text:style-name='textcolor34'>interaction-strength   parameter   values</text:span>   (<!--  l. 70 
+ --><draw:frame draw:name='mobj-77' draw:style-name='mml-inline' draw:z-index='0' text:anchor-type='as-char'><draw:object xlink:actuate='onLoad' xlink:href='./main-m77' xlink:show='embed' xlink:type='simple'></draw:object></draw:frame>–<!--  l. 70 
+ --><draw:frame draw:name='mobj-78' draw:style-name='mml-inline' draw:z-index='0' text:anchor-type='as-char'><draw:object xlink:actuate='onLoad' xlink:href='./main-m78' xlink:show='embed' xlink:type='simple'></draw:object></draw:frame>
+).
+Mixture predominates at low <!--  l. 70 
+ --><draw:frame draw:name='mobj-79' draw:style-name='mml-inline' draw:z-index='0' text:anchor-type='as-char'><draw:object xlink:actuate='onLoad' xlink:href='./main-m79' xlink:show='embed' xlink:type='simple'></draw:object></draw:frame>,
+while Dominance becomes prevalent as <!--  l. 70 
+ --><draw:frame draw:name='mobj-80' draw:style-name='mml-inline' draw:z-index='0' text:anchor-type='as-char'><draw:object xlink:actuate='onLoad' xlink:href='./main-m80' xlink:show='embed' xlink:type='simple'></draw:object></draw:frame>
+increases. Restructuring peaks at intermediate strengths. Error bars, s.e.m.                  </text:span>
+                                                                                      
+                                                                                      
+   </text:p> 
+<text:p text:style-name='bigskip'></text:p></text:section>
+   <!--  end of subsection 
+ --><!--  start of subsection 
+ --><text:h text:outline-level='3' text:style-name='Heading-3'><text:span text:style-name='subsection'>2.4    </text:span><text:bookmark text:name='x1-60002.4'></text:bookmark>Nutrient-dependent invasion resistance and environmental feedbacks shift coalescence
+outcomes</text:h> 
+
+<!--  l. 79 
+ --><text:p text:style-name='Text-body'><text:span text:style-name='textcolor35'>Following prior work showing that nutrient concentration can alter microbial competition and that
+pH-mediated environmental feedbacks can drive bacterial interactions<text:span text:style-name='textsuperscript'><text:a xlink:href='#bibitem34' xlink:type='simple'>34</text:a>,<text:a xlink:href='#bibitem35' xlink:type='simple'>35</text:a>,<text:a xlink:href='#bibitem36' xlink:type='simple'>36</text:a>,<text:a xlink:href='#bibitem37' xlink:type='simple'>37</text:a></text:span>, we conducted
+additional coalescence experiments by removing glucose and urea from the Base medium or increasing
+their concentrations (Methods). This yielded two additional media conditions (Fig. <text:a xlink:href='#x1-6001r4' xlink:type='simple'>4<!--  tex4ht:ref: fig:fig4  
+ --></text:a>A): Nutr<!--  l. 79 
+ --><draw:frame draw:name='mobj-81' draw:style-name='mml-inline' draw:z-index='0' text:anchor-type='as-char'><draw:object xlink:actuate='onLoad' xlink:href='./main-m81' xlink:show='embed' xlink:type='simple'></draw:object></draw:frame> (no added glucose/urea) and Nutr<!--  l. 79 
+ --><draw:frame draw:name='mobj-82' draw:style-name='mml-inline' draw:z-index='0' text:anchor-type='as-char'><draw:object xlink:actuate='onLoad' xlink:href='./main-m82' xlink:show='embed' xlink:type='simple'></draw:object></draw:frame> (high supplementation). To approximate how net interaction effects change across
+nutrient conditions, we measured invasion resistance using pairwise invasion assays among the
+12 most abundant isolates (95:5 initial frequency; Methods, Supplementary Figs. 7–9).
+The fraction of failed invasions increased monotonically with nutrient supply (Nutr<!--  l. 79 
+ --><draw:frame draw:name='mobj-83' draw:style-name='mml-inline' draw:z-index='0' text:anchor-type='as-char'><draw:object xlink:actuate='onLoad' xlink:href='./main-m83' xlink:show='embed' xlink:type='simple'></draw:object></draw:frame>: <!--  l. 79 
+ --><draw:frame draw:name='mobj-84' draw:style-name='mml-inline' draw:z-index='0' text:anchor-type='as-char'><draw:object xlink:actuate='onLoad' xlink:href='./main-m84' xlink:show='embed' xlink:type='simple'></draw:object></draw:frame>; Base: <!--  l. 79 
+ --><draw:frame draw:name='mobj-85' draw:style-name='mml-inline' draw:z-index='0' text:anchor-type='as-char'><draw:object xlink:actuate='onLoad' xlink:href='./main-m85' xlink:show='embed' xlink:type='simple'></draw:object></draw:frame>; Nutr<!--  l. 79 
+ --><draw:frame draw:name='mobj-86' draw:style-name='mml-inline' draw:z-index='0' text:anchor-type='as-char'><draw:object xlink:actuate='onLoad' xlink:href='./main-m86' xlink:show='embed' xlink:type='simple'></draw:object></draw:frame>: <!--  l. 79 
+ --><draw:frame draw:name='mobj-87' draw:style-name='mml-inline' draw:z-index='0' text:anchor-type='as-char'><draw:object xlink:actuate='onLoad' xlink:href='./main-m87' xlink:show='embed' xlink:type='simple'></draw:object></draw:frame>; mean <!--  l. 79 
+ --><draw:frame draw:name='mobj-88' draw:style-name='mml-inline' draw:z-index='0' text:anchor-type='as-char'><draw:object xlink:actuate='onLoad' xlink:href='./main-m88' xlink:show='embed' xlink:type='simple'></draw:object></draw:frame> s.e.m.; Fig. <text:a xlink:href='#x1-6001r4' xlink:type='simple'>4<!--  tex4ht:ref: fig:fig4  
+ --></text:a>B), indicating that invasion resistance increases across the nutrient gradient.</text:span>
+</text:p> 
+<!--  l. 81 
+ --><text:p text:style-name='First-line-indent'>   <text:span text:style-name='textcolor36'>We then performed coalescence experiments in Nutr<!--  l. 81 
+ --><draw:frame draw:name='mobj-89' draw:style-name='mml-inline' draw:z-index='0' text:anchor-type='as-char'><draw:object xlink:actuate='onLoad' xlink:href='./main-m89' xlink:show='embed' xlink:type='simple'></draw:object></draw:frame> and Nutr<!--  l. 81 
+ --><draw:frame draw:name='mobj-90' draw:style-name='mml-inline' draw:z-index='0' text:anchor-type='as-char'><draw:object xlink:actuate='onLoad' xlink:href='./main-m90' xlink:show='embed' xlink:type='simple'></draw:object></draw:frame> media using the same parental-community assembly scheme to examine whether this
+nutrient-dependent change in invasion resistance is accompanied by the predicted shift in coalescence
+outcomes.</text:span> The distribution of outcomes in similarity space shifted systematically with nutrient
+concentration (Fig. <text:a xlink:href='#x1-6001r4' xlink:type='simple'>4<!--  tex4ht:ref: fig:fig4  
+ --></text:a>C), which we quantified by the fraction of each outcome type (Fig. <text:a xlink:href='#x1-6001r4' xlink:type='simple'>4<!--  tex4ht:ref: fig:fig4  
+ --></text:a>D). In Nutr<!--  l. 81 
+ --><draw:frame draw:name='mobj-91' draw:style-name='mml-inline' draw:z-index='0' text:anchor-type='as-char'><draw:object xlink:actuate='onLoad' xlink:href='./main-m91' xlink:show='embed' xlink:type='simple'></draw:object></draw:frame> (<!--  l. 81 
+ --><draw:frame draw:name='mobj-92' draw:style-name='mml-inline' draw:z-index='0' text:anchor-type='as-char'><draw:object xlink:actuate='onLoad' xlink:href='./main-m92' xlink:show='embed' xlink:type='simple'></draw:object></draw:frame>), where interactions are weakest, Mixture was the most frequent outcome (53%), and Dominance
+was substantially reduced to 39% compared to the Base medium (Dominance: 65%, Mixture: 4%). In
+Nutr<!--  l. 81 
+ --><draw:frame draw:name='mobj-93' draw:style-name='mml-inline' draw:z-index='0' text:anchor-type='as-char'><draw:object xlink:actuate='onLoad' xlink:href='./main-m93' xlink:show='embed' xlink:type='simple'></draw:object></draw:frame> (<!--  l. 81 
+ --><draw:frame draw:name='mobj-94' draw:style-name='mml-inline' draw:z-index='0' text:anchor-type='as-char'><draw:object xlink:actuate='onLoad' xlink:href='./main-m94' xlink:show='embed' xlink:type='simple'></draw:object></draw:frame>), Dominance further increased to 76%. <text:span text:style-name='textcolor37'>The distributions of PDI, asymmetry, and retention
+magnitude show the same nutrient-dependent shift before applying category labels (Supplementary
+Figs. 10–12).</text:span> Pairwise selection correlation analysis confirmed that this shift corresponds
+to a transition in the level of selection (Extended Data Fig. 6). In Base and Nutr<!--  l. 81 
+ --><draw:frame draw:name='mobj-95' draw:style-name='mml-inline' draw:z-index='0' text:anchor-type='as-char'><draw:object xlink:actuate='onLoad' xlink:href='./main-m95' xlink:show='embed' xlink:type='simple'></draw:object></draw:frame> media, within-community species pairs showed significantly higher selection correlation than cross-community
+pairs (<!--  l. 81 
+ --><draw:frame draw:name='mobj-96' draw:style-name='mml-inline' draw:z-index='0' text:anchor-type='as-char'><draw:object xlink:actuate='onLoad' xlink:href='./main-m96' xlink:show='embed' xlink:type='simple'></draw:object></draw:frame>), consistent with community-level selection. In Nutr<!--  l. 81 
+ --><draw:frame draw:name='mobj-97' draw:style-name='mml-inline' draw:z-index='0' text:anchor-type='as-char'><draw:object xlink:actuate='onLoad' xlink:href='./main-m97' xlink:show='embed' xlink:type='simple'></draw:object></draw:frame>, no such correlation was observed, consistent with weaker origin-correlated persistence and more
+species-level dynamics. <text:span text:style-name='textcolor38'>We next tested whether nutrient-dependent changes in parental-community
+properties, including parental-community biomass heterogeneity and initial richness effects, could
+explain this trend; however, Dominance outcomes were not biased toward the higher-biomass parental
+community, and these factors did not account for the nutrient-dependent increase in Dominance or
+correlated species fates (Supplementary Note 5 and Supplementary Figs. 13–15, 45).</text:span> These results
+are consistent with the qualitative theoretical prediction: lower invasion resistance and
+weaker effective interactions yield Mixture with uncorrelated species fates, while higher
+invasion resistance and stronger effective interactions yield Dominance with community-level
+selection.
+   </text:p> 
+<text:section text:name='fig' text:style-name='Figure'><text:p text:style-name='bigskip'></text:p>
+                                                                                      
+                                                                                      
+                                                                                      
+                                                                                      
+<!--  l. 86 
+ --><text:p text:style-name='Text-body'> <draw:frame draw:name='figure_main_4_nutrient_perturbation-.png' draw:z-index='0' text:anchor-type='as-char'><draw:image xlink:actuate='onLoad' xlink:href='Pictures/figure_main_4_nutrient_perturbation-.png' xlink:show='embed' xlink:type='simple'></draw:image><!--  draw:name="IMG"  
+svg:width="452.9679pt" svg:height="453.09233pt"  
+ --><svg:title>ALT</svg:title></draw:frame> <text:bookmark text:name='x1-6001r4'></text:bookmark>
+</text:p> 
+<!--  l. 87 
+ --><text:p text:style-name='Text-body'></text:p> 
+
+                                                                                      
+                                                                                      
+<!--  l. 87 
+ --><text:p text:style-name='Text-body'> 
+<text:span text:style-name='caption'><text:span text:style-name='caption-title'><text:a xlink:href='#x1-6001r4' xlink:type='simple'>Figure 4<text:bookmark text:name='x1-6001r4'></text:bookmark></text:a>:   </text:span><text:span text:style-name='textbf'><text:span text:style-name='ecbx-1095'>Fig.</text:span><text:span text:style-name='ecbx-1095'> 4.   Nutrient   concentration   modulates   invasion   resistance   and</text:span>
+<text:span text:style-name='ecbx-1095'>coalescence outcomes.</text:span></text:span> <text:span text:style-name='textcolor41'>Experimental manipulation of nutrient concentration tests whether
+increased invasion resistance is associated with a shift in coalescence outcomes from Mixture
+toward  Dominance.</text:span>  <text:span text:style-name='textbf'><text:span text:style-name='ecbx-1095'>a</text:span></text:span>,  Schematic  of  nutrient  manipulation:  we  varied  glucose  and  urea
+concentrations  to  create  three  media  conditions  with  increasing  invasion  resistance  (Nutr<!--  l. 87 
+ --><draw:frame draw:name='mobj-115' draw:style-name='mml-inline' draw:z-index='0' text:anchor-type='as-char'><draw:object xlink:actuate='onLoad' xlink:href='./main-m115' xlink:show='embed' xlink:type='simple'></draw:object></draw:frame>,
+Base, Nutr<!--  l. 87 
+ --><draw:frame draw:name='mobj-116' draw:style-name='mml-inline' draw:z-index='0' text:anchor-type='as-char'><draw:object xlink:actuate='onLoad' xlink:href='./main-m116' xlink:show='embed' xlink:type='simple'></draw:object></draw:frame>).
+<text:span text:style-name='textbf'><text:span text:style-name='ecbx-1095'>b</text:span></text:span>,      Pairwise      invasion      assays      show      that      failed      invasion      frequency
+among     the     12     most     abundant     isolates     (95:5     initial     frequency,     <!--  l. 87 
+ --><draw:frame draw:name='mobj-117' draw:style-name='mml-inline' draw:z-index='0' text:anchor-type='as-char'><draw:object xlink:actuate='onLoad' xlink:href='./main-m117' xlink:show='embed' xlink:type='simple'></draw:object></draw:frame>
+assays   per   medium)   increases   monotonically   with   nutrient   concentration   (Nutr<!--  l. 87 
+ --><draw:frame draw:name='mobj-118' draw:style-name='mml-inline' draw:z-index='0' text:anchor-type='as-char'><draw:object xlink:actuate='onLoad' xlink:href='./main-m118' xlink:show='embed' xlink:type='simple'></draw:object></draw:frame>:
+<!--  l. 87 
+ --><draw:frame draw:name='mobj-119' draw:style-name='mml-inline' draw:z-index='0' text:anchor-type='as-char'><draw:object xlink:actuate='onLoad' xlink:href='./main-m119' xlink:show='embed' xlink:type='simple'></draw:object></draw:frame>,
+Base: <!--  l. 87 
+ --><draw:frame draw:name='mobj-120' draw:style-name='mml-inline' draw:z-index='0' text:anchor-type='as-char'><draw:object xlink:actuate='onLoad' xlink:href='./main-m120' xlink:show='embed' xlink:type='simple'></draw:object></draw:frame>,
+Nutr<!--  l. 87 
+ --><draw:frame draw:name='mobj-121' draw:style-name='mml-inline' draw:z-index='0' text:anchor-type='as-char'><draw:object xlink:actuate='onLoad' xlink:href='./main-m121' xlink:show='embed' xlink:type='simple'></draw:object></draw:frame>:
+<!--  l. 87 
+ --><draw:frame draw:name='mobj-122' draw:style-name='mml-inline' draw:z-index='0' text:anchor-type='as-char'><draw:object xlink:actuate='onLoad' xlink:href='./main-m122' xlink:show='embed' xlink:type='simple'></draw:object></draw:frame>;
+mean <!--  l. 87 
+ --><draw:frame draw:name='mobj-123' draw:style-name='mml-inline' draw:z-index='0' text:anchor-type='as-char'><draw:object xlink:actuate='onLoad' xlink:href='./main-m123' xlink:show='embed' xlink:type='simple'></draw:object></draw:frame>
+s.e.m.).    <text:span text:style-name='textbf'><text:span text:style-name='ecbx-1095'>c</text:span></text:span>,    Coalescence    outcome    distributions    shift    systematically    with    nutrient
+concentration.  Scatter  plots  show  outcomes  in  similarity  space  for  each  medium  (Nutr<!--  l. 87 
+ --><draw:frame draw:name='mobj-124' draw:style-name='mml-inline' draw:z-index='0' text:anchor-type='as-char'><draw:object xlink:actuate='onLoad' xlink:href='./main-m124' xlink:show='embed' xlink:type='simple'></draw:object></draw:frame>:
+<!--  l. 87 
+ --><draw:frame draw:name='mobj-125' draw:style-name='mml-inline' draw:z-index='0' text:anchor-type='as-char'><draw:object xlink:actuate='onLoad' xlink:href='./main-m125' xlink:show='embed' xlink:type='simple'></draw:object></draw:frame>,
+magenta; Base: <!--  l. 87 
+ --><draw:frame draw:name='mobj-126' draw:style-name='mml-inline' draw:z-index='0' text:anchor-type='as-char'><draw:object xlink:actuate='onLoad' xlink:href='./main-m126' xlink:show='embed' xlink:type='simple'></draw:object></draw:frame>,
+brown; Nutr<!--  l. 87 
+ --><draw:frame draw:name='mobj-127' draw:style-name='mml-inline' draw:z-index='0' text:anchor-type='as-char'><draw:object xlink:actuate='onLoad' xlink:href='./main-m127' xlink:show='embed' xlink:type='simple'></draw:object></draw:frame>:
+<!--  l. 87 
+ --><draw:frame draw:name='mobj-128' draw:style-name='mml-inline' draw:z-index='0' text:anchor-type='as-char'><draw:object xlink:actuate='onLoad' xlink:href='./main-m128' xlink:show='embed' xlink:type='simple'></draw:object></draw:frame>,
+orange);  different  symbols  indicate  initial  richness.  <text:span text:style-name='textcolor42'>Gray  points  represent  the  symmetric
+counterpart  of  each  coalescence  event  (community  B  versus  A).</text:span>  Histograms  show  PDI
+distributions. <text:span text:style-name='textbf'><text:span text:style-name='ecbx-1095'>d</text:span></text:span>, The fraction of Dominance increases with nutrient concentration (39% in Nutr<!--  l. 87 
+ --><draw:frame draw:name='mobj-129' draw:style-name='mml-inline' draw:z-index='0' text:anchor-type='as-char'><draw:object xlink:actuate='onLoad' xlink:href='./main-m129' xlink:show='embed' xlink:type='simple'></draw:object></draw:frame>,
+65% in Base, 76% in Nutr<!--  l. 87 
+ --><draw:frame draw:name='mobj-130' draw:style-name='mml-inline' draw:z-index='0' text:anchor-type='as-char'><draw:object xlink:actuate='onLoad' xlink:href='./main-m130' xlink:show='embed' xlink:type='simple'></draw:object></draw:frame>)
+while   Mixture   declines   from   53%   to   4%   to   6%   (chi-square   test   for   trend,   <!--  l. 87 
+ --><draw:frame draw:name='mobj-131' draw:style-name='mml-inline' draw:z-index='0' text:anchor-type='as-char'><draw:object xlink:actuate='onLoad' xlink:href='./main-m131' xlink:show='embed' xlink:type='simple'></draw:object></draw:frame>),
+consistent with model predictions. Error bars, s.e.m.                                       </text:span>
+                                                                                      
+                                                                                      
+                                                                                      
+                                                                                      
+   </text:p> 
+<text:p text:style-name='bigskip'></text:p></text:section>
+   <!--  end of subsection 
+ --><!--  start of subsection 
+ --><text:h text:outline-level='3' text:style-name='Heading-3'><text:span text:style-name='subsection'>2.5    </text:span><text:bookmark text:name='x1-70002.5'></text:bookmark>Dominant community predictability reveals two mechanistic regimes</text:h> 
+
+<!--  l. 96 
+ --><text:p text:style-name='Text-body'>We observed Dominance in both Base and Nutr<!--  l. 96 
+ --><draw:frame draw:name='mobj-132' draw:style-name='mml-inline' draw:z-index='0' text:anchor-type='as-char'><draw:object xlink:actuate='onLoad' xlink:href='./main-m132' xlink:show='embed' xlink:type='simple'></draw:object></draw:frame> media, consistent with community-level selection as confirmed by pairwise selection correlation
+(Extended Data Fig. 6). We next asked whether we can predict which parental community will
+win during coalescence. Prior work has suggested that species-level competitive outcomes
+may correlate with Dominance direction<text:span text:style-name='textsuperscript'><text:a xlink:href='#bibitem10' xlink:type='simple'>10</text:a>,<text:a xlink:href='#bibitem38' xlink:type='simple'>38</text:a></text:span>. Inspired by these observations, we tested
+whether pairwise competition between dominant species<text:span text:style-name='textsuperscript'><text:a xlink:href='#bibitem34' xlink:type='simple'>34</text:a>,<text:a xlink:href='#bibitem37' xlink:type='simple'>37</text:a></text:span> predicts which community wins
+(Fig. <text:a xlink:href='#x1-7001r5' xlink:type='simple'>5<!--  tex4ht:ref: fig:fig5  
+ --></text:a>A).
+</text:p> 
+<!--  l. 98 
+ --><text:p text:style-name='First-line-indent'>   The relative abundance of dominant species in stabilized parental communities increased with nutrient
+concentration (<!--  l. 98 
+ --><draw:frame draw:name='mobj-133' draw:style-name='mml-inline' draw:z-index='0' text:anchor-type='as-char'><draw:object xlink:actuate='onLoad' xlink:href='./main-m133' xlink:show='embed' xlink:type='simple'></draw:object></draw:frame> in Nutr<!--  l. 98 
+ --><draw:frame draw:name='mobj-134' draw:style-name='mml-inline' draw:z-index='0' text:anchor-type='as-char'><draw:object xlink:actuate='onLoad' xlink:href='./main-m134' xlink:show='embed' xlink:type='simple'></draw:object></draw:frame>, <!--  l. 98 
+ --><draw:frame draw:name='mobj-135' draw:style-name='mml-inline' draw:z-index='0' text:anchor-type='as-char'><draw:object xlink:actuate='onLoad' xlink:href='./main-m135' xlink:show='embed' xlink:type='simple'></draw:object></draw:frame> in Base, <!--  l. 98 
+ --><draw:frame draw:name='mobj-136' draw:style-name='mml-inline' draw:z-index='0' text:anchor-type='as-char'><draw:object xlink:actuate='onLoad' xlink:href='./main-m136' xlink:show='embed' xlink:type='simple'></draw:object></draw:frame> in Nutr<!--  l. 98 
+ --><draw:frame draw:name='mobj-137' draw:style-name='mml-inline' draw:z-index='0' text:anchor-type='as-char'><draw:object xlink:actuate='onLoad' xlink:href='./main-m137' xlink:show='embed' xlink:type='simple'></draw:object></draw:frame>; mean <!--  l. 98 
+ --><draw:frame draw:name='mobj-138' draw:style-name='mml-inline' draw:z-index='0' text:anchor-type='as-char'><draw:object xlink:actuate='onLoad' xlink:href='./main-m138' xlink:show='embed' xlink:type='simple'></draw:object></draw:frame> s.e.m., Fig. <text:a xlink:href='#x1-7001r5' xlink:type='simple'>5<!--  tex4ht:ref: fig:fig5  
+ --></text:a>B), suggesting that dominant species exert greater influence under
+higher nutrient concentration. We therefore tested whether pairwise competition between
+dominant species predicts the coalescence outcome by analyzing the linear relationship
+between dominant-species competitive success (from invasion assays) and the PDI of
+coalescence outcomes (Fig. <text:a xlink:href='#x1-7001r5' xlink:type='simple'>5<!--  tex4ht:ref: fig:fig5  
+ --></text:a>C). Predictive power varied markedly across media: in Nutr<!--  l. 98 
+ --><draw:frame draw:name='mobj-139' draw:style-name='mml-inline' draw:z-index='0' text:anchor-type='as-char'><draw:object xlink:actuate='onLoad' xlink:href='./main-m139' xlink:show='embed' xlink:type='simple'></draw:object></draw:frame>, where Mixture predominates and pairwise selection correlation is weak, pairwise competition showed no
+predictive power (<!--  l. 98 
+ --><draw:frame draw:name='mobj-140' draw:style-name='mml-inline' draw:z-index='0' text:anchor-type='as-char'><draw:object xlink:actuate='onLoad' xlink:href='./main-m140' xlink:show='embed' xlink:type='simple'></draw:object></draw:frame>); in Base medium, predictive power was weak (<!--  l. 98 
+ --><draw:frame draw:name='mobj-141' draw:style-name='mml-inline' draw:z-index='0' text:anchor-type='as-char'><draw:object xlink:actuate='onLoad' xlink:href='./main-m141' xlink:show='embed' xlink:type='simple'></draw:object></draw:frame>), consistent with collective multi-species dynamics shaping outcomes; in Nutr<!--  l. 98 
+ --><draw:frame draw:name='mobj-142' draw:style-name='mml-inline' draw:z-index='0' text:anchor-type='as-char'><draw:object xlink:actuate='onLoad' xlink:href='./main-m142' xlink:show='embed' xlink:type='simple'></draw:object></draw:frame>, pairwise competition was more predictive (<!--  l. 98 
+ --><draw:frame draw:name='mobj-143' draw:style-name='mml-inline' draw:z-index='0' text:anchor-type='as-char'><draw:object xlink:actuate='onLoad' xlink:href='./main-m143' xlink:show='embed' xlink:type='simple'></draw:object></draw:frame>), indicating that dominant species contribute substantially to determining which community wins.
+These results suggest that community-level selection spans a mechanistic continuum: at one end,
+an emergent regime (Base medium) where multi-species dynamics collectively shape the
+outcome and no single species trait is predictive, and at the other, a top-down regime (Nutr<!--  l. 98 
+ --><draw:frame draw:name='mobj-144' draw:style-name='mml-inline' draw:z-index='0' text:anchor-type='as-char'><draw:object xlink:actuate='onLoad' xlink:href='./main-m144' xlink:show='embed' xlink:type='simple'></draw:object></draw:frame> medium) where a few dominant taxa determine the winner. <text:span text:style-name='textcolor43'>The Nutr<!--  l. 98 
+ --><draw:frame draw:name='mobj-145' draw:style-name='mml-inline' draw:z-index='0' text:anchor-type='as-char'><draw:object xlink:actuate='onLoad' xlink:href='./main-m145' xlink:show='embed' xlink:type='simple'></draw:object></draw:frame> predictability trend remained significant after recalculating PDI with dominant species excluded (Spearman
+rank-correlation tests: <!--  l. 98 
+ --><draw:frame draw:name='mobj-146' draw:style-name='mml-inline' draw:z-index='0' text:anchor-type='as-char'><draw:object xlink:actuate='onLoad' xlink:href='./main-m146' xlink:show='embed' xlink:type='simple'></draw:object></draw:frame>  after removing the coalesced-community dominant species and <!--  l. 98 
+ --><draw:frame draw:name='mobj-147' draw:style-name='mml-inline' draw:z-index='0' text:anchor-type='as-char'><draw:object xlink:actuate='onLoad' xlink:href='./main-m147' xlink:show='embed' xlink:type='simple'></draw:object></draw:frame> after removing the two parental-community dominant species; Supplementary Fig. 16), indicating
+that it is not solely a dominant-species artifact in the PDI calculation.</text:span>
+</text:p> 
+<!--  l. 100 
+ --><text:p text:style-name='First-line-indent'>   <text:span text:style-name='textcolor44'>We next asked whether environmental modification through pH could contribute to
+the top-down regime.</text:span> In our system, dominant species are often strong pH modifiers that
+either acidify or alkalinize the medium (Supplementary Fig. 17). In both Base and Nutr<!--  l. 100 
+ --><draw:frame draw:name='mobj-148' draw:style-name='mml-inline' draw:z-index='0' text:anchor-type='as-char'><draw:object xlink:actuate='onLoad' xlink:href='./main-m148' xlink:show='embed' xlink:type='simple'></draw:object></draw:frame> media, when these pH-modifying species become dominant within a community, <text:span text:style-name='textcolor45'>their identities
+predict</text:span> the community’s overall pH. Communities dominated by acidifiers become acidic, while those
+dominated by alkalizers become alkaline (Supplementary Fig. 18). <text:span text:style-name='textcolor46'>In coalescence events between acidic
+(pH <!--  l. 100 
+ --><draw:frame draw:name='mobj-149' draw:style-name='mml-inline' draw:z-index='0' text:anchor-type='as-char'><draw:object xlink:actuate='onLoad' xlink:href='./main-m149' xlink:show='embed' xlink:type='simple'></draw:object></draw:frame> 6.5) and alkaline (pH <!--  l. 100 
+ --><draw:frame draw:name='mobj-150' draw:style-name='mml-inline' draw:z-index='0' text:anchor-type='as-char'><draw:object xlink:actuate='onLoad' xlink:href='./main-m150' xlink:show='embed' xlink:type='simple'></draw:object></draw:frame> 7.5) parental communities, the acidic community dominated in only 56% of cases in Base medium
+(<!--  l. 100 
+ --><draw:frame draw:name='mobj-151' draw:style-name='mml-inline' draw:z-index='0' text:anchor-type='as-char'><draw:object xlink:actuate='onLoad' xlink:href='./main-m151' xlink:show='embed' xlink:type='simple'></draw:object></draw:frame>) and in 91% of cases in Nutr<!--  l. 100 
+ --><draw:frame draw:name='mobj-152' draw:style-name='mml-inline' draw:z-index='0' text:anchor-type='as-char'><draw:object xlink:actuate='onLoad' xlink:href='./main-m152' xlink:show='embed' xlink:type='simple'></draw:object></draw:frame> medium (<!--  l. 100 
+ --><draw:frame draw:name='mobj-153' draw:style-name='mml-inline' draw:z-index='0' text:anchor-type='as-char'><draw:object xlink:actuate='onLoad' xlink:href='./main-m153' xlink:show='embed' xlink:type='simple'></draw:object></draw:frame>) (Extended Data Fig. 7). The difference between Base and Nutr<!--  l. 100 
+ --><draw:frame draw:name='mobj-154' draw:style-name='mml-inline' draw:z-index='0' text:anchor-type='as-char'><draw:object xlink:actuate='onLoad' xlink:href='./main-m154' xlink:show='embed' xlink:type='simple'></draw:object></draw:frame> proportions was significant (two-sided Fisher exact test, <!--  l. 100 
+ --><draw:frame draw:name='mobj-155' draw:style-name='mml-inline' draw:z-index='0' text:anchor-type='as-char'><draw:object xlink:actuate='onLoad' xlink:href='./main-m155' xlink:show='embed' xlink:type='simple'></draw:object></draw:frame>), consistent with the hypothesis that high nutrients amplify metabolic activity,
+thereby intensifying pH modification and excluding pH-sensitive species<text:span text:style-name='textsuperscript'><text:a xlink:href='#bibitem36' xlink:type='simple'>36</text:a>,<text:a xlink:href='#bibitem37' xlink:type='simple'>37</text:a></text:span>.</text:span>
+<text:span text:style-name='textcolor47'>Together, the dominant-species and strict pH-contrast analyses suggest that Nutr<!--  l. 100 
+ --><draw:frame draw:name='mobj-156' draw:style-name='mml-inline' draw:z-index='0' text:anchor-type='as-char'><draw:object xlink:actuate='onLoad' xlink:href='./main-m156' xlink:show='embed' xlink:type='simple'></draw:object></draw:frame> Dominance may reflect a top-down regime, in which dominant taxa and associated environmental
+feedbacks help determine winner identity. However, this pH-based analysis addresses winner direction
+in high-contrast acidic–alkaline pairings and does not by itself account for the full Dominance pattern
+across all coalescence events. Dominance in Base is less directly explained by the measured
+dominant-species and pH effects tested here.</text:span>
+   </text:p> 
+<text:section text:name='fig' text:style-name='Figure'><text:p text:style-name='bigskip'></text:p>
+                                                                                      
+                                                                                      
+                                                                                      
+                                                                                      
+<!--  l. 106 
+ --><text:p text:style-name='Text-body'> <draw:frame draw:name='figure_main_5_predictability-.png' draw:z-index='0' text:anchor-type='as-char'><draw:image xlink:actuate='onLoad' xlink:href='Pictures/figure_main_5_predictability-.png' xlink:show='embed' xlink:type='simple'></draw:image><!--  draw:name="IMG"  
+svg:width="452.9679pt" svg:height="453.09233pt"  
+ --><svg:title>ALT</svg:title></draw:frame> <text:bookmark text:name='x1-7001r5'></text:bookmark>
+</text:p> 
+<!--  l. 107 
+ --><text:p text:style-name='Text-body'></text:p> 
+
+<!--  l. 107 
+ --><text:p text:style-name='Text-body'> 
+<text:span text:style-name='caption'><text:span text:style-name='caption-title'><text:a xlink:href='#x1-7001r5' xlink:type='simple'>Figure 5<text:bookmark text:name='x1-7001r5'></text:bookmark></text:a>:    </text:span><text:span text:style-name='textbf'><text:span text:style-name='ecbx-1095'>Fig.</text:span><text:span text:style-name='ecbx-1095'> 5.    Predictability    of    Dominance    direction    reveals    two</text:span>
+<text:span text:style-name='ecbx-1095'>mechanistic  regimes.</text:span></text:span>  The  direction  of  Dominance  (which  parental  community  wins)
+becomes   increasingly   predictable   from   dominant   species   competition   across   media
+conditions,  distinguishing  an  emergent  regime  (Base)  from  a  top-down  regime  (Nutr<!--  l. 107 
+ --><draw:frame draw:name='mobj-171' draw:style-name='mml-inline' draw:z-index='0' text:anchor-type='as-char'><draw:object xlink:actuate='onLoad' xlink:href='./main-m171' xlink:show='embed' xlink:type='simple'></draw:object></draw:frame>).
+<text:span text:style-name='textbf'><text:span text:style-name='ecbx-1095'>a</text:span></text:span>, Schematic: can pairwise competition between dominant species predict which community
+wins? <text:span text:style-name='textbf'><text:span text:style-name='ecbx-1095'>b</text:span></text:span>, Relative abundance of dominant species increases with nutrient concentration (Nutr<!--  l. 107 
+ --><draw:frame draw:name='mobj-172' draw:style-name='mml-inline' draw:z-index='0' text:anchor-type='as-char'><draw:object xlink:actuate='onLoad' xlink:href='./main-m172' xlink:show='embed' xlink:type='simple'></draw:object></draw:frame>:
+<!--  l. 107 
+ --><draw:frame draw:name='mobj-173' draw:style-name='mml-inline' draw:z-index='0' text:anchor-type='as-char'><draw:object xlink:actuate='onLoad' xlink:href='./main-m173' xlink:show='embed' xlink:type='simple'></draw:object></draw:frame>;
+Base: <!--  l. 107 
+ --><draw:frame draw:name='mobj-174' draw:style-name='mml-inline' draw:z-index='0' text:anchor-type='as-char'><draw:object xlink:actuate='onLoad' xlink:href='./main-m174' xlink:show='embed' xlink:type='simple'></draw:object></draw:frame>;
+Nutr<!--  l. 107 
+ --><draw:frame draw:name='mobj-175' draw:style-name='mml-inline' draw:z-index='0' text:anchor-type='as-char'><draw:object xlink:actuate='onLoad' xlink:href='./main-m175' xlink:show='embed' xlink:type='simple'></draw:object></draw:frame>:
+<!--  l. 107 
+ --><draw:frame draw:name='mobj-176' draw:style-name='mml-inline' draw:z-index='0' text:anchor-type='as-char'><draw:object xlink:actuate='onLoad' xlink:href='./main-m176' xlink:show='embed' xlink:type='simple'></draw:object></draw:frame>;
+mean <!--  l. 107 
+ --><draw:frame draw:name='mobj-177' draw:style-name='mml-inline' draw:z-index='0' text:anchor-type='as-char'><draw:object xlink:actuate='onLoad' xlink:href='./main-m177' xlink:show='embed' xlink:type='simple'></draw:object></draw:frame>
+s.e.m.).    <text:span text:style-name='textbf'><text:span text:style-name='ecbx-1095'>c</text:span></text:span>,    Dominant    species    competitive    success    versus    PDI    of    coalescence
+outcomes;      gray      shading      indicates      Dominance.      Predictive      power:      <!--  l. 107 
+ --><draw:frame draw:name='mobj-178' draw:style-name='mml-inline' draw:z-index='0' text:anchor-type='as-char'><draw:object xlink:actuate='onLoad' xlink:href='./main-m178' xlink:show='embed' xlink:type='simple'></draw:object></draw:frame>
+in Nutr<!--  l. 107 
+ --><draw:frame draw:name='mobj-179' draw:style-name='mml-inline' draw:z-index='0' text:anchor-type='as-char'><draw:object xlink:actuate='onLoad' xlink:href='./main-m179' xlink:show='embed' xlink:type='simple'></draw:object></draw:frame>,
+<!--  l. 107 
+ --><draw:frame draw:name='mobj-180' draw:style-name='mml-inline' draw:z-index='0' text:anchor-type='as-char'><draw:object xlink:actuate='onLoad' xlink:href='./main-m180' xlink:show='embed' xlink:type='simple'></draw:object></draw:frame>
+(<!--  l. 107 
+ --><draw:frame draw:name='mobj-181' draw:style-name='mml-inline' draw:z-index='0' text:anchor-type='as-char'><draw:object xlink:actuate='onLoad' xlink:href='./main-m181' xlink:show='embed' xlink:type='simple'></draw:object></draw:frame>)
+in Base (emergent regime), and <!--  l. 107 
+ --><draw:frame draw:name='mobj-182' draw:style-name='mml-inline' draw:z-index='0' text:anchor-type='as-char'><draw:object xlink:actuate='onLoad' xlink:href='./main-m182' xlink:show='embed' xlink:type='simple'></draw:object></draw:frame>
+(<!--  l. 107 
+ --><draw:frame draw:name='mobj-183' draw:style-name='mml-inline' draw:z-index='0' text:anchor-type='as-char'><draw:object xlink:actuate='onLoad' xlink:href='./main-m183' xlink:show='embed' xlink:type='simple'></draw:object></draw:frame>)
+in Nutr<!--  l. 107 
+ --><draw:frame draw:name='mobj-184' draw:style-name='mml-inline' draw:z-index='0' text:anchor-type='as-char'><draw:object xlink:actuate='onLoad' xlink:href='./main-m184' xlink:show='embed' xlink:type='simple'></draw:object></draw:frame>
+(top-down regime). <text:span text:style-name='textcolor49'>Gray points represent the symmetric counterpart of each coalescence event
+(community B versus A).</text:span> Linear regression with 95% confidence intervals shown.             </text:span>
+                                                                                      
+                                                                                      
+   </text:p> 
+<text:p text:style-name='bigskip'></text:p></text:section>
+   <!--  end of subsection 
+ --><!--  start of subsection 
+ --><text:h text:outline-level='3' text:style-name='Heading-3'><text:span text:style-name='subsection'>2.6    </text:span><text:bookmark text:name='x1-80002.6'></text:bookmark><text:span text:style-name='textcolor50'>Nutrient-dependent coalescence outcomes in natural sample-derived communities</text:span></text:h> 
+
+<!--  l. 116 
+ --><text:p text:style-name='Text-body'>The synthetic communities described above were assembled from individually isolated bacterial strains,
+allowing precise control over initial composition but raising the question of whether these patterns also
+appear in taxonomically richer communities derived from natural environmental samples. <text:span text:style-name='textcolor51'>To address
+this, we performed coalescence experiments using natural sample-derived communities established
+through laboratory stabilization from environmental samples.</text:span>
+</text:p> 
+<!--  l. 118 
+ --><text:p text:style-name='First-line-indent'>   We collected six environmental samples from diverse microhabitats (soil, compost, and
+decomposing organic matter) and established bacterial communities through seven rounds
+of serial growth-dilution in laboratory media across all three nutrient conditions (Nutr<!--  l. 118 
+ --><draw:frame draw:name='mobj-185' draw:style-name='mml-inline' draw:z-index='0' text:anchor-type='as-char'><draw:object xlink:actuate='onLoad' xlink:href='./main-m185' xlink:show='embed' xlink:type='simple'></draw:object></draw:frame>, Base, and Nutr<!--  l. 118 
+ --><draw:frame draw:name='mobj-186' draw:style-name='mml-inline' draw:z-index='0' text:anchor-type='as-char'><draw:object xlink:actuate='onLoad' xlink:href='./main-m186' xlink:show='embed' xlink:type='simple'></draw:object></draw:frame>; Fig. <text:a xlink:href='#x1-8001r6' xlink:type='simple'>6<!--  tex4ht:ref: fig:fig6  
+ --></text:a>A). After stabilization, these natural sample-derived communities
+exhibited higher ASV richness than synthetic communities (mean of <!--  l. 118 
+ --><draw:frame draw:name='mobj-187' draw:style-name='mml-inline' draw:z-index='0' text:anchor-type='as-char'><draw:object xlink:actuate='onLoad' xlink:href='./main-m187' xlink:show='embed' xlink:type='simple'></draw:object></draw:frame> ASVs above 0.1% threshold, compared to <!--  l. 118 
+ --><draw:frame draw:name='mobj-188' draw:style-name='mml-inline' draw:z-index='0' text:anchor-type='as-char'><draw:object xlink:actuate='onLoad' xlink:href='./main-m188' xlink:show='embed' xlink:type='simple'></draw:object></draw:frame> in synthetic communities; Supplementary Figs. 19–21) and <text:span text:style-name='textcolor52'>retained source-specific taxonomic
+structure at both ASV and genus levels (Supplementary Fig. 22).</text:span>
+</text:p> 
+<!--  l. 120 
+ --><text:p text:style-name='First-line-indent'>   We performed 15 pairwise coalescence events with two biological replicates each (<!--  l. 120 
+ --><draw:frame draw:name='mobj-189' draw:style-name='mml-inline' draw:z-index='0' text:anchor-type='as-char'><draw:object xlink:actuate='onLoad' xlink:href='./main-m189' xlink:show='embed' xlink:type='simple'></draw:object></draw:frame> per condition) across all three nutrient conditions after stabilization and analyzed outcomes using
+the same similarity framework applied to synthetic communities. Natural sample-derived communities
+showed similar patterns to synthetic communities: outcomes clustered along the axes in similarity
+space (Fig. <text:a xlink:href='#x1-8001r6' xlink:type='simple'>6<!--  tex4ht:ref: fig:fig6  
+ --></text:a>B,C). The fraction of Dominance outcomes increased with nutrient concentration (37% in
+Nutr<!--  l. 120 
+ --><draw:frame draw:name='mobj-190' draw:style-name='mml-inline' draw:z-index='0' text:anchor-type='as-char'><draw:object xlink:actuate='onLoad' xlink:href='./main-m190' xlink:show='embed' xlink:type='simple'></draw:object></draw:frame>, 70% in Base, 77% in Nutr<!--  l. 120 
+ --><draw:frame draw:name='mobj-191' draw:style-name='mml-inline' draw:z-index='0' text:anchor-type='as-char'><draw:object xlink:actuate='onLoad' xlink:href='./main-m191' xlink:show='embed' xlink:type='simple'></draw:object></draw:frame>), mirroring the nutrient-dependent trend observed in synthetic communities. <text:span text:style-name='textcolor53'>These communities
+showed higher Restructuring fractions, possibly reflecting greater taxonomic diversity and more
+complex interaction networks. Because these communities were laboratory-stabilized before
+coalescence, pre-selection in defined media could have contributed to their similarity to
+synthetic-community outcomes. However, their higher richness and retained source-specific taxonomic
+structure indicate that stabilization did not produce complete ASV- or genus-level taxonomic collapse
+(Supplementary Figs. 19–22 and Supplementary Note 6). Overall, these results suggest that the
+nutrient-dependent increase in Dominance observed in synthetic consortia is also present in
+taxonomically richer natural sample-derived communities.</text:span>
+   </text:p> 
+<text:section text:name='fig' text:style-name='Figure'><text:p text:style-name='bigskip'></text:p>
+                                                                                      
+                                                                                      
+                                                                                      
+                                                                                      
+<!--  l. 125 
+ --><text:p text:style-name='Text-body'> <draw:frame draw:name='figure_main_6_natural_communities-.png' draw:z-index='0' text:anchor-type='as-char'><draw:image xlink:actuate='onLoad' xlink:href='Pictures/figure_main_6_natural_communities-.png' xlink:show='embed' xlink:type='simple'></draw:image><!--  draw:name="IMG"  
+svg:width="452.9679pt" svg:height="453.09233pt"  
+ --><svg:title>ALT</svg:title></draw:frame> <text:bookmark text:name='x1-8001r6'></text:bookmark>
+</text:p> 
+<!--  l. 126 
+ --><text:p text:style-name='Text-body'></text:p> 
+
+<!--  l. 126 
+ --><text:p text:style-name='Text-body'> 
+<text:span text:style-name='caption'><text:span text:style-name='caption-title'><text:a xlink:href='#x1-8001r6' xlink:type='simple'>Figure 6<text:bookmark text:name='x1-8001r6'></text:bookmark></text:a>:  </text:span><text:span text:style-name='textcolor57'><text:span text:style-name='textbf'><text:span text:style-name='ecbx-1095'>Fig.</text:span><text:span text:style-name='ecbx-1095'> 6.  Dominance  patterns  in  natural  sample-derived  communities.</text:span></text:span>
+Natural   sample-derived   communities   show   qualitatively   similar   coalescence   patterns
+to    synthetic    communities,    with    Dominance    frequency    increasing    under    higher
+nutrient   concentration.</text:span>   <text:span text:style-name='textbf'><text:span text:style-name='ecbx-1095'>a</text:span></text:span>,   Experimental   workflow   follows   Fig. 1c,   but   uses   natural
+sample-derived   communities   from   six   environmental   samples   including   soil,   compost,
+and   decomposing   organic   matter.   <text:span text:style-name='textbf'><text:span text:style-name='ecbx-1095'>b</text:span></text:span>,   Coalescence   outcome   distributions   in   similarity
+space   for   natural   sample-derived   communities   across   three   media   conditions   (<!--  l. 126 
+ --><draw:frame draw:name='mobj-198' draw:style-name='mml-inline' draw:z-index='0' text:anchor-type='as-char'><draw:object xlink:actuate='onLoad' xlink:href='./main-m198' xlink:show='embed' xlink:type='simple'></draw:object></draw:frame>
+coalescence events per condition, 15 unique pairs <!--  l. 126 
+ --><draw:frame draw:name='mobj-199' draw:style-name='mml-inline' draw:z-index='0' text:anchor-type='as-char'><draw:object xlink:actuate='onLoad' xlink:href='./main-m199' xlink:show='embed' xlink:type='simple'></draw:object></draw:frame>
+2  replicates).  Similar  to  synthetic  communities,  outcomes  are  more  centered  in  Nutr<!--  l. 126 
+ --><draw:frame draw:name='mobj-200' draw:style-name='mml-inline' draw:z-index='0' text:anchor-type='as-char'><draw:object xlink:actuate='onLoad' xlink:href='./main-m200' xlink:show='embed' xlink:type='simple'></draw:object></draw:frame>
+and shift toward the axes in Base and Nutr<!--  l. 126 
+ --><draw:frame draw:name='mobj-201' draw:style-name='mml-inline' draw:z-index='0' text:anchor-type='as-char'><draw:object xlink:actuate='onLoad' xlink:href='./main-m201' xlink:show='embed' xlink:type='simple'></draw:object></draw:frame>.
+<text:span text:style-name='textcolor58'>Gray  points  represent  the  symmetric  counterpart  of  each  coalescence  event  (community
+B  versus  A).</text:span>  Histograms  below  show  PDI  distributions.  <text:span text:style-name='textbf'><text:span text:style-name='ecbx-1095'>c</text:span></text:span>,  <text:span text:style-name='textcolor59'>The  fraction  of  Dominance
+outcomes  increases  with  nutrient  concentration  in  these  communities</text:span>  (37%  in  Nutr<!--  l. 126 
+ --><draw:frame draw:name='mobj-202' draw:style-name='mml-inline' draw:z-index='0' text:anchor-type='as-char'><draw:object xlink:actuate='onLoad' xlink:href='./main-m202' xlink:show='embed' xlink:type='simple'></draw:object></draw:frame>,
+70% in Base, 77% in Nutr<!--  l. 126 
+ --><draw:frame draw:name='mobj-203' draw:style-name='mml-inline' draw:z-index='0' text:anchor-type='as-char'><draw:object xlink:actuate='onLoad' xlink:href='./main-m203' xlink:show='embed' xlink:type='simple'></draw:object></draw:frame>),
+consistent with patterns observed in synthetic communities. Error bars, s.e.m.               </text:span>
+                                                                                      
+                                                                                      
+   </text:p> 
+<text:p text:style-name='bigskip'></text:p></text:section>
+   <!--  end of subsection 
+ --><!--  end of section 
+ --><!--  start of section 
+ --><text:h text:outline-level='2' text:style-name='Heading-2'><text:span text:style-name='section'>3    </text:span><text:bookmark text:name='x1-90003'></text:bookmark>Discussion</text:h> 
+
+<!--  l. 8 
+ --><text:p text:style-name='Text-body'>Our work demonstrates that effective interaction intensity, environmental feedbacks, and
+assembly-generated interaction structure govern community coalescence outcomes, determining both
+the dominant outcome type and the level at which selection operates. In both experiments and
+modeling, when effective interactions are strong, Dominance prevails and species persistence is
+correlated within parental communities, indicating community-level selection; when interactions are
+weak, Mixture predominates and species respond independently. <text:span text:style-name='textcolor60'>Furthermore, predictability analyses
+suggest two regimes within Dominance. In the top-down regime, dominant taxa and environmental
+feedbacks, including pH modification, may bias winner identity. In the emergent regime,
+collective multi-species dynamics appear to govern outcomes, and dominant-species-based
+prediction is insufficient.</text:span> These findings reconcile the Clements–Gleason debate: effective
+interaction intensity determines whether communities behave as cohesive units or loose species
+assemblages.
+</text:p> 
+<!--  l. 10 
+ --><text:p text:style-name='First-line-indent'>   Our work provides the first experimental demonstration of alternative regimes in community
+coalescence, reconciling previously contrasting observations of community-level versus species-level
+selection. Prior studies have reported both outcomes: some found communities behaving as
+cohesive units<text:span text:style-name='textsuperscript'><text:a xlink:href='#bibitem22' xlink:type='simple'>22</text:a>,<text:a xlink:href='#bibitem25' xlink:type='simple'>25</text:a></text:span>, while others observed species responding independently<text:span text:style-name='textsuperscript'><text:a xlink:href='#bibitem26' xlink:type='simple'>26</text:a>,<text:a xlink:href='#bibitem29' xlink:type='simple'>29</text:a></text:span>. Our
+results suggest that these conflicting observations may reflect differences in interaction
+strength across experimental systems. For instance, the absence of community-level
+selection in <text:span text:style-name='textit'><text:span text:style-name='ecti-1095'>in vitro</text:span></text:span> gut microbiome coalescence experiments<text:span text:style-name='textsuperscript'><text:a xlink:href='#bibitem30' xlink:type='simple'>30</text:a>,<text:a xlink:href='#bibitem31' xlink:type='simple'>31</text:a></text:span> is consistent with our
+framework. Rich media such as Brain Heart Infusion (BHI) are analogous to our Nutr<!--  l. 10 
+ --><draw:frame draw:name='mobj-204' draw:style-name='mml-inline' draw:z-index='0' text:anchor-type='as-char'><draw:object xlink:actuate='onLoad' xlink:href='./main-m204' xlink:show='embed' xlink:type='simple'></draw:object></draw:frame> condition, providing complex and diverse resources while lacking high concentrations of readily
+metabolizable carbon sources. This resource structure reduces both direct resource competition and
+pH-mediated interactions, thereby weakening interspecies interactions<text:span text:style-name='textsuperscript'><text:a xlink:href='#bibitem37' xlink:type='simple'>37</text:a></text:span> and favoring species-level
+rather than community-level dynamics. Likewise, interaction strength may vary systematically across
+ecosystems: microbial biofilms experience strong metabolic interactions due to high cell densities
+and shared resources<text:span text:style-name='textsuperscript'><text:a xlink:href='#bibitem39' xlink:type='simple'>39</text:a></text:span>, whereas mobile macroscopic organisms interact more transiently
+across larger spatial scales. These differences may explain why community-level selection
+is more frequently observed in microbial coalescence studies. This framework provides a
+unified perspective: rather than asking whether communities are cohesive units, we should
+ask under what conditions they become so, with interaction strength emerging as a key
+determinant.
+</text:p> 
+<!--  l. 13 
+ --><text:p text:style-name='First-line-indent'>   A growing body of work has identified interaction strength as a key control parameter governing
+diverse aspects of microbial community dynamics, including diversity<text:span text:style-name='textsuperscript'><text:a xlink:href='#bibitem34' xlink:type='simple'>34</text:a>,<text:a xlink:href='#bibitem40' xlink:type='simple'>40</text:a></text:span>, stability<text:span text:style-name='textsuperscript'><text:a xlink:href='#bibitem37' xlink:type='simple'>37</text:a>,<text:a xlink:href='#bibitem41' xlink:type='simple'>41</text:a></text:span>,
+coexistence<text:span text:style-name='textsuperscript'><text:a xlink:href='#bibitem33' xlink:type='simple'>33</text:a></text:span>, and invasion outcomes<text:span text:style-name='textsuperscript'><text:a xlink:href='#bibitem35' xlink:type='simple'>35</text:a>,<text:a xlink:href='#bibitem42' xlink:type='simple'>42</text:a></text:span>. Our results extend this claim to include coalescence,
+providing further evidence that interaction strength determines when communities exhibit collective
+behavior. <text:span text:style-name='textcolor61'>Importantly, interaction strength is used here as a coarse-grained descriptor that can reflect
+the combined effects of multiple ecological processes, rather than as a claim about one specific
+mechanism.</text:span> The parallel with priority effects is particularly instructive; recent work showed that
+assembly order shapes final composition only under strong interactions, whereas weak interactions lead
+to convergent outcomes regardless of assembly history<text:span text:style-name='textsuperscript'><text:a xlink:href='#bibitem35' xlink:type='simple'>35</text:a>,<text:a xlink:href='#bibitem43' xlink:type='simple'>43</text:a></text:span>. Our coalescence results mirror this
+pattern: strong interactions allow parental-community identity to shape the outcome, while weak
+interactions yield convergent Mixtures. Together, these findings reinforce interaction strength as
+a useful predictor of history-dependent community dynamics across multiple ecological
+contexts.
+</text:p> 
+<!--  l. 15 
+ --><text:p text:style-name='First-line-indent'>   <text:span text:style-name='textcolor62'>Notably, and perhaps counterintuitively, our model shows that community-level selection-like
+patterns can emerge without explicitly cooperative interactions between species, consistent with
+predictions from Tikhonov’s resource-competition models<text:span text:style-name='textsuperscript'><text:a xlink:href='#bibitem22' xlink:type='simple'>22</text:a></text:span> and random Lotka–Volterra theory<text:span text:style-name='textsuperscript'><text:a xlink:href='#bibitem32' xlink:type='simple'>32</text:a>,<text:a xlink:href='#bibitem33' xlink:type='simple'>33</text:a></text:span>.
+Community-level selection is often attributed to cooperative mechanisms such as cross-feeding or
+division of labor. By contrast, the model suggests that assembly history and competitive interactions
+can be sufficient to generate correlated species fates during coalescence. Thus, cooperative
+and competitive mechanisms may represent distinct routes to community-level selection,
+and understanding how these routes interact remains an important direction for future
+                                                                                      
+                                                                                      
+work.</text:span>
+</text:p> 
+<!--  l. 17 
+ --><text:p text:style-name='First-line-indent'>   <text:span text:style-name='textcolor63'>Accordingly, we use community-level selection as an outcome-level description of origin-correlated
+persistence during coalescence. This operational definition does not by itself identify the causal
+ecological or biochemical mechanisms, which may vary across systems.</text:span> In nature, coalescence occurs in
+richer settings that may shift regimes and outcomes. Environmental heterogeneity (temperature, pH
+buffering, and other physicochemical factors) covaries with interaction strength and can reshape
+coalescence across habitats<text:span text:style-name='textsuperscript'><text:a xlink:href='#bibitem10' xlink:type='simple'>10</text:a>,<text:a xlink:href='#bibitem38' xlink:type='simple'>38</text:a>,<text:a xlink:href='#bibitem44' xlink:type='simple'>44</text:a>,<text:a xlink:href='#bibitem45' xlink:type='simple'>45</text:a></text:span>. In host-associated microbiomes, host filtering, priority effects,
+and spatial structure further influence successful colonization, making coalescence a useful
+framework for predicting and steering microbiome transfer<text:span text:style-name='textsuperscript'><text:a xlink:href='#bibitem14' xlink:type='simple'>14</text:a>,<text:a xlink:href='#bibitem46' xlink:type='simple'>46</text:a>,<text:a xlink:href='#bibitem47' xlink:type='simple'>47</text:a></text:span>. Our experiments focus on
+steady-state outcomes and thus do not capture temporal dynamics such as fluctuating resources,
+migration pulses, or host responses. Accounting for this broader ecological complexity will
+help build a more comprehensive picture of community-level selection across habitats and
+scales.
+</text:p> 
+<!--  l. 71 
+ --><text:p text:style-name='First-line-indent'>   </text:p> 
+<text:p text:style-name='newpage'></text:p>
+<!--  l. 71 
+ --><text:p text:style-name='First-line-indent'>
+                                                                                      
+                                                                                      
+   </text:p> 
+<!--  end of section 
+ --><!--  start of section 
+ --><text:h text:outline-level='2' text:style-name='Heading-2'><text:span text:style-name='section'>4    </text:span><text:bookmark text:name='x1-100004'></text:bookmark>Methods</text:h> 
+
+<!--  l. 8 
+ --><text:p text:style-name='Text-body'>
+   </text:p> 
+<!--  start of subsection* 
+ --><text:h text:outline-level='3' text:style-name='Heading-3'><text:bookmark text:name='x1-11000'></text:bookmark>Microbial Strain Library and Culture Conditions</text:h> 
+
+<text:bookmark text:name='x1-11000doc'></text:bookmark>
+<!--  l. 11 
+ --><text:p text:style-name='Text-body'>We used a library of 54 bacterial isolates from environmental samples (soil, tree surface,
+and flower stamen) collected in Cambridge, MA, USA, spanning 29 families across three
+phyla (Proteobacteria, Firmicutes, and Bacteroidota; Extended Data Fig. 1; Supplementary
+Fig. 1). Isolates were purified by serial streaking and stored as glycerol stocks at <!--  l. 11 
+ --><draw:frame draw:name='mobj-205' draw:style-name='mml-inline' draw:z-index='0' text:anchor-type='as-char'><draw:object xlink:actuate='onLoad' xlink:href='./main-m205' xlink:show='embed' xlink:type='simple'></draw:object></draw:frame> <text:span text:style-name='tcrm-1095'>°</text:span>C. Experiments were conducted in culture medium containing 1 g L<!--  l. 11 
+ --><draw:frame draw:name='mobj-206' draw:style-name='mml-inline' draw:z-index='0' text:anchor-type='as-char'><draw:object xlink:actuate='onLoad' xlink:href='./main-m206' xlink:show='embed' xlink:type='simple'></draw:object></draw:frame> yeast extract, 1 g L<!--  l. 11 
+ --><draw:frame draw:name='mobj-207' draw:style-name='mml-inline' draw:z-index='0' text:anchor-type='as-char'><draw:object xlink:actuate='onLoad' xlink:href='./main-m207' xlink:show='embed' xlink:type='simple'></draw:object></draw:frame>  soytone, 10 mM sodium phosphate, 0.1 mM CaCl<!--  l. 11 
+ --><draw:frame draw:name='mobj-208' draw:style-name='mml-inline' draw:z-index='0' text:anchor-type='as-char'><draw:object xlink:actuate='onLoad' xlink:href='./main-m208' xlink:show='embed' xlink:type='simple'></draw:object></draw:frame>, 2 mM MgCl<!--  l. 11 
+ --><draw:frame draw:name='mobj-209' draw:style-name='mml-inline' draw:z-index='0' text:anchor-type='as-char'><draw:object xlink:actuate='onLoad' xlink:href='./main-m209' xlink:show='embed' xlink:type='simple'></draw:object></draw:frame>, 4 mg L<!--  l. 11 
+ --><draw:frame draw:name='mobj-210' draw:style-name='mml-inline' draw:z-index='0' text:anchor-type='as-char'><draw:object xlink:actuate='onLoad' xlink:href='./main-m210' xlink:show='embed' xlink:type='simple'></draw:object></draw:frame> NiSO<!--  l. 11 
+ --><draw:frame draw:name='mobj-211' draw:style-name='mml-inline' draw:z-index='0' text:anchor-type='as-char'><draw:object xlink:actuate='onLoad' xlink:href='./main-m211' xlink:show='embed' xlink:type='simple'></draw:object></draw:frame>, 50 mg L<!--  l. 11 
+ --><draw:frame draw:name='mobj-212' draw:style-name='mml-inline' draw:z-index='0' text:anchor-type='as-char'><draw:object xlink:actuate='onLoad' xlink:href='./main-m212' xlink:show='embed' xlink:type='simple'></draw:object></draw:frame> MnCl<!--  l. 11 
+ --><draw:frame draw:name='mobj-213' draw:style-name='mml-inline' draw:z-index='0' text:anchor-type='as-char'><draw:object xlink:actuate='onLoad' xlink:href='./main-m213' xlink:show='embed' xlink:type='simple'></draw:object></draw:frame>  (pH 6.5), supplemented at three nutrient levels—Nutr<!--  l. 11 
+ --><draw:frame draw:name='mobj-214' draw:style-name='mml-inline' draw:z-index='0' text:anchor-type='as-char'><draw:object xlink:actuate='onLoad' xlink:href='./main-m214' xlink:show='embed' xlink:type='simple'></draw:object></draw:frame> (no added glucose/urea), Base (5 g L<!--  l. 11 
+ --><draw:frame draw:name='mobj-215' draw:style-name='mml-inline' draw:z-index='0' text:anchor-type='as-char'><draw:object xlink:actuate='onLoad' xlink:href='./main-m215' xlink:show='embed' xlink:type='simple'></draw:object></draw:frame> glucose, 4 g L<!--  l. 11 
+ --><draw:frame draw:name='mobj-216' draw:style-name='mml-inline' draw:z-index='0' text:anchor-type='as-char'><draw:object xlink:actuate='onLoad' xlink:href='./main-m216' xlink:show='embed' xlink:type='simple'></draw:object></draw:frame> urea), and Nutr<!--  l. 11 
+ --><draw:frame draw:name='mobj-217' draw:style-name='mml-inline' draw:z-index='0' text:anchor-type='as-char'><draw:object xlink:actuate='onLoad' xlink:href='./main-m217' xlink:show='embed' xlink:type='simple'></draw:object></draw:frame> (20 g L<!--  l. 11 
+ --><draw:frame draw:name='mobj-218' draw:style-name='mml-inline' draw:z-index='0' text:anchor-type='as-char'><draw:object xlink:actuate='onLoad' xlink:href='./main-m218' xlink:show='embed' xlink:type='simple'></draw:object></draw:frame> glucose, 16 g L<!--  l. 11 
+ --><draw:frame draw:name='mobj-219' draw:style-name='mml-inline' draw:z-index='0' text:anchor-type='as-char'><draw:object xlink:actuate='onLoad' xlink:href='./main-m219' xlink:show='embed' xlink:type='simple'></draw:object></draw:frame> urea)—<text:span text:style-name='textcolor64'>which perturb net interaction intensity, invasion resistance, and environmental feedbacks.</text:span> Communities
+were grown in 300 <!--  l. 11 
+ --><draw:frame draw:name='mobj-220' draw:style-name='mml-inline' draw:z-index='0' text:anchor-type='as-char'><draw:object xlink:actuate='onLoad' xlink:href='./main-m220' xlink:show='embed' xlink:type='simple'></draw:object></draw:frame>L volumes in 96-well deep-well plates at 25 <text:span text:style-name='tcrm-1095'>°</text:span>C with shaking at 800 rpm. Full media composition
+and culture conditions are provided in Supplementary Methods.
+   </text:p> 
+<!--  end of subsection* 
+ --><!--  start of subsection* 
+ --><text:h text:outline-level='3' text:style-name='Heading-3'><text:bookmark text:name='x1-12000'></text:bookmark>Community Assembly and Coalescence Experiments</text:h> 
+
+<text:bookmark text:name='x1-12000doc'></text:bookmark>
+<!--  l. 18 
+ --><text:p text:style-name='Text-body'>Parental communities (<!--  l. 18 
+ --><draw:frame draw:name='mobj-221' draw:style-name='mml-inline' draw:z-index='0' text:anchor-type='as-char'><draw:object xlink:actuate='onLoad' xlink:href='./main-m221' xlink:show='embed' xlink:type='simple'></draw:object></draw:frame>) were assembled at three richness levels (6, 12, or 24 species) by sequential assignment of isolates
+from the strain library, each with two biological replicates. For 6-species and 12-species parental
+communities, non-overlapping sets were assembled (e.g., community 1: strains 1–6, community 2:
+strains 7–12). Communities were stabilized through seven daily 30-fold serial dilutions before
+coalescence. Coalescence experiments mixed two pre-stabilized parental communities at a 1:1 volume
+ratio, followed by seven additional serial transfers to reach new steady states (Fig. <text:a xlink:href='#x1-3002r1' xlink:type='simple'>1<!--  tex4ht:ref: fig:fig1  
+ --></text:a>C). In total, 83
+pairwise coalescence events were performed in Base medium, and additional experiments were
+conducted across all three nutrient conditions. Full experimental details are provided in Supplementary
+Methods.
+   </text:p> 
+<!--  end of subsection* 
+ --><!--  start of subsection* 
+ --><text:h text:outline-level='3' text:style-name='Heading-3'><text:bookmark text:name='x1-13000'></text:bookmark>16S rRNA Sequencing</text:h> 
+
+<text:bookmark text:name='x1-13000doc'></text:bookmark>
+<!--  l. 25 
+ --><text:p text:style-name='Text-body'>Community composition was measured by 16S rRNA amplicon sequencing (V4 region). DNA was
+extracted using QIAGEN DNeasy PowerSoil kit, and sequencing was performed at Argonne National
+Laboratory. Amplicon sequence variants (ASVs) were identified using DADA2<text:span text:style-name='textsuperscript'><text:a xlink:href='#bibitem48' xlink:type='simple'>48</text:a></text:span> with SILVA 138<text:span text:style-name='textsuperscript'><text:a xlink:href='#bibitem49' xlink:type='simple'>49</text:a></text:span>
+as reference. <text:span text:style-name='textcolor65'>In experimental analyses, the community composition vector was the ASV
+relative-abundance vector derived from these 16S profiles.</text:span> Species richness was defined as ASVs with <!--  l. 25 
+ --><draw:frame draw:name='mobj-222' draw:style-name='mml-inline' draw:z-index='0' text:anchor-type='as-char'><draw:object xlink:actuate='onLoad' xlink:href='./main-m222' xlink:show='embed' xlink:type='simple'></draw:object></draw:frame>0.1% relative abundance, corresponding to the extinction threshold used in simulations. Raw
+sequencing reads are available via Dryad; see Data Availability. Full sequencing and data processing
+details are provided in Supplementary Methods.
+   </text:p> 
+<!--  end of subsection* 
+ --><!--  start of subsection* 
+ --><text:h text:outline-level='3' text:style-name='Heading-3'><text:bookmark text:name='x1-14000'></text:bookmark>Optical Density and pH Measurements</text:h> 
+
+<text:bookmark text:name='x1-14000doc'></text:bookmark>
+<!--  l. 32 
+ --><text:p text:style-name='Text-body'>Optical density (OD<!--  l. 32 
+ --><draw:frame draw:name='mobj-223' draw:style-name='mml-inline' draw:z-index='0' text:anchor-type='as-char'><draw:object xlink:actuate='onLoad' xlink:href='./main-m223' xlink:show='embed' xlink:type='simple'></draw:object></draw:frame>) was measured after each 24-hour growth cycle using a plate reader (BioTek Synergy H1).
+<text:span text:style-name='textcolor66'>Community pH was measured using a benchtop pH meter (Apera Instruments PH5500).</text:span> These
+measurements were used to monitor community growth dynamics and to assess environmental
+modification by dominant species. Full measurement protocols are provided in Supplementary
+Methods.
+   </text:p> 
+<!--  end of subsection* 
+ --><!--  start of subsection* 
+ --><text:h text:outline-level='3' text:style-name='Heading-3'><text:bookmark text:name='x1-15000'></text:bookmark>Classification of Coalescence Outcomes</text:h> 
+
+<text:bookmark text:name='x1-15000doc'></text:bookmark>
+<!--  l. 39 
+ --><text:p text:style-name='Text-body'>Coalescence outcomes were classified based on similarity between the coalesced community and each
+parental community. <text:span text:style-name='textcolor67'>Similarity was computed as cosine similarity between community composition vectors
+(see Supplementary Note 1 for full normalization details).</text:span> These two similarity scores place each outcome
+in a two-dimensional similarity space. From the similarity scores, we derived: (1) retention magnitude <!--  l. 39 
+ --><draw:frame draw:name='mobj-224' draw:style-name='mml-inline' draw:z-index='0' text:anchor-type='as-char'><draw:object xlink:actuate='onLoad' xlink:href='./main-m224' xlink:show='embed' xlink:type='simple'></draw:object></draw:frame>, quantifying how much of the coalesced composition is explained by the parental communities; and (2)
+parental dominance index (PDI), quantifying directional parental contribution (0: parental community B
+dominance, 0.5: equal contributions, 1: parental community A dominance). <text:span text:style-name='textcolor68'>The Restructuring boundary is
+defined by <!--  l. 39 
+ --><draw:frame draw:name='mobj-225' draw:style-name='mml-inline' draw:z-index='0' text:anchor-type='as-char'><draw:object xlink:actuate='onLoad' xlink:href='./main-m225' xlink:show='embed' xlink:type='simple'></draw:object></draw:frame>, equivalently by a retention radius <!--  l. 39 
+ --><draw:frame draw:name='mobj-226' draw:style-name='mml-inline' draw:z-index='0' text:anchor-type='as-char'><draw:object xlink:actuate='onLoad' xlink:href='./main-m226' xlink:show='embed' xlink:type='simple'></draw:object></draw:frame> in the similarity map.</text:span> Outcomes were categorized as Restructuring (low retention; substantial
+ecological reorganization), Mixture (high retention with PDI near 0.5; balanced parental
+contributions), or Dominance (high retention with PDI near 0 or 1; one parental community
+overwhelms the other). To assess whether Dominance reflects community-level selection, we computed
+pairwise selection correlations measuring whether species from the same parental community share
+selection outcomes during coalescence. Full mathematical framework is provided in Supplementary
+Notes 1–2.
+   </text:p> 
+<!--  end of subsection* 
+ --><!--  start of subsection* 
+ --><text:h text:outline-level='3' text:style-name='Heading-3'><text:bookmark text:name='x1-16000'></text:bookmark>Lotka–Volterra Simulations</text:h> 
+
+<text:bookmark text:name='x1-16000doc'></text:bookmark>
+<!--  l. 46 
+ --><text:p text:style-name='Text-body'>Community dynamics were modeled using generalized Lotka–Volterra (gLV)
+equations (Eq. <text:a xlink:href='main-m23.4om#x23-4001r2' xlink:type='simple'>2<!--  tex4ht:ref: eq:glv  
+ --></text:a>). <text:span text:style-name='textcolor69'>We fixed growth rates to 1 and self-interaction coefficients <!--  l. 46 
+ --><draw:frame draw:name='mobj-227' draw:style-name='mml-inline' draw:z-index='0' text:anchor-type='as-char'><draw:object xlink:actuate='onLoad' xlink:href='./main-m227' xlink:show='embed' xlink:type='simple'></draw:object></draw:frame>, and drew off-diagonal competition coefficients from a uniform distribution <!--  l. 46 
+ --><draw:frame draw:name='mobj-228' draw:style-name='mml-inline' draw:z-index='0' text:anchor-type='as-char'><draw:object xlink:actuate='onLoad' xlink:href='./main-m228' xlink:show='embed' xlink:type='simple'></draw:object></draw:frame>, so <!--  l. 46 
+ --><draw:frame draw:name='mobj-229' draw:style-name='mml-inline' draw:z-index='0' text:anchor-type='as-char'><draw:object xlink:actuate='onLoad' xlink:href='./main-m229' xlink:show='embed' xlink:type='simple'></draw:object></draw:frame> sets the sampled coefficient range and therefore controls both the mean and heterogeneity of
+competitive effects within this phenomenological model.</text:span> From a pool of 54 species, we assembled four
+non-overlapping parental communities of 12 species each (no shared species per pair). Communities
+were equilibrated numerically (species below 0.1% relative abundance threshold set to zero), then all
+pairwise combinations mixed at equal proportions to simulate coalescence, with independently sampled
+interaction matrices per replicate. Full simulation parameters and robustness analyses are provided in
+Supplementary Methods.
+   </text:p> 
+<!--  end of subsection* 
+ --><!--  start of subsection* 
+ --><text:h text:outline-level='3' text:style-name='Heading-3'><text:bookmark text:name='x1-17000'></text:bookmark>Pairwise Invasion Assays</text:h> 
+
+<text:bookmark text:name='x1-17000doc'></text:bookmark>
+<!--  l. 53 
+ --><text:p text:style-name='Text-body'>To operationally estimate invasion resistance across nutrient conditions, we performed pairwise
+invasion assays among the 12 most abundant isolates. Each pair was tested in both directions
+(resident:invader = 95:5) and propagated through seven daily dilution cycles across all three nutrient
+conditions. Final compositions were determined by colony counting. An invasion was scored as failed if
+the invader remained below 1% relative abundance. Pairwise outcomes were then classified as
+coexistence (both isolates above 10% in both directions), exclusion (the same isolate drove its
+competitor below 1% in both directions), or bistability (each isolate excluded the other when resident).
+<text:span text:style-name='textcolor70'>The fraction of failed invasions served as an empirical proxy for net interaction intensity and
+invasion resistance (Fig. <text:a xlink:href='#x1-6001r4' xlink:type='simple'>4<!--  tex4ht:ref: fig:fig4  
+ --></text:a>B).</text:span> Full experimental details are provided in Supplementary
+Methods.
+</text:p> 
+<!--  l. 58 
+ --><text:p text:style-name='Text-body'>
+   </text:p> 
+<!--  end of subsection* 
+ --><!--  start of subsection* 
+ --><text:h text:outline-level='3' text:style-name='Heading-3'><text:bookmark text:name='x1-18000'></text:bookmark>Natural Sample-Derived Communities</text:h> 
+
+<text:bookmark text:name='x1-18000doc'></text:bookmark>
+<!--  l. 61 
+ --><text:p text:style-name='Text-body'>We performed coalescence experiments using communities derived from six natural environmental
+samples (soil, compost, decomposing organic matter) collected in Cambridge, MA. <text:span text:style-name='textcolor71'>Unlike synthetic
+communities assembled from isolated strains, these communities were derived from complex
+environmental assemblages.</text:span> Samples were enriched through seven serial dilution cycles to establish
+stable communities, then 15 pairwise coalescence events (each with two biological replicates, <!--  l. 61 
+ --><draw:frame draw:name='mobj-230' draw:style-name='mml-inline' draw:z-index='0' text:anchor-type='as-char'><draw:object xlink:actuate='onLoad' xlink:href='./main-m230' xlink:show='embed' xlink:type='simple'></draw:object></draw:frame> per condition) were conducted across all three nutrient conditions. Full experimental details are
+provided in Supplementary Methods.
+   </text:p> 
+<!--  end of subsection* 
+ --><!--  start of subsection* 
+ --><text:h text:outline-level='3' text:style-name='Heading-3'><text:bookmark text:name='x1-19000'></text:bookmark>Statistical Analyses</text:h> 
+
+<text:bookmark text:name='x1-19000doc'></text:bookmark>
+<!--  l. 68 
+ --><text:p text:style-name='Text-body'>Statistical significance was defined at <!--  l. 68 
+ --><draw:frame draw:name='mobj-231' draw:style-name='mml-inline' draw:z-index='0' text:anchor-type='as-char'><draw:object xlink:actuate='onLoad' xlink:href='./main-m231' xlink:show='embed' xlink:type='simple'></draw:object></draw:frame>. <text:span text:style-name='textcolor72'>All tests were two-sided unless explicitly stated otherwise.</text:span> Paired <!--  l. 68 
+ --><draw:frame draw:name='mobj-232' draw:style-name='mml-inline' draw:z-index='0' text:anchor-type='as-char'><draw:object xlink:actuate='onLoad' xlink:href='./main-m232' xlink:show='embed' xlink:type='simple'></draw:object></draw:frame>-tests compared <text:span text:style-name='textcolor73'>interaction strength values</text:span> before and after assembly. Permutation tests (1,000
+permutations) assessed pairwise selection correlations. Mann-Whitney U tests compared experimental
+values against null distributions. Chi-square tests for trend assessed outcome fraction shifts across
+nutrient conditions. Fisher’s exact test compared categorical outcomes between conditions. Linear
+regression quantified predictability of coalescence outcomes from dominant-species competition (<!--  l. 68 
+ --><draw:frame draw:name='mobj-233' draw:style-name='mml-inline' draw:z-index='0' text:anchor-type='as-char'><draw:object xlink:actuate='onLoad' xlink:href='./main-m233' xlink:show='embed' xlink:type='simple'></draw:object></draw:frame> reported). For figures requiring error bars, the mean and s.e.m. are presented, with specific test
+details provided in each legend. Full statistical methods are provided in Supplementary
+Methods.
+   </text:p> 
+<!--  end of subsection* 
+ --><!--  start of subsection* 
+ --><text:h text:outline-level='3' text:style-name='Heading-3'><text:bookmark text:name='x1-20000'></text:bookmark>Data Availability</text:h> 
+
+<text:bookmark text:name='x1-20000doc'></text:bookmark>
+<!--  l. 75 
+ --><text:p text:style-name='Text-body'><text:span text:style-name='textcolor74'>Isolates and communities are available upon request. All data are available in the Supplementary
+Information and via Dryad: DOI: <text:a xlink:href='https://doi.org/10.5061/dryad.2z34tmq0z' xlink:type='simple'>10.5061/dryad.2z34tmq0z</text:a>.</text:span>
+</text:p> 
+<!--  l. 79 
+ --><text:p text:style-name='Text-body'>
+   </text:p> 
+<!--  end of subsection* 
+ --><!--  start of subsection* 
+ --><text:h text:outline-level='3' text:style-name='Heading-3'><text:bookmark text:name='x1-21000'></text:bookmark>Code Availability</text:h> 
+
+<text:bookmark text:name='x1-21000doc'></text:bookmark>
+<!--  l. 82 
+ --><text:p text:style-name='Text-body'><text:span text:style-name='textcolor75'>All code used for simulation and analysis is available</text:span> via GitHub at
+<text:a xlink:href='https://github.com/Jinyeop3110/interspecies-interaction-derive-Community-Level-Selection' xlink:type='simple'><text:span text:style-name='ectt-1095'>https://github.com/Jinyeop3110/interspecies-interaction-derive-Community-Level-Selection</text:span></text:a>.
+</text:p> 
+<!--  l. 89 
+ --><text:p text:style-name='Text-body'>
+   </text:p> 
+<!--  start of section* 
+ --><text:h text:outline-level='2' text:style-name='Heading-2'><text:bookmark text:name='x1-22000'></text:bookmark>Acknowledgements</text:h> 
+
+<text:bookmark text:name='x1-22000doc'></text:bookmark>
+<!--  l. 92 
+ --><text:p text:style-name='Text-body'>J.G. acknowledges funding support from the Schmidt Polymath Award and the Sloan Foundation.
+</text:p> 
+<!--  l. 95 
+ --><text:p text:style-name='Text-body'>
+   </text:p> 
+<!--  end of section* 
+ --><!--  start of section* 
+ --><text:h text:outline-level='2' text:style-name='Heading-2'><text:bookmark text:name='x1-23000'></text:bookmark>Author Contributions</text:h> 
+
+<text:bookmark text:name='x1-23000doc'></text:bookmark>
+<!--  l. 98 
+ --><text:p text:style-name='Text-body'>J.Y.S., J.H. and J.G. conceived the study. J.Y.S. and J.H. performed the experiments and the
+theoretical modeling. J.Y.S. analyzed the data. All authors wrote and edited the manuscript.
+</text:p> 
+<!--  l. 101 
+ --><text:p text:style-name='Text-body'>
+                                                                                      
+                                                                                      
+   </text:p> 
+<!--  end of section* 
+ --><!--  start of section* 
+ --><text:h text:outline-level='2' text:style-name='Heading-2'><text:bookmark text:name='x1-24000'></text:bookmark>Competing Interests</text:h> 
+
+<text:bookmark text:name='x1-24000doc'></text:bookmark>
+<!--  l. 104 
+ --><text:p text:style-name='Text-body'>The authors declare no competing interests.
+</text:p> 
+<!--  l. 107 
+ --><text:p text:style-name='Text-body'>
+   </text:p> 
+<!--  end of section* 
+ --><!--  start of section* 
+ --><text:h text:outline-level='2' text:style-name='Heading-2'><text:bookmark text:name='x1-25000'></text:bookmark>Additional Information</text:h> 
+
+<text:bookmark text:name='x1-25000doc'></text:bookmark>
+<!--  l. 110 
+ --><text:p text:style-name='Text-body'>Supplementary Information is available for this paper.
+</text:p> 
+<!--  l. 112 
+ --><text:p text:style-name='Text-body'>Correspondence to Jeff Gore (gore@mit.edu).
+</text:p> 
+<!--  l. 1 
+ --><text:p text:style-name='Text-body'>
+   </text:p> 
+<!--  end of section* 
+ --><!--  start of section* 
+ --><text:h text:outline-level='2' text:style-name='Heading-2'><text:bookmark text:name='x1-26000'></text:bookmark>References</text:h> 
+
+<!--  l. 1 
+ --><text:p text:style-name='Text-body'>
+    </text:p> 
+<text:bibliography text:name='bib-1'> <text:bibliography-source> 
+<text:index-title-template>References</text:index-title-template> 
+<text:bibliography-entry-template text:bibliography-type='custom1' text:style-name='Bibliography11'> 
+<text:index-entry-bibliography text:bibliography-data-field='identifier'></text:index-entry-bibliography> 
+<text:index-entry-span>: </text:index-entry-span> 
+<text:index-entry-bibliography text:bibliography-data-field='author'></text:index-entry-bibliography> 
+<text:index-entry-span>, </text:index-entry-span> 
+<text:index-entry-bibliography text:bibliography-data-field='title'></text:index-entry-bibliography> 
+<text:index-entry-span>, </text:index-entry-span> 
+<text:index-entry-bibliography text:bibliography-data-field='year'></text:index-entry-bibliography> 
+</text:bibliography-entry-template> 
+ 
+</text:bibliography-source> 
+<text:index-body> 
+<text:p text:style-name='p-bibitem'>
+ <text:bookmark text:name='bibitem1'></text:bookmark>[1] Clements, F. E. <text:span text:style-name='Emphasis'><text:span text:style-name='ecti-1095'>Plant Succession: An Analysis of the Development of Vegetation</text:span></text:span>. No. 242
+    in Carnegie Institution of Washington Publication (Carnegie Institution of Washington,
+    Washington, DC, 1916).
+    </text:p><text:p text:style-name='p-bibitem'>
+ <text:bookmark text:name='bibitem2'></text:bookmark>[2] Clements, F. E. Nature and structure of the climax. <text:span text:style-name='Emphasis'><text:span text:style-name='ecti-1095'>Journal of Ecology</text:span></text:span> <text:span text:style-name='textbf'><text:span text:style-name='ecbx-1095'>24</text:span></text:span>, 252–284 (1936).
+    </text:p><text:p text:style-name='p-bibitem'>
+ <text:bookmark text:name='bibitem3'></text:bookmark>[3] Odum, E. P. The strategy of ecosystem development. <text:span text:style-name='Emphasis'><text:span text:style-name='ecti-1095'>Science</text:span></text:span> <text:span text:style-name='textbf'><text:span text:style-name='ecbx-1095'>164</text:span></text:span>, 262–270 (1969).
+    </text:p><text:p text:style-name='p-bibitem'>
+ <text:bookmark text:name='bibitem4'></text:bookmark>[4] Lovelock, J. E.  <text:span text:style-name='Emphasis'><text:span text:style-name='ecti-1095'>Gaia: A New Look at Life on Earth</text:span></text:span> (Oxford University Press, Oxford,
+    1979).
+    </text:p><text:p text:style-name='p-bibitem'>
+ <text:bookmark text:name='bibitem5'></text:bookmark>[5] Wilson, D. S. &amp; Sober, E.  Reviving the superorganism.  <text:span text:style-name='Emphasis'><text:span text:style-name='ecti-1095'>Journal of Theoretical Biology</text:span></text:span>
+    <text:span text:style-name='textbf'><text:span text:style-name='ecbx-1095'>136</text:span></text:span>, 337–356 (1989).
+                                                                                      
+                                                                                      
+    </text:p><text:p text:style-name='p-bibitem'>
+ <text:bookmark text:name='bibitem6'></text:bookmark>[6] Gleason, H. A. The individualistic concept of the plant association. <text:span text:style-name='Emphasis'><text:span text:style-name='ecti-1095'>The American Midland</text:span>
+    <text:span text:style-name='ecti-1095'>Naturalist</text:span></text:span> <text:span text:style-name='textbf'><text:span text:style-name='ecbx-1095'>21</text:span></text:span>, 92–110 (1939).
+    </text:p><text:p text:style-name='p-bibitem'>
+ <text:bookmark text:name='bibitem7'></text:bookmark>[7] Cain, S. A.  Characteristics of natural areas and factors in their development.  <text:span text:style-name='Emphasis'><text:span text:style-name='ecti-1095'>Ecological</text:span>
+    <text:span text:style-name='ecti-1095'>Monographs</text:span></text:span> <text:span text:style-name='textbf'><text:span text:style-name='ecbx-1095'>17</text:span></text:span>, 185–200 (1947).
+    </text:p><text:p text:style-name='p-bibitem'>
+ <text:bookmark text:name='bibitem8'></text:bookmark>[8] Mason,  H. L.    Evolution  of  certain  floristic  associations  in  Western  North  America.
+    <text:span text:style-name='Emphasis'><text:span text:style-name='ecti-1095'>Ecological Monographs</text:span></text:span> <text:span text:style-name='textbf'><text:span text:style-name='ecbx-1095'>17</text:span></text:span>, 201–210 (1947).
+    </text:p><text:p text:style-name='p-bibitem'>
+ <text:bookmark text:name='bibitem9'></text:bookmark>[9] Whittaker, R. H. Gradient analysis of vegetation. <text:span text:style-name='Emphasis'><text:span text:style-name='ecti-1095'>Biological Reviews</text:span></text:span> <text:span text:style-name='textbf'><text:span text:style-name='ecbx-1095'>42</text:span></text:span>, 207–264 (1967).
+    </text:p><text:p text:style-name='p-bibitem'>
+<text:bookmark text:name='bibitem10'></text:bookmark>[10] Rillig, M. C. <text:span text:style-name='Emphasis'><text:span text:style-name='ecti-1095'>et</text:span><text:span text:style-name='ecti-1095'> al.</text:span></text:span>  Interchange of entire communities: Microbial community coalescence.
+    <text:span text:style-name='Emphasis'><text:span text:style-name='ecti-1095'>Trends in Ecology &amp; Evolution</text:span></text:span> <text:span text:style-name='textbf'><text:span text:style-name='ecbx-1095'>30</text:span></text:span>, 470–476 (2015).
+    </text:p><text:p text:style-name='p-bibitem'>
+<text:bookmark text:name='bibitem11'></text:bookmark>[11] Lechón-Alonso, P., Clegg, T., Cook, J., Smith, T. P. &amp; Pawar, S. The role of competition
+    versus cooperation in microbial community coalescence.  <text:span text:style-name='Emphasis'><text:span text:style-name='ecti-1095'>PLoS Computational Biology</text:span></text:span> <text:span text:style-name='textbf'><text:span text:style-name='ecbx-1095'>17</text:span></text:span>,
+    e1009584 (2021).
+    </text:p><text:p text:style-name='p-bibitem'>
+<text:bookmark text:name='bibitem12'></text:bookmark>[12] Huet, S. <text:span text:style-name='Emphasis'><text:span text:style-name='ecti-1095'>et</text:span><text:span text:style-name='ecti-1095'> al.</text:span></text:span>  Experimental community coalescence sheds light on microbial interactions
+    in soil and restores impaired functions. <text:span text:style-name='Emphasis'><text:span text:style-name='ecti-1095'>Microbiome</text:span></text:span> <text:span text:style-name='textbf'><text:span text:style-name='ecbx-1095'>11</text:span></text:span>, 42 (2023).
+    </text:p><text:p text:style-name='p-bibitem'>
+<text:bookmark text:name='bibitem13'></text:bookmark>[13] Bresciani,  L.,  Custer,  G. F.,  Koslicki,  D.  &amp;  Dini-Andreote,  F.   Interplay  of  ecological
+    processes modulates microbial community reassembly following coalescence.   <text:span text:style-name='Emphasis'><text:span text:style-name='ecti-1095'>The ISME</text:span>
+    <text:span text:style-name='ecti-1095'>Journal</text:span></text:span> <text:span text:style-name='textbf'><text:span text:style-name='ecbx-1095'>19</text:span></text:span>, wraf041 (2025).
+    </text:p><text:p text:style-name='p-bibitem'>
+<text:bookmark text:name='bibitem14'></text:bookmark>[14] Liu, X. &amp; Salles, J. F. Drivers and consequences of microbial community coalescence. <text:span text:style-name='Emphasis'><text:span text:style-name='ecti-1095'>The</text:span>
+    <text:span text:style-name='ecti-1095'>ISME Journal</text:span></text:span> <text:span text:style-name='textbf'><text:span text:style-name='ecbx-1095'>18</text:span></text:span>, wrae179 (2024).
+                                                                                      
+                                                                                      
+    </text:p><text:p text:style-name='p-bibitem'>
+<text:bookmark text:name='bibitem15'></text:bookmark>[15] Sarkar, A. <text:span text:style-name='Emphasis'><text:span text:style-name='ecti-1095'>et</text:span><text:span text:style-name='ecti-1095'> al.</text:span></text:span>  Microbial transmission in the social microbiome and host health and
+    disease. <text:span text:style-name='Emphasis'><text:span text:style-name='ecti-1095'>Cell</text:span></text:span> <text:span text:style-name='textbf'><text:span text:style-name='ecbx-1095'>187</text:span></text:span>, 17–43 (2024).
+    </text:p><text:p text:style-name='p-bibitem'>
+<text:bookmark text:name='bibitem16'></text:bookmark>[16] Xiao, Y., Angulo, M. T., Lao, S., Weiss, S. T. &amp; Liu, Y.-Y.  An ecological framework to
+    understand the efficacy of fecal microbiota transplantation.  <text:span text:style-name='Emphasis'><text:span text:style-name='ecti-1095'>Nature Communications</text:span></text:span> <text:span text:style-name='textbf'><text:span text:style-name='ecbx-1095'>11</text:span></text:span>,
+    3329 (2020).
+    </text:p><text:p text:style-name='p-bibitem'>
+<text:bookmark text:name='bibitem17'></text:bookmark>[17] Gupta,  S.,  Allen-Vercoe,  E.  &amp;  Petrof,  E. O.    Fecal  microbiota  transplantation:  in
+    perspective. <text:span text:style-name='Emphasis'><text:span text:style-name='ecti-1095'>Therapeutic Advances in Gastroenterology</text:span></text:span> <text:span text:style-name='textbf'><text:span text:style-name='ecbx-1095'>9</text:span></text:span>, 229–239 (2016).
+    </text:p><text:p text:style-name='p-bibitem'>
+<text:bookmark text:name='bibitem18'></text:bookmark>[18] Gilpin, M.  Community-level competition: Asymmetrical dominance.  <text:span text:style-name='Emphasis'><text:span text:style-name='ecti-1095'>Proceedings of the</text:span>
+    <text:span text:style-name='ecti-1095'>National Academy of Sciences</text:span></text:span> <text:span text:style-name='textbf'><text:span text:style-name='ecbx-1095'>91</text:span></text:span>, 3252–3254 (1994).
+    </text:p><text:p text:style-name='p-bibitem'>
+<text:bookmark text:name='bibitem19'></text:bookmark>[19] Debray, R. <text:span text:style-name='Emphasis'><text:span text:style-name='ecti-1095'>et</text:span><text:span text:style-name='ecti-1095'> al.</text:span></text:span> Priority effects in microbiome assembly. <text:span text:style-name='Emphasis'><text:span text:style-name='ecti-1095'>Nature Reviews Microbiology</text:span></text:span> <text:span text:style-name='textbf'><text:span text:style-name='ecbx-1095'>20</text:span></text:span>,
+    109–121 (2022).
+    </text:p><text:p text:style-name='p-bibitem'>
+<text:bookmark text:name='bibitem20'></text:bookmark>[20] Venturelli,  O. S.  <text:span text:style-name='Emphasis'><text:span text:style-name='ecti-1095'>et</text:span><text:span text:style-name='ecti-1095'> al.</text:span></text:span>    Deciphering  microbial  interactions  in  synthetic  human  gut
+    microbiome communities. <text:span text:style-name='Emphasis'><text:span text:style-name='ecti-1095'>Molecular Systems Biology</text:span></text:span> <text:span text:style-name='textbf'><text:span text:style-name='ecbx-1095'>14</text:span></text:span>, e8157 (2018).
+    </text:p><text:p text:style-name='p-bibitem'>
+<text:bookmark text:name='bibitem21'></text:bookmark>[21] Maynard,  D. S.,  Miller,  Z. R.  &amp;  Allesina,  S.   Predicting  coexistence  in  experimental
+    ecological communities. <text:span text:style-name='Emphasis'><text:span text:style-name='ecti-1095'>Nature Ecology &amp; Evolution</text:span></text:span> <text:span text:style-name='textbf'><text:span text:style-name='ecbx-1095'>4</text:span></text:span>, 91–100 (2020).
+    </text:p><text:p text:style-name='p-bibitem'>
+<text:bookmark text:name='bibitem22'></text:bookmark>[22] Tikhonov, M. Community-level cohesion without cooperation. <text:span text:style-name='Emphasis'><text:span text:style-name='ecti-1095'>eLife</text:span></text:span> <text:span text:style-name='textbf'><text:span text:style-name='ecbx-1095'>5</text:span></text:span>, e15747 (2016).
+    </text:p><text:p text:style-name='p-bibitem'>
+<text:bookmark text:name='bibitem23'></text:bookmark>[23] Xie, L., Yuan, A. E. &amp; Shou, W.  Simulations reveal challenges to artificial community
+    selection and possible strategies for success. <text:span text:style-name='Emphasis'><text:span text:style-name='ecti-1095'>PLOS Biology</text:span></text:span> <text:span text:style-name='textbf'><text:span text:style-name='ecbx-1095'>17</text:span></text:span>, e3000295 (2019).
+                                                                                      
+                                                                                      
+    </text:p><text:p text:style-name='p-bibitem'>
+<text:bookmark text:name='bibitem24'></text:bookmark>[24] Xie, L. &amp; Shou, W. Steering ecological-evolutionary dynamics to improve artificial selection
+    of microbial communities. <text:span text:style-name='Emphasis'><text:span text:style-name='ecti-1095'>Nature Communications</text:span></text:span> <text:span text:style-name='textbf'><text:span text:style-name='ecbx-1095'>12</text:span></text:span>, 6799 (2021).
+    </text:p><text:p text:style-name='p-bibitem'>
+<text:bookmark text:name='bibitem25'></text:bookmark>[25] Diaz-Colunga, J. <text:span text:style-name='Emphasis'><text:span text:style-name='ecti-1095'>et</text:span><text:span text:style-name='ecti-1095'> al.</text:span></text:span>  Top-down and bottom-up cohesiveness in microbial community
+    coalescence. <text:span text:style-name='Emphasis'><text:span text:style-name='ecti-1095'>Proceedings of the National Academy of Sciences</text:span></text:span> <text:span text:style-name='textbf'><text:span text:style-name='ecbx-1095'>119</text:span></text:span>, e2111261119 (2022).
+    </text:p><text:p text:style-name='p-bibitem'>
+<text:bookmark text:name='bibitem26'></text:bookmark>[26] Vermeij,  G. J.    When  biotas  meet:  Understanding  biotic  interchange.    <text:span text:style-name='Emphasis'><text:span text:style-name='ecti-1095'>Science</text:span></text:span>  <text:span text:style-name='textbf'><text:span text:style-name='ecbx-1095'>253</text:span></text:span>,
+    1099–1104 (1991).
+    </text:p><text:p text:style-name='p-bibitem'>
+<text:bookmark text:name='bibitem27'></text:bookmark>[27] Brochet, S. <text:span text:style-name='Emphasis'><text:span text:style-name='ecti-1095'>et</text:span><text:span text:style-name='ecti-1095'> al.</text:span></text:span> Niche partitioning facilitates coexistence of closely related honey bee gut
+    bacteria. <text:span text:style-name='Emphasis'><text:span text:style-name='ecti-1095'>eLife</text:span></text:span> <text:span text:style-name='textbf'><text:span text:style-name='ecbx-1095'>10</text:span></text:span>, e68583 (2021).
+    </text:p><text:p text:style-name='p-bibitem'>
+<text:bookmark text:name='bibitem28'></text:bookmark>[28] Benton,  M. J.  &amp;  Emerson,  B. C.   How  did  life  become  so  diverse?  the  dynamics  of
+    diversification according to the fossil record and molecular phylogenetics. <text:span text:style-name='Emphasis'><text:span text:style-name='ecti-1095'>Palaeontology</text:span></text:span> <text:span text:style-name='textbf'><text:span text:style-name='ecbx-1095'>50</text:span></text:span>,
+    23–40 (2007).
+    </text:p><text:p text:style-name='p-bibitem'>
+<text:bookmark text:name='bibitem29'></text:bookmark>[29] Van der  Gucht,  K.  <text:span text:style-name='Emphasis'><text:span text:style-name='ecti-1095'>et</text:span><text:span text:style-name='ecti-1095'> al.</text:span></text:span>   The  power  of  species  sorting:  Local  factors  drive  bacterial
+    community composition over a wide range of spatial scales.  <text:span text:style-name='Emphasis'><text:span text:style-name='ecti-1095'>Proceedings of the National</text:span>
+    <text:span text:style-name='ecti-1095'>Academy of Sciences</text:span></text:span> <text:span text:style-name='textbf'><text:span text:style-name='ecbx-1095'>104</text:span></text:span>, 20404–20409 (2007).
+    </text:p><text:p text:style-name='p-bibitem'>
+<text:bookmark text:name='bibitem30'></text:bookmark>[30] Goldman, D. A. <text:span text:style-name='Emphasis'><text:span text:style-name='ecti-1095'>et</text:span><text:span text:style-name='ecti-1095'> al.</text:span></text:span>  Competition for shared resources increases dependence on initial
+    population size during coalescence of gut microbial communities. <text:span text:style-name='Emphasis'><text:span text:style-name='ecti-1095'>Proceedings of the National</text:span>
+    <text:span text:style-name='ecti-1095'>Academy of Sciences</text:span></text:span> <text:span text:style-name='textbf'><text:span text:style-name='ecbx-1095'>122</text:span></text:span>, e2322440122 (2025).
+    </text:p><text:p text:style-name='p-bibitem'>
+<text:bookmark text:name='bibitem31'></text:bookmark>[31] Walton, S. J. <text:span text:style-name='Emphasis'><text:span text:style-name='ecti-1095'>et</text:span><text:span text:style-name='ecti-1095'> al.</text:span></text:span> Community coalescence reveals strong selection and coexistence within
+    species in complex microbial communities. <text:span text:style-name='Emphasis'><text:span text:style-name='ecti-1095'>bioRxiv</text:span></text:span> (2025).
+    </text:p><text:p text:style-name='p-bibitem'>
+<text:bookmark text:name='bibitem32'></text:bookmark>[32] May, R. M. Will a large complex system be stable? <text:span text:style-name='Emphasis'><text:span text:style-name='ecti-1095'>Nature</text:span></text:span> <text:span text:style-name='textbf'><text:span text:style-name='ecbx-1095'>238</text:span></text:span>, 413–414 (1972).
+                                                                                      
+                                                                                      
+    </text:p><text:p text:style-name='p-bibitem'>
+<text:bookmark text:name='bibitem33'></text:bookmark>[33] Grilli,  J.  <text:span text:style-name='Emphasis'><text:span text:style-name='ecti-1095'>et</text:span><text:span text:style-name='ecti-1095'> al.</text:span></text:span>   Feasibility  and  coexistence  of  large  ecological  communities.    <text:span text:style-name='Emphasis'><text:span text:style-name='ecti-1095'>Nature</text:span>
+    <text:span text:style-name='ecti-1095'>Communications</text:span></text:span> <text:span text:style-name='textbf'><text:span text:style-name='ecbx-1095'>8</text:span></text:span>, 14389 (2017).
+    </text:p><text:p text:style-name='p-bibitem'>
+<text:bookmark text:name='bibitem34'></text:bookmark>[34] Hu, J., Amor, D. R., Barbier, M., Bunin, G. &amp; Gore, J.  Emergent phases of ecological
+    diversity and dynamics mapped in microcosms. <text:span text:style-name='Emphasis'><text:span text:style-name='ecti-1095'>Science</text:span></text:span> <text:span text:style-name='textbf'><text:span text:style-name='ecbx-1095'>378</text:span></text:span>, 85–89 (2022).
+    </text:p><text:p text:style-name='p-bibitem'>
+<text:bookmark text:name='bibitem35'></text:bookmark>[35] Hu, J., Barbier, M., Bunin, G. &amp; Gore, J.  Collective dynamical regimes predict invasion
+    success and impacts in microbial communities.  <text:span text:style-name='Emphasis'><text:span text:style-name='ecti-1095'>Nature Ecology &amp; Evolution</text:span></text:span> <text:span text:style-name='textbf'><text:span text:style-name='ecbx-1095'>9</text:span></text:span>, 406–416
+    (2025).
+    </text:p><text:p text:style-name='p-bibitem'>
+<text:bookmark text:name='bibitem36'></text:bookmark>[36] Ratzke, C. &amp; Gore, J. Modifying and reacting to the environmental pH can drive bacterial
+    interactions. <text:span text:style-name='Emphasis'><text:span text:style-name='ecti-1095'>PLOS Biology</text:span></text:span> <text:span text:style-name='textbf'><text:span text:style-name='ecbx-1095'>16</text:span></text:span>, e2004248 (2018).
+    </text:p><text:p text:style-name='p-bibitem'>
+<text:bookmark text:name='bibitem37'></text:bookmark>[37] Ratzke, C., Barrere, J. &amp; Gore, J. Strength of species interactions determines biodiversity
+    and stability in microbial communities. <text:span text:style-name='Emphasis'><text:span text:style-name='ecti-1095'>Nature Ecology &amp; Evolution</text:span></text:span> <text:span text:style-name='textbf'><text:span text:style-name='ecbx-1095'>4</text:span></text:span>, 376–383 (2020).
+    </text:p><text:p text:style-name='p-bibitem'>
+<text:bookmark text:name='bibitem38'></text:bookmark>[38] Castledine, M., Sierocinski, P., Padfield, D. &amp; Buckling, A.  Community coalescence: An
+    eco-evolutionary perspective. <text:span text:style-name='Emphasis'><text:span text:style-name='ecti-1095'>Philosophical Transactions of the Royal Society B: Biological</text:span>
+    <text:span text:style-name='ecti-1095'>Sciences</text:span></text:span> <text:span text:style-name='textbf'><text:span text:style-name='ecbx-1095'>375</text:span></text:span>, 20190252 (2020).
+    </text:p><text:p text:style-name='p-bibitem'>
+<text:bookmark text:name='bibitem39'></text:bookmark>[39] Nadell, C. D., Drescher, K. &amp; Foster, K. R. Spatial structure, cooperation and competition
+    in biofilms. <text:span text:style-name='Emphasis'><text:span text:style-name='ecti-1095'>Nature Reviews Microbiology</text:span></text:span> <text:span text:style-name='textbf'><text:span text:style-name='ecbx-1095'>14</text:span></text:span>, 589–600 (2016).
+    </text:p><text:p text:style-name='p-bibitem'>
+<text:bookmark text:name='bibitem40'></text:bookmark>[40] Marsland, R., III <text:span text:style-name='Emphasis'><text:span text:style-name='ecti-1095'>et</text:span><text:span text:style-name='ecti-1095'> al.</text:span></text:span> Available energy fluxes drive a transition in the diversity, stability,
+    and  functional  structure  of  microbial  communities.   <text:span text:style-name='Emphasis'><text:span text:style-name='ecti-1095'>PLoS  Computational  Biology</text:span></text:span>  <text:span text:style-name='textbf'><text:span text:style-name='ecbx-1095'>15</text:span></text:span>,
+    e1006793 (2019).
+                                                                                      
+                                                                                      
+    </text:p><text:p text:style-name='p-bibitem'>
+<text:bookmark text:name='bibitem41'></text:bookmark>[41] Allesina, S. &amp; Tang, S.  Stability criteria for complex ecosystems.  <text:span text:style-name='Emphasis'><text:span text:style-name='ecti-1095'>Nature</text:span></text:span> <text:span text:style-name='textbf'><text:span text:style-name='ecbx-1095'>483</text:span></text:span>, 205–208
+    (2012).
+    </text:p><text:p text:style-name='p-bibitem'>
+<text:bookmark text:name='bibitem42'></text:bookmark>[42] Kurkjian, H. M., Akbari, M. J. &amp; Momeni, B.  The impact of interactions on invasion
+    and colonization resistance in microbial communities.  <text:span text:style-name='Emphasis'><text:span text:style-name='ecti-1095'>PLOS Computational Biology</text:span></text:span> <text:span text:style-name='textbf'><text:span text:style-name='ecbx-1095'>17</text:span></text:span>,
+    e1008643 (2021).
+    </text:p><text:p text:style-name='p-bibitem'>
+<text:bookmark text:name='bibitem43'></text:bookmark>[43] Fukami, T. Historical contingency in community assembly: Integrating niches, species pools,
+    and priority effects. <text:span text:style-name='Emphasis'><text:span text:style-name='ecti-1095'>Annual Review of Ecology, Evolution, and Systematics</text:span></text:span> <text:span text:style-name='textbf'><text:span text:style-name='ecbx-1095'>46</text:span></text:span>, 1–23 (2015).
+    </text:p><text:p text:style-name='p-bibitem'>
+<text:bookmark text:name='bibitem44'></text:bookmark>[44] Rillig, M. C. &amp; Mansour, I.  Microbial ecology: Community coalescence stirs things up.
+    <text:span text:style-name='Emphasis'><text:span text:style-name='ecti-1095'>Current Biology</text:span></text:span> <text:span text:style-name='textbf'><text:span text:style-name='ecbx-1095'>27</text:span></text:span>, R1280–R1282 (2017).
+    </text:p><text:p text:style-name='p-bibitem'>
+<text:bookmark text:name='bibitem45'></text:bookmark>[45] Tropini,  C.,  Earle,  K. A.,  Huang,  K. C.  &amp;  Sonnenburg,  J. L.   The  gut  microbiome:
+    Connecting spatial organization to function. <text:span text:style-name='Emphasis'><text:span text:style-name='ecti-1095'>Cell Host &amp; Microbe</text:span></text:span> <text:span text:style-name='textbf'><text:span text:style-name='ecbx-1095'>21</text:span></text:span>, 433–442 (2017).
+    </text:p><text:p text:style-name='p-bibitem'>
+<text:bookmark text:name='bibitem46'></text:bookmark>[46] Smillie, C. S. <text:span text:style-name='Emphasis'><text:span text:style-name='ecti-1095'>et</text:span><text:span text:style-name='ecti-1095'> al.</text:span></text:span> Strain tracking reveals the determinants of bacterial engraftment in the
+    human gut following fecal microbiota transplantation. <text:span text:style-name='Emphasis'><text:span text:style-name='ecti-1095'>Cell Host &amp; Microbe</text:span></text:span> <text:span text:style-name='textbf'><text:span text:style-name='ecbx-1095'>23</text:span></text:span>, 229–240.e5
+    (2018).
+    </text:p><text:p text:style-name='p-bibitem'>
+<text:bookmark text:name='bibitem47'></text:bookmark>[47] Rocca, J. D., Muscarella, M. E., Peralta, A. L., Izabel-Shen, D. &amp; Simonin, M.  Guided
+    by  microbes:  Applying  community  coalescence  principles  for  predictive  microbiome
+    engineering. <text:span text:style-name='Emphasis'><text:span text:style-name='ecti-1095'>mSystems</text:span></text:span> <text:span text:style-name='textbf'><text:span text:style-name='ecbx-1095'>6</text:span></text:span>, e00538–21 (2021).
+    </text:p><text:p text:style-name='p-bibitem'>
+<text:bookmark text:name='bibitem48'></text:bookmark>[48] Callahan, B. J. <text:span text:style-name='Emphasis'><text:span text:style-name='ecti-1095'>et</text:span><text:span text:style-name='ecti-1095'> al.</text:span></text:span>  DADA2: High-resolution sample inference from Illumina amplicon
+    data. <text:span text:style-name='Emphasis'><text:span text:style-name='ecti-1095'>Nature Methods</text:span></text:span> <text:span text:style-name='textbf'><text:span text:style-name='ecbx-1095'>13</text:span></text:span>, 581–583 (2016).
+                                                                                      
+                                                                                      
+    </text:p><text:p text:style-name='p-bibitem'>
+<text:bookmark text:name='bibitem49'></text:bookmark>[49] Quast,  C.  <text:span text:style-name='Emphasis'><text:span text:style-name='ecti-1095'>et</text:span><text:span text:style-name='ecti-1095'> al.</text:span></text:span>   The  SILVA  ribosomal  RNA  gene  database  project:  improved  data
+    processing and web-based tools. <text:span text:style-name='Emphasis'><text:span text:style-name='ecti-1095'>Nucleic Acids Research</text:span></text:span> <text:span text:style-name='textbf'><text:span text:style-name='ecbx-1095'>41</text:span></text:span>, D590–D596 (2013).
+    </text:p></text:index-body></text:bibliography>
+   <!--  end of section* 
+ --><!--  end of subsection* 
+ --><!--  end of section 
+ --></office:text></office:body> 
+</office:document-content>

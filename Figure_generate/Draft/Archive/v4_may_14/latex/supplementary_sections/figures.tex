@@ -1,0 +1,426 @@
+% ============================================
+% Supplementary Figures
+% ============================================
+% Reordered to match sequential appearance in main text
+% Note: Some figures moved to Extended Data (ED Figs 1-9)
+% Note: Taxonomy color map moved to Extended Data Fig. 1
+\newpage
+\subsection*{Supplementary Figures}
+
+% ============================================
+% Figure 1: Strain characterization (Section 3.1)
+% ============================================
+
+% Supple Fig 1 - Phylogeny tree (was Fig 2)
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.9\textwidth]{supplementary_figs/Fig_1-3_phylogeny_tree.pdf}
+\caption{\textbf{Supplementary Fig.~1.} Phylogenetic tree of bacterial isolates. Maximum-likelihood phylogenetic tree based on full-length 16S rRNA gene sequences of the 54 bacterial isolates used in this study. Tree was constructed using EMBL-EBI tools\citep{Madeira2022}. The isolates span three phyla (Proteobacteria, Firmicutes, Bacteroidota) and 29 families, representing broad phylogenetic diversity.}
+\label{fig:suppl_s1}
+\end{figure}
+
+% Note: Time series in Base media moved to Supplementary Fig. 26
+% Note: Metric-sensitivity analysis moved to Extended Data Fig. 2
+% Note: Skewness null model comparison moved to Extended Data Fig. 3
+
+% ============================================
+% Figures 2-4: Simulation robustness (Section 3.3)
+% ============================================
+
+% Supple Fig 2 - Simulation: growth-rate heterogeneity (was Fig 3)
+\begin{figure}[H]
+\centering
+\begin{subfigure}[b]{0.48\textwidth}
+    \includegraphics[width=\textwidth]{supplementary_figs/Fig_phase_diagram_ablation_growth_std01.pdf}
+    \caption{Growth rate: mean 1, standard deviation 0.1}
+\end{subfigure}
+\hfill
+\begin{subfigure}[b]{0.48\textwidth}
+    \includegraphics[width=\textwidth]{supplementary_figs/Fig_phase_diagram_ablation_growth_std02.pdf}
+    \caption{Growth rate: mean 1, standard deviation 0.2}
+\end{subfigure}
+\caption{\textbf{Supplementary Fig.~2.} Phase diagrams with growth-rate heterogeneity. Coalescence outcomes when species have heterogeneous intrinsic growth rates sampled from normal distributions with mean 1 and standard deviations of \textbf{(a)} 0.1 and \textbf{(b)} 0.2. The qualitative transition from Mixture-dominated to Dominance/Restructuring outcomes with increasing interaction strength is robust to growth-rate variation.}
+\label{fig:suppl_s2}
+\end{figure}
+
+% Supple Fig 3 - Simulation: carrying-capacity variation (was Fig 4)
+\begin{figure}[H]
+\centering
+\begin{subfigure}[b]{0.48\textwidth}
+    \includegraphics[width=\textwidth]{supplementary_figs/Fig_phase_diagram_ablation_k_std01.pdf}
+    \caption{Carrying capacity: mean 1, standard deviation 0.1}
+\end{subfigure}
+\hfill
+\begin{subfigure}[b]{0.48\textwidth}
+    \includegraphics[width=\textwidth]{supplementary_figs/Fig_phase_diagram_ablation_k_std02.pdf}
+    \caption{Carrying capacity: mean 1, standard deviation 0.2}
+\end{subfigure}
+\caption{\textbf{Supplementary Fig.~3.} Phase diagrams with carrying-capacity variation. Coalescence outcomes when species have heterogeneous carrying capacities sampled from normal distributions with mean 1 and standard deviations of \textbf{(a)} 0.1 and \textbf{(b)} 0.2. The qualitative transition from Mixture-dominated to Dominance/Restructuring outcomes with increasing interaction strength is robust to carrying-capacity variation.}
+\label{fig:suppl_s3}
+\end{figure}
+
+% Supple Fig 4 - Simulation: alternative alpha_ij distributions (was Fig 5)
+\begin{figure}[H]
+\centering
+\begin{subfigure}[b]{0.48\textwidth}
+    \includegraphics[width=\textwidth]{supplementary_figs/Fig_phase_diagram_ablation_gaussian.pdf}
+    \caption{Gaussian distribution (mean $\mu$, matched variance)}
+\end{subfigure}
+\hfill
+\begin{subfigure}[b]{0.48\textwidth}
+    \includegraphics[width=\textwidth]{supplementary_figs/Fig_phase_diagram_ablation_gamma.pdf}
+    \caption{Gamma distribution (mean $\mu$, matched variance)}
+\end{subfigure}
+\caption{\textbf{Supplementary Fig.~4.} Phase diagrams for alternative interaction coefficient distributions. Both distributions have the same mean and variance but different shapes. \textbf{(a)} Gaussian distribution (truncated at 0 to ensure non-negative coefficients). \textbf{(b)} Gamma distribution (inherently non-negative). The qualitative transition from Mixture-dominated to Dominance/Restructuring outcomes with increasing mean interaction strength $\mu$ is robust to the choice of distribution, confirming that the observed patterns depend primarily on interaction strength rather than distributional details.}
+\label{fig:suppl_s4}
+\end{figure}
+
+% Note: Species number ablation moved to Extended Data Fig. 4
+% Note: Pairwise selection correlation (simulation) moved to Extended Data Fig. 5
+
+% ============================================
+% Figures 5-7: Pairwise invasion matrices (Section 3.4)
+% ============================================
+
+% Supple Fig 5 - Nutr- pairwise invasion (was Fig 6)
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.9\textwidth]{supplementary_figs/Pairwise_Matrix_Dynamics_LN_improved.pdf}
+\caption{\textbf{Supplementary Fig.~5.} Pairwise invasion outcomes in Nutr$-$ medium. Matrix showing competitive outcomes among the 12 most abundant isolates. Each cell indicates whether the invader (initially 5\%) successfully established or was excluded after seven growth-dilution cycles. Low failed invasion frequency indicates weak competitive exclusion.}
+\label{fig:suppl_s5}
+\end{figure}
+
+% Supple Fig 6 - Base pairwise invasion (was Fig 7)
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.9\textwidth]{supplementary_figs/Pairwise_Matrix_Dynamics_MN_improved.pdf}
+\caption{\textbf{Supplementary Fig.~6.} Pairwise invasion outcomes in Base medium. Matrix showing competitive outcomes among the 12 most abundant isolates. Each cell indicates whether the invader (initially 5\%) successfully established or was excluded after seven growth-dilution cycles. Intermediate failed invasion frequency indicates moderate competitive exclusion.}
+\label{fig:suppl_s6}
+\end{figure}
+
+% Supple Fig 7 - Nutr+ pairwise invasion (was Fig 8)
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.9\textwidth]{supplementary_figs/Pairwise_Matrix_Dynamics_HN_improved.pdf}
+\caption{\textbf{Supplementary Fig.~7.} Pairwise invasion outcomes in Nutr$+$ medium. Matrix showing competitive outcomes among the 12 most abundant isolates. Each cell indicates whether the invader (initially 5\%) successfully established or was excluded after seven growth-dilution cycles. High failed invasion frequency indicates strong competitive exclusion.}
+\label{fig:suppl_s7}
+\end{figure}
+
+% Note: Pairwise selection correlation (experimental) moved to Extended Data Fig. 6
+
+% ============================================
+% Figures 8-9: pH mechanism (Section 3.5)
+% ============================================
+
+% Supple Fig 8 - Species-pH correlation (was Fig 9)
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.9\textwidth]{supplementary_figs/two_panel_ph_asv_figure.pdf}
+\caption{\textbf{Supplementary Fig.~8.} Monoculture pH modification by bacterial isolates. Distribution of monoculture pH after 15~h growth for all ASVs, showing the range of pH modification abilities relative to the initial pH of 6.5. Strong acidifiers (monoculture pH $<$ 5) include ASV 12 (\textit{Serratia}), ASV 3 (\textit{Enterobacter}), and ASV 8 (\textit{Citrobacter}). Species that maintain or slightly increase pH above initial (monoculture pH $>$ 6.5) include ASV 11 (\textit{Stenotrophomonas}) and ASV 9 (\textit{Pseudomonas}). Bottom legend shows taxa identities for the labeled ASVs.}
+\label{fig:suppl_s8}
+\end{figure}
+
+% Supple Fig 9 - ASV abundance vs parent community pH (was Fig 10)
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.95\textwidth]{supplementary_figs/Fig_S23_ASV_vs_pH_combined.pdf}
+\caption{\textbf{Supplementary Fig.~9.} Dominant species class (acidifier vs.\ alkalizer) determines parental community pH. Scatter plots showing the relationship between dominant ASV relative abundance in parental communities and the resulting community pH at stabilization. Top row: alkalizers including ASV 9 (\textit{Pseudomonas}) and ASV 11 (\textit{Stenotrophomonas}), whose dominance is associated with higher community pH. Bottom row: acidifiers including ASV 3 (\textit{Enterobacter}), ASV 8 (\textit{Citrobacter}), and ASV 12 (\textit{Serratia}), whose dominance is associated with lower community pH. For each ASV, left panel shows Base medium and right panel shows Nutr$+$ medium. Regression lines and correlation coefficients shown; asterisks indicate $p < 0.05$.}
+\label{fig:suppl_s9}
+\end{figure}
+
+% Note: pH difference vs coalescence outcome moved to Extended Data Fig. 8
+
+% ============================================
+% Figures 10-12: Rank-Abundance Curves
+% ============================================
+
+% Supple Fig 10 - Rank-Abundance Curves - Base medium (was Fig 11)
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.85\textwidth]{supplementary_figs/rank_abundance_parental_vs_coalesced_Base.pdf}
+\caption{\textbf{Supplementary Fig.~10.} Rank-abundance curves comparing parental and coalesced communities in Base medium. \textbf{(a)} Parental communities before coalescence. \textbf{(b)} Coalesced communities after coalescence. Each line represents one community's rank-abundance curve. Gini coefficients quantify abundance inequality (0 = perfectly even, 1 = one species dominates). Parental: Gini = 0.62 $\pm$ 0.19 (n=59); Coalesced: Gini = 0.64 $\pm$ 0.15 (n=94). Both parental and coalesced communities exhibit substantial abundance skewness with similar Gini values.}
+\label{fig:suppl_s10}
+\end{figure}
+
+% Supple Fig 11 - Rank-Abundance Curves - Nutr- medium (was Fig 12)
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.85\textwidth]{supplementary_figs/rank_abundance_parental_vs_coalesced_Nutr-.pdf}
+\caption{\textbf{Supplementary Fig.~11.} Rank-abundance curves comparing parental and coalesced communities in Nutr$-$ medium. \textbf{(a)} Parental communities before coalescence. \textbf{(b)} Coalesced communities after coalescence. Each line represents one community's rank-abundance curve. Parental: Gini = 0.63 $\pm$ 0.09 (n=60); Coalesced: Gini = 0.61 $\pm$ 0.12 (n=92).}
+\label{fig:suppl_s11}
+\end{figure}
+
+% Supple Fig 12 - Rank-Abundance Curves - Nutr+ medium (was Fig 13)
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.85\textwidth]{supplementary_figs/rank_abundance_parental_vs_coalesced_Nutr+.pdf}
+\caption{\textbf{Supplementary Fig.~12.} Rank-abundance curves comparing parental and coalesced communities in Nutr$+$ medium. \textbf{(a)} Parental communities before coalescence. \textbf{(b)} Coalesced communities after coalescence. Each line represents one community's rank-abundance curve. Parental: Gini = 0.64 $\pm$ 0.17 (n=60); Coalesced: Gini = 0.66 $\pm$ 0.14 (n=94).}
+\label{fig:suppl_s12}
+\end{figure}
+
+% ============================================
+% Figures 13-15: Coalescence Outcome Matrices
+% ============================================
+
+% Supple Fig 13 - Coalescence Matrix - Nutr- (was Fig 14)
+\begin{figure}[H]
+\centering
+\begin{subfigure}[b]{0.72\textwidth}
+    \includegraphics[width=\textwidth]{supplementary_figs/PieCharts/CoalescenceMatrices/coalescence_matrix_Nutr-_s6.pdf}
+    \caption{Initial richness: 6 species}
+\end{subfigure}
+
+\vspace{0.5cm}
+
+\begin{subfigure}[b]{0.72\textwidth}
+    \includegraphics[width=\textwidth]{supplementary_figs/PieCharts/CoalescenceMatrices/coalescence_matrix_Nutr-_s12.pdf}
+    \caption{Initial richness: 12 species}
+\end{subfigure}
+
+\vspace{0.5cm}
+
+\begin{subfigure}[b]{0.72\textwidth}
+    \includegraphics[width=\textwidth]{supplementary_figs/PieCharts/CoalescenceMatrices/coalescence_matrix_Nutr-_s24.pdf}
+    \caption{Initial richness: 24 species}
+\end{subfigure}
+\caption{\textbf{Supplementary Fig.~13.} Coalescence outcome matrices in Nutr$-$ medium. Each matrix shows pairwise coalescence outcomes for all parental community combinations at different initial richness levels. Pie charts display the species composition of coalesced communities; colors match parental origins. Under weak interactions, outcomes show more balanced mixing.}
+\label{fig:suppl_s13}
+\end{figure}
+
+% Supple Fig 14 - Coalescence Matrix - Base (was Fig 15)
+\begin{figure}[H]
+\centering
+\begin{subfigure}[b]{0.72\textwidth}
+    \includegraphics[width=\textwidth]{supplementary_figs/PieCharts/CoalescenceMatrices/coalescence_matrix_Base_s6.pdf}
+    \caption{Initial richness: 6 species}
+\end{subfigure}
+
+\vspace{0.5cm}
+
+\begin{subfigure}[b]{0.72\textwidth}
+    \includegraphics[width=\textwidth]{supplementary_figs/PieCharts/CoalescenceMatrices/coalescence_matrix_Base_s12.pdf}
+    \caption{Initial richness: 12 species}
+\end{subfigure}
+
+\vspace{0.5cm}
+
+\begin{subfigure}[b]{0.72\textwidth}
+    \includegraphics[width=\textwidth]{supplementary_figs/PieCharts/CoalescenceMatrices/coalescence_matrix_Base_s24.pdf}
+    \caption{Initial richness: 24 species}
+\end{subfigure}
+\caption{\textbf{Supplementary Fig.~14.} Coalescence outcome matrices in Base medium. Each matrix shows pairwise coalescence outcomes for all parental community combinations at different initial richness levels. Pie charts display the species composition of coalesced communities; colors match parental origins. Moderate interactions produce frequent one-sided outcomes (Dominance).}
+\label{fig:suppl_s14}
+\end{figure}
+
+% Supple Fig 15 - Coalescence Matrix - Nutr+ (was Fig 16)
+\begin{figure}[H]
+\centering
+\begin{subfigure}[b]{0.72\textwidth}
+    \includegraphics[width=\textwidth]{supplementary_figs/PieCharts/CoalescenceMatrices/coalescence_matrix_Nutr+_s6.pdf}
+    \caption{Initial richness: 6 species}
+\end{subfigure}
+
+\vspace{0.5cm}
+
+\begin{subfigure}[b]{0.72\textwidth}
+    \includegraphics[width=\textwidth]{supplementary_figs/PieCharts/CoalescenceMatrices/coalescence_matrix_Nutr+_s12.pdf}
+    \caption{Initial richness: 12 species}
+\end{subfigure}
+
+\vspace{0.5cm}
+
+\begin{subfigure}[b]{0.72\textwidth}
+    \includegraphics[width=\textwidth]{supplementary_figs/PieCharts/CoalescenceMatrices/coalescence_matrix_Nutr+_s24.pdf}
+    \caption{Initial richness: 24 species}
+\end{subfigure}
+\caption{\textbf{Supplementary Fig.~15.} Coalescence outcome matrices in Nutr$+$ medium. Each matrix shows pairwise coalescence outcomes for all parental community combinations at different initial richness levels. Pie charts display the species composition of coalesced communities; colors match parental origins. Strong interactions produce predominantly one-sided outcomes (Dominance).}
+\label{fig:suppl_s15}
+\end{figure}
+
+% ============================================
+% Figures 16-17: Additional Time Series
+% ============================================
+
+% Supple Fig 16 - Nutr- time series (was Fig 17)
+\begin{figure}[H]
+\centering
+\begin{subfigure}[b]{0.45\textwidth}
+    \includegraphics[width=\textwidth]{supplementary_figs/timeseries_merged/Fig_1-3_timeseries_Nutr-_ex1_merged.pdf}
+    \caption{}
+\end{subfigure}
+\hfill
+\begin{subfigure}[b]{0.45\textwidth}
+    \includegraphics[width=\textwidth]{supplementary_figs/timeseries_merged/Fig_1-3_timeseries_Nutr-_ex2_merged.pdf}
+    \caption{}
+\end{subfigure}
+\caption{\textbf{Supplementary Fig.~16.} Time series of community composition during coalescence in Nutr$-$ medium. Each panel \textbf{(a, b)} shows two parental communities (left, stacked vertically) and their coalesced outcome (right) over serial dilution cycles. Stacked bar charts represent relative species abundances at each time point. X-axis: serial dilution cycles (0--7); Y-axis: relative abundance.}
+\label{fig:suppl_s16}
+\end{figure}
+
+% Supple Fig 17 - Nutr+ time series (was Fig 18)
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.5\textwidth]{supplementary_figs/timeseries_merged/Fig_1-3_timeseries_Nutr+_ex1_merged.pdf}
+\caption{\textbf{Supplementary Fig.~17.} Time series of community composition during coalescence in Nutr$+$ medium. The panel shows two parental communities (left, stacked vertically) and their coalesced outcome (right) over serial dilution cycles. Stacked bar charts represent relative species abundances at each time point. X-axis: serial dilution cycles (0--7); Y-axis: relative abundance.}
+\label{fig:suppl_s17}
+\end{figure}
+
+% ============================================
+% Figures 18-19: Assembly Effect
+% ============================================
+
+% Supple Fig 18 - Assembly reduces interaction strength (was Fig 19)
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.6\textwidth]{supplementary_figs/Assembly_effect_scatter_combined.pdf}
+\caption{\textbf{Supplementary Fig.~18.} Assembly reduces mean pairwise interaction strength. Mean interaction strength before assembly (red, pre-assembly species pool) versus after assembly (blue, within-community) across different interaction strength parameters $\mu$. Points show individual simulation runs; lines connect means. Post-assembly communities consistently show reduced interaction strength, indicating that assembly filters out strongly competing species.}
+\label{fig:suppl_s18}
+\end{figure}
+
+% Note: Assembly effect simulation stacked bar moved to Extended Data Fig. 7
+
+% Supple Fig 19 - Assembly effect experimental (was Fig 20)
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.7\textwidth]{supplementary_figs/Fig_S26_assembly_effect_experimental_stacked_bar.pdf}
+\caption{\textbf{Supplementary Fig.~19.} Assembly history promotes Dominance in experiments. Stacked bar plots comparing outcome distributions between coalescence (top row) and direct assembly (bottom row) across three nutrient conditions (Nutr$-$, Base, Nutr$+$). Percentages and counts (n/total) are shown for each category. In Base and Nutr$+$ conditions, coalescence shows elevated Dominance rates compared to direct assembly, consistent with simulation predictions (Extended Data Fig.~7, Supplementary Fig.~18).}
+\label{fig:suppl_s19}
+\end{figure}
+
+% ============================================
+% Figures 20-21: Monoculture and Overlap
+% ============================================
+
+% Supple Fig 20 - Monoculture OD and growth rate characterization (was Fig 21)
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.9\textwidth]{supplementary_figs/monoculture_od_growth_histograms.pdf}
+\caption{\textbf{Supplementary Fig.~20.} Phenotypic diversity of bacterial isolates in monoculture (Base medium). \textbf{(a)} Distribution of optical density (OD$_{600}$) reached by bacterial isolates during monoculture growth in Base medium ($n = 54$ isolates). \textbf{(b)} Distribution of exponential growth rates across isolates ($n = 45$ isolates with measurable growth rates out of 54 total). Growth rates were computed by log-linear regression of OD versus time during the exponential phase from full kinetic time-course measurements (475 cycles, $\sim$3~min intervals). The isolates exhibit broad variation in both growth yield and growth rate, reflecting phenotypic diversity that may contribute to varied coalescence outcomes in community mixing experiments.}
+\label{fig:suppl_s20}
+\end{figure}
+
+% Supple Fig 21 - Overlap fraction histogram (was Fig 22)
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.95\textwidth]{supplementary_figs/overlap_fraction_histogram.pdf}
+\caption{\textbf{Supplementary Fig.~21.} Fraction of coalesced ASVs present in both parental communities. Distribution of overlap fraction across coalescence events in three nutrient conditions. Overlap fraction is defined as the proportion of ASVs in the coalesced community that were present in both parental communities before mixing. Nutr$-$: mean = 0.10 $\pm$ 0.10 (n=90); Base: mean = 0.22 $\pm$ 0.26 (n=83); Nutr$+$: mean = 0.17 $\pm$ 0.25 (n=90). The relatively low overlap fractions across all conditions indicate that most surviving ASVs in coalesced communities originated from only one of the two parental communities, consistent with the prevalence of Dominance outcomes.}
+\label{fig:suppl_s21}
+\end{figure}
+
+% ============================================
+% Figures 22-25: Natural Community (Section 3.6)
+% ============================================
+
+% Supple Fig 22 - Natural rank-abundance Nutr- (was Fig 23)
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.85\textwidth]{supplementary_figs/rank_abundance_natural_Nutr-.pdf}
+\caption{\textbf{Supplementary Fig.~22.} Rank-abundance curves for natural sample-derived communities in Nutr$-$ medium. \textbf{(a)} Parental communities before coalescence. \textbf{(b)} Coalesced communities after coalescence. Each line represents one community's rank-abundance curve. Gini coefficients quantify abundance inequality (0 = perfectly even, 1 = one species dominates). ASV richness indicates number of ASVs above 0.1\% relative abundance threshold. Horizontal dashed line indicates 0.1\% threshold. Natural communities exhibit higher ASV richness compared to synthetic communities (which had controlled initial richness of 6, 12, or 24 species), reflecting the complex species assemblages in environmental samples.}
+\label{fig:suppl_s22}
+\end{figure}
+
+% Supple Fig 23 - Natural rank-abundance Base (was Fig 24)
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.85\textwidth]{supplementary_figs/rank_abundance_natural_Base.pdf}
+\caption{\textbf{Supplementary Fig.~23.} Rank-abundance curves for natural sample-derived communities in Base medium (natural-community analog of Supplementary Fig.~10 for synthetic communities). \textbf{(a)} Parental communities before coalescence. \textbf{(b)} Coalesced communities after coalescence. Each line represents one community's rank-abundance curve. Gini coefficients quantify abundance inequality (0 = perfectly even, 1 = one species dominates). ASV richness indicates number of ASVs above 0.1\% relative abundance threshold. Horizontal dashed line indicates 0.1\% threshold.}
+\label{fig:suppl_s23}
+\end{figure}
+
+% Supple Fig 24 - Natural rank-abundance Nutr+ (was Fig 25)
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.85\textwidth]{supplementary_figs/rank_abundance_natural_Nutr+.pdf}
+\caption{\textbf{Supplementary Fig.~24.} Rank-abundance curves for natural sample-derived communities in Nutr$+$ medium (natural-community analog of Supplementary Fig.~12 for synthetic communities). \textbf{(a)} Parental communities before coalescence. \textbf{(b)} Coalesced communities after coalescence. Each line represents one community's rank-abundance curve. Gini coefficients quantify abundance inequality (0 = perfectly even, 1 = one species dominates). ASV richness indicates number of ASVs above 0.1\% relative abundance threshold. Horizontal dashed line indicates 0.1\% threshold.}
+\label{fig:suppl_s24}
+\end{figure}
+
+% Supple Fig 25 - Natural overlap fraction histogram (was Fig 26)
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.95\textwidth]{supplementary_figs/overlap_fraction_histogram_natural.pdf}
+\caption{\textbf{Supplementary Fig.~25.} Fraction of coalesced ASVs present in both parental communities for natural sample-derived communities. Distribution of overlap fraction across coalescence events in three nutrient conditions. Overlap fraction is defined as the proportion of ASVs in the coalesced community that were present in both parental communities before mixing. Nutr$-$: mean = 0.13 $\pm$ 0.09 (n=30); Base: mean = 0.09 $\pm$ 0.13 (n=30); Nutr$+$: mean = 0.23 $\pm$ 0.15 (n=30). Similar to synthetic communities (Supplementary Fig.\ 21), the relatively low overlap fractions indicate that most surviving ASVs in coalesced communities originated from only one of the two parental communities, consistent with the prevalence of Dominance outcomes.}
+\label{fig:suppl_s25}
+\end{figure}
+
+% Supple Fig 26 - Time series Base medium (moved from Extended Data)
+\begin{figure}[H]
+\centering
+\includegraphics[width=\textwidth]{supplementary_figs/timeseries_Base_combined.pdf}
+\caption{\textbf{Supplementary Fig.~26.} Time series of community composition during coalescence in Base medium. Each panel \textbf{(a--c)} shows two parental communities (left, stacked vertically) and their coalesced outcome (right) over serial dilution cycles. Stacked bar charts represent relative species abundances at each time point. X-axis: serial dilution cycles (0--7); Y-axis: relative abundance. These representative time courses illustrate the dynamics underlying Dominance and Restructuring outcomes, where one parental community rapidly displaces the other or the merged community converges toward a novel state.}
+\label{fig:suppl_s26}
+\end{figure}
+
+% Supple Fig 27 - Post-assembly interaction matrix (added for R1-7)
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.9\textwidth]{supplementary_figs/interaction_matrix_post_assembly.pdf}
+\caption{\rev{\textbf{Supplementary Fig.~27.} Post-assembly interaction matrix shows block structure. For $\mu = 0.50$ simulations ($n = 1{,}200$ coalescence events), we pooled the pairwise competition coefficients $\alpha_{ij}$ among surviving species and split them by whether the species pair originated from the same parental community (within-community, left) or different parental communities (between-community, right). Within-community coefficients are significantly lower (mean $= 0.389$) than between-community coefficients (mean $= 0.500$, matching the pool mean $\mu = 0.50$; Mann--Whitney $U$ test, $p < 0.001$), confirming that assembly filters species into mutually weakly competing groups while leaving cross-community interactions at the pool-mean level. This block-diagonal structure is the mechanistic basis for correlated species fates during coalescence and for the positive within-community pairwise selection correlation shown in Fig.~2D.}}
+\label{fig:suppl_s27}
+\end{figure}
+
+% Supple Fig 28 - Excess invasion concordance vs mu (added for R2-4)
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.85\textwidth]{supplementary_figs/invasion_fitness_supp.pdf}
+\caption{\rev{\textbf{Supplementary Fig.~28.} Excess same-parent selection correlation scales with interaction strength $\mu$. This auxiliary analysis focuses on the within-parent component of the same-vs-cross pairwise selection metric shown in Fig.~2D. Across the full simulated $\mu$ sweep ($\mu = 0.05$--$1.20$), the excess same-parent selection correlation (observed same-parent correlation minus an origin-shuffled null that randomises parent-of-origin labels while preserving the coalesced community composition) tracks mean interaction strength with Pearson $r = 0.870$, $p = 3.2 \times 10^{-8}$. Because the null holds composition fixed and only permutes labels, the observed enrichment is not expected from origin-label structure alone and is consistent with interaction-mediated correlated invasion outcomes. This quantitative linkage operationalises the conceptual bridge between pairwise selection correlation and correlated multi-species invasion fitness discussed in Supplementary Note~4.}}
+\label{fig:suppl_s28}
+\end{figure}
+
+% Supple Fig 29 - Continuous per-medium PDI / retention marginals (added for R2-3)
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.95\textwidth]{supplementary_figs/marginal_distributions_by_medium.pdf}
+\caption{\rev{\textbf{Supplementary Fig.~29.} Continuous per-medium similarity measures. From left to right: PDI distribution, asymmetry magnitude $y$ (direction-independent), and squared retention magnitude $r^2 = u^2 + v^2$. PDI is computed as $(2/\pi)\arctan(u/v)$, as defined in the Supplementary Methods. These continuous measures track the categorical Dominance / Mixture / Restructuring trend across the nutrient gradient.}}
+\label{fig:suppl_s29}
+\end{figure}
+
+% Supple Fig 30 - Boundary sensitivity for R2-3
+\begin{figure}[H]
+\centering
+\includegraphics[width=\textwidth]{supplementary_figs/boundary_sensitivity_by_medium.pdf}
+\caption{\rev{\textbf{Supplementary Fig.~30.} Boundary-sensitivity analysis for the Dominance classification. (A) Dominance fractions after varying the PDI boundary while holding the retention boundary at $r^2 > 0.5$. (B) Dominance fractions after varying the retention boundary while holding the PDI boundary at the manuscript baseline. Dashed lines mark the manuscript baseline.}}
+\label{fig:suppl_s30}
+\end{figure}
+
+% Supple Fig 31 - Dominant-species removal control for Fig. 5C (added for R1-3)
+\begin{figure}[H]
+\centering
+\includegraphics[width=\textwidth]{supplementary_figs/Fig_R1_3_per_medium_scatter.pdf}
+\caption{\rev{\textbf{Supplementary Fig.~31.} Dominant-species removal control for the Fig.~5C PDI analysis. Per-medium PDI scatter plots are shown without pooling Base and Nutr$+$ events. Rows show Base and Nutr$+$; columns show the original Fig.~5C calculation, removal of the most abundant species in the coalesced community from all three abundance vectors, and removal of the most abundant species from each parental community before recalculating PDI. $R^2$ and slope annotations are computed on the reflected plotting data, as in Fig.~5C. Spearman $\rho$ and $p$ are computed on the independent, non-reflected events.}}
+\label{fig:suppl_s31}
+\end{figure}
+
+% Supple Fig 32 - Pool-size dependency on community-level selection (added for R1-4)
+\begin{figure}[H]
+\centering
+\includegraphics[width=\textwidth]{supplementary_figs/pool_size_analysis.pdf}
+\caption{\rev{\textbf{Supplementary Fig.~32.} Pool-size dependency on community-level selection. \textbf{A:} Realized parental richness (ASVs above 0.1\% threshold) shown by medium, with boxplots grouped and colored by initial species pool size; pooled statistics in the response text use a Kruskal--Wallis test of richness across pool sizes. \textbf{B:} Parental ASV retention ratio, defined as the number of parental ASV occurrences retained above threshold after coalescence divided by the summed thresholded richness of the two parental communities, shown by medium and initial species pool size; pooled statistics in the response text use a Kruskal--Wallis test across pool sizes. \textbf{C:} Experimental Dominance fraction shown by medium, with bars grouped and colored by initial species pool size; the displayed pooled $p$-value is from a chi-square test of independence for Dominance vs non-Dominance outcomes across pool sizes. \textbf{D:} Experimental pairwise species selection grouped by initial species pool size; solid circles indicate same-parent species pairs and dashed open squares indicate cross-parent species pairs, using the same concordance-based metric as Fig.~2D. \textbf{E:} Model Dominance fraction grouped by $\mu$ (600 coalescence pairs per bar). \textbf{F:} Model pairwise species selection (same solid / cross dashed) at $\mu \in \{0.30, 0.60, 0.80\}$ across pool sizes $4$--$48$. Panels D--F summarize observed trends descriptively; no additional p-values are shown for these panels.}}
+\label{fig:suppl_s32}
+\end{figure}
+
+% Supple Fig 33 - Parental OD control for Dominance direction and pairwise selection (added for R1-1)
+\begin{figure}[H]
+\centering
+\begin{minipage}{0.49\textwidth}
+\centering
+\includegraphics[width=\linewidth]{supplementary_figs/Fig_R1_1A_winner_loser_OD.pdf}
+\end{minipage}
+\hfill
+\begin{minipage}{0.49\textwidth}
+\centering
+\includegraphics[width=\linewidth]{supplementary_figs/Fig_R1_1B_OD_vs_PDI.pdf}
+\end{minipage}
+\vspace{0.5em}
+\includegraphics[width=0.62\textwidth]{supplementary_figs/Fig_R1_1C_pairwise_corr_vs_OD.pdf}
+\caption{\rev{\textbf{Supplementary Fig.~33.} Parental-community OD$_{600}$ does not explain Dominance direction or nutrient-dependent correlated species fates. \textbf{A:} Winner OD vs loser OD for Dominance events per medium; dashed line is $y=x$. The displayed $p$ value is from a two-sided binomial test against the null expectation that the higher-OD parental community wins 50\% of Dominance events. \textbf{B:} Signed $\Delta\text{OD}_{A-B}$ ($\text{OD}_{A} - \text{OD}_{B}$) vs PDI per medium. Spearman $\rho$ is the rank correlation between signed $\Delta\text{OD}_{A-B}$ and PDI; the displayed $p$ value is from a two-sided Spearman rank-correlation test. Gray points are reflections included for symmetry. \textbf{C:} Within-community pairwise selection correlation vs parental-community OD. Left column: parental communities grouped into low, mid, and high within-medium OD tertiles, with OD$_{600}$ ranges shown below the group labels. Bars show within-community pairwise selection correlation with bootstrap 95\% CIs; the dashed gray line and shaded band show the medium-level mean cross-community correlation and its bootstrap 95\% CI. Right column: per-event parental-community observations plotted by OD and within-community pairwise selection correlation.}}
+\label{fig:suppl_s33}
+\end{figure}
+
+% Supple Fig 34 - pH-pair analysis for Dominance frequency and winner identity (added for R1-2)
+\begin{figure}[H]
+\centering
+\includegraphics[width=\textwidth]{supplementary_figs/Fig_R1_2_acidalk_per_medium.pdf}
+\caption{\rev{\textbf{Supplementary Fig.~34.} pH mismatch weakly predicts outcome class, but acidic parental communities preferentially win acid--alk events in Nutr$+$. \textbf{(Left, Middle)} Stacked class-fraction bars (Dominance / Mixture / Restructuring) for the three pH-pair types in Base and Nutr$+$; pair types are ordered Acid--Alk, Acid--Acid, Alk--Alk, with Dominance \% labelled inside each bar. Reported class-frequency p-values are from two-sided Fisher exact tests on 2$\times$2 tables comparing Acid--Alk vs pooled same-pH (Acid--Acid $\cup$ Alk--Alk) events and Dominance vs non-Dominance outcomes. \textbf{(Right)} Signed PDI for acid--alk pairs: positive = acidic parental community won, negative = alkaline parental community won. Acid-win p-values are from two-sided binomial tests against the null expectation that the acidic parental community wins 50\% of acid--alk events. Dots = individual events; squares = mean $\pm$ s.e.m.; p-values above each column are from one-sample $t$-tests of signed PDI against zero.}}
+\label{fig:suppl_s34}
+\end{figure}

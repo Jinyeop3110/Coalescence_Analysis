@@ -1,0 +1,188 @@
+% ============================================
+% Response to Reviewer 3
+% ============================================
+\section*{Response to Reviewer 3}
+
+We thank the reviewer for their rigorous and technically insightful feedback, particularly the geometric analysis of dimensionality effects on similarity metrics. Below we address each point.
+
+% --------------------------------------------
+\subsection*{R3-1. Clarify L\_1 versus L\_2 normalization in the similarity metric (P1)}
+
+\reviewercomment{With respect to the similarity metrics used by the authors (the dot products $x_A \cdot x_C$ and $x_B \cdot x_C$), I believe that their interpretation is less straightforward than it would appear at first glance. As a first small comment, the authors state that $x$ are ``normalized abundance vectors,'' and Fig. 1B clearly suggests that these are $L_1$ normalized, that is, their elements sum to 1 (i.e., they represent species' relative abundances). But in the Supplementary Methods, the authors clarify that $x$ are $L_2$ normalized, i.e., it is the sum of squares of their elements that is 1. I think making this more clear in the main text would help, since it fundamentally changes what one should expect for the dot products under different hypotheses.}
+
+\responselabel
+We thank the reviewer for identifying this ambiguity and apologize for the confusion. To clarify, we computed cosine similarity after Euclidean normalization (L$_2$ norm) of the abundance vectors. We have corrected the wording in the main Results text, updated the Methods classification paragraph, and updated the Supplementary Methods paragraph so that the workflow is explicit: communities are visualized as relative-abundance vectors, but the similarity calculation itself uses the corresponding Euclidean-normalized vectors.
+
+
+Results \S2.1, after the similarity-score equation: \mschange{``where $\vec{x}_A$, $\vec{x}_B$, and $\vec{x}_C$ denote the relative-abundance vectors for the two parental communities and the coalesced community after Euclidean normalization.''}
+
+Methods \S Classification of Coalescence Outcomes, at first definition of the similarity metric: \mschange{``Each community was represented by its relative-abundance vector and then normalized to unit Euclidean length for the similarity calculation; similarity was computed as the cosine similarity (equivalently, the dot product of the Euclidean-normalized vectors) between the coalesced community and each parental community (see Supplementary Methods for full normalization details).''}
+
+Supplementary Methods, metric definition paragraph: \mschange{``To characterize coalescence outcomes, we quantified the compositional similarity between the post-coalescence community and each parental community. Each community's relative-abundance profile was normalized to unit length using Euclidean normalization (i.e., dividing by the square root of the sum of squared abundances, so that the resulting vector has unit Euclidean length). We then computed the cosine similarity (dot product of Euclidean-normalized vectors) between the coalesced community C and each parent A and B. These two similarity scores place each coalescence outcome in a two-dimensional similarity space, where the position reflects how strongly the coalesced community resembles each parental community.''}
+
+% --------------------------------------------
+\subsection*{R3-2. Dimensionality artifact in similarity metrics (P0)}
+
+\reviewercomment{%
+Along these lines, my main concern is that these similarity metrics can behave in somewhat counter-intuitive ways, and some of the results the authors report may be at least partially skewed by simple statistical effects. To make my point as clear as possible, let me propose a simple example. Let's consider two communities A and B, each with N non-overlapping species. Total species' abundances can be represented by vectors $n_A$ and $n_B$:
+
+\[
+n_A = ( n_A^{(1)} , n_A^{(2)} , \ldots , n_A^{(N)} , 0 , 0 , \ldots , 0 )
+\]
+\[
+n_B = ( 0 , 0 , \ldots , 0 , n_B^{(1)} , n_B^{(2)} , \ldots , n_B^{(N)} )
+\]
+
+Now consider a simple null model (similar to the ``shuffled abundance'' null model proposed by the authors) in which community C, which results from A and B undergoing coalescence, has N species. The abundance vector of C, $n_C$, has N elements that are zero and N that are non-zero. Which elements are set to zero is chosen randomly (though the argument holds in other scenarios, including the ``abundance-weighted random selection'' model formulated by the authors). The non-zero elements of $n_C$ are random samples of the non-zero elements of $n_A$ and $n_B$. This null model aims at representing a ``maximal restructuring'' situation, where species' abundances in community C are completely uncorrelated from their abundances in the parental communities. If we generate $n_A$ and $n_B$ by randomly sampling their non-zero elements uniformly in (0, 1) and we compute the similarity metrics
+
+\[
+\mathrm{Sim}(A,C) = n_A \cdot n_C / |n_A| |n_C|
+\]
+\[
+\mathrm{Sim}(B,C) = n_B \cdot n_C / |n_B| |n_C|
+\]
+
+For different values of N and different pairs of randomly-generated communities, the ``similarity map'' looks like:
+
+[See attached Reviewer Figure 1]
+
+So despite the model being formulated as a null baseline representing a ``full restructuring'' situation, many cases would be flagged as ``dominance'' or ``mixing.'' The same is true if species' abundances in A and B are sampled differently, for instance if instead of sampling them uniformly ($n \sim U(0,1)$) we used a more uneven distribution (such as $n \sim 10^{U(-3,0)}$) we would find:
+
+[See attached Reviewer Figure 2]
+
+Notably, a somewhat similar effect also occurs under a much simpler null model: if the community C was simply the superposition of communities A and B (i.e., if the two parental communities mixed perfectly without interacting), we would have $n_C = n_A + n_B$. In this case:
+
+[See attached Reviewer Figure 3]
+
+The key takeaway here is that, when using these similarity metrics and the author's ``Dominance-Mixing-Restructuring'' classification, one could expect to observe a decline in the ``Dominance'' fraction as community diversity increases due to a simple statistical effect: positive unit vectors are more likely to be close to orthogonal in lower dimensions than they are in higher dimensions.%
+}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.88\textwidth,height=0.78\textheight,keepaspectratio]{Reviewer3_attachment_figures.pdf}
+\caption*{\textbf{Reviewer attachment.}}
+\end{figure}
+
+\responselabel
+Thank you for this interesting suggestion. We reproduced the reviewer's toy null mixture models plus the corresponding skewed-abundance additive case (random restructuring with $U(0,1)$, random restructuring with $10^{U(-3,0)}$, simple additive mixing $n_C = n_A + n_B$ with abundances drawn from $U(0,1)$, and simple additive mixing $n_C = n_A + n_B$ with abundances drawn from $10^{U(-3,0)}$) using the exact same L$_2$/cosine analysis used in our manuscript. We note that one mismatch in the reviewer-attached visualization is that the Restructuring boundary appears to use a retention-magnitude cutoff of $r < 1/2$, whereas our pipeline uses $r \leq 1/\sqrt{2}$ (equivalently, $r^2 \leq 1/2$).
+
+Using the same classification pipeline as in the manuscript, the reproduced results classify the expected outcomes well, except for the skewed-abundance null mixture model: the random-restructuring null mixture models become increasingly classified as Restructuring as $N$ grows (uniform case: $43.4\%, 64.9\%, 78.5\%, 88.7\%$ for $N = 2, 4, 6, 8$), and the uniform additive null mixture model concentrates on the symmetric Mixture axis and is classified as Mixture in $80.5\%, 97.4\%, 99.1\%, 99.7\%$ of cases. The skewed-abundance null mixture model remains high-retention but can fall off the symmetry line and be classified as high Dominance (Dominance: $73.9\%, 50.0\%, 39.7\%, 30.6\%$ for $N = 2, 4, 6, 8$). This provides a stringent check that the manuscript classification remains valid even at the low-richness end of the species-pool sizes considered here.
+
+We have revised the Methods and Supplementary Methods to state this boundary explicitly, and Response Fig.~R3-2.0a shows both the manuscript boundary and the alternative visual boundary at $r = 1/2$.
+
+Methods, ``Classification of Coalescence Outcomes,'' now states that \mschange{``The Restructuring boundary is defined by $r^2 \leq 0.5$, equivalently a retention radius $r \leq 1/\sqrt{2}$ in the similarity map.''} Supplementary Methods, ``Similarity-Based Classification of Coalescence Outcomes,'' now states that \mschange{``Restructuring occurs when $r^2 \leq 0.5$, equivalently when the retention radius satisfies $r \leq 1/\sqrt{2}$ in the two-parental-community similarity map,''} and \mschange{``the retention threshold $r^2 = 0.5$ (radius $r = 1/\sqrt{2}$, not $r = 1/2$) marks the point at which the best linear combination of the two parental-community composition vectors accounts for half of the coalesced community's composition in the normalized similarity space.''}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.95\textwidth]{Fig_R3_2_reviewer_reproduction_L2.pdf}
+\caption*{\textbf{Response Fig.~R3-2.0a.} \textbf{Reviewer toy nulls analyzed with the manuscript classifier.} Rows: \textbf{A}, random restructuring with $U(0,1)$ abundances; \textbf{B}, random restructuring with $10^{U(-3,0)}$ abundances; \textbf{C}, additive mixing with $U(0,1)$ abundances; \textbf{D}, additive mixing with $10^{U(-3,0)}$ abundances. Scatter panels show the reviewer's visual boundary ($r=1/2$, gray) and the manuscript boundaries ($r=1/\sqrt{2}$ and $y=0.5$, black); bars show manuscript-classifier fractions.}
+\end{figure}
+
+\reviewercomment{%
+This effect is partially accounted for in the manuscript; specifically, Extended Data Fig.~3 shows that the empirical distribution of Dominance values has significantly higher mean than its counterparts generated by the null models. However, while the authors' claim is correct (``skewed abundance distributions alone do not fully account for the observed asymmetric outcomes''), this does not mean that the empirically quantified Dominance values aren't biased by the statistical effects described above. Many cases flagged as ``Dominance'' may in actuality be compatible with a simple null model, particularly for the communities assembled from the less diverse species pools.%
+}
+
+\responselabel
+As the prior analysis demonstrated, a simple additive null model in low-richness settings can be classified as Dominance because of a simple statistical effect. Specifically, this occurs when the two parental-community vectors have substantially different norms. For a simple additive null mixture, $n_A+n_B$ is closer to the larger-norm parental community. For non-overlapping abundance vectors of parental communities, this effect is direct: $\mathrm{Sim}(A,A+B)$ and $\mathrm{Sim}(B,A+B)$ are proportional to $\|n_A\|_2$ and $\|n_B\|_2$, respectively. We agree that this could particularly matter under small-richness setups, where community-vector norms can have larger fold differences by chance.
+
+However, we expect this effect to be marginal in our experiments. In our experimental coalescence pairs, the fold differences of raw abundance vectors (16S count data) between the two parental communities were $1.85 \pm 0.95$ (mean $\pm$ SD; median $1.58$), with per-medium means ranging from $1.55 \pm 0.51$ to $2.05 \pm 1.18$. These values are far smaller than those in the skewed-abundance simple-additive toy model, where the fold differences were $18.2 \pm 39.4$ and $7.1 \pm 14.7$ for $N=2$ and $N=4$, respectively (Response Fig.~R3-2C). This implies that the suggested simple statistical effect may not be strong among parental-community pairs in our experimental setup.
+
+To directly test, we analyzed the simple additive null model on the actual raw abundance vectors of the paired parental communities in our experiment (Response Fig.~R3-2C). The result was that most simple additive null mixtures were classified as Mixture in each nutrient condition: 84/90 in Nutr$-$ (93.3\%), 66/83 in Base (79.5\%), and 69/90 in Nutr$+$ (76.7\%). This clearly shows that the simple additive-mixture effect is marginal in our results.
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.92\textwidth]{Fig_R3_2_parent_norm_asymmetry.pdf}
+\caption*{\textbf{Response Fig.~R3-2C.} \textbf{Raw parental norm imbalance and additive-null classifications.} \textbf{A}, Raw ASV count-vector L$_2$ norms for parental communities. \textbf{B}, Paired parental L$_2$ norm fold differences, with skewed additive toy models shown for scale; dashed line, $1+\sqrt{2}$ fold difference corresponding to PDI $<0.25$ or $>0.75$ for a simple additive null. \textbf{C}, Event-matched raw-count additive-null class fractions; labels show Mixture counts.}
+\end{figure}
+
+\reviewercomment{%
+In my view, it would be necessary to compare each coalescence community with a corresponding null model constructed specifically for each of the pairs of parental communities, such as the simple additive model $n_{C,\mathrm{null}} = n_A + n_B$. Comparing the experimental coalesced community with such a null model should be done on a case-by-case basis, not just by comparing distributions of Dominance indexes as in Extended Data Fig.~3.%
+}
+
+\responselabel
+Thank you for this interesting suggestion. We performed a pair-specific comparison between each observed coalescence community and its corresponding simple additive null model, constructed from the same two parental communities. As described above, this simple additive null model was generally classified as Mixture. Moreover, the experimental Base-medium outcomes were shifted further toward parental asymmetry than their event-matched nulls (one-sided paired Wilcoxon test, $p = 5.9 \times 10^{-14}$). Thus, the case-by-case additive-null comparison also shows that the simple additive-mixture model is not sufficient to explain the observed Dominance tendency.
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.98\textwidth]{Fig_R3_2_additive_null_comparison.pdf}
+\caption*{\textbf{Response Fig.~R3-2A.} \textbf{Base-medium observations versus event-matched additive nulls.} \textbf{A}, Similarity map: orange open points, raw-count additive nulls; blue filled points, observed coalesced communities; arrows, example matched pairs. \textbf{B}, Paired PDI/asymmetry shifts from null to observation for all 83 Base events. \textbf{C}, Class transitions from raw-count nulls (columns) to observations (rows).}
+\end{figure}
+
+% --------------------------------------------
+\subsection*{R3-3. Interaction strength, diversity, and Dominance frequency (P0)}
+
+\reviewercomment{In section 2.3 of the Results, the authors examine how varying the mean interaction (competition) strength between species in a gLV model affects coalescence outcomes. The main conclusion here is that increasing competition strength shifts the distribution of coalescence outcomes from all ``Mixing'' to mostly ``Dominance'' and ``Restructuring.'' However, it is not clear to what extent this phenomenon can be explained by simple statistical effects like the ones described above. Increasing the mean interaction strength (mu) can be expected to decrease the number of species in the communities, and, as mentioned above, reducing N generically causes an increase in the frequency of ``Dominance'' outcomes. It seems important to test whether the increase of ``Dominance'' outcomes in the model (and in the experiments) as mu grows is substantially different from the expected increase in the null models as N decreases.}
+
+\responselabel
+As shown in R3-2, the expected statistical/geometric effect can occur, but it appears weak in our experimental paired parental communities: raw-vector norm fold differences between paired parental communities were relatively small, and the event-matched simple additive null was usually classified as Mixture (Response Fig.~R3-2C). We performed the analogous norm/additive-null diagnostic for the simulations. In the gLV simulations, the simple additive null remains mostly classified as Mixture across $\mu$, although it becomes partially classified as Dominance at high $\mu$ (Response Fig.~R3-3B). Thus, this statistical effect exists in the model, but is not sufficient to explain the observed Dominance increase.
+
+In the simulations, we constructed a composition-shuffling null model that preserves the unevenness structure of post-assembly communities at each $\mu$, including the per-$\mu$ mean richness and abundance distribution, but randomizes parent-of-origin labels among coalesced survivors. This preserves richness and abundance unevenness while removing parental-origin structure. At high $\mu$, this null predicts $\sim 35\%$ Dominance from unevenness alone, whereas observed Dominance reaches $\sim 77\%$: the $\sim 43$ pp gap is attributable to ecological assembly and increases monotonically with $\mu$ (Pearson $r = 0.695$, $p = 1.65 \times 10^{-4}$). Averaged over $\mu \geq 0.3$, the mean excess is $45.2$ percentage points.
+
+An independent check is the pairwise selection correlation analysis (Extended Data Figs.~5--6), which does not use between-community similarity scores. Correlated species fates within parental communities cannot arise from geometric effects on the $\mathrm{Sim}(A,C)$--$\mathrm{Sim}(B,C)$ map, so the observed increase in pairwise selection correlation with $\mu$ provides separate evidence that the transition is not only a similarity-metric artifact.
+
+Results \S2.3, after interaction strength sweep: \mschange{``To test whether decreasing diversity with increasing $\mu$ could account for the rise in Dominance, we compared observed outcomes against a composition-shuffling null model that preserves unevenness but destroys species-level ecological structure. At high $\mu$, unevenness alone predicts $\sim$35\% Dominance, whereas observed simulations reach $\sim$77\%, giving an excess of $\sim$43 percentage points attributable to ecological assembly.''}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.90\textwidth]{Fig_R3_3_sim_parent_norm_asymmetry.pdf}
+\caption*{\textbf{Response Fig.~R3-3B.} \textbf{Simulation parent-vector norm imbalance and additive-null classifications across interaction strength.} \textbf{A}, Euclidean norms of assembled sub-community abundance vectors across $\mu$; line shows the median and shading shows the 25th--75th percentile range. \textbf{B}, Fold difference in Euclidean norm between the two parental sub-communities for each simulated coalescence event; line shows the median, shading shows the 25th--75th percentile range, and dotted line shows the 95th percentile. The dashed horizontal line marks the fold difference $1+\sqrt{2}$ corresponding to PDI $<0.25$ or $>0.75$ for a simple additive null. \textbf{C}, Classification fractions for the simple additive null model computed from event-matched parental sub-community vectors at each $\mu$.}
+\end{figure}
+
+\reviewercomment{It would also be useful to see how richness (in the final communities, not in the inocula) changes with mu in the model, as well as across the different media (Base, Nutr-, Nutr+) used in the experiment. From Supplementary Figs. 10-12, it seems like communities derived from natural samples do exhibit substantial diversity differences in the Base and Nutr+ media with respect to the Nutr- medium, but I could not find an equivalent representation for the first experiment.}
+
+\responselabel
+We agree that showing the final-community richness directly is useful. In the simulations, final richness decreases with $\mu$ for both post-assembly sub-communities and coalesced communities (Response Fig.~R3-3A, panel A). In the experiment, final coalesced-community richness also differs across media, with median richness of 13, 7, and 9 ASVs in Nutr$-$, Base, and Nutr$+$, respectively (Response Fig.~R3-3A, panel B). Thus, richness differences are real and are now shown directly. However, as demonstrated by the prior analyses, the associated statistical/geometric effect does not explain the Dominance patterns: it is marginal in experimental pair-matched additive nulls (Response Fig.~R3-2C) and insufficient to explain the simulation trend (Response Fig.~R3-3B).
+
+Results \S2.4, add richness data: \mschange{``Final coalesced-community richness varied across media (median richness: 13, 7, and 9 ASVs for Nutr$-$, Base, and Nutr$+$, respectively), but the magnitude of Dominance increase exceeded what richness differences alone would predict.''}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.92\textwidth]{Fig_R3_3_richness_summary.pdf}
+\caption*{\textbf{Response Fig.~R3-3A.} \textbf{Final richness across interaction strength and nutrient conditions.} \textbf{A}, Mean final richness of simulated post-assembly sub-communities and coalesced communities across $\mu$; error bars show SEM. \textbf{B}, Final coalesced-community richness (ASVs above 0.1\% threshold) across nutrient conditions and initial pool sizes in the synthetic-community experiment.}
+\end{figure}
+
+% --------------------------------------------
+\subsection*{R3-4. gLV model excludes facilitation}
+
+\reviewercomment{With respect to the model, the gLV framework is restricted to competitive interactions ($\alpha_{ij} > 0$). While this is reasonable from a modeling perspective because it prevents situations of ``unchecked growth,'' it also limits the range of ecological scenarios that the model can represent. Previous works have shown that facilitative interactions (particularly in the form of metabolic cross-feeding) are an important determinant of correlated species' fates during coalescence.}
+
+\responselabel
+We thank the reviewer for raising this important and valid limitation. We agree that the competition-only gLV model cannot capture facilitative interactions such as metabolic cross-feeding, and we have toned down the corresponding claim in \S2.6 of the Results (quoted below). The Discussion already addresses this scope: it frames the gLV as a competition-only model (paragraph 2), notes that the nutrient--$\mu$ mapping may involve changes in the competition--facilitation balance (paragraph 4), and explicitly states that ``systems with substantial mutualism or facilitation may exhibit qualitatively different dynamics'' (paragraph 6).
+
+First, our competition-only baseline is an empirically motivated approximation for this experimental system, not a claim that facilitation is absent from microbial coalescence in general. In the 12-isolate pairwise coculture assay, focal ASV yields were usually lower in coculture than in monoculture (Response Fig.~R3-4A): 79/84/93\,\% of species-in-pair observations fell below the monoculture expectation in Nutr$-$/Base/Nutr$+$. Thus, the assay is consistent with a competition-dominated regime in this system, especially in the Base and Nutr$+$ conditions where Dominance is most common (though pairwise yield reductions do not strictly rule out asymmetric facilitative effects). This is consistent with prior synthetic-microcosm work showing that nutrient supply can modulate microbial competitive exclusion and interaction strength (Ratzke et al.\ 2020; Hu et al.\ 2022; Hu et al.\ 2025).
+
+At the same time, we agree that the appropriate interaction type is context-dependent, and that it is valid to ask whether the scenario extends beyond strictly competitive interactions. To test this directly, we introduced a mixed-sign extension with an iid facilitative tail in the interaction matrix while preserving the mean interaction coefficient and adding density-dependent self-limitation to prevent runaway growth (Response Fig.~R3-4B). Dominance still rises with $\mu$ at every facilitative-tail strength tested. At $\mu=0.30$, increasing the facilitative tail shifts outcomes away from Mixture toward both Dominance and Restructuring (Dom/Mix/Res $=18/73/9\,\%$ at $f=0$ and $43/33/24\,\%$ at $f=0.8$). At $\mu=0.80$, Dominance remains high across the facilitative tail (70--76\%). Notably, the low-$\mu$ shift toward Restructuring is consistent with the reviewer's intuition that facilitative interactions can promote Restructuring. The core qualitative claim is preserved: the monotonic rise of Dominance with $\mu$ holds across all facilitative-tail strengths tested, while the Mixture$\leftrightarrow$Restructuring balance shifts with the facilitative tail.
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=\textwidth]{R3_4_experiment.pdf}
+\caption*{\textbf{Response Fig.~R3-4A.} \textbf{Pairwise coculture data show widespread growth-inhibiting effects, especially in Base and Nutr$+$.}
+\textbf{(A--C)} Per-medium scatter of each focal ASV's coculture CFU ($C_i$) versus its monoculture CFU ($M_i$) from the 12-isolate pairwise invasion assay. Each point is one ASV in one unordered pair, averaged across the two invasion directions when both were available; the dashed line marks $C_i=M_i$. Points below the diagonal indicate direct suppression of that ASV in coculture relative to monoculture.
+\textbf{(D)} Bar summary of the fraction of species-in-pair observations below the monoculture expectation: 79/84/93\,\% for Nutr$-$/Base/Nutr$+$. These fractions are descriptive summaries; no p-values are shown for this panel.}
+\label{fig:R3-4A}
+\end{figure}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=\textwidth]{R3_4_mixed_sign_higher_order.pdf}
+\caption*{\textbf{Response Fig.~R3-4B.} \textbf{Allowing a facilitative tail can increase Restructuring but does not remove the rise of Dominance with $\mu$.}
+Off-diagonal coefficients are drawn iid from $\alpha_{ij}\sim U[-f\mu,(2+f)\mu]$, preserving $E[\alpha_{ij}]=\mu$ while increasing the expected facilitative fraction $P(\alpha_{ij}<0)$ from 0 to 22.2\%. Top insets show the analytic sampling density of $\alpha_{ij}/\mu$ (red: facilitative support; gray: nonnegative support), drawn from the formula rather than from simulated matrices. Dynamics include a stabilizing density-dependent self-limitation term, $\dot n_i=n_i(1-(A n)_i-0.1n_i^2)$. Each panel fixes one facilitative-tail strength $f$ and shows Dominance / Mixture / Restructuring fractions at $\mu \in \{0.30,0.60,0.80\}$ (200 pools $\times$ 6 coalescence events per cell). Trends across the simulated parameter grid are descriptive; no p-values are shown for this robustness simulation.}
+\label{fig:R3-4B}
+\end{figure}
+
+\reviewercomment{This seems particularly relevant given that ``Restructuring'' appears to be much more common in natural sample-derived communities than in the initial bottom-up-assembled communities. Given these discrepancies, and the fact that natural sample-derived communities are still model systems (even if they may be closer to natural microbiomes than communities assembled from defined species pools), I would suggest the claims in section 2.6 of the Results as well as in the Discussion are toned down (e.g., lines 292-294).}
+
+We have changed and toned down our conclusion for natural sample-derived communities as follows: \mschange{``Natural communities showed higher Restructuring fractions, possibly reflecting greater taxonomic diversity and more complex interaction networks. These results suggest that the nutrient-dependent increase in Dominance observed in synthetic consortia is also present in laboratory-stabilized communities derived from taxonomically richer natural samples.''}
+
+% --------------------------------------------
+\subsection*{R3-5. ``Interaction strength'' versus ``competition strength''}
+
+\reviewercomment{One last comment along these lines, which is admittedly mostly semantic: the term ``interaction strength'' may be somewhat confusing since, in the context of the gLV model, it refers strictly to competitive interactions. It may be worth considering using different terminology (``competition strength''?)}
+
+\responselabel
+We thank the reviewer for raising this important concern about the semantics around the term ``interaction strength''; after revisiting the terminology, we retain this term because it is consistent with the random-interaction and microbial gLV literature that motivates our framework, including May's classic random community model (May 1972) and recent microbial gLV work by Hu et al. (2022, 2025), where interaction strength is used prevalently. The R3-4 analyses support this scope by showing that the empirical coculture data contain frequent growth-inhibiting effects and that the qualitative Dominance trend persists under a mixed-sign facilitative-tail extension. We therefore kept the established term while noting that the existing Discussion already frames the model as focused on a competitive-interaction regime and explicitly flags that systems with substantial mutualism or facilitation may exhibit qualitatively different dynamics.
+
+\reviewercomment{Would two species which engage in a mutualism be considered ``weak interactors'' or the opposite?}
+
+\responselabel
+We have addressed this in R3-4.

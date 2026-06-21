@@ -1,0 +1,104 @@
+\documentclass[11pt,a4paper]{article}
+
+% ============================================
+% Packages
+% ============================================
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{amsmath,amssymb,amsfonts}
+\usepackage{graphicx}
+\usepackage[margin=1in]{geometry}
+\usepackage[numbers,super,sort&compress]{natbib}
+\usepackage{hyperref}
+\usepackage{xcolor}
+\usepackage{booktabs}
+\usepackage{array}
+\usepackage{longtable}
+\usepackage{float}
+\usepackage{caption}
+\usepackage{subcaption}
+\usepackage{lineno}
+\usepackage{setspace}
+\usepackage{authblk}
+
+% ============================================
+% Document Settings
+% ============================================
+\doublespacing
+
+% Hyperref settings
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue,
+    citecolor=blue,
+    urlcolor=blue
+}
+
+% ============================================
+% Custom Commands
+% ============================================
+\newcommand{\rev}[1]{\textcolor{red}{#1}}
+\newcommand{\figref}[1]{Fig.~\ref{#1}}
+\newcommand{\eqnref}[1]{Eq.~(\ref{#1})}
+\newcommand{\secref}[1]{Section~\ref{#1}}
+\newcommand{\tabref}[1]{Table~\ref{#1}}
+
+% Graphics path
+\graphicspath{{figures/}}
+
+% Supplementary figure/table numbering (no S prefix for Nature E&E)
+\setcounter{figure}{0}
+\setcounter{table}{0}
+
+% ============================================
+% Document Begin
+% ============================================
+\begin{document}
+
+% Title
+\begin{center}
+{\LARGE \textbf{Supplementary Information}}\\[1em]
+{\large Interspecies Interactions Drive Community-Level Selection in Microbial Coalescence}\\[0.5em]
+\end{center}
+
+% ============================================
+% Supplementary Information Content
+% ============================================
+
+The Supplementary Methods are provided first. The Supplementary Notes are organized by topic. Supplementary Note 1 defines outcome classification, metric sensitivity, and null models. Supplementary Note 2 addresses assembly history and parental-affiliation-correlated species fates. Supplementary Note 3 tests simulation sensitivity to model assumptions. Supplementary Note 4 examines nutrient perturbation and pairwise invasion resistance. Supplementary Note 5 evaluates alternative mechanisms and controls. Supplementary Note 6 discusses natural sample-derived communities and stabilization caveats.
+
+% Supplementary Methods (consolidated)
+\input{supplementary_sections/supplementary_methods}
+
+% Supplementary Tables
+\input{supplementary_sections/tables}
+
+% Supplementary Note 1: Outcome Classification, Metric Sensitivity, and Null Models
+\input{supplementary_sections/skewness_null_model}
+
+% Supplementary Note 2: Assembly History and Parental-Affiliation-Correlated Species Fates
+\input{supplementary_sections/assembly_effect}
+
+% Supplementary Note 3: Simulation Robustness
+\input{supplementary_sections/simulations}
+
+% Supplementary Note 4: Nutrient Perturbation and Pairwise Invasion Resistance
+\input{supplementary_sections/invasion}
+
+% Supplementary Note 5: Alternative Models and Controls for Community-Level Selection
+\input{supplementary_sections/alternative_models_controls}
+
+% Supplementary Note 6: Natural Sample-Derived Communities and Stabilization Caveats
+\input{supplementary_sections/natural_communities}
+
+% Extended Data Figures
+\input{supplementary_sections/extended_data}
+
+% Supplementary Figures
+\input{supplementary_sections/figures}
+
+% References (if needed for supplementary)
+\bibliographystyle{naturemag}
+\bibliography{references}
+
+\end{document}

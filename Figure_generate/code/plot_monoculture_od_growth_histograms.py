@@ -2,8 +2,8 @@
 """
 Monoculture OD and Growth Rate Histograms
 Generates a two-panel figure:
-- Left: OD histogram over ASVs
-- Right: Growth rate histogram over ASVs
+- Left: OD histogram over isolates
+- Right: Growth rate histogram over isolates
 
 Growth rates are computed from full kinetic time-course data (480 cycles, ~3 min intervals)
 using exponential-phase log-linear regression, replicating the MATLAB GRcalculate_500 method.
@@ -69,7 +69,7 @@ def load_od_data(file_path, sheet_name='Sheet4'):
                         'Row': row_label,
                         'Column': col_idx + 1,
                         'OD': float(od_value),
-                        'ASV': well_id  # Using well as ASV identifier
+                        'Isolate': well_id
                     })
 
         df_od = pd.DataFrame(all_data)
@@ -212,13 +212,13 @@ def create_two_panel_histogram(df_od, df_growth, output_dir):
     ax1 = axes[0]
     od_values = df_od['OD'].dropna().values
 
-    n_asvs_od = len(od_values)
+    n_isolates_od = len(od_values)
 
     ax1.hist(od_values, bins=15, edgecolor='black', linewidth=0.8,
              color='#4C72B0', alpha=0.8)
     ax1.set_xlabel('Optical Density (OD)')
-    ax1.set_ylabel('Number of ASVs')
-    ax1.set_title(f'Monoculture OD Distribution (Base)\n(n = {n_asvs_od} ASVs)')
+    ax1.set_ylabel('Number of isolates')
+    ax1.set_title(f'Monoculture OD Distribution (Base)\n(n = {n_isolates_od} isolates)')
 
     # Add mean and std annotation
     mean_od = np.mean(od_values)
@@ -234,13 +234,13 @@ def create_two_panel_histogram(df_od, df_growth, output_dir):
 
     if not df_growth.empty and 'GrowthRate' in df_growth.columns:
         gr_values = df_growth['GrowthRate'].dropna().values
-        n_asvs_gr = len(gr_values)
+        n_isolates_gr = len(gr_values)
 
         ax2.hist(gr_values, bins=15, edgecolor='black', linewidth=0.8,
                  color='#55A868', alpha=0.8)
         ax2.set_xlabel('Growth Rate (h$^{-1}$)')
-        ax2.set_ylabel('Number of ASVs')
-        ax2.set_title(f'Monoculture Growth Rate (Base)\n(n = {n_asvs_gr} ASVs)')
+        ax2.set_ylabel('Number of isolates')
+        ax2.set_title(f'Monoculture Growth Rate (Base)\n(n = {n_isolates_gr} isolates)')
 
         # Add mean and std annotation
         mean_gr = np.mean(gr_values)
@@ -255,7 +255,7 @@ def create_two_panel_histogram(df_od, df_growth, output_dir):
                  transform=ax2.transAxes, ha='center', va='center',
                  fontsize=12, color='gray')
         ax2.set_xlabel('Growth Rate (h$^{-1}$)')
-        ax2.set_ylabel('Number of ASVs')
+        ax2.set_ylabel('Number of isolates')
         ax2.set_title('Monoculture Growth Rate Distribution')
 
     plt.tight_layout()
@@ -316,17 +316,19 @@ def main():
 
     # Print summary
     print("\n=== Summary ===")
-    print(f"Total ASVs with OD data: {len(df_od)}")
+    print(f"Total isolates with OD data: {len(df_od)}")
     od_filtered = df_od[df_od['OD'] > 0.1]
-    print(f"ASVs with OD > 0.1: {len(od_filtered)}")
+    print(f"Isolates with OD > 0.1: {len(od_filtered)}")
     print(f"Mean OD: {od_filtered['OD'].mean():.3f}")
     print(f"Std OD: {od_filtered['OD'].std():.3f}")
 
     if not df_growth.empty:
-        gr_filtered = df_growth[df_growth['GrowthRate'] > 0]['GrowthRate']
-        print(f"\nASVs with valid growth rate: {len(gr_filtered)}")
-        print(f"Mean growth rate: {gr_filtered.mean():.2f} h^-1")
-        print(f"Std growth rate: {gr_filtered.std():.2f} h^-1")
+        gr_measured = df_growth['GrowthRate'].dropna()
+        gr_positive = gr_measured[gr_measured > 0]
+        print(f"\nIsolates with measurable growth rate: {len(gr_measured)}")
+        print(f"Isolates with positive growth rate: {len(gr_positive)}")
+        print(f"Mean growth rate: {gr_measured.mean():.2f} h^-1")
+        print(f"Std growth rate: {gr_measured.std():.2f} h^-1")
 
     print(f"\nFigures saved to: {output_dir}/")
     print("  - monoculture_od_growth_histograms.svg")

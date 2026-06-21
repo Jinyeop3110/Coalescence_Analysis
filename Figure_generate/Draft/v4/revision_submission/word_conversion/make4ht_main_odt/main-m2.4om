@@ -1,0 +1,12 @@
+<?xml version='1.0' encoding='UTF-8' ?> 
+<!DOCTYPE math PUBLIC "-//W3C//DTD MathML 2.0//EN" "http://www.w3.org/Math/DTD/mathml2/mathml2.dtd"> 
+ 
+<!--  main-m2 by TeX4ht from main.tex line 14 2023-01-19-13:31 
+(http://www.cse.ohio-state.edu/~gurari/TeX4ht/)  --> 
+ 
+<math xmlns:xlink='http://www.w3.org/1999/xlink' xmlns='http://www.w3.org/1998/Math/MathML'><mrow>
+                 <mstyle href='#x2-3001r1' id='x2-3001r1'></mstyle><!-- endlabel
+ --><mo stretchy='false'><text:span text:style-name='textcolor4'><mstyle><mtext>Sim</mtext></mstyle>(C,A) =    <mfrac><mrow><msub><mrow><mover accent='true'><mrow>x</mrow><mo accent='true'>→</mo></mover></mrow><mrow>C</mrow></msub> ⋅<msub><mrow><mover accent='true'><mrow>x</mrow><mo accent='true'>→</mo></mover></mrow><mrow>A</mrow></msub></mrow> 
+<mrow>∥<msub><mrow><mover accent='true'><mrow>x</mrow><mo accent='true'>→</mo></mover></mrow><mrow>C</mrow></msub><msub><mrow>∥</mrow><mrow>2</mrow></msub>∥<msub><mrow><mover accent='true'><mrow>x</mrow><mo accent='true'>→</mo></mover></mrow><mrow>A</mrow></msub><msub><mrow>∥</mrow><mrow>2</mrow></msub></mrow></mfrac>,<mspace width='1em'></mspace><mstyle><mtext>Sim</mtext></mstyle>(C,B) =    <mfrac><mrow><msub><mrow><mover accent='true'><mrow>x</mrow><mo accent='true'>→</mo></mover></mrow><mrow>C</mrow></msub> ⋅<msub><mrow><mover accent='true'><mrow>x</mrow><mo accent='true'>→</mo></mover></mrow><mrow>B</mrow></msub></mrow> 
+<mrow>∥<msub><mrow><mover accent='true'><mrow>x</mrow><mo accent='true'>→</mo></mover></mrow><mrow>C</mrow></msub><msub><mrow>∥</mrow><mrow>2</mrow></msub>∥<msub><mrow><mover accent='true'><mrow>x</mrow><mo accent='true'>→</mo></mover></mrow><mrow>B</mrow></msub><msub><mrow>∥</mrow><mrow>2</mrow></msub></mrow></mfrac></text:span></mo>
+</mrow></math>

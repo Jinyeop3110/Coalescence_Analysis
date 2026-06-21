@@ -1,0 +1,249 @@
+% ============================================
+% Response to Reviewer 2
+% ============================================
+\section*{Response to Reviewer 2}
+
+We thank the reviewer for their thoughtful and constructive comments, which have significantly improved the conceptual clarity of the manuscript. Below we address each point.
+
+% ============================================
+\subsection*{R2-1. Nutrient enrichment versus interaction strength}
+
+\reviewercomment{The central claim of the paper is that increasing nutrient supply strengthens interactions, which in turn drives a shift toward community-level selection. While this is an appealing and intuitive interpretation, it may be overly simplified.
+
+Nutrient enrichment simultaneously affects multiple ecological processes, including:
+\begin{itemize}
+\item species' carrying capacities
+\item metabolic rates
+\item environmental modification (e.g.\ pH shifts)
+\item the balance of competition and facilitation
+\end{itemize}
+
+Indeed, the manuscript itself shows that pH modification by dominant taxa plays a strong role in the nutrient-rich regime. This suggests that the observed transition may reflect changes in environmental feedbacks and dominance structure, rather than a simple increase in pairwise interaction strength.
+
+This raises an important conceptual point:
+
+\emph{Is the observed shift in coalescence outcomes driven by increased interaction strength per se, or by other effects of resource enrichment?}
+
+We therefore suggest reframing this result more broadly in terms of changes in \emph{interaction intensity and environmental feedbacks}, rather than interpreting nutrient enrichment as a direct proxy for stronger interactions. This would align well with recent work highlighting the role of environmentally mediated interactions in microbial communities [Goldford et al., 2018, Estrela et al., 2021].}
+
+\responselabel
+We agree that this is an important conceptual question to clarify and that there are subtle nuances. In our manuscript, interaction strength is a coarse-grained parameter for the overall intensity of ecological coupling across species pairs, framed through our main gLV model. Interaction strength is used slightly differently in the model and in the experiments. In the model, interaction strength is a model-level parameter that governs the distribution from which pairwise interaction coefficients, $\alpha_{ij}$, are sampled. In the experiments, interaction strength is an empirically observed interaction readout under a given medium condition, quantified by pairwise invasion resistance, which was described as failed invasion in the prior draft. We observe stronger empirical interaction intensity under higher nutrient availability, but the increase in this empirical intensity could arise from a combination of mechanisms, including stronger resource competition, environmental modification, carrying-capacity changes, metabolic feedbacks, and shifts in the balance of competition and facilitation. We also note that this framing is consistent with prior work suggesting that multiple mechanisms, including resource competition and environmentally mediated feedbacks, can account for how nutrient conditions reshape microbial community assembly and effective interactions (Ratzke et al., 2020; Goldford et al., 2018; Estrela et al., 2021; Duan et al., 2025).
+
+The reviewer's suggestion to reframe the terminology is compelling, but we think interaction strength remains a useful and clear notion because it connects the empirical results with our main gLV model. We have therefore revised the manuscript to clarify that higher nutrient supply does not identify one unique mechanistic source of stronger interactions; rather, it increases our empirical interaction readout, invasion resistance, which can be amplified through several mechanisms.
+
+\reviewercomment{From a consumer--resource perspective, it is also not mathematically self-evident that increasing resource supply monotonically increases effective pairwise interaction strengths. In our recent theoretical work [Duan et al., 2025], we show that when mapping mechanistic consumer--resource dynamics to effective Lotka--Volterra coefficients, the external supply rate can cancel out under broad conditions, provided that resources are not strictly limiting and metabolic strategies remain fixed.
+
+Under such conditions, resource enrichment increases total biomass but does not necessarily increase mean per-capita competition strength. Instead, enrichment restructures the interaction network through changes in equilibrium abundances and environmental feedbacks. This distinction is important, as it suggests that the observed transition may reflect a reorganisation of interaction structure rather than a simple scaling of interaction strength.
+
+A brief discussion of these issues would significantly strengthen the conceptual clarity of the manuscript.}
+
+\responselabel
+The apparent discrepancy comes from the level at which ``interaction strength'' is defined. Duan, Pawar and colleagues start from a mechanistic consumer--resource framework and derive effective Lotka--Volterra coefficients in a per-capita population-growth equation. Their result therefore concerns whether external resource supply monotonically changes effective per-capita coefficients. By contrast, our nutrient-gradient experiment uses the population-level, normalized-composition invasion-resistance readout defined above. Therefore, the monotonic increase in this empirical readout across Nutr$-$, Base, and Nutr$+$ does not require, and should not be interpreted as, a monotonic increase in effective per-capita LV coefficients. It indicates that invader exclusion becomes more frequent under our enriched media, potentially through several mechanisms.
+
+To address both points, we restructured the opening paragraph of Results \S2.4 so that the empirical nutrient perturbation is introduced as a way to test the model-predicted interaction-strength-dependent transition, while making clear that nutrient availability can intensify microbial competition through several mechanisms. We also added a concise Discussion clarification that the nutrient-to-$\mu$ mapping is phenomenological.
+
+Results \S2.4 (``Nutrient-dependent interaction strength in experiments recapitulates model predictions'') now reads: \mschange{``We next asked whether the interaction-strength-dependent transition in community-level selection predicted by the model could be observed empirically. Prior work suggests that microbial competition can intensify across nutrient-availability gradients through multiple mechanisms, including denser competition, increased metabolic activity, and environmental modification (Hu et~al.\ 2022; Ratzke et~al.\ 2020; Hu et~al.\ 2025; Duan et~al.\ 2025; Duan, Pawar and colleagues 2025; Goldford et~al.\ 2018; Estrela et~al.\ 2021). Following these studies, we modulated microbial competition by removing or augmenting glucose and urea in the Base medium used in Fig.~1 (Methods).''}
+
+Discussion now reads: \mschange{``This phenomenological mapping is intended to capture the net interaction intensity expressed in invasion outcomes, rather than to identify a unique biochemical mechanism. In our experiments, the nutrient-dependent increase in invasion resistance could reflect several non-mutually exclusive processes, including denser resource competition, increased metabolic activity, environmental modification such as pH shifts, and changes in competition--facilitation balance.''}
+
+
+% ============================================
+\subsection*{R2-2. Alternative explanations for community-level selection}
+
+\reviewercomment{The manuscript interprets dominance of one parental community and correlated persistence of its taxa as evidence for community-level selection. We find this interpretation interesting and potentially insightful, but it is not uniquely diagnostic on its own.
+
+Similar patterns could arise from:
+\begin{itemize}
+\item shared environmental filtering
+\item correlated traits within parental communities
+\item environmental modification (e.g.\ pH tolerance)
+\end{itemize}
+
+In particular, the nutrient-rich regime appears consistent with strong environmental filtering imposed by a small number of dominant taxa, which may not require invoking selection acting at the level of the community as a unit.
+
+We therefore recommend clarifying the interpretation of ``community-level selection,'' and explicitly discussing alternative mechanisms that could generate similar patterns. This distinction has been discussed in previous work on community coalescence and microbial assembly [Mansour et al., 2018, Rillig et al., 2015].}
+
+\responselabel
+We agree that our previous wording did not distinguish clearly enough between the operational pattern we call community-level selection and the mechanisms that can generate it. We have revised the manuscript to define community-level selection as a phenomenological, outcome-level pattern: species persistence is correlated with parental-community origin, such that one parental community behaves as a coherent ecological unit during coalescence. Under this definition, shared environmental tolerance, correlated traits, and environmental filtering by pH-modifying dominant taxa are not necessarily alternatives to community-level selection when they make parental-community origin predictive of persistence; they are possible mechanisms by which community-level selection can occur. What we should not imply is that Dominance proves one exclusive mechanism.
+
+We made this distinction explicit in Results \S2.1 (``Community-level selection is prevalent in microbial coalescence''): \mschange{``We use community-level selection in this phenomenological, outcome-level sense: species persistence is correlated with parental-community origin, so one parental community behaves as a coherent ecological unit during coalescence. This definition is mechanism-agnostic and does not by itself identify the causal process; such coherence can arise through direct interspecies interactions, shared traits or environmental tolerances among members of a parental community, or environmental modification by dominant community members.''}
+
+This reframing is particularly important for Nutr$+$. We agree with the reviewer that Nutr$+$ is consistent with strong environmental filtering imposed by dominant taxa. In acid-alk coalescence pairs, the acidic parental community wins $86.4\%$ of Nutr$+$ events (38/44, binomial $p = 9.4 \times 10^{-7}$; Response Fig.~R1-2). We therefore now describe Nutr$+$ as a top-down route to community-level selection, in which pH-modifying dominant taxa reshape the environment and bias persistence toward their parental community. By contrast, Base medium is framed as the stronger case for an emergent multi-species route, because dominant-species predictability is much weaker there.
+
+We revised the Discussion paragraph defining community-level selection accordingly: \mschange{``We define community-level selection operationally as origin-correlated persistence during coalescence, rather than as a claim about one exclusive biochemical mechanism. This is a phenomenological description of the outcome, not a mechanistic attribution on its own. Under this definition, shared environmental tolerances, correlated traits, and environmental filtering by dominant pH-modifying taxa are not necessarily alternatives to community-level selection when they make parental-community origin predictive of persistence; they can be mechanisms by which a parental community behaves as a coherent ecological unit.''}
+
+We also added direct tests of two simple passive-retention explanations. If Dominance were simply caused by the denser parental community contributing more biomass at mixing, the higher-OD parental community should usually win. Instead, across 157 Dominance events, the denser parental community won only $26.8\%$ of cases (binomial $p = 4.9 \times 10^{-9}$), falling to $13.2\%$ in Nutr$+$ (Response Fig.~R2-2, left; see also R1-1A). If Dominance were driven by initial pool size, Dominance frequency should scale with initial richness. It does not: Dominance frequency is $61.3\% / 58.9\% / 59.4\%$ across initial pool sizes $6 / 12 / 24$ ($\chi^2 = 2.24$, $p = 0.69$), and the nutrient trend is preserved within pool-size bins (Response Fig.~R2-2, right; see also R1-4). These controls do not exclude environmental filtering; rather, they show that the observed origin-correlated persistence is not explained by simple biomass advantage or initial richness alone.
+
+\begin{figure}[H]
+\centering
+\begin{minipage}[c]{0.42\textwidth}
+\includegraphics[width=\linewidth]{Fig_R1_1A_winner_loser_OD.pdf}
+\end{minipage}\hfill
+\begin{minipage}[c]{0.42\textwidth}
+\includegraphics[width=\linewidth]{pool_size_analysis.pdf}
+\end{minipage}
+\caption*{\textbf{Response Fig.~R2-2.} \textbf{Two simple-retention alternatives do not explain the observed Dominance pattern.} Panels are reproduced at reduced size from R1-1 and R1-4. \textbf{Left:} winner vs.\ loser OD for Dominance events per medium; the displayed p-values are from two-sided binomial tests against the null expectation that the denser parental community wins 50\% of Dominance events. \textbf{Right:} pool-size analysis; panel~C shows experimental Dominance fraction across initial pool sizes, with p-values from chi-square tests of independence for Dominance vs non-Dominance outcomes across pool sizes.}
+\end{figure}
+
+\reviewercomment{Relatedly, we suggest clarifying the ecological meaning of ``failed invasion.'' At present it is primarily used as a proxy for interaction strength, but it is also naturally interpretable as invasion resistance (i.e.\ whether a rare invader can establish). Framing this more explicitly in terms of invasion fitness would help connect the experimental results to ecological theory and may provide additional insight into the observed patterns.}
+
+We thank the reviewer for this suggestion. We now define invasion resistance using the quantity we directly measured: failed invasion frequency. Results \S2.4 now states: \mschange{``To empirically validate this effect, we measured invasion resistance across nutrient conditions using pairwise invasion assays among the 12 most abundant isolates (95:5 initial frequency; Methods, Supplementary Figs.~5--7). We used failed invasion frequency as the empirical proxy for invasion resistance.''}
+
+The corresponding Supplementary Methods now clarifies the gLV connection: \mschange{``In the gLV framework, invasion fitness is the rare-invader per-capita growth rate in a resident community; failed invasion corresponds to negative invasion fitness. Thus, higher invasion resistance indicates a greater proportion of pairwise contexts in which invader growth is suppressed, consistent with stronger net interaction effects.''} The broader theoretical connection to invasion fitness in the gLV framework is elaborated in R2-4 and in Supplementary Note~4 with Supplementary Fig.~28, while R3-5 explains why we did not adopt ``competition strength'' as a manuscript-wide replacement.
+
+% ============================================
+\subsection*{R2-3. Continuous measures alongside categorical outcomes}
+\reviewercomment{The classification into Dominance, Mixture, and Restructuring is useful and provides a clear framework for summarising outcomes. However, it depends on thresholding a continuous similarity measure.
+
+As noted in the broader literature [Mansour et al., 2018], coalescence outcomes often lie along a continuum rather than discrete categories.
+
+We suggest that the authors:
+\begin{itemize}
+\item present continuous similarity measures alongside categorical outcomes
+\end{itemize}}
+
+\responselabel
+We agree that the Dominance / Mixture / Restructuring classifications depend on boundaries in a continuous similarity space. For this reason, we introduced the Parental Dominance Index (PDI) in Figs.~3 and 4 as a continuous measure of parental-community asymmetry: values near 0 or 1 indicate dominance by one parent, whereas values near 0.5 indicate balanced parental contributions. We also quantify parental retention as $r^2 = u^2 + v^2$, where $r$ is the retention magnitude and $r^2$ measures how much of the coalesced composition is explained by the two parents.
+
+In Response Fig.~R2-3, the PDI and retention distributions support the same trend as the categorical fractions: Nutr$-$ outcomes remain closer to balanced parental contributions, whereas Base and Nutr$+$ shift toward stronger parental asymmetry; Restructuring events show lower retention. In Response Fig.~R2-4, we test whether this trend depends on the exact classification boundaries by varying the PDI boundary and the retention boundary around the manuscript baseline. Across these alternative boundary choices, Dominance remains higher in Base and Nutr$+$ than in Nutr$-$, although exact percentages vary.
+
+In the revised manuscript, we added these analyses as Supplementary Figs.~29 and 30 and discuss them briefly in the Supplementary Methods.
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.9\textwidth]{marginal_distributions_by_medium.pdf}
+\caption*{\textbf{Response Fig.~R2-3.} \textbf{Continuous similarity measures track the same nutrient-dependent shift as the categorical classifications.} From left to right: Parental Dominance Index (PDI), where values near 0 or 1 indicate strong asymmetry toward one parent and values near 0.5 indicate balanced parental contributions; asymmetry magnitude $y$, a direction-independent measure of how unequal the two parental contributions are; and squared retention magnitude $r^2 = u^2 + v^2$, which measures how much of the coalesced composition is explained by the parental communities.}
+\end{figure}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.95\textwidth]{boundary_sensitivity_by_medium.pdf}
+\caption*{\textbf{Response Fig.~R2-4.} \textbf{Boundary-sensitivity analysis supports the nutrient-dependent Dominance trend.} (A) Dominance fractions after varying the PDI boundary while holding the retention boundary at $r^2 > 0.5$. (B) Dominance fractions after varying the retention boundary while holding the PDI boundary at the manuscript baseline. Dashed lines mark the manuscript baseline.}
+\end{figure}
+
+\reviewercomment{In addition, the distinction between mixture and restructuring is not entirely straightforward biologically, particularly because abundance changes contribute to classification.
+
+We suggest that the authors:
+\begin{itemize}
+\item clarify the biological interpretation of ``restructuring''
+\end{itemize}}
+
+Restructuring means that the coalesced community is poorly represented by any linear mixture of the two parental communities. This differs from Mixture, where the coalesced community remains well explained by a balanced contribution from both parents. Thus, Restructuring is an operational readout of low parental retention rather than a claim about one specific mechanism.
+
+Results \S2.1 (``Community-level selection is prevalent in microbial coalescence'') now includes the concise Restructuring definition: \mschange{``Restructuring denotes low parental retention: the offspring community is poorly represented by a linear mixture of the two parental communities, unlike Mixture where both parents remain well represented; continuous per-medium distributions of PDI, asymmetry, and retention magnitude are given in Supplementary Fig.~29.''}
+
+\reviewercomment{We also find the comparison between dot product and Jaccard metrics in Extended Data Fig.~2 potentially very informative. The divergence between these metrics in low-nutrient environments may itself provide evidence that species-level processes dominate in that regime, and this could be discussed more explicitly.}
+
+We agree, and we have revised this point in a way that is also consistent with Reviewer~1's concern about metric robustness. The dot-product/vector-decomposition metric is abundance-weighted, so it asks whether the coalesced community is quantitatively skewed toward one parent; Jaccard is presence/absence-based, so it asks whether species identities from each parent are retained. The divergence in Nutr$-$ therefore supports the reviewer's interpretation that weak-interaction outcomes are governed more by species-level persistence than by wholesale parental-community dominance, while reinforcing that Jaccard should be treated as a complementary species-identity readout rather than as a robustness check for abundance-weighted Dominance.
+
+Results \S2.1 now narrows the main-text robustness statement to alternative relative-abundance metrics: \mschange{``This pattern of Dominance as the most frequent outcome was robust across variants of relative-abundance metrics, including Euclidean distance and Bray--Curtis dissimilarity (Extended Data Fig.~2).''} We also added a concise Nutr$-$ interpretation: \mschange{``By contrast, in Nutr$-$, Jaccard shows that weak-interaction outcomes often retain species from both parents even when abundance-weighted parental contributions are uneven.''} Extended Data Fig.~2 caption now carries the metric-divergence interpretation: \mschange{``The primary Dominance pattern is recovered under alternative relative-abundance metrics (Euclidean distance and Bray--Curtis dissimilarity), but not under Jensen--Shannon divergence or Jaccard index, for which the coalesced community is less often measured as skewed toward one parental community. This divergence reflects the fact that the metrics emphasize different aspects of community composition: relative-abundance metrics are more sensitive to quantitative abundance dominance, whereas Jaccard reflects presence/absence retention and Jensen--Shannon evaluates divergence across the full abundance distribution.''}
+
+% ============================================
+\subsection*{R2-4. Interpretation of pairwise selection correlation}
+
+\reviewercomment{The pairwise ``selection correlation'' metric is an interesting attempt to quantify lineage-level coherence, but its interpretation remains somewhat unclear.}
+
+\responselabel
+We agree that the pairwise selection correlation is best interpreted through invasion fitness, and we now define it as correlated multi-species invasion success in the gLV framework. In that framework, invasion fitness is the per-capita growth rate of a species in the rare-invader limit when introduced into a resident community at its stable equilibrium; positive invasion fitness implies successful establishment, negative implies exclusion. This yields a two-level mapping from our experimental metrics to gLV theory: pairwise invasion assays approximate two-species invasion fitness between isolate pairs using a 5\% initial invader frequency, while pairwise selection correlation measures correlated multi-species invasion success when a parental community confronts a resident assembled from a different parental community.
+
+\reviewercomment{It appears closely related to co-occurrence patterns, and it is not fully clear whether the observed correlations reflect ecological interactions, shared environmental responses, or methodological effects. We find this analysis potentially insightful, but its conceptual interpretation would benefit from clarification.}
+
+This framing also addresses the methodological-artifact reading the reviewer flagged. Because the null randomises parent-of-origin labels while holding the coalesced community composition fixed, the enrichment is not expected from the label structure alone. We therefore interpret it as support for correlated invasion outcomes, consistent with interaction-mediated community-level selection.
+
+\reviewercomment{We suggest adding a short paragraph linking this metric more explicitly to invasion fitness in a gLV framework. In that context, invasion fitness corresponds to the growth rate of a species when rare in a resident community. The pairwise invasion assays can then be interpreted as empirical approximations of invasion fitness in two-species systems, while coalescence outcomes reflect correlations in invasion success across many species.
+
+This would provide a unifying theoretical framework linking pairwise assays, community coalescence, and the notion of community-level selection.}
+
+Quantitatively, as an auxiliary gLV analysis focused on the within-parent component of the same-vs-cross pairwise selection metric, we computed the excess same-parent selection correlation relative to an origin-shuffled null. Across the full simulated $\mu$ sweep ($\mu = 0.05$--$1.20$), this excess same-parent correlation tracks mean interaction strength with Pearson $r = 0.870$, $p = 3.2 \times 10^{-8}$ (Supplementary Fig.~28).
+
+We also added one sentence to Results \S2.2 so this interpretation is visible in the main text: \mschange{``In the gLV framework, this same-vs-cross selection metric can be interpreted as correlated multi-species invasion success; an auxiliary same-parent invasion-fitness analysis shows that excess same-parent concordance above an origin-shuffled null increases with $\mu$ (Supplementary Fig.~28).''}
+
+Supplementary Note~4, in the new ``Connection to invasion fitness'' subsection, now includes the following paragraph, and Supplementary Fig.~28 carries the associated quantitative result. The integrated paragraph reads: \mschange{``The pairwise selection correlation can be re-read through the lens of invasion fitness in the generalised Lotka--Volterra (gLV) framework \ldots\ As an auxiliary gLV analysis focused on the within-parent component of this metric, we computed excess same-parent selection correlation \ldots\ Across the full simulated $\mu$ sweep ($\mu = 0.05$--$1.20$), this same-parent excess tracks the mean interaction strength with Pearson $r = 0.870$ ($p = 3.2 \times 10^{-8}$; Supplementary Fig.~28). Because the null holds composition fixed and only permutes parent-of-origin labels, this enrichment is not expected from the label structure alone; it is consistent with interaction-mediated correlated invasion outcomes.''}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.9\textwidth]{invasion_fitness_analysis.pdf}
+\caption*{\textbf{Response Fig.~R2-5.} \textbf{Excess same-parent selection correlation increases with interaction strength, beyond the origin-shuffled null.} This auxiliary analysis focuses on the within-parent component of the same-vs-cross pairwise selection metric. Across the full simulated $\mu$ sweep ($\mu = 0.05$--$1.20$), excess same-parent selection correlation tracks interaction strength (Pearson $r = 0.870$, $p = 3.2 \times 10^{-8}$), supporting interaction-mediated correlated invasion outcomes that are not expected from origin-label structure alone. Now integrated as Supplementary Fig.~28.}
+\end{figure}
+
+% ============================================
+\subsection*{R2-5. Pre-selection of natural communities}
+
+\reviewercomment{The inclusion of natural communities is an important strength of the study. However, the use of a common stabilisation phase in defined media may introduce pre-selection effects that reduce ecological heterogeneity across communities.
+
+In particular, incubating diverse natural communities in simplified media is known to drive convergence toward a limited set of functional guilds [Goldford et al., 2018]. As a result, the ``natural'' communities used here may already be filtered to resemble the synthetic communities, potentially contributing to the similarity of results across systems.}
+
+\responselabel
+We agree that stabilisation-phase pre-selection in defined media is a real methodological limitation, and we thank the reviewer for pressing this point. The revised Discussion now says so explicitly and cites Goldford et al.\ (2018) as the reason the concern is well-grounded.
+
+\reviewercomment{We therefore suggest that the authors:
+\begin{itemize}
+\item discuss the potential effects of this pre-selection more explicitly
+\end{itemize}
+
+This would help contextualise the generality of the natural-community results.}
+
+We therefore now frame the natural-community result as \emph{qualitative support} for the nutrient-dependence of coalescence outcomes under the tested laboratory stabilisation protocol, rather than as evidence that unmanipulated natural communities follow the same rules. The Discussion now includes a dedicated natural-community pre-selection caveat: \mschange{``A related caveat concerns our natural community experiments. The stabilization phase, seven serial growth-dilution cycles in defined laboratory media, may pre-select natural communities toward species that thrive under these specific culture conditions, potentially reducing effective diversity and making natural communities functionally more similar to our synthetic consortia. This pre-selection could contribute to the convergent coalescence patterns observed between natural and synthetic communities, though it is unlikely to account fully for the qualitative trend of increasing Dominance with nutrient concentration, which is preserved across both community types. Future work using culture-independent approaches or broader environmental sampling could help disentangle the contributions of laboratory adaptation from intrinsic ecological dynamics.''}
+
+\reviewercomment{We therefore suggest that the authors:
+\begin{itemize}
+\item clarify the extent to which taxonomic or functional convergence occurs during the stabilisation phase
+\end{itemize}}
+
+What the current data \emph{can} establish about convergence is mixed rather than complete. Three observations argue that convergence was not total: (i) natural communities retained substantially higher ASV richness than synthetic communities (mean $13.7$ vs.\ $9.8$ ASVs); (ii) ASV overlap between communities derived from different environmental samples remained low within every medium (Supplementary Figs.~22--25, overlap fractions $0.09$--$0.23$ across media); and (iii) the qualitative nutrient-Dominance trend is preserved in both community types, with very similar per-medium Dominance fractions. These facts bound how strongly stabilisation could have homogenised the starting communities.
+
+What the current data \emph{cannot} establish is the functional dimension the reviewer specifically asks about. We do not have paired pre-stabilisation and post-stabilisation 16S of the fresh environmental samples, so we cannot directly quantify taxonomic or functional convergence across the stabilisation phase. We state this openly rather than infer convergence from the post-stabilisation data alone. A culture-independent, paired-sample study would be the appropriate follow-up.
+
+This point is addressed in the Discussion natural-community pre-selection caveat, with Goldford et al.\ (2018) cited in the adjacent nutrient-enrichment discussion. No new figure is added; a paired pre/post-stabilisation 16S study would be the appropriate follow-up if quantitative convergence measurement is required.
+
+
+% ============================================
+\subsection*{R2-6. Frame gLV as phenomenological}
+
+\reviewercomment{The gLV model successfully reproduces the qualitative transition in coalescence outcomes and serves as a useful minimal framework. However, it is limited to purely competitive interactions and does not explicitly capture environmentally mediated effects such as pH modification.
+
+We therefore suggest framing the model more explicitly as a phenomenological rather than mechanistic description of the system.}
+
+\responselabel
+We agree that the gLV model should be framed as a phenomenological minimal model rather than a mechanistic description of the biochemical processes operating in the experiments. Results \S2.2 (``Theoretical model with random interactions reproduces community-level selection'') now states: \mschange{``The gLV model serves as a phenomenological framework to explore how the statistical properties of interaction coefficients shape coalescence outcomes, rather than as a mechanistic model of the specific biochemical interactions (e.g., pH modification, metabolic cross-feeding, carrying capacity variation) underlying our experimental observations.''}
+
+\reviewercomment{In addition, while the robustness analysis across interaction coefficient distributions is appreciated, a brief discussion of the biological interpretation of these distributions would be helpful. In particular, clarifying how the mean interaction strength parameter ($\mu$) relates to underlying ecological processes would improve interpretability.}
+
+We also revised Supplementary Methods, ``Lotka--Volterra Simulations,'' to give $\alpha_{ij}$, $\mu$, and the coefficient distributions a more explicit biological interpretation. Each $\alpha_{ij}$ is now described as an effective per-capita effect of species $j$ on species $i$ within the coarse-grained gLV model. Such coefficients can absorb the net inhibitory consequences of direct competition and indirect environmental effects at steady state, but they do not identify the underlying biochemical mechanism and the model does not dynamically represent pH or other environmental state variables. We also state explicitly that, because $\alpha_{ij} \geq 0$, the model captures growth-inhibiting competitive effects but not facilitative dynamics such as cross-feeding.
+
+Within this phenomenological framework, $\mu$ controls the average strength of competitive suppression across species pairs. We further clarify that the alternative coefficient distributions are phenomenological ensembles of heterogeneous effective competitive effects, not fitted empirical distributions; the robustness analyses therefore test whether the qualitative coalescence transition depends on a particular assumed form of interaction heterogeneity.
+
+
+% ============================================
+\subsection*{R2 minor comments}
+
+\reviewercomment{Improve the visualisation of pairwise correlation results, as the separation between groups is not visually clear.}
+
+\responselabel
+We agree that the previous visualization could be clearer. We revised the Fig.~2D caption in Results \S2.2 to define each visual element explicitly:
+\mschange{``Individual dots show per-event pairwise selection correlations; in the simulation panel, 50 stratified events per group are displayed for legibility. Squares with error bars show mean $\pm$ s.e.m.\ across all coalescence events ($n = 1{,}200$ per group in simulations and all valid experimental events in the experimental panel). Gray horizontal lines indicate the random selection baseline from a null model in which species origin labels are shuffled (see Supplementary Information).''}
+
+\reviewercomment{Specify how pH was measured (e.g.\ continuously or at endpoints), and whether variability across replicates was assessed.}
+
+We clarified the pH-measurement description in Methods, ``Optical Density and pH Measurements,'' and in Supplementary Methods, ``Optical Density Measurements and Monoculture Characterization.'' The Methods now state:
+\mschange{``Community pH was measured using a benchtop pH meter (Apera Instruments PH5500).''}
+The Supplementary Methods now clarify the timing and replicate treatment:
+\mschange{``Community-level pH measurements were endpoint measurements on culture supernatant rather than continuous measurements during growth; replicate-to-replicate variability is represented by the biological replicates shown in the pH-based analyses.''}
+
+\reviewercomment{Clarify the biological interpretation of the interaction coefficient distributions used in the theoretical model.}
+
+We clarified the biological interpretation of the gLV coefficients and their distributions in Supplementary Methods, ``Lotka--Volterra Simulations.'' The revised text states:
+\mschange{``Biologically, each $\alpha_{ij}$ is an effective per-capita term for the effect of species $j$ on species $i$ within the coarse-grained gLV model. It can absorb the net inhibitory consequences of direct mechanisms (e.g., resource competition, interference) and indirect mechanisms (e.g., metabolite-mediated inhibition, pH modification) at steady state, but it does not identify the underlying biochemical mechanism and the model does not dynamically represent pH or other environmental state variables.''}
+We also clarify the meaning of $\mu$ and the distributional assumption:
+\mschange{``Within the simulated gLV system, the mean of the interaction coefficient distribution, $\mu$, therefore parameterizes the average intensity of interspecific competition, with larger $\mu$ corresponding to stronger average competitive suppression.''}
+\mschange{``This distribution is a phenomenological ensemble of heterogeneous effective competitive effects rather than a fitted empirical distribution of biochemical mechanisms; robustness analyses across alternative coefficient distributions test whether the qualitative coalescence transition depends on this particular statistical assumption.''}
+
+\reviewercomment{Ensure consistent terminology and notation throughout (e.g.\ ``pairwise'', ``community-level'', $\alpha_{ij}$).}
+
+We standardized the terminology throughout the revised manuscript. In particular, Results \S2.2 now uses ``pairwise selection correlation'' for the lineage-level correlation metric and defines it as follows:
+\mschange{``We quantified this effect using pairwise selection correlation---the degree to which species pairs share the same survival outcome (both persist or both go extinct) across coalescence events.''}
+We use ``community-level selection'' for origin-correlated persistence at the parental-community level and use $\alpha_{ij}$ consistently for the gLV interaction coefficients.
+
+\reviewercomment{Correct minor typographical issues, including ``generalis ability'' $\to$ ``generalisability''.}
+
+We thank the reviewer for catching this typo. We corrected the phrase to ``generalisability'' and corrected minor typographical issues throughout the revised manuscript.

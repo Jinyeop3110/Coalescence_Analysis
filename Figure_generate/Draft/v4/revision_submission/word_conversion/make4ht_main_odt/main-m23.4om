@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding='UTF-8' ?> 
+<!DOCTYPE math PUBLIC "-//W3C//DTD MathML 2.0//EN" "http://www.w3.org/Math/DTD/mathml2/mathml2.dtd"> 
+ 
+<!--  main-m23 by TeX4ht from main.tex line 38 2023-01-19-13:31 
+(http://www.cse.ohio-state.edu/~gurari/TeX4ht/)  --> 
+ 
+<math xmlns:xlink='http://www.w3.org/1999/xlink' xmlns='http://www.w3.org/1998/Math/MathML'><mrow>
+                                <mstyle href='#x23-4001r2' id='x23-4001r2'></mstyle><!-- endlabel
+ --><mo stretchy='false'><mfrac><mrow>d<msub><mrow>n</mrow><mrow>i</mrow></msub></mrow>
+ <mrow>dt</mrow></mfrac></mo> <mo stretchy='false'>=</mo> <msub><mrow><mi>n</mi></mrow><mrow><mi>i</mi></mrow></msub> <mfenced close=')' open='('><mrow><msub><mrow><mi>r</mi></mrow><mrow><mi>i</mi></mrow></msub> <mo stretchy='false'>−</mo><msub><mrow><mi>∑</mi><mo> ⁡<!-- FUNCTION APPLICATION
+ --></mo>
+  <!-- nolimits
+ --></mrow><mrow><mi>j</mi></mrow></msub><msub><mrow><mi>α</mi></mrow><mrow><mi mathvariant='italic'>ij</mi></mrow></msub><msub><mrow><mi>n</mi></mrow><mrow><mi>j</mi></mrow></msub></mrow></mfenced>
+</mrow></math>

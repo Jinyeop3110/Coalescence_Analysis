@@ -1,0 +1,364 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+<manifest:manifest xmlns:manifest = "urn:oasis:names:tc:opendocument:xmlns:manifest:1.0"> 
+<manifest:file-entry manifest:media-type="application/vnd.oasis.opendocument.text" manifest:full-path="/"/> <manifest:file-entry manifest:media-type="" manifest:full-path="Pictures/"/> 
+<manifest:file-entry manifest:media-type="text/xml" manifest:full-path="content.xml"/> 
+<manifest:file-entry manifest:media-type="text/xml" manifest:full-path="styles.xml"/> 
+<manifest:file-entry manifest:media-type="text/xml" manifest:full-path="meta.xml"/> 
+<manifest:file-entry manifest:media-type="text/xml" manifest:full-path="settings.xml"/> 
+<manifest:file-entry manifest:media-type="text/xml" manifest:full-path="main-m2/content.xml"/> 
+<manifest:file-entry manifest:media-type="text/xml" manifest:full-path="main-m2/settings.xml"/> 
+<manifest:file-entry manifest:media-type="application/vnd.oasis.opendocument.formula" manifest:full-path="main-m2/"/> <manifest:file-entry manifest:media-type="text/xml" manifest:full-path="main-m3/content.xml"/> 
+<manifest:file-entry manifest:media-type="text/xml" manifest:full-path="main-m3/settings.xml"/> 
+<manifest:file-entry manifest:media-type="application/vnd.oasis.opendocument.formula" manifest:full-path="main-m3/"/> <manifest:file-entry manifest:media-type="text/xml" manifest:full-path="main-m4/content.xml"/> 
+<manifest:file-entry manifest:media-type="text/xml" manifest:full-path="main-m4/settings.xml"/> 
+<manifest:file-entry manifest:media-type="application/vnd.oasis.opendocument.formula" manifest:full-path="main-m4/"/> <manifest:file-entry manifest:media-type="text/xml" manifest:full-path="main-m5/content.xml"/> 
+<manifest:file-entry manifest:media-type="text/xml" manifest:full-path="main-m5/settings.xml"/> 
+<manifest:file-entry manifest:media-type="application/vnd.oasis.opendocument.formula" manifest:full-path="main-m5/"/> <manifest:file-entry manifest:media-type="text/xml" manifest:full-path="main-m6/content.xml"/> 
+<manifest:file-entry manifest:media-type="text/xml" manifest:full-path="main-m6/settings.xml"/> 
+<manifest:file-entry manifest:media-type="application/vnd.oasis.opendocument.formula" manifest:full-path="main-m6/"/> <manifest:file-entry manifest:media-type="text/xml" manifest:full-path="main-m7/content.xml"/> 
+<manifest:file-entry manifest:media-type="text/xml" manifest:full-path="main-m7/settings.xml"/> 
+<manifest:file-entry manifest:media-type="application/vnd.oasis.opendocument.formula" manifest:full-path="main-m7/"/> <manifest:file-entry manifest:media-type="text/xml" manifest:full-path="main-m8/content.xml"/> 
+<manifest:file-entry manifest:media-type="text/xml" manifest:full-path="main-m8/settings.xml"/> 
+<manifest:file-entry manifest:media-type="application/vnd.oasis.opendocument.formula" manifest:full-path="main-m8/"/> <manifest:file-entry manifest:media-type="text/xml" manifest:full-path="main-m9/content.xml"/> 
+<manifest:file-entry manifest:media-type="text/xml" manifest:full-path="main-m9/settings.xml"/> 
+<manifest:file-entry manifest:media-type="application/vnd.oasis.opendocument.formula" manifest:full-path="main-m9/"/> <manifest:file-entry manifest:media-type="text/xml" manifest:full-path="main-m10/content.xml"/> 
+<manifest:file-entry manifest:media-type="text/xml" manifest:full-path="main-m10/settings.xml"/> 
+<manifest:file-entry manifest:media-type="application/vnd.oasis.opendocument.formula" manifest:full-path="main-m10/"/> <manifest:file-entry manifest:media-type="text/xml" manifest:full-path="main-m11/content.xml"/> 
+<manifest:file-entry manifest:media-type="text/xml" manifest:full-path="main-m11/settings.xml"/> 
+<manifest:file-entry manifest:media-type="application/vnd.oasis.opendocument.formula" manifest:full-path="main-m11/"/> <manifest:file-entry manifest:media-type="text/xml" manifest:full-path="main-m12/content.xml"/> 
+<manifest:file-entry manifest:media-type="text/xml" manifest:full-path="main-m12/settings.xml"/> 
+<manifest:file-entry manifest:media-type="application/vnd.oasis.opendocument.formula" manifest:full-path="main-m12/"/> <manifest:file-entry manifest:media-type="text/xml" manifest:full-path="main-m13/content.xml"/> 
+<manifest:file-entry manifest:media-type="text/xml" manifest:full-path="main-m13/settings.xml"/> 
+<manifest:file-entry manifest:media-type="application/vnd.oasis.opendocument.formula" manifest:full-path="main-m13/"/> <manifest:file-entry manifest:media-type="text/xml" manifest:full-path="main-m14/content.xml"/> 
+<manifest:file-entry manifest:media-type="text/xml" manifest:full-path="main-m14/settings.xml"/> 
+<manifest:file-entry manifest:media-type="application/vnd.oasis.opendocument.formula" manifest:full-path="main-m14/"/> <manifest:file-entry manifest:media-type="text/xml" manifest:full-path="main-m15/content.xml"/> 
+<manifest:file-entry manifest:media-type="text/xml" manifest:full-path="main-m15/settings.xml"/> 
+<manifest:file-entry manifest:media-type="application/vnd.oasis.opendocument.formula" manifest:full-path="main-m15/"/> <manifest:file-entry manifest:media-type="text/xml" manifest:full-path="main-m16/content.xml"/> 
+<manifest:file-entry manifest:media-type="text/xml" manifest:full-path="main-m16/settings.xml"/> 
+<manifest:file-entry manifest:media-type="application/vnd.oasis.opendocument.formula" manifest:full-path="main-m16/"/> <manifest:file-entry manifest:media-type="text/xml" manifest:full-path="main-m17/content.xml"/> 
+<manifest:file-entry manifest:media-type="text/xml" manifest:full-path="main-m17/settings.xml"/> 
+<manifest:file-entry manifest:media-type="application/vnd.oasis.opendocument.formula" manifest:full-path="main-m17/"/> <manifest:file-entry manifest:media-type="text/xml" manifest:full-path="main-m18/content.xml"/> 
+<manifest:file-entry manifest:media-type="text/xml" manifest:full-path="main-m18/settings.xml"/> 
+<manifest:file-entry manifest:media-type="application/vnd.oasis.opendocument.formula" manifest:full-path="main-m18/"/> <manifest:file-entry manifest:media-type="text/xml" manifest:full-path="main-m19/content.xml"/> 
+<manifest:file-entry manifest:media-type="text/xml" manifest:full-path="main-m19/settings.xml"/> 
+<manifest:file-entry manifest:media-type="application/vnd.oasis.opendocument.formula" manifest:full-path="main-m19/"/> <manifest:file-entry manifest:media-type="text/xml" manifest:full-path="main-m20/content.xml"/> 
+<manifest:file-entry manifest:media-type="text/xml" manifest:full-path="main-m20/settings.xml"/> 
+<manifest:file-entry manifest:media-type="application/vnd.oasis.opendocument.formula" manifest:full-path="main-m20/"/> <manifest:file-entry manifest:full-path="Pictures/figure_main_1_experimental_overview-.png" manifest:media-type="\image:mimepng "/> 
+<manifest:file-entry manifest:media-type="text/xml" manifest:full-path="main-m22/content.xml"/> 
+<manifest:file-entry manifest:media-type="text/xml" manifest:full-path="main-m22/settings.xml"/> 
+<manifest:file-entry manifest:media-type="application/vnd.oasis.opendocument.formula" manifest:full-path="main-m22/"/> <manifest:file-entry manifest:media-type="text/xml" manifest:full-path="main-m23/content.xml"/> 
+<manifest:file-entry manifest:media-type="text/xml" manifest:full-path="main-m23/settings.xml"/> 
+<manifest:file-entry manifest:media-type="application/vnd.oasis.opendocument.formula" manifest:full-path="main-m23/"/> <manifest:file-entry manifest:media-type="text/xml" manifest:full-path="main-m24/content.xml"/> 
+<manifest:file-entry manifest:media-type="text/xml" manifest:full-path="main-m24/settings.xml"/> 
+<manifest:file-entry manifest:media-type="application/vnd.oasis.opendocument.formula" manifest:full-path="main-m24/"/> <manifest:file-entry manifest:media-type="text/xml" manifest:full-path="main-m25/content.xml"/> 
+<manifest:file-entry manifest:media-type="text/xml" manifest:full-path="main-m25/settings.xml"/> 
+<manifest:file-entry manifest:media-type="application/vnd.oasis.opendocument.formula" manifest:full-path="main-m25/"/> <manifest:file-entry manifest:media-type="text/xml" manifest:full-path="main-m26/content.xml"/> 
+<manifest:file-entry manifest:media-type="text/xml" manifest:full-path="main-m26/settings.xml"/> 
+<manifest:file-entry manifest:media-type="application/vnd.oasis.opendocument.formula" manifest:full-path="main-m26/"/> <manifest:file-entry manifest:media-type="text/xml" manifest:full-path="main-m27/content.xml"/> 
+<manifest:file-entry manifest:media-type="text/xml" manifest:full-path="main-m27/settings.xml"/> 
+<manifest:file-entry manifest:media-type="application/vnd.oasis.opendocument.formula" manifest:full-path="main-m27/"/> <manifest:file-entry manifest:media-type="text/xml" manifest:full-path="main-m28/content.xml"/> 
+<manifest:file-entry manifest:media-type="text/xml" manifest:full-path="main-m28/settings.xml"/> 
+<manifest:file-entry manifest:media-type="application/vnd.oasis.opendocument.formula" manifest:full-path="main-m28/"/> <manifest:file-entry manifest:media-type="text/xml" manifest:full-path="main-m29/content.xml"/> 
+<manifest:file-entry manifest:media-type="text/xml" manifest:full-path="main-m29/settings.xml"/> 
+<manifest:file-entry manifest:media-type="application/vnd.oasis.opendocument.formula" manifest:full-path="main-m29/"/> <manifest:file-entry manifest:media-type="text/xml" manifest:full-path="main-m30/content.xml"/> 
+<manifest:file-entry manifest:media-type="text/xml" manifest:full-path="main-m30/settings.xml"/> 
+<manifest:file-entry manifest:media-type="application/vnd.oasis.opendocument.formula" manifest:full-path="main-m30/"/> <manifest:file-entry manifest:media-type="text/xml" manifest:full-path="main-m31/content.xml"/> 
+<manifest:file-entry manifest:media-type="text/xml" manifest:full-path="main-m31/settings.xml"/> 
+<manifest:file-entry manifest:media-type="application/vnd.oasis.opendocument.formula" manifest:full-path="main-m31/"/> <manifest:file-entry manifest:media-type="text/xml" manifest:full-path="main-m32/content.xml"/> 
+<manifest:file-entry manifest:media-type="text/xml" manifest:full-path="main-m32/settings.xml"/> 
+<manifest:file-entry manifest:media-type="application/vnd.oasis.opendocument.formula" manifest:full-path="main-m32/"/> <manifest:file-entry manifest:media-type="text/xml" manifest:full-path="main-m33/content.xml"/> 
+<manifest:file-entry manifest:media-type="text/xml" manifest:full-path="main-m33/settings.xml"/> 
+<manifest:file-entry manifest:media-type="application/vnd.oasis.opendocument.formula" manifest:full-path="main-m33/"/> <manifest:file-entry manifest:media-type="text/xml" manifest:full-path="main-m34/content.xml"/> 
+<manifest:file-entry manifest:media-type="text/xml" manifest:full-path="main-m34/settings.xml"/> 
+<manifest:file-entry manifest:media-type="application/vnd.oasis.opendocument.formula" manifest:full-path="main-m34/"/> <manifest:file-entry manifest:media-type="text/xml" manifest:full-path="main-m35/content.xml"/> 
+<manifest:file-entry manifest:media-type="text/xml" manifest:full-path="main-m35/settings.xml"/> 
+<manifest:file-entry manifest:media-type="application/vnd.oasis.opendocument.formula" manifest:full-path="main-m35/"/> <manifest:file-entry manifest:full-path="Pictures/figure_main_2_simulation_framework-.png" manifest:media-type="\image:mimepng "/> 
+<manifest:file-entry manifest:media-type="text/xml" manifest:full-path="main-m45/content.xml"/> 
+<manifest:file-entry manifest:media-type="text/xml" manifest:full-path="main-m45/settings.xml"/> 
+<manifest:file-entry manifest:media-type="application/vnd.oasis.opendocument.formula" manifest:full-path="main-m45/"/> <manifest:file-entry manifest:media-type="text/xml" manifest:full-path="main-m46/content.xml"/> 
+<manifest:file-entry manifest:media-type="text/xml" manifest:full-path="main-m46/settings.xml"/> 
+<manifest:file-entry manifest:media-type="application/vnd.oasis.opendocument.formula" manifest:full-path="main-m46/"/> <manifest:file-entry manifest:media-type="text/xml" manifest:full-path="main-m47/content.xml"/> 
+<manifest:file-entry manifest:media-type="text/xml" manifest:full-path="main-m47/settings.xml"/> 
+<manifest:file-entry manifest:media-type="application/vnd.oasis.opendocument.formula" manifest:full-path="main-m47/"/> <manifest:file-entry manifest:media-type="text/xml" manifest:full-path="main-m48/content.xml"/> 
+<manifest:file-entry manifest:media-type="text/xml" manifest:full-path="main-m48/settings.xml"/> 
+<manifest:file-entry manifest:media-type="application/vnd.oasis.opendocument.formula" manifest:full-path="main-m48/"/> <manifest:file-entry manifest:media-type="text/xml" manifest:full-path="main-m49/content.xml"/> 
+<manifest:file-entry manifest:media-type="text/xml" manifest:full-path="main-m49/settings.xml"/> 
+<manifest:file-entry manifest:media-type="application/vnd.oasis.opendocument.formula" manifest:full-path="main-m49/"/> <manifest:file-entry manifest:media-type="text/xml" manifest:full-path="main-m50/content.xml"/> 
+<manifest:file-entry manifest:media-type="text/xml" manifest:full-path="main-m50/settings.xml"/> 
+<manifest:file-entry manifest:media-type="application/vnd.oasis.opendocument.formula" manifest:full-path="main-m50/"/> <manifest:file-entry manifest:media-type="text/xml" manifest:full-path="main-m51/content.xml"/> 
+<manifest:file-entry manifest:media-type="text/xml" manifest:full-path="main-m51/settings.xml"/> 
+<manifest:file-entry manifest:media-type="application/vnd.oasis.opendocument.formula" manifest:full-path="main-m51/"/> <manifest:file-entry manifest:media-type="text/xml" manifest:full-path="main-m52/content.xml"/> 
+<manifest:file-entry manifest:media-type="text/xml" manifest:full-path="main-m52/settings.xml"/> 
+<manifest:file-entry manifest:media-type="application/vnd.oasis.opendocument.formula" manifest:full-path="main-m52/"/> <manifest:file-entry manifest:media-type="text/xml" manifest:full-path="main-m53/content.xml"/> 
+<manifest:file-entry manifest:media-type="text/xml" manifest:full-path="main-m53/settings.xml"/> 
+<manifest:file-entry manifest:media-type="application/vnd.oasis.opendocument.formula" manifest:full-path="main-m53/"/> <manifest:file-entry manifest:media-type="text/xml" manifest:full-path="main-m54/content.xml"/> 
+<manifest:file-entry manifest:media-type="text/xml" manifest:full-path="main-m54/settings.xml"/> 
+<manifest:file-entry manifest:media-type="application/vnd.oasis.opendocument.formula" manifest:full-path="main-m54/"/> <manifest:file-entry manifest:media-type="text/xml" manifest:full-path="main-m55/content.xml"/> 
+<manifest:file-entry manifest:media-type="text/xml" manifest:full-path="main-m55/settings.xml"/> 
+<manifest:file-entry manifest:media-type="application/vnd.oasis.opendocument.formula" manifest:full-path="main-m55/"/> <manifest:file-entry manifest:media-type="text/xml" manifest:full-path="main-m56/content.xml"/> 
+<manifest:file-entry manifest:media-type="text/xml" manifest:full-path="main-m56/settings.xml"/> 
+<manifest:file-entry manifest:media-type="application/vnd.oasis.opendocument.formula" manifest:full-path="main-m56/"/> <manifest:file-entry manifest:media-type="text/xml" manifest:full-path="main-m57/content.xml"/> 
+<manifest:file-entry manifest:media-type="text/xml" manifest:full-path="main-m57/settings.xml"/> 
+<manifest:file-entry manifest:media-type="application/vnd.oasis.opendocument.formula" manifest:full-path="main-m57/"/> <manifest:file-entry manifest:media-type="text/xml" manifest:full-path="main-m58/content.xml"/> 
+<manifest:file-entry manifest:media-type="text/xml" manifest:full-path="main-m58/settings.xml"/> 
+<manifest:file-entry manifest:media-type="application/vnd.oasis.opendocument.formula" manifest:full-path="main-m58/"/> <manifest:file-entry manifest:media-type="text/xml" manifest:full-path="main-m59/content.xml"/> 
+<manifest:file-entry manifest:media-type="text/xml" manifest:full-path="main-m59/settings.xml"/> 
+<manifest:file-entry manifest:media-type="application/vnd.oasis.opendocument.formula" manifest:full-path="main-m59/"/> <manifest:file-entry manifest:media-type="text/xml" manifest:full-path="main-m60/content.xml"/> 
+<manifest:file-entry manifest:media-type="text/xml" manifest:full-path="main-m60/settings.xml"/> 
+<manifest:file-entry manifest:media-type="application/vnd.oasis.opendocument.formula" manifest:full-path="main-m60/"/> <manifest:file-entry manifest:full-path="Pictures/figure_main_3_interaction_strength-.png" manifest:media-type="\image:mimepng "/> 
+<manifest:file-entry manifest:media-type="text/xml" manifest:full-path="main-m71/content.xml"/> 
+<manifest:file-entry manifest:media-type="text/xml" manifest:full-path="main-m71/settings.xml"/> 
+<manifest:file-entry manifest:media-type="application/vnd.oasis.opendocument.formula" manifest:full-path="main-m71/"/> <manifest:file-entry manifest:media-type="text/xml" manifest:full-path="main-m72/content.xml"/> 
+<manifest:file-entry manifest:media-type="text/xml" manifest:full-path="main-m72/settings.xml"/> 
+<manifest:file-entry manifest:media-type="application/vnd.oasis.opendocument.formula" manifest:full-path="main-m72/"/> <manifest:file-entry manifest:media-type="text/xml" manifest:full-path="main-m73/content.xml"/> 
+<manifest:file-entry manifest:media-type="text/xml" manifest:full-path="main-m73/settings.xml"/> 
+<manifest:file-entry manifest:media-type="application/vnd.oasis.opendocument.formula" manifest:full-path="main-m73/"/> <manifest:file-entry manifest:media-type="text/xml" manifest:full-path="main-m74/content.xml"/> 
+<manifest:file-entry manifest:media-type="text/xml" manifest:full-path="main-m74/settings.xml"/> 
+<manifest:file-entry manifest:media-type="application/vnd.oasis.opendocument.formula" manifest:full-path="main-m74/"/> <manifest:file-entry manifest:media-type="text/xml" manifest:full-path="main-m75/content.xml"/> 
+<manifest:file-entry manifest:media-type="text/xml" manifest:full-path="main-m75/settings.xml"/> 
+<manifest:file-entry manifest:media-type="application/vnd.oasis.opendocument.formula" manifest:full-path="main-m75/"/> <manifest:file-entry manifest:media-type="text/xml" manifest:full-path="main-m76/content.xml"/> 
+<manifest:file-entry manifest:media-type="text/xml" manifest:full-path="main-m76/settings.xml"/> 
+<manifest:file-entry manifest:media-type="application/vnd.oasis.opendocument.formula" manifest:full-path="main-m76/"/> <manifest:file-entry manifest:media-type="text/xml" manifest:full-path="main-m77/content.xml"/> 
+<manifest:file-entry manifest:media-type="text/xml" manifest:full-path="main-m77/settings.xml"/> 
+<manifest:file-entry manifest:media-type="application/vnd.oasis.opendocument.formula" manifest:full-path="main-m77/"/> <manifest:file-entry manifest:media-type="text/xml" manifest:full-path="main-m78/content.xml"/> 
+<manifest:file-entry manifest:media-type="text/xml" manifest:full-path="main-m78/settings.xml"/> 
+<manifest:file-entry manifest:media-type="application/vnd.oasis.opendocument.formula" manifest:full-path="main-m78/"/> <manifest:file-entry manifest:media-type="text/xml" manifest:full-path="main-m79/content.xml"/> 
+<manifest:file-entry manifest:media-type="text/xml" manifest:full-path="main-m79/settings.xml"/> 
+<manifest:file-entry manifest:media-type="application/vnd.oasis.opendocument.formula" manifest:full-path="main-m79/"/> <manifest:file-entry manifest:media-type="text/xml" manifest:full-path="main-m80/content.xml"/> 
+<manifest:file-entry manifest:media-type="text/xml" manifest:full-path="main-m80/settings.xml"/> 
+<manifest:file-entry manifest:media-type="application/vnd.oasis.opendocument.formula" manifest:full-path="main-m80/"/> <manifest:file-entry manifest:media-type="text/xml" manifest:full-path="main-m81/content.xml"/> 
+<manifest:file-entry manifest:media-type="text/xml" manifest:full-path="main-m81/settings.xml"/> 
+<manifest:file-entry manifest:media-type="application/vnd.oasis.opendocument.formula" manifest:full-path="main-m81/"/> <manifest:file-entry manifest:media-type="text/xml" manifest:full-path="main-m82/content.xml"/> 
+<manifest:file-entry manifest:media-type="text/xml" manifest:full-path="main-m82/settings.xml"/> 
+<manifest:file-entry manifest:media-type="application/vnd.oasis.opendocument.formula" manifest:full-path="main-m82/"/> <manifest:file-entry manifest:media-type="text/xml" manifest:full-path="main-m83/content.xml"/> 
+<manifest:file-entry manifest:media-type="text/xml" manifest:full-path="main-m83/settings.xml"/> 
+<manifest:file-entry manifest:media-type="application/vnd.oasis.opendocument.formula" manifest:full-path="main-m83/"/> <manifest:file-entry manifest:media-type="text/xml" manifest:full-path="main-m84/content.xml"/> 
+<manifest:file-entry manifest:media-type="text/xml" manifest:full-path="main-m84/settings.xml"/> 
+<manifest:file-entry manifest:media-type="application/vnd.oasis.opendocument.formula" manifest:full-path="main-m84/"/> <manifest:file-entry manifest:media-type="text/xml" manifest:full-path="main-m85/content.xml"/> 
+<manifest:file-entry manifest:media-type="text/xml" manifest:full-path="main-m85/settings.xml"/> 
+<manifest:file-entry manifest:media-type="application/vnd.oasis.opendocument.formula" manifest:full-path="main-m85/"/> <manifest:file-entry manifest:media-type="text/xml" manifest:full-path="main-m86/content.xml"/> 
+<manifest:file-entry manifest:media-type="text/xml" manifest:full-path="main-m86/settings.xml"/> 
+<manifest:file-entry manifest:media-type="application/vnd.oasis.opendocument.formula" manifest:full-path="main-m86/"/> <manifest:file-entry manifest:media-type="text/xml" manifest:full-path="main-m87/content.xml"/> 
+<manifest:file-entry manifest:media-type="text/xml" manifest:full-path="main-m87/settings.xml"/> 
+<manifest:file-entry manifest:media-type="application/vnd.oasis.opendocument.formula" manifest:full-path="main-m87/"/> <manifest:file-entry manifest:media-type="text/xml" manifest:full-path="main-m88/content.xml"/> 
+<manifest:file-entry manifest:media-type="text/xml" manifest:full-path="main-m88/settings.xml"/> 
+<manifest:file-entry manifest:media-type="application/vnd.oasis.opendocument.formula" manifest:full-path="main-m88/"/> <manifest:file-entry manifest:media-type="text/xml" manifest:full-path="main-m89/content.xml"/> 
+<manifest:file-entry manifest:media-type="text/xml" manifest:full-path="main-m89/settings.xml"/> 
+<manifest:file-entry manifest:media-type="application/vnd.oasis.opendocument.formula" manifest:full-path="main-m89/"/> <manifest:file-entry manifest:media-type="text/xml" manifest:full-path="main-m90/content.xml"/> 
+<manifest:file-entry manifest:media-type="text/xml" manifest:full-path="main-m90/settings.xml"/> 
+<manifest:file-entry manifest:media-type="application/vnd.oasis.opendocument.formula" manifest:full-path="main-m90/"/> <manifest:file-entry manifest:media-type="text/xml" manifest:full-path="main-m91/content.xml"/> 
+<manifest:file-entry manifest:media-type="text/xml" manifest:full-path="main-m91/settings.xml"/> 
+<manifest:file-entry manifest:media-type="application/vnd.oasis.opendocument.formula" manifest:full-path="main-m91/"/> <manifest:file-entry manifest:media-type="text/xml" manifest:full-path="main-m92/content.xml"/> 
+<manifest:file-entry manifest:media-type="text/xml" manifest:full-path="main-m92/settings.xml"/> 
+<manifest:file-entry manifest:media-type="application/vnd.oasis.opendocument.formula" manifest:full-path="main-m92/"/> <manifest:file-entry manifest:media-type="text/xml" manifest:full-path="main-m93/content.xml"/> 
+<manifest:file-entry manifest:media-type="text/xml" manifest:full-path="main-m93/settings.xml"/> 
+<manifest:file-entry manifest:media-type="application/vnd.oasis.opendocument.formula" manifest:full-path="main-m93/"/> <manifest:file-entry manifest:media-type="text/xml" manifest:full-path="main-m94/content.xml"/> 
+<manifest:file-entry manifest:media-type="text/xml" manifest:full-path="main-m94/settings.xml"/> 
+<manifest:file-entry manifest:media-type="application/vnd.oasis.opendocument.formula" manifest:full-path="main-m94/"/> <manifest:file-entry manifest:media-type="text/xml" manifest:full-path="main-m95/content.xml"/> 
+<manifest:file-entry manifest:media-type="text/xml" manifest:full-path="main-m95/settings.xml"/> 
+<manifest:file-entry manifest:media-type="application/vnd.oasis.opendocument.formula" manifest:full-path="main-m95/"/> <manifest:file-entry manifest:media-type="text/xml" manifest:full-path="main-m96/content.xml"/> 
+<manifest:file-entry manifest:media-type="text/xml" manifest:full-path="main-m96/settings.xml"/> 
+<manifest:file-entry manifest:media-type="application/vnd.oasis.opendocument.formula" manifest:full-path="main-m96/"/> <manifest:file-entry manifest:media-type="text/xml" manifest:full-path="main-m97/content.xml"/> 
+<manifest:file-entry manifest:media-type="text/xml" manifest:full-path="main-m97/settings.xml"/> 
+<manifest:file-entry manifest:media-type="application/vnd.oasis.opendocument.formula" manifest:full-path="main-m97/"/> <manifest:file-entry manifest:full-path="Pictures/figure_main_4_nutrient_perturbation-.png" manifest:media-type="\image:mimepng "/> 
+<manifest:file-entry manifest:media-type="text/xml" manifest:full-path="main-m115/content.xml"/> 
+<manifest:file-entry manifest:media-type="text/xml" manifest:full-path="main-m115/settings.xml"/> 
+<manifest:file-entry manifest:media-type="application/vnd.oasis.opendocument.formula" manifest:full-path="main-m115/"/> <manifest:file-entry manifest:media-type="text/xml" manifest:full-path="main-m116/content.xml"/> 
+<manifest:file-entry manifest:media-type="text/xml" manifest:full-path="main-m116/settings.xml"/> 
+<manifest:file-entry manifest:media-type="application/vnd.oasis.opendocument.formula" manifest:full-path="main-m116/"/> <manifest:file-entry manifest:media-type="text/xml" manifest:full-path="main-m117/content.xml"/> 
+<manifest:file-entry manifest:media-type="text/xml" manifest:full-path="main-m117/settings.xml"/> 
+<manifest:file-entry manifest:media-type="application/vnd.oasis.opendocument.formula" manifest:full-path="main-m117/"/> <manifest:file-entry manifest:media-type="text/xml" manifest:full-path="main-m118/content.xml"/> 
+<manifest:file-entry manifest:media-type="text/xml" manifest:full-path="main-m118/settings.xml"/> 
+<manifest:file-entry manifest:media-type="application/vnd.oasis.opendocument.formula" manifest:full-path="main-m118/"/> <manifest:file-entry manifest:media-type="text/xml" manifest:full-path="main-m119/content.xml"/> 
+<manifest:file-entry manifest:media-type="text/xml" manifest:full-path="main-m119/settings.xml"/> 
+<manifest:file-entry manifest:media-type="application/vnd.oasis.opendocument.formula" manifest:full-path="main-m119/"/> <manifest:file-entry manifest:media-type="text/xml" manifest:full-path="main-m120/content.xml"/> 
+<manifest:file-entry manifest:media-type="text/xml" manifest:full-path="main-m120/settings.xml"/> 
+<manifest:file-entry manifest:media-type="application/vnd.oasis.opendocument.formula" manifest:full-path="main-m120/"/> <manifest:file-entry manifest:media-type="text/xml" manifest:full-path="main-m121/content.xml"/> 
+<manifest:file-entry manifest:media-type="text/xml" manifest:full-path="main-m121/settings.xml"/> 
+<manifest:file-entry manifest:media-type="application/vnd.oasis.opendocument.formula" manifest:full-path="main-m121/"/> <manifest:file-entry manifest:media-type="text/xml" manifest:full-path="main-m122/content.xml"/> 
+<manifest:file-entry manifest:media-type="text/xml" manifest:full-path="main-m122/settings.xml"/> 
+<manifest:file-entry manifest:media-type="application/vnd.oasis.opendocument.formula" manifest:full-path="main-m122/"/> <manifest:file-entry manifest:media-type="text/xml" manifest:full-path="main-m123/content.xml"/> 
+<manifest:file-entry manifest:media-type="text/xml" manifest:full-path="main-m123/settings.xml"/> 
+<manifest:file-entry manifest:media-type="application/vnd.oasis.opendocument.formula" manifest:full-path="main-m123/"/> <manifest:file-entry manifest:media-type="text/xml" manifest:full-path="main-m124/content.xml"/> 
+<manifest:file-entry manifest:media-type="text/xml" manifest:full-path="main-m124/settings.xml"/> 
+<manifest:file-entry manifest:media-type="application/vnd.oasis.opendocument.formula" manifest:full-path="main-m124/"/> <manifest:file-entry manifest:media-type="text/xml" manifest:full-path="main-m125/content.xml"/> 
+<manifest:file-entry manifest:media-type="text/xml" manifest:full-path="main-m125/settings.xml"/> 
+<manifest:file-entry manifest:media-type="application/vnd.oasis.opendocument.formula" manifest:full-path="main-m125/"/> <manifest:file-entry manifest:media-type="text/xml" manifest:full-path="main-m126/content.xml"/> 
+<manifest:file-entry manifest:media-type="text/xml" manifest:full-path="main-m126/settings.xml"/> 
+<manifest:file-entry manifest:media-type="application/vnd.oasis.opendocument.formula" manifest:full-path="main-m126/"/> <manifest:file-entry manifest:media-type="text/xml" manifest:full-path="main-m127/content.xml"/> 
+<manifest:file-entry manifest:media-type="text/xml" manifest:full-path="main-m127/settings.xml"/> 
+<manifest:file-entry manifest:media-type="application/vnd.oasis.opendocument.formula" manifest:full-path="main-m127/"/> <manifest:file-entry manifest:media-type="text/xml" manifest:full-path="main-m128/content.xml"/> 
+<manifest:file-entry manifest:media-type="text/xml" manifest:full-path="main-m128/settings.xml"/> 
+<manifest:file-entry manifest:media-type="application/vnd.oasis.opendocument.formula" manifest:full-path="main-m128/"/> <manifest:file-entry manifest:media-type="text/xml" manifest:full-path="main-m129/content.xml"/> 
+<manifest:file-entry manifest:media-type="text/xml" manifest:full-path="main-m129/settings.xml"/> 
+<manifest:file-entry manifest:media-type="application/vnd.oasis.opendocument.formula" manifest:full-path="main-m129/"/> <manifest:file-entry manifest:media-type="text/xml" manifest:full-path="main-m130/content.xml"/> 
+<manifest:file-entry manifest:media-type="text/xml" manifest:full-path="main-m130/settings.xml"/> 
+<manifest:file-entry manifest:media-type="application/vnd.oasis.opendocument.formula" manifest:full-path="main-m130/"/> <manifest:file-entry manifest:media-type="text/xml" manifest:full-path="main-m131/content.xml"/> 
+<manifest:file-entry manifest:media-type="text/xml" manifest:full-path="main-m131/settings.xml"/> 
+<manifest:file-entry manifest:media-type="application/vnd.oasis.opendocument.formula" manifest:full-path="main-m131/"/> <manifest:file-entry manifest:media-type="text/xml" manifest:full-path="main-m132/content.xml"/> 
+<manifest:file-entry manifest:media-type="text/xml" manifest:full-path="main-m132/settings.xml"/> 
+<manifest:file-entry manifest:media-type="application/vnd.oasis.opendocument.formula" manifest:full-path="main-m132/"/> <manifest:file-entry manifest:media-type="text/xml" manifest:full-path="main-m133/content.xml"/> 
+<manifest:file-entry manifest:media-type="text/xml" manifest:full-path="main-m133/settings.xml"/> 
+<manifest:file-entry manifest:media-type="application/vnd.oasis.opendocument.formula" manifest:full-path="main-m133/"/> <manifest:file-entry manifest:media-type="text/xml" manifest:full-path="main-m134/content.xml"/> 
+<manifest:file-entry manifest:media-type="text/xml" manifest:full-path="main-m134/settings.xml"/> 
+<manifest:file-entry manifest:media-type="application/vnd.oasis.opendocument.formula" manifest:full-path="main-m134/"/> <manifest:file-entry manifest:media-type="text/xml" manifest:full-path="main-m135/content.xml"/> 
+<manifest:file-entry manifest:media-type="text/xml" manifest:full-path="main-m135/settings.xml"/> 
+<manifest:file-entry manifest:media-type="application/vnd.oasis.opendocument.formula" manifest:full-path="main-m135/"/> <manifest:file-entry manifest:media-type="text/xml" manifest:full-path="main-m136/content.xml"/> 
+<manifest:file-entry manifest:media-type="text/xml" manifest:full-path="main-m136/settings.xml"/> 
+<manifest:file-entry manifest:media-type="application/vnd.oasis.opendocument.formula" manifest:full-path="main-m136/"/> <manifest:file-entry manifest:media-type="text/xml" manifest:full-path="main-m137/content.xml"/> 
+<manifest:file-entry manifest:media-type="text/xml" manifest:full-path="main-m137/settings.xml"/> 
+<manifest:file-entry manifest:media-type="application/vnd.oasis.opendocument.formula" manifest:full-path="main-m137/"/> <manifest:file-entry manifest:media-type="text/xml" manifest:full-path="main-m138/content.xml"/> 
+<manifest:file-entry manifest:media-type="text/xml" manifest:full-path="main-m138/settings.xml"/> 
+<manifest:file-entry manifest:media-type="application/vnd.oasis.opendocument.formula" manifest:full-path="main-m138/"/> <manifest:file-entry manifest:media-type="text/xml" manifest:full-path="main-m139/content.xml"/> 
+<manifest:file-entry manifest:media-type="text/xml" manifest:full-path="main-m139/settings.xml"/> 
+<manifest:file-entry manifest:media-type="application/vnd.oasis.opendocument.formula" manifest:full-path="main-m139/"/> <manifest:file-entry manifest:media-type="text/xml" manifest:full-path="main-m140/content.xml"/> 
+<manifest:file-entry manifest:media-type="text/xml" manifest:full-path="main-m140/settings.xml"/> 
+<manifest:file-entry manifest:media-type="application/vnd.oasis.opendocument.formula" manifest:full-path="main-m140/"/> <manifest:file-entry manifest:media-type="text/xml" manifest:full-path="main-m141/content.xml"/> 
+<manifest:file-entry manifest:media-type="text/xml" manifest:full-path="main-m141/settings.xml"/> 
+<manifest:file-entry manifest:media-type="application/vnd.oasis.opendocument.formula" manifest:full-path="main-m141/"/> <manifest:file-entry manifest:media-type="text/xml" manifest:full-path="main-m142/content.xml"/> 
+<manifest:file-entry manifest:media-type="text/xml" manifest:full-path="main-m142/settings.xml"/> 
+<manifest:file-entry manifest:media-type="application/vnd.oasis.opendocument.formula" manifest:full-path="main-m142/"/> <manifest:file-entry manifest:media-type="text/xml" manifest:full-path="main-m143/content.xml"/> 
+<manifest:file-entry manifest:media-type="text/xml" manifest:full-path="main-m143/settings.xml"/> 
+<manifest:file-entry manifest:media-type="application/vnd.oasis.opendocument.formula" manifest:full-path="main-m143/"/> <manifest:file-entry manifest:media-type="text/xml" manifest:full-path="main-m144/content.xml"/> 
+<manifest:file-entry manifest:media-type="text/xml" manifest:full-path="main-m144/settings.xml"/> 
+<manifest:file-entry manifest:media-type="application/vnd.oasis.opendocument.formula" manifest:full-path="main-m144/"/> <manifest:file-entry manifest:media-type="text/xml" manifest:full-path="main-m145/content.xml"/> 
+<manifest:file-entry manifest:media-type="text/xml" manifest:full-path="main-m145/settings.xml"/> 
+<manifest:file-entry manifest:media-type="application/vnd.oasis.opendocument.formula" manifest:full-path="main-m145/"/> <manifest:file-entry manifest:media-type="text/xml" manifest:full-path="main-m146/content.xml"/> 
+<manifest:file-entry manifest:media-type="text/xml" manifest:full-path="main-m146/settings.xml"/> 
+<manifest:file-entry manifest:media-type="application/vnd.oasis.opendocument.formula" manifest:full-path="main-m146/"/> <manifest:file-entry manifest:media-type="text/xml" manifest:full-path="main-m147/content.xml"/> 
+<manifest:file-entry manifest:media-type="text/xml" manifest:full-path="main-m147/settings.xml"/> 
+<manifest:file-entry manifest:media-type="application/vnd.oasis.opendocument.formula" manifest:full-path="main-m147/"/> <manifest:file-entry manifest:media-type="text/xml" manifest:full-path="main-m148/content.xml"/> 
+<manifest:file-entry manifest:media-type="text/xml" manifest:full-path="main-m148/settings.xml"/> 
+<manifest:file-entry manifest:media-type="application/vnd.oasis.opendocument.formula" manifest:full-path="main-m148/"/> <manifest:file-entry manifest:media-type="text/xml" manifest:full-path="main-m149/content.xml"/> 
+<manifest:file-entry manifest:media-type="text/xml" manifest:full-path="main-m149/settings.xml"/> 
+<manifest:file-entry manifest:media-type="application/vnd.oasis.opendocument.formula" manifest:full-path="main-m149/"/> <manifest:file-entry manifest:media-type="text/xml" manifest:full-path="main-m150/content.xml"/> 
+<manifest:file-entry manifest:media-type="text/xml" manifest:full-path="main-m150/settings.xml"/> 
+<manifest:file-entry manifest:media-type="application/vnd.oasis.opendocument.formula" manifest:full-path="main-m150/"/> <manifest:file-entry manifest:media-type="text/xml" manifest:full-path="main-m151/content.xml"/> 
+<manifest:file-entry manifest:media-type="text/xml" manifest:full-path="main-m151/settings.xml"/> 
+<manifest:file-entry manifest:media-type="application/vnd.oasis.opendocument.formula" manifest:full-path="main-m151/"/> <manifest:file-entry manifest:media-type="text/xml" manifest:full-path="main-m152/content.xml"/> 
+<manifest:file-entry manifest:media-type="text/xml" manifest:full-path="main-m152/settings.xml"/> 
+<manifest:file-entry manifest:media-type="application/vnd.oasis.opendocument.formula" manifest:full-path="main-m152/"/> <manifest:file-entry manifest:media-type="text/xml" manifest:full-path="main-m153/content.xml"/> 
+<manifest:file-entry manifest:media-type="text/xml" manifest:full-path="main-m153/settings.xml"/> 
+<manifest:file-entry manifest:media-type="application/vnd.oasis.opendocument.formula" manifest:full-path="main-m153/"/> <manifest:file-entry manifest:media-type="text/xml" manifest:full-path="main-m154/content.xml"/> 
+<manifest:file-entry manifest:media-type="text/xml" manifest:full-path="main-m154/settings.xml"/> 
+<manifest:file-entry manifest:media-type="application/vnd.oasis.opendocument.formula" manifest:full-path="main-m154/"/> <manifest:file-entry manifest:media-type="text/xml" manifest:full-path="main-m155/content.xml"/> 
+<manifest:file-entry manifest:media-type="text/xml" manifest:full-path="main-m155/settings.xml"/> 
+<manifest:file-entry manifest:media-type="application/vnd.oasis.opendocument.formula" manifest:full-path="main-m155/"/> <manifest:file-entry manifest:media-type="text/xml" manifest:full-path="main-m156/content.xml"/> 
+<manifest:file-entry manifest:media-type="text/xml" manifest:full-path="main-m156/settings.xml"/> 
+<manifest:file-entry manifest:media-type="application/vnd.oasis.opendocument.formula" manifest:full-path="main-m156/"/> <manifest:file-entry manifest:full-path="Pictures/figure_main_5_predictability-.png" manifest:media-type="\image:mimepng "/> 
+<manifest:file-entry manifest:media-type="text/xml" manifest:full-path="main-m171/content.xml"/> 
+<manifest:file-entry manifest:media-type="text/xml" manifest:full-path="main-m171/settings.xml"/> 
+<manifest:file-entry manifest:media-type="application/vnd.oasis.opendocument.formula" manifest:full-path="main-m171/"/> <manifest:file-entry manifest:media-type="text/xml" manifest:full-path="main-m172/content.xml"/> 
+<manifest:file-entry manifest:media-type="text/xml" manifest:full-path="main-m172/settings.xml"/> 
+<manifest:file-entry manifest:media-type="application/vnd.oasis.opendocument.formula" manifest:full-path="main-m172/"/> <manifest:file-entry manifest:media-type="text/xml" manifest:full-path="main-m173/content.xml"/> 
+<manifest:file-entry manifest:media-type="text/xml" manifest:full-path="main-m173/settings.xml"/> 
+<manifest:file-entry manifest:media-type="application/vnd.oasis.opendocument.formula" manifest:full-path="main-m173/"/> <manifest:file-entry manifest:media-type="text/xml" manifest:full-path="main-m174/content.xml"/> 
+<manifest:file-entry manifest:media-type="text/xml" manifest:full-path="main-m174/settings.xml"/> 
+<manifest:file-entry manifest:media-type="application/vnd.oasis.opendocument.formula" manifest:full-path="main-m174/"/> <manifest:file-entry manifest:media-type="text/xml" manifest:full-path="main-m175/content.xml"/> 
+<manifest:file-entry manifest:media-type="text/xml" manifest:full-path="main-m175/settings.xml"/> 
+<manifest:file-entry manifest:media-type="application/vnd.oasis.opendocument.formula" manifest:full-path="main-m175/"/> <manifest:file-entry manifest:media-type="text/xml" manifest:full-path="main-m176/content.xml"/> 
+<manifest:file-entry manifest:media-type="text/xml" manifest:full-path="main-m176/settings.xml"/> 
+<manifest:file-entry manifest:media-type="application/vnd.oasis.opendocument.formula" manifest:full-path="main-m176/"/> <manifest:file-entry manifest:media-type="text/xml" manifest:full-path="main-m177/content.xml"/> 
+<manifest:file-entry manifest:media-type="text/xml" manifest:full-path="main-m177/settings.xml"/> 
+<manifest:file-entry manifest:media-type="application/vnd.oasis.opendocument.formula" manifest:full-path="main-m177/"/> <manifest:file-entry manifest:media-type="text/xml" manifest:full-path="main-m178/content.xml"/> 
+<manifest:file-entry manifest:media-type="text/xml" manifest:full-path="main-m178/settings.xml"/> 
+<manifest:file-entry manifest:media-type="application/vnd.oasis.opendocument.formula" manifest:full-path="main-m178/"/> <manifest:file-entry manifest:media-type="text/xml" manifest:full-path="main-m179/content.xml"/> 
+<manifest:file-entry manifest:media-type="text/xml" manifest:full-path="main-m179/settings.xml"/> 
+<manifest:file-entry manifest:media-type="application/vnd.oasis.opendocument.formula" manifest:full-path="main-m179/"/> <manifest:file-entry manifest:media-type="text/xml" manifest:full-path="main-m180/content.xml"/> 
+<manifest:file-entry manifest:media-type="text/xml" manifest:full-path="main-m180/settings.xml"/> 
+<manifest:file-entry manifest:media-type="application/vnd.oasis.opendocument.formula" manifest:full-path="main-m180/"/> <manifest:file-entry manifest:media-type="text/xml" manifest:full-path="main-m181/content.xml"/> 
+<manifest:file-entry manifest:media-type="text/xml" manifest:full-path="main-m181/settings.xml"/> 
+<manifest:file-entry manifest:media-type="application/vnd.oasis.opendocument.formula" manifest:full-path="main-m181/"/> <manifest:file-entry manifest:media-type="text/xml" manifest:full-path="main-m182/content.xml"/> 
+<manifest:file-entry manifest:media-type="text/xml" manifest:full-path="main-m182/settings.xml"/> 
+<manifest:file-entry manifest:media-type="application/vnd.oasis.opendocument.formula" manifest:full-path="main-m182/"/> <manifest:file-entry manifest:media-type="text/xml" manifest:full-path="main-m183/content.xml"/> 
+<manifest:file-entry manifest:media-type="text/xml" manifest:full-path="main-m183/settings.xml"/> 
+<manifest:file-entry manifest:media-type="application/vnd.oasis.opendocument.formula" manifest:full-path="main-m183/"/> <manifest:file-entry manifest:media-type="text/xml" manifest:full-path="main-m184/content.xml"/> 
+<manifest:file-entry manifest:media-type="text/xml" manifest:full-path="main-m184/settings.xml"/> 
+<manifest:file-entry manifest:media-type="application/vnd.oasis.opendocument.formula" manifest:full-path="main-m184/"/> <manifest:file-entry manifest:media-type="text/xml" manifest:full-path="main-m185/content.xml"/> 
+<manifest:file-entry manifest:media-type="text/xml" manifest:full-path="main-m185/settings.xml"/> 
+<manifest:file-entry manifest:media-type="application/vnd.oasis.opendocument.formula" manifest:full-path="main-m185/"/> <manifest:file-entry manifest:media-type="text/xml" manifest:full-path="main-m186/content.xml"/> 
+<manifest:file-entry manifest:media-type="text/xml" manifest:full-path="main-m186/settings.xml"/> 
+<manifest:file-entry manifest:media-type="application/vnd.oasis.opendocument.formula" manifest:full-path="main-m186/"/> <manifest:file-entry manifest:media-type="text/xml" manifest:full-path="main-m187/content.xml"/> 
+<manifest:file-entry manifest:media-type="text/xml" manifest:full-path="main-m187/settings.xml"/> 
+<manifest:file-entry manifest:media-type="application/vnd.oasis.opendocument.formula" manifest:full-path="main-m187/"/> <manifest:file-entry manifest:media-type="text/xml" manifest:full-path="main-m188/content.xml"/> 
+<manifest:file-entry manifest:media-type="text/xml" manifest:full-path="main-m188/settings.xml"/> 
+<manifest:file-entry manifest:media-type="application/vnd.oasis.opendocument.formula" manifest:full-path="main-m188/"/> <manifest:file-entry manifest:media-type="text/xml" manifest:full-path="main-m189/content.xml"/> 
+<manifest:file-entry manifest:media-type="text/xml" manifest:full-path="main-m189/settings.xml"/> 
+<manifest:file-entry manifest:media-type="application/vnd.oasis.opendocument.formula" manifest:full-path="main-m189/"/> <manifest:file-entry manifest:media-type="text/xml" manifest:full-path="main-m190/content.xml"/> 
+<manifest:file-entry manifest:media-type="text/xml" manifest:full-path="main-m190/settings.xml"/> 
+<manifest:file-entry manifest:media-type="application/vnd.oasis.opendocument.formula" manifest:full-path="main-m190/"/> <manifest:file-entry manifest:media-type="text/xml" manifest:full-path="main-m191/content.xml"/> 
+<manifest:file-entry manifest:media-type="text/xml" manifest:full-path="main-m191/settings.xml"/> 
+<manifest:file-entry manifest:media-type="application/vnd.oasis.opendocument.formula" manifest:full-path="main-m191/"/> <manifest:file-entry manifest:full-path="Pictures/figure_main_6_natural_communities-.png" manifest:media-type="\image:mimepng "/> 
+<manifest:file-entry manifest:media-type="text/xml" manifest:full-path="main-m198/content.xml"/> 
+<manifest:file-entry manifest:media-type="text/xml" manifest:full-path="main-m198/settings.xml"/> 
+<manifest:file-entry manifest:media-type="application/vnd.oasis.opendocument.formula" manifest:full-path="main-m198/"/> <manifest:file-entry manifest:media-type="text/xml" manifest:full-path="main-m199/content.xml"/> 
+<manifest:file-entry manifest:media-type="text/xml" manifest:full-path="main-m199/settings.xml"/> 
+<manifest:file-entry manifest:media-type="application/vnd.oasis.opendocument.formula" manifest:full-path="main-m199/"/> <manifest:file-entry manifest:media-type="text/xml" manifest:full-path="main-m200/content.xml"/> 
+<manifest:file-entry manifest:media-type="text/xml" manifest:full-path="main-m200/settings.xml"/> 
+<manifest:file-entry manifest:media-type="application/vnd.oasis.opendocument.formula" manifest:full-path="main-m200/"/> <manifest:file-entry manifest:media-type="text/xml" manifest:full-path="main-m201/content.xml"/> 
+<manifest:file-entry manifest:media-type="text/xml" manifest:full-path="main-m201/settings.xml"/> 
+<manifest:file-entry manifest:media-type="application/vnd.oasis.opendocument.formula" manifest:full-path="main-m201/"/> <manifest:file-entry manifest:media-type="text/xml" manifest:full-path="main-m202/content.xml"/> 
+<manifest:file-entry manifest:media-type="text/xml" manifest:full-path="main-m202/settings.xml"/> 
+<manifest:file-entry manifest:media-type="application/vnd.oasis.opendocument.formula" manifest:full-path="main-m202/"/> <manifest:file-entry manifest:media-type="text/xml" manifest:full-path="main-m203/content.xml"/> 
+<manifest:file-entry manifest:media-type="text/xml" manifest:full-path="main-m203/settings.xml"/> 
+<manifest:file-entry manifest:media-type="application/vnd.oasis.opendocument.formula" manifest:full-path="main-m203/"/> <manifest:file-entry manifest:media-type="text/xml" manifest:full-path="main-m204/content.xml"/> 
+<manifest:file-entry manifest:media-type="text/xml" manifest:full-path="main-m204/settings.xml"/> 
+<manifest:file-entry manifest:media-type="application/vnd.oasis.opendocument.formula" manifest:full-path="main-m204/"/> <manifest:file-entry manifest:media-type="text/xml" manifest:full-path="main-m205/content.xml"/> 
+<manifest:file-entry manifest:media-type="text/xml" manifest:full-path="main-m205/settings.xml"/> 
+<manifest:file-entry manifest:media-type="application/vnd.oasis.opendocument.formula" manifest:full-path="main-m205/"/> <manifest:file-entry manifest:media-type="text/xml" manifest:full-path="main-m206/content.xml"/> 
+<manifest:file-entry manifest:media-type="text/xml" manifest:full-path="main-m206/settings.xml"/> 
+<manifest:file-entry manifest:media-type="application/vnd.oasis.opendocument.formula" manifest:full-path="main-m206/"/> <manifest:file-entry manifest:media-type="text/xml" manifest:full-path="main-m207/content.xml"/> 
+<manifest:file-entry manifest:media-type="text/xml" manifest:full-path="main-m207/settings.xml"/> 
+<manifest:file-entry manifest:media-type="application/vnd.oasis.opendocument.formula" manifest:full-path="main-m207/"/> <manifest:file-entry manifest:media-type="text/xml" manifest:full-path="main-m208/content.xml"/> 
+<manifest:file-entry manifest:media-type="text/xml" manifest:full-path="main-m208/settings.xml"/> 
+<manifest:file-entry manifest:media-type="application/vnd.oasis.opendocument.formula" manifest:full-path="main-m208/"/> <manifest:file-entry manifest:media-type="text/xml" manifest:full-path="main-m209/content.xml"/> 
+<manifest:file-entry manifest:media-type="text/xml" manifest:full-path="main-m209/settings.xml"/> 
+<manifest:file-entry manifest:media-type="application/vnd.oasis.opendocument.formula" manifest:full-path="main-m209/"/> <manifest:file-entry manifest:media-type="text/xml" manifest:full-path="main-m210/content.xml"/> 
+<manifest:file-entry manifest:media-type="text/xml" manifest:full-path="main-m210/settings.xml"/> 
+<manifest:file-entry manifest:media-type="application/vnd.oasis.opendocument.formula" manifest:full-path="main-m210/"/> <manifest:file-entry manifest:media-type="text/xml" manifest:full-path="main-m211/content.xml"/> 
+<manifest:file-entry manifest:media-type="text/xml" manifest:full-path="main-m211/settings.xml"/> 
+<manifest:file-entry manifest:media-type="application/vnd.oasis.opendocument.formula" manifest:full-path="main-m211/"/> <manifest:file-entry manifest:media-type="text/xml" manifest:full-path="main-m212/content.xml"/> 
+<manifest:file-entry manifest:media-type="text/xml" manifest:full-path="main-m212/settings.xml"/> 
+<manifest:file-entry manifest:media-type="application/vnd.oasis.opendocument.formula" manifest:full-path="main-m212/"/> <manifest:file-entry manifest:media-type="text/xml" manifest:full-path="main-m213/content.xml"/> 
+<manifest:file-entry manifest:media-type="text/xml" manifest:full-path="main-m213/settings.xml"/> 
+<manifest:file-entry manifest:media-type="application/vnd.oasis.opendocument.formula" manifest:full-path="main-m213/"/> <manifest:file-entry manifest:media-type="text/xml" manifest:full-path="main-m214/content.xml"/> 
+<manifest:file-entry manifest:media-type="text/xml" manifest:full-path="main-m214/settings.xml"/> 
+<manifest:file-entry manifest:media-type="application/vnd.oasis.opendocument.formula" manifest:full-path="main-m214/"/> <manifest:file-entry manifest:media-type="text/xml" manifest:full-path="main-m215/content.xml"/> 
+<manifest:file-entry manifest:media-type="text/xml" manifest:full-path="main-m215/settings.xml"/> 
+<manifest:file-entry manifest:media-type="application/vnd.oasis.opendocument.formula" manifest:full-path="main-m215/"/> <manifest:file-entry manifest:media-type="text/xml" manifest:full-path="main-m216/content.xml"/> 
+<manifest:file-entry manifest:media-type="text/xml" manifest:full-path="main-m216/settings.xml"/> 
+<manifest:file-entry manifest:media-type="application/vnd.oasis.opendocument.formula" manifest:full-path="main-m216/"/> <manifest:file-entry manifest:media-type="text/xml" manifest:full-path="main-m217/content.xml"/> 
+<manifest:file-entry manifest:media-type="text/xml" manifest:full-path="main-m217/settings.xml"/> 
+<manifest:file-entry manifest:media-type="application/vnd.oasis.opendocument.formula" manifest:full-path="main-m217/"/> <manifest:file-entry manifest:media-type="text/xml" manifest:full-path="main-m218/content.xml"/> 
+<manifest:file-entry manifest:media-type="text/xml" manifest:full-path="main-m218/settings.xml"/> 
+<manifest:file-entry manifest:media-type="application/vnd.oasis.opendocument.formula" manifest:full-path="main-m218/"/> <manifest:file-entry manifest:media-type="text/xml" manifest:full-path="main-m219/content.xml"/> 
+<manifest:file-entry manifest:media-type="text/xml" manifest:full-path="main-m219/settings.xml"/> 
+<manifest:file-entry manifest:media-type="application/vnd.oasis.opendocument.formula" manifest:full-path="main-m219/"/> <manifest:file-entry manifest:media-type="text/xml" manifest:full-path="main-m220/content.xml"/> 
+<manifest:file-entry manifest:media-type="text/xml" manifest:full-path="main-m220/settings.xml"/> 
+<manifest:file-entry manifest:media-type="application/vnd.oasis.opendocument.formula" manifest:full-path="main-m220/"/> <manifest:file-entry manifest:media-type="text/xml" manifest:full-path="main-m221/content.xml"/> 
+<manifest:file-entry manifest:media-type="text/xml" manifest:full-path="main-m221/settings.xml"/> 
+<manifest:file-entry manifest:media-type="application/vnd.oasis.opendocument.formula" manifest:full-path="main-m221/"/> <manifest:file-entry manifest:media-type="text/xml" manifest:full-path="main-m222/content.xml"/> 
+<manifest:file-entry manifest:media-type="text/xml" manifest:full-path="main-m222/settings.xml"/> 
+<manifest:file-entry manifest:media-type="application/vnd.oasis.opendocument.formula" manifest:full-path="main-m222/"/> <manifest:file-entry manifest:media-type="text/xml" manifest:full-path="main-m223/content.xml"/> 
+<manifest:file-entry manifest:media-type="text/xml" manifest:full-path="main-m223/settings.xml"/> 
+<manifest:file-entry manifest:media-type="application/vnd.oasis.opendocument.formula" manifest:full-path="main-m223/"/> <manifest:file-entry manifest:media-type="text/xml" manifest:full-path="main-m224/content.xml"/> 
+<manifest:file-entry manifest:media-type="text/xml" manifest:full-path="main-m224/settings.xml"/> 
+<manifest:file-entry manifest:media-type="application/vnd.oasis.opendocument.formula" manifest:full-path="main-m224/"/> <manifest:file-entry manifest:media-type="text/xml" manifest:full-path="main-m225/content.xml"/> 
+<manifest:file-entry manifest:media-type="text/xml" manifest:full-path="main-m225/settings.xml"/> 
+<manifest:file-entry manifest:media-type="application/vnd.oasis.opendocument.formula" manifest:full-path="main-m225/"/> <manifest:file-entry manifest:media-type="text/xml" manifest:full-path="main-m226/content.xml"/> 
+<manifest:file-entry manifest:media-type="text/xml" manifest:full-path="main-m226/settings.xml"/> 
+<manifest:file-entry manifest:media-type="application/vnd.oasis.opendocument.formula" manifest:full-path="main-m226/"/> <manifest:file-entry manifest:media-type="text/xml" manifest:full-path="main-m227/content.xml"/> 
+<manifest:file-entry manifest:media-type="text/xml" manifest:full-path="main-m227/settings.xml"/> 
+<manifest:file-entry manifest:media-type="application/vnd.oasis.opendocument.formula" manifest:full-path="main-m227/"/> <manifest:file-entry manifest:media-type="text/xml" manifest:full-path="main-m228/content.xml"/> 
+<manifest:file-entry manifest:media-type="text/xml" manifest:full-path="main-m228/settings.xml"/> 
+<manifest:file-entry manifest:media-type="application/vnd.oasis.opendocument.formula" manifest:full-path="main-m228/"/> <manifest:file-entry manifest:media-type="text/xml" manifest:full-path="main-m229/content.xml"/> 
+<manifest:file-entry manifest:media-type="text/xml" manifest:full-path="main-m229/settings.xml"/> 
+<manifest:file-entry manifest:media-type="application/vnd.oasis.opendocument.formula" manifest:full-path="main-m229/"/> <manifest:file-entry manifest:media-type="text/xml" manifest:full-path="main-m230/content.xml"/> 
+<manifest:file-entry manifest:media-type="text/xml" manifest:full-path="main-m230/settings.xml"/> 
+<manifest:file-entry manifest:media-type="application/vnd.oasis.opendocument.formula" manifest:full-path="main-m230/"/> <manifest:file-entry manifest:media-type="text/xml" manifest:full-path="main-m231/content.xml"/> 
+<manifest:file-entry manifest:media-type="text/xml" manifest:full-path="main-m231/settings.xml"/> 
+<manifest:file-entry manifest:media-type="application/vnd.oasis.opendocument.formula" manifest:full-path="main-m231/"/> <manifest:file-entry manifest:media-type="text/xml" manifest:full-path="main-m232/content.xml"/> 
+<manifest:file-entry manifest:media-type="text/xml" manifest:full-path="main-m232/settings.xml"/> 
+<manifest:file-entry manifest:media-type="application/vnd.oasis.opendocument.formula" manifest:full-path="main-m232/"/> <manifest:file-entry manifest:media-type="text/xml" manifest:full-path="main-m233/content.xml"/> 
+<manifest:file-entry manifest:media-type="text/xml" manifest:full-path="main-m233/settings.xml"/> 
+<manifest:file-entry manifest:media-type="application/vnd.oasis.opendocument.formula" manifest:full-path="main-m233/"/> </manifest:manifest> 

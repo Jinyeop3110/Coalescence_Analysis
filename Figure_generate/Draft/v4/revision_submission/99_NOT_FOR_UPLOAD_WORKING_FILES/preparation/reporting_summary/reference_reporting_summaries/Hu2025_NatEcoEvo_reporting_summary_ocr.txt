@@ -1,0 +1,141 @@
+
+
+--- hu2025_page-1.png ---
+
+=]
+® 2
+c
+u :
+Corresponding author(s): Jeff Gore 3
+oo
+Last updated by author(s): Oct 24, 2024 oO
+TO s
+o
+xe}
+. fe)
+Reporting Summary 3
+De > 5
+Ire)
+Nature Portfolio wishes to improve the reproducibility of the work that we publish. This form provides structure for consistency and transparency w
+in reporting. For further information on Nature Portfolio policies, see our Editorial Policies and the Editorial Policy Checklist. 3
+3
+ow
+<
+Statistics
+For all statistical analyses, confirm that the following items are present in the figure legend, table legend, main text, or Methods section.
+n/a | Confirmed
+LE] The exact sample size (n) for each experimental group/condition, given as a discrete number and unit of measurement
+im x A statement on whether measurements were taken from distinct samples or whether the same sample was measured repeatedly
+CO The statistical test(s) used AND whether they are one- or two-sided
+Only common tests should be described solely by name; describe more complex techniques in the Methods section.
+CE] A description of all covariates tested
+CE] A description of any assumptions or corrections, such as tests of normality and adjustment for multiple comparisons
+Oo A full description of the statistical parameters including central tendency (e.g. means) or other basic estimates (e.g. regression coefficient)
+YN AND variation (e.g. standard deviation) or associated estimates of uncertainty (e.g. confidence intervals)
+Ol x For null hypothesis testing, the test statistic (e.g. F, t, r) with confidence intervals, effect sizes, degrees of freedom and P value noted
+Give P values as exact values whenever suitable.
+XI] [J For Bayesian analysis, information on the choice of priors and Markov chain Monte Carlo settings
+XX] [J For hierarchical and complex designs, identification of the appropriate level for tests and full reporting of outcomes
+L] Estimates of effect sizes (e.g. Cohen's d, Pearson's r), indicating how they were calculated
+Our web collection on statistics for biologists contains articles on many of the points above.
+Software and code
+Policy information about availability of computer code
+Data collection = The simulations in this study were conducted using MATLAB 2024.
+Data analysis We used the DADA2 R package to obtain amplicon sequence variants (ASVs). Taxonomic identities were assigned to the ASVs using the SILVA
+reference database (version 132).
+For manuscripts utilizing custom algorithms or software that are central to the research but not yet described in published literature, software must be made available to editors and
+reviewers. We strongly encourage code deposition in a community repository (e.g. GitHub). See the Nature Portfolio guidelines for submitting code & software for further information
+Data
+Policy information about availability of data
+All manuscripts must include a data availability statement. This statement should provide the following information, where applicable:
+- Accession codes, unique identifiers, or web links for publicly available datasets
+- A description of any restrictions on data availability
+- For clinical datasets or third party data, please ensure that the statement adheres to our policy >
+All data are available in the supplementary materials, and the raw sequencing data have been deposited in Dryad: DOI: 10.5061/dryad.8gtht76xz S
+1
+
+
+--- hu2025_page-2.png ---
+
+=)
+Research involving human participants, their data, or biological material SS
+=
+Policy information about studies with human participants or human data. See also policy information about sex, gender (identity/presentation £
+and sexual orientation and race, ethnicity and racism. Q
+oo
+Reporting on sex and gender Use the terms sex (biological attribute) and gender (shaped by social and cultural circumstances) carefully in order to avoid o
+confusing both terms. Indicate if findings apply to only one sex or gender; describe whether sex and gender were considered in Oo
+study design; whether sex and/or gender was determined based on self-reporting or assigned and methods used. —=
+Provide in the source data disaggregated sex and gender data, where this information has been collected, and if consent has o
+been obtained for sharing of individual-level data; provide overall numbers in this Reporting Summary. Please state if this eg
+information has not been collected. o
+Report sex- and gender-based analyses where performed, justify reasons for lack of sex- and gender-based analysis. a
+wn
+Reporting on race, ethnicity, or | Please specify the socially constructed or socially relevant categorization variable(s) used in your manuscript and explain why S
+other socially relevant they were used. Please note that such variables should not be used as proxies for other socially constructed/relevant variables 3
+groupings (for example, race or ethnicity should not be used as a proxy for socioeconomic status). m
+Provide clear definitions of the relevant terms used, how they were provided (by the participants/respondents, the S
+researchers, or third parties), and the method(s) used to classify people into the different categories (e.g. self-report, census or
+administrative data, social media data, etc.)
+Please provide details about how you controlled for confounding variables in your analyses.
+Population characteristics Describe the covariate-relevant population characteristics of the human research participants (e.g. age, genotypic
+information, past and current diagnosis and treatment categories). If you filled out the behavioural & social sciences study
+design questions and have nothing to add here, write "See above."
+Recruitment Describe how participants were recruited. Outline any potential self-selection bias or other biases that may be present and
+how these are likely to impact results.
+Ethics oversight Identify the organization(s) that approved the study protocol.
+Note that full information on the approval of the study protocol must also be provided in the manuscript.
+Please select the one below that is the best fit for your research. If you are not sure, read the appropriate sections before making your selection.
+IX] Life sciences [_] Behavioural & social sciences [_] Ecological, evolutionary & environmental sciences
+For a reference copy of the document with all sections, see nature.com/documents/nr-reporting-summary-flat.pdf
+All studies must disclose on these points even when the disclosure is negative.
+Sample size The sample size for the study was based on previous literature and experimental feasibility. For each experimental condition, we built 17
+different synthetic microbial communities using a library of 80 bacterial isolates. Each community was exposed to multiple invasion tests (7-9
+per community), which allowed us to detect statistically significant differences in invasion success rates.
+Data exclusions No data were excluded from the analyses.
+Replication All attempts at replication were successful.
+Randomization | Samples and bacterial isolates were randomly allocated into experimental groups. Invader species were randomly chosen for each invasion
+test to minimize any potential biases in species selection or community assembly.
+Blinding Blinding was not relevant to this study because the bacterial species in the resident community and the invader were randomly chosen for
+each experiment.
+Reporting for specific materials, systems and methods
+We require information from authors about some types of materials, experimental systems and methods used in many studies. Here, indicate whether each material,
+system or method listed is relevant to your study. If you are not sure if a list item applies to your research, read the appropriate section before selecting a response.
+S
+2
+
+
+--- hu2025_page-3.png ---
+
+Materials & experimental systems Methods =
+n/a | Involved in the study n/a | Involved in the study =
+BI] Antibodies XIE] chir-seq o
+me)
+&X im Eukaryotic cell lines & oO Flow cytometry S
+x L] Palaeontology and archaeology x im MRI-based neuroimaging o
+BJ} Animals and other organisms 2
+BI] J Clinical data a
+XJ] _] Dual use research of concern is;
+o
+Xx im Plants >
+ce)
+wn
+c
+3
+3
+Plants 2
+=
+<
+Seed stocks Report on the source of all seed stocks or other plant material used. If applicable, state the seed stock centre and catalogue number. If
+plant specimens were collected from the field, describe the collection location, date and sampling procedures.
+Novel plant genotypes Describe the methods by which all novel plant genotypes were produced. This includes those generated by transgenic approaches,
+gene editing, chemical/radiation-based mutagenesis and hybridization. For transgenic lines, describe the transformation method, the
+number of independent lines analyzed and the generation upon which experiments were performed. For gene-edited lines, describe
+the editor used, the endogenous sequence targeted for editing, the targeting guide RNA sequence (if applicable) and how the editor
+was upplied-
+Authentication Beseribe-any authentication procedures foreach seed stock used or novel genotype generated.Describe-any-experiments-used-to
+assess the effect of a mutation and, where applicable, how potential secondary effects (e.g. second site T-DNA insertions, mosiacism,
+off-target gene editing) were examined.
+S
+2
+3

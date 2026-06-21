@@ -1,0 +1,53 @@
+# P3.7 — Pool Size / Richness Effects
+
+## Reviewer: R1, Point #4 (Moderate)
+## Status: COMPLETED
+## Confidence: 90%
+
+### Reviewer Comment
+"Effect of initial pool size -- more detail on richness effects in model and experiment"
+
+### What They Want
+The paper uses parental communities assembled from pools of 6, 12, and 24 species. The reviewer wants to see how realized richness, survival ratio, and Dominance frequency relate to initial pool size.
+
+### Key Results
+
+**Realized richness vs pool size (parental communities):**
+- Pool 6:  n=54, mean=7.1 +/- 4.3, median=7
+- Pool 12: n=53, mean=10.4 +/- 5.1, median=10
+- Pool 24: n=72, mean=11.3 +/- 4.1, median=12
+- Kruskal-Wallis H = 27.48, p = 1.08e-06 (highly significant)
+
+**Survival ratio (realized richness / pool size):**
+- Pool 6:  mean=1.185 +/- 0.714 (more species survive than initially inoculated -- likely contaminants or rare ASVs)
+- Pool 12: mean=0.868 +/- 0.425
+- Pool 24: mean=0.471 +/- 0.173
+- Kruskal-Wallis H = 56.40, p = 5.65e-13
+- Larger pools have lower survival ratios, consistent with competitive exclusion
+
+**Dominance frequency by pool size:**
+- Pool 6:  61.3% Dominance (n=80)
+- Pool 12: 58.9% Dominance (n=151)
+- Pool 24: 59.4% Dominance (n=32)
+- Chi-square test: chi2 = 2.24, p = 0.69 (NOT significant)
+- Dominance frequency is remarkably stable across pool sizes
+
+**Dominance by pool size AND medium (most informative):**
+- Pool 6:  Nutr- 50%, Base 67%, Nutr+ 67%
+- Pool 12: Nutr- 35%, Base 66%, Nutr+ 77%
+- Pool 24: Nutr- 33%, Base 56%, Nutr+ 91%
+- The nutrient effect on Dominance is amplified at higher pool sizes
+
+### Output Figures
+- `pool_size_analysis.{svg,pdf,png}` — 4-panel: (A) richness, (B) survival ratio, (C) dominance fraction, (D) stacked category fractions
+- `pool_size_by_medium.{svg,pdf,png}` — Richness by pool size, faceted by medium
+
+### Code Location
+`/Figure_generate/code/Figure_revision/R1_4_pool_size/analyze_pool_size.py`
+
+### Implications for Manuscript
+- Realized richness increases with pool size but with diminishing returns (saturation)
+- Survival ratio decreases with pool size (competitive exclusion)
+- Dominance frequency is NOT significantly affected by pool size overall
+- BUT the nutrient-Dominance interaction is stronger at higher pool sizes
+- Recommend: new Supplementary Figure + 1-2 sentences in Results

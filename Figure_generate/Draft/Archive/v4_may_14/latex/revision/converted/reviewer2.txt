@@ -1,0 +1,121 @@
+Reviewer 2
+
+Review of Song et al.
+Samraat Pawar, Jiayi Chen, Danica Duan, Yan Zhu
+
+Summary
+
+This manuscript investigates how microbial community coalescence outcomes depend on interaction strength, manipulated experimentally via nutrient availability. The authors report a transition from mixture-dominated outcomes under weaker interactions to dominance by one parental community under stronger interactions, which they interpret as a shift from species-level to community-level selection, supported by correlations in species persistence within parental lineages.
+
+The study combines synthetic communities, natural communities, and a minimal theoretical model, and represents a well-executed and timely contribution to the growing literature on microbial community coalescence [Rillig et al., 2015, Mansour et al., 2018, Sierocinski et al., 2017]. In particular, the empirical demonstration of a shift in outcomes with changing environmental conditions is a valuable advance, and the work is supported by clear experimental effort and compelling visualisation.
+
+At the same time, several aspects of the interpretation -- especially regarding the role of interaction strength and the inference of community-level selection -- would benefit from clarification and refinement. Our comments below are intended to be constructive and to help strengthen what we believe is a solid and interesting contribution.
+
+Major Comments
+
+As a general note before our specific comments, we want to acknowledge the elegance of the experimental setup. The study employs a thoughtfully designed empirical framework that allows complex community coalescence dynamics to be quantified with impressive clarity. The combination of synthetic and natural communities is particularly valuable.
+
+At the same time, a central concern is that the manuscript appears to conflate resource enrichment with increased interaction strength, whereas both theory and prior work suggest that enrichment restructures interaction networks in more complex ways that do not map cleanly onto a scalar increase in pairwise interaction coefficients. We elaborate on this and related points below.
+
+1. Relationship between nutrient enrichment and "interaction strength"
+
+The central claim of the paper is that increasing nutrient supply strengthens interactions, which in turn drives a shift toward community-level selection. While this is an appealing and intuitive interpretation, it may be overly simplified.
+
+Nutrient enrichment simultaneously affects multiple ecological processes, including:
+- species' carrying capacities
+- metabolic rates
+- environmental modification (e.g. pH shifts)
+- the balance of competition and facilitation
+
+Indeed, the manuscript itself shows that pH modification by dominant taxa plays a strong role in the nutrient-rich regime. This suggests that the observed transition may reflect changes in environmental feedbacks and dominance structure, rather than a simple increase in pairwise interaction strength.
+
+This raises an important conceptual point:
+
+Is the observed shift in coalescence outcomes driven by increased interaction strength per se, or by other effects of resource enrichment?
+
+We therefore suggest reframing this result more broadly in terms of changes in *interaction intensity and environmental feedbacks*, rather than interpreting nutrient enrichment as a direct proxy for stronger interactions. This would align well with recent work highlighting the role of environmentally mediated interactions in microbial communities [Goldford et al., 2018, Estrela et al., 2021].
+
+From a consumer-resource perspective, it is also not mathematically self-evident that increasing resource supply monotonically increases effective pairwise interaction strengths. In our recent theoretical work [Duan et al., 2025], we show that when mapping mechanistic consumer-resource dynamics to effective Lotka-Volterra coefficients, the external supply rate can cancel out under broad conditions, provided that resources are not strictly limiting and metabolic strategies remain fixed.
+
+Under such conditions, resource enrichment increases total biomass but does not necessarily increase mean per-capita competition strength. Instead, enrichment restructures the interaction network through changes in equilibrium abundances and environmental feedbacks. This distinction is important, as it suggests that the observed transition may reflect a reorganisation of interaction structure rather than a simple scaling of interaction strength.
+
+A brief discussion of these issues would significantly strengthen the conceptual clarity of the manuscript.
+
+2. Evidence for community-level selection
+
+The manuscript interprets dominance of one parental community and correlated persistence of its taxa as evidence for community-level selection. We find this interpretation interesting and potentially insightful, but it is not uniquely diagnostic on its own.
+
+Similar patterns could arise from:
+- shared environmental filtering
+- correlated traits within parental communities
+- environmental modification (e.g. pH tolerance)
+
+In particular, the nutrient-rich regime appears consistent with strong environmental filtering imposed by a small number of dominant taxa, which may not require invoking selection acting at the level of the community as a unit.
+
+We therefore recommend clarifying the interpretation of "community-level selection," and explicitly discussing alternative mechanisms that could generate similar patterns. This distinction has been discussed in previous work on community coalescence and microbial assembly [Mansour et al., 2018, Rillig et al., 2015].
+
+Relatedly, we suggest clarifying the ecological meaning of "failed invasion." At present it is primarily used as a proxy for interaction strength, but it is also naturally interpretable as invasion resistance (i.e. whether a rare invader can establish). Framing this more explicitly in terms of invasion fitness would help connect the experimental results to ecological theory and may provide additional insight into the observed patterns.
+
+3. Classification of coalescence outcomes
+
+The classification into Dominance, Mixture, and Restructuring is useful and provides a clear framework for summarising outcomes. However, it depends on thresholding a continuous similarity measure.
+
+As noted in the broader literature [Mansour et al., 2018], coalescence outcomes often lie along a continuum rather than discrete categories. In addition, the distinction between mixture and restructuring is not entirely straightforward biologically, particularly because abundance changes contribute to classification.
+
+We suggest that the authors:
+- present continuous similarity measures alongside categorical outcomes
+- clarify the biological interpretation of "restructuring"
+
+We also find the comparison between dot product and Jaccard metrics in Extended Data Fig. 2 potentially very informative. The divergence between these metrics in low-nutrient environments may itself provide evidence that species-level processes dominate in that regime, and this could be discussed more explicitly.
+
+4. Pairwise selection correlation analysis
+
+The pairwise "selection correlation" metric is an interesting attempt to quantify lineage-level coherence, but its interpretation remains somewhat unclear.
+
+It appears closely related to co-occurrence patterns, and it is not fully clear whether the observed correlations reflect ecological interactions, shared environmental responses, or methodological effects. We find this analysis potentially insightful, but its conceptual interpretation would benefit from clarification.
+
+We suggest adding a short paragraph linking this metric more explicitly to invasion fitness in a gLV framework. In that context, invasion fitness corresponds to the growth rate of a species when rare in a resident community. The pairwise invasion assays can then be interpreted as empirical approximations of invasion fitness in two-species systems, while coalescence outcomes reflect correlations in invasion success across many species.
+
+This would provide a unifying theoretical framework linking pairwise assays, community coalescence, and the notion of community-level selection.
+
+5. Natural community experiments and pre-selection effects
+
+The inclusion of natural communities is an important strength of the study. However, the use of a common stabilisation phase in defined media may introduce pre-selection effects that reduce ecological heterogeneity across communities.
+
+In particular, incubating diverse natural communities in simplified media is known to drive convergence toward a limited set of functional guilds [Goldford et al., 2018]. As a result, the "natural" communities used here may already be filtered to resemble the synthetic communities, potentially contributing to the similarity of results across systems.
+
+We therefore suggest that the authors:
+- discuss the potential effects of this pre-selection more explicitly
+- clarify the extent to which taxonomic or functional convergence occurs during the stabilisation phase
+
+This would help contextualise the generality of the natural-community results.
+
+6. Mathematical model
+
+The gLV model successfully reproduces the qualitative transition in coalescence outcomes and serves as a useful minimal framework. However, it is limited to purely competitive interactions and does not explicitly capture environmentally mediated effects such as pH modification.
+
+We therefore suggest framing the model more explicitly as a phenomenological rather than mechanistic description of the system.
+
+In addition, while the robustness analysis across interaction coefficient distributions is appreciated, a brief discussion of the biological interpretation of these distributions would be helpful. In particular, clarifying how the mean interaction strength parameter (μ) relates to underlying ecological processes would improve interpretability.
+
+Minor Comments
+
+- Improve the visualisation of pairwise correlation results, as the separation between groups is not visually clear.
+- Specify how pH was measured (e.g. continuously or at endpoints), and whether variability across replicates was assessed.
+- Clarify the biological interpretation of the interaction coefficient distributions used in the theoretical model.
+- Ensure consistent terminology and notation throughout (e.g. "pairwise", "community-level", α_ij).
+- Correct minor typographical issues, including "generalis ability" -> "generalisability".
+
+References
+
+Duan Q, Harcombe W, Savage V, Mustri M, Smith TP, and Pawar S. General patterns in the temperature-dependence of heterotrophic microbial interactions. bioRxiv, 2025.
+
+Estrela S, Vila JCC, Lu N, Bajic D, Rebolleda-Gómez M, Chang CY, Sanchez-Gorostiaga A, and Sanchez A. Metabolic rules of microbial community assembly. Science, 372(6542), 2021.
+
+Goldford JE, Lu N, Bajic D, Estrela S, Tikhonov M, Sanchez-Gorostiaga A, Segre D, Mehta P, and Sanchez A. Emergent simplicity in microbial community assembly. Science, 361(6401), 2018.
+
+Mansour I, Jürgen P, and Rillig MC. An ecological theory of microbial community coalescence. Nature Ecology & Evolution, 2:1298-1305, 2018.
+
+Rillig MC, Antonovics J, Caruso T, Lehmann A, Powell JR, and Veresoglou SD. Interchange of entire communities: microbial community coalescence. Trends in Ecology & Evolution, 30(8):470-476, 2015.
+
+Sierocinski P, Milferstedt K, Bayer F, Großkopf T, Alston M, Bastkowski S, van der Meer JR, and Ackermann M. A single community dominates structure and function of a mixture of multiple methanogenic communities. Current Biology, 27(21):3390-3395, 2017.
