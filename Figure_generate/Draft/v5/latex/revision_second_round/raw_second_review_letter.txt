@@ -1,0 +1,65 @@
+Dear Dr. Gore,
+
+Thank you for submitting your revised manuscript "Interspecies Interactions Drive Community-Level Selection in Microbial Coalescence" (NATECOLEVOL-26010384A). It has now been seen again by the original reviewers and their comments are below. The reviewers find that the paper has improved in revision, and therefore we'll be happy in principle to publish it in Nature Ecology & Evolution, pending minor revisions to satisfy the reviewers' final requests and to comply with our editorial and formatting guidelines.
+
+If the current version of your manuscript is in a PDF format, please email us a copy of the file in an editable format (Microsoft Word or LaTex)-- we can not proceed with PDFs at this stage.
+
+If you have not done so already, please ensure that you also email us a completed copy of the Reporting summary :
+
+Reporting summary: https://www.nature.com/documents/nr-reporting-summary.pdf
+
+We are now performing detailed checks on your paper and will send you a checklist detailing our editorial and formatting requirements in a couple of weeks. Please do not upload the final materials and make any revisions until you receive this additional information from us.
+
+Thank you again for your interest in Nature Ecology & Evolution. Please do not hesitate to contact me if you have any questions.
+
+Sincerely,
+
+Iain Dickson
+Editor
+Nature Ecology & Evolution
+
+
+
+Reviewer #1 (Remarks to the Author):
+
+It was a pleasure to re-review this manuscript. The Authors have adequately addressed my questions and concerns. I applaud them for their thorough and thoughtful engagement with all of the reviewer feedback.
+I have no additional major comments, but I list below some minor suggestions (mostly for clarity) that I hope can help improve the manuscript even further.
+In response to my earlier question (R1-1), the Authors provide convincing evidence that community cohesion is not driven by heterogeneity in parental community biomass. Somewhat surprisingly, they actually find the opposite pattern: in Nutr+ communities, lower-OD parent communities consistently dominate against higher-OD communities. This struck me as very surprising as first, but I agree with the Authors’ note on p. S16 that this might be consistent with the larger story that strongly acidifying parental communities create extreme environmental conditions that suppress the growth of many species, lowering parental community OD and favoring dominance of these communities in coalescence events. I wonder if this is worth mentioning in the Main Text, as further (albeit somewhat circumstantial) for the hypothesized mechanism of top-down dominance. And perhaps this could be buttressed by examining the correlation between parental community OD and pH directly?
+Line 15: The “Dominance” category is used in the Abstract without clear explanation. At the cost of a few additional words, maybe replace “nutrient-dependent shift toward Dominance” with “nutrient-dependent shift toward dominance of one parental community”.
+Lines 61 – 75: I find this paragraph a little confusing. The Authors seem to point to evidence for a few distinct non-collective patterns: One is evidence for coexistence when distinct communities are combined (a “Mixture” outcome), while another is evidence for individual, species-level dynamics and responses to environmental factors. These are distinct ways in which community cohesion can fail to hold, and it would be helpful to spell that out for readers. Community-level selection, as understood in this manuscript, requires both competitive exclusions *and* correlated fates – these examples show that both features can (separately) fail to hold.
+Line 64: Would read more clearly as “… coexistence between species from different source communities via niche partitioning is more common than competitive exclusion …”
+Line 105: To avoid any confusion, I would be even more explicit here: “… denote community composition (relative abundance) vectors …”
+Line 169: “introduced” -> “studied”
+Lines 177 and 185: I was a little confused by the set-up here. Is the procedure of generating a 54-species pool, dividing into 4 non-overlapping parental communities, and combining in all 6 pairs repeated 1200 times? Or 200 times, yielding 1200 total coalescences? Is there a reason why this procedure is necessary, as opposed to just directly sampling 1200 pairs of parental communities? If so, please spell it out.
+Lines 247 and 251: The use of “Notably” is repetitive.
+Lines 263 – 264: The Fig. 3 caption mentions error bars, but I don’t see any in the figure.
+Lines 267-279: I appreciate that the Authors have revised this section to avoid any overly strong claims about the mechanism by which nutrient conditions and invasion resistance are related, but I think this has come at some cost of clarity for readers who are not very familiar with the Gore lab’s previous work. In particular, at line 279, the Authors refer to “the predicted shift in coalescence outcomes”, but since the (hypothesized) link between nutrient conditions and interaction strengths has not been stated, readers may be very confused about what the expected relationship is supposed to be. I would suggest modifying the previous paragraph at line 276, perhaps like “… Fig 4B). Thus, invasion resistance increases across the nutrient gradient, potentially indicating stronger competition or other antagonistic effects (e.g. mediated by stronger environmental feedbacks) in higher nutrient conditions.”
+Line 286: “before applying category labels” is a little unclear. Maybe “before classifying outcomes categorically”?
+Lines 291-299: The addition of new text interrupts the logical flow of this paragraph. Maybe reverse the order: First state that the results described in lines 277-291 are consistent with the theoretical prediction of stronger effective interactions yielding more community-level selection, then state (in new paragraph) that these outcomes could also potentially be explained by changes in the parental communities that have nothing to do with interaction strengths, but additional tests do not support this.
+Fig. 4C and 6B: I’m unsure what the gray vs. colored bars in histograms represent. Can the Authors clarify this somewhere?
+Line 342: For clarity, be more explicit here. Maybe: “indicating that the predictive power of dominant species interaction outcomes is not simply a result of including dominant species in the PDI calculation.”
+Fig. 5C: The abbreviation “CLS” is used in the figure, but I don’t think it is ever defined in the text or caption.
+
+Reviewer #1 (Remarks on code availability):
+
+The Authors provide a link to code in a github repository. However, the available code is not sufficient to conduct all of the analyses, and I do not see any of the code used to produce figures. The available code is well documented, but I would expect additional code to be made publicly available.
+
+
+Reviewer #2 (Remarks to the Author):
+
+We thank the authors for their exceptionally thorough and constructive revision. The manuscript has been substantially strengthened, and I am satisfied that our previous concerns have been substantively addressed through clearer framing, extensive new analyses, and appropriately narrowed claims.
+
+We have one remaining minor conceptual point concerning the treatment of community-level selection in the response to R2-2.
+
+We appreciate the new operational definition of community-level selection as "an outcome-level description of origin-correlated persistence during coalescence" (albeit a bit ungainly!) and the explicit acknowledgement that this does not, by itself, identify the causal ecological or biochemical mechanism. However, with this definition, the statement that Dominance "provides outcome-level evidence for community-level selection" risks becoming somewhat circular: Dominance is itself a manifestation of parental-origin-correlated persistence, which is then used as evidence for a concept operationally defined by parental-origin-correlated persistence.
+
+We think the manuscript already contains a stronger, more informative argument that resolves this issue, namely, the coalescence-versus-direct-assembly comparison in Supplementary Note 2. In this comparison, the key difference is whether species have undergone separate prior assembly within parental communities before they interact. The substantially greater frequency of Dominance following coalescence than following direct assembly, in both the simulations and the relevant experimental conditions, therefore provides evidence that the history of parental-community assembly itself generates the excess origin-correlated persistence. This moves the argument beyond simply assigning the label "community-level selection" to the observed outcome.
+
+We therefore suggest relating this comparison more explicitly to the operational definition of community-level selection in the main text. For example, the authors could state that Dominance is the compositional signature used to quantify origin-correlated persistence, and that the excess of Dominance after prior parental assembly, relative to direct assembly, provides causal support that this origin dependence is generated by shared community assembly history. In our view, this would make the interpretation of community-level selection considerably clearer and directly address the alternative explanations raised in our original review.
+
+Subject to this minor clarification, we ar satisfied that our previous concerns have been addressed and consider the manuscript suitable for publication.
+
+
+Reviewer #3 (Remarks to the Author):
+
+I thank the authors for their thorough assessment of Reviewers' comments. I believe the new analyses appropriately address my main concerns with the original manuscript (particularly the potential dimensionality artifacts in the similarity metrics). I have no further comments.

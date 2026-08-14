@@ -1,0 +1,51 @@
+% ============================================
+% Figure Legends (main-text figures)
+% ============================================
+% Moved here from sections/results.tex so that the manuscript follows the
+% editor-specified section order: ... Competing Interests, Tables,
+% Figure Legends/Captions, References.
+
+\section*{Figure Legends}
+
+% Figure 1
+\begin{figure}[H]
+\centering
+\includegraphics[width=\textwidth]{figure_main_1_experimental_overview.pdf}
+\caption{\textbf{Fig.~1. Coalescence of synthetic microbial communities frequently yields Dominance.} \textbf{a}, Schematic of coalescence: parental communities A and B are mixed to produce C. Outcomes are classified as Dominance (one parental community wins), Mixture (both persist), or Restructuring (novel state). \textbf{b}, We use similarity to quantify compositional resemblance between communities and define a two-dimensional similarity map for classifying outcomes. \textbf{c}, Experimental workflow: 30 parental communities (initial richness 6, 12, or 24) were assembled from 54 bacterial isolates, stabilized, mixed pairwise ($n = 83$), and restabilized. \textbf{d}, Representative time courses showing Dominance (left, center) and Restructuring (right). \textbf{e}, Dominance is the most frequent outcome in Base medium. Of 83 coalescence events, 54 (65\%) were classified as Dominance, 26 (31\%) as Restructuring, and 3 (4\%) as Mixture. Different symbols indicate initial richness (circles: 6; squares: 12; triangles: 24 species). Gray points show the same data with parental communities A and B interchanged.}
+\label{fig:fig1}
+\end{figure}
+% Figure 2
+\begin{figure}[H]
+\centering
+\includegraphics[width=\textwidth]{figure_main_2_simulation_framework.pdf}
+\caption{\textbf{Fig.~2. Generalized Lotka--Volterra model of community coalescence.} \textbf{a}, Simulation workflow: species grow according to the generalized Lotka--Volterra (gLV) equations, where interaction coefficients $\alpha_{ij}$ are drawn from a uniform distribution $\mathbb{U}(0, 2\mu)$. The interaction-strength parameter $\mu$ sets the sampled coefficient range, increasing both the mean and the spread. Two equilibrated parental communities are mixed and simulated to steady state. \textbf{b}, Outcome density map ($\mu = 0.6$, $n = 1{,}200$ simulations). The model reproduces the high frequency of Dominance (61\%) observed experimentally. \textbf{c}, Community assembly significantly reduces interaction strength among surviving species ($n = 600$ paired pre- versus post-assembly summaries; paired $t$-test, $t_{599} = 29.26$, $p = 1.54 \times 10^{-117}$). \textbf{d}, Pairwise selection correlation. Individual dots show per-event pairwise selection correlations; in the simulation panel, 100 stratified events per group are displayed for legibility. Squares with error bars show mean $\pm$ s.e.m.\ across all coalescence events ($n = 1{,}200$ per group in simulations and all valid experimental events in the experimental panel). Gray horizontal lines indicate the random selection baseline from a null model in which parental-affiliation labels are shuffled (see Supplementary Note~7). Within-community pairs (species pairs from the same parental community; red) show positive correlation (co-survival), while cross-community pairs (blue) show negative correlation, indicating community-level selection. This pattern holds for both simulations (left) and experiments (right).}
+\label{fig:fig2}
+\end{figure}
+% Figure 3
+\begin{figure}[H]
+\centering
+\includegraphics[width=\textwidth]{figure_main_3_interaction_strength.pdf}
+\caption{\textbf{Fig.~3. Interaction strength controls the transition between coalescence outcome types in simulations.} \textbf{a}, Simulated coalescence outcome maps at three representative values of the interaction-strength parameter: $\mu = 0.3$, $0.6$, $0.8$; $n = 1{,}200$ simulations per condition. Outcomes shift from central Mixtures at weak interactions ($\mu = 0.3$) to axis-aligned Dominance at strong interactions ($\mu = 0.8$). Histograms show the Parental Dominance Index (PDI) distribution transitioning from unimodal to bimodal. \textbf{b}, Outcome fractions across interaction-strength parameter values ($\mu = 0$--$1.2$). Mixture predominates at low $\mu$, while Dominance becomes prevalent as $\mu$ increases. Restructuring peaks at intermediate strengths. Fractions are computed from 1,200 simulated coalescence events per value of $\mu$.}
+\label{fig:fig3}
+\end{figure}
+% Figure 4
+\begin{figure}[H]
+\centering
+\includegraphics[width=\textwidth]{figure_main_4_nutrient_perturbation.pdf}
+\caption{\textbf{Fig.~4. Nutrient concentration modulates invasion resistance and coalescence outcomes.} Experimental manipulation of nutrient concentration tests whether increased invasion resistance is associated with a shift in coalescence outcomes from Mixture toward Dominance. \textbf{a}, Schematic of nutrient manipulation: we varied glucose and urea concentrations to create three media conditions with increasing invasion resistance (Nutr$-$, Base, Nutr$+$). \textbf{b}, Pairwise invasion assays show that failed invasion frequency among the 12 most abundant isolates (95:5 initial frequency; 132 directional assays were attempted and 122 directional assays from 61 unordered isolate pairs returned paired endpoint data per medium) increases monotonically with nutrient concentration (Nutr$-$: $2 \pm 1\%$, Base: $33 \pm 4\%$, Nutr$+$: $48 \pm 4\%$; mean $\pm$ s.e.m.). \textbf{c}, Coalescence outcome distributions shift systematically with nutrient concentration. Scatter plots show outcomes in similarity space for each medium (Nutr$-$: $n = 90$, magenta; Base: $n = 83$, brown; Nutr$+$: $n = 90$, orange); different symbols indicate initial richness. Gray points and histogram bars show the same data with parental communities A and B interchanged. \textbf{d}, The fraction of Dominance increases with nutrient concentration (39\% in Nutr$-$, 65\% in Base, 76\% in Nutr$+$) while Mixture declines from 53\% to 4\% to 6\% (full three-category outcome-distribution $\chi^2$ test: $\chi^2_{4} = 89.36$, $p = 1.80 \times 10^{-18}$; Cochran--Armitage trend tests: Dominance $\chi^2_{1} = 25.15$, $p = 5.32 \times 10^{-7}$; Mixture $\chi^2_{1} = 61.29$, $p = 4.88 \times 10^{-15}$), consistent with model predictions. Error bars, s.e.m.\ ($n = 90$ Nutr$-$, $83$ Base, $90$ Nutr$+$ coalescence events). Replicates are biological (separately assembled and stabilized parental communities), not technical.}
+\label{fig:fig4}
+\end{figure}
+% Figure 5
+\begin{figure}[H]
+\centering
+\includegraphics[width=\textwidth]{figure_main_5_predictability.pdf}
+\caption{\textbf{Fig.~5. Predictability of Dominance direction reveals two mechanistic regimes.} The direction of Dominance (which parental community wins) becomes increasingly predictable from dominant species competition across media conditions, distinguishing an emergent regime (Base) from a top-down regime (Nutr$+$). \textbf{a}, Schematic: can pairwise competition between dominant species predict which community wins? \textbf{b}, Relative abundance of dominant species increases with nutrient concentration (Nutr$-$: $44 \pm 2\%$; Base: $51 \pm 5\%$; Nutr$+$: $67 \pm 4\%$; mean $\pm$ s.e.m.\ across $n = 18$, $17$ and $18$ individual 12-species parental-community cultures, respectively). \textbf{c}, Dominant-species competitive success versus PDI of coalescence outcomes; gray shading indicates Dominance (labeled CLS in the panel, where CLS denotes community-level selection). Predictive power: $R^2 = 0.00$ in Nutr$-$, $R^2 = 0.11$ ($p = 0.03$, Base $n = 34$ independent events with valid pairwise-assay lookup) in Base (emergent regime), and $R^2 = 0.49$ ($p < 0.001$, Nutr$+$ $n = 63$) in Nutr$+$ (top-down regime). Gray points show the same data with parental communities A and B interchanged. Linear regression with 95\% confidence intervals shown. Replicates are biological (separately assembled and stabilized parental communities), not technical.}
+\label{fig:fig5}
+\end{figure}
+% Figure 6
+\begin{figure}[H]
+\centering
+\includegraphics[width=\textwidth]{figures/figure_main_6_natural_communities.pdf}
+\caption{\textbf{Fig.~6. Dominance patterns in natural sample-derived communities.} Natural sample-derived communities show qualitatively similar coalescence patterns to synthetic communities, with Dominance frequency increasing at higher nutrient concentrations. \textbf{a}, Experimental workflow follows Fig.~1c, but uses natural sample-derived communities from six environmental samples including soil, compost, and decomposing organic matter. \textbf{b}, Coalescence outcome distributions in similarity space for natural sample-derived communities across three media conditions ($n = 30$ coalescence events per condition, 15 unique pairs $\times$ 2 replicates). Similar to synthetic communities, outcomes are more centered in Nutr$-$ and shift toward the axes in Base and Nutr$+$. Gray points and histogram bars show the same data with parental communities A and B interchanged. \textbf{c}, The fraction of Dominance outcomes increases with nutrient concentration in these communities (37\% in Nutr$-$, 70\% in Base, 77\% in Nutr$+$), consistent with patterns observed in synthetic communities. Error bars, s.e.m. Replicates are biological (separately assembled and stabilized parental communities), not technical.}
+\label{fig:fig6}
+\end{figure}

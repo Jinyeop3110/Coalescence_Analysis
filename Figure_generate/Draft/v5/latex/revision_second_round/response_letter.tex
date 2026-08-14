@@ -1,0 +1,76 @@
+\documentclass[11pt]{article}
+
+\usepackage[margin=1in]{geometry}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{bm}
+\usepackage{float}
+\usepackage[round,authoryear]{natbib}
+\usepackage{hyperref}
+\usepackage{xcolor}
+\usepackage{setspace}
+\usepackage{enumitem}
+\usepackage{caption}
+
+\singlespacing
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0.45em plus 0.1em minus 0.05em}
+\setlength{\emergencystretch}{3em}
+\graphicspath{{revision_figure_folder/}}
+
+\definecolor{ReviewerSkyBlue}{RGB}{0,150,220}
+\definecolor{SecondRoundBlue}{RGB}{0,70,180}
+\definecolor{DraftGray}{RGB}{90,90,90}
+\definecolor{DraftRed}{RGB}{180,0,0}
+
+% Keep this true while author responses remain unfinished. Set it to false and
+% remove every \draftresponse block before producing a reviewer-facing PDF.
+\newif\ifresponsedraft
+\responsedraftfalse
+
+\newcommand{\mschange}[1]{%
+  \par\smallskip
+  \noindent{\color{SecondRoundBlue}#1}\par
+  \smallskip
+}
+\newenvironment{reviewercommentenv}{\par\smallskip\noindent\color{ReviewerSkyBlue}\ignorespaces}{\par\normalfont\color{black}\smallskip}
+\newcommand{\reviewercomment}[1]{\begin{reviewercommentenv}#1\end{reviewercommentenv}}
+\newcommand{\responselabel}{\par\smallskip\noindent\color{black}}
+\newcommand{\draftresponse}[1]{%
+  \ifresponsedraft
+    \par\smallskip\noindent{\color{DraftGray}\textit{Drafting note: #1}}\par\smallskip
+  \else
+    \PackageError{response_letter}{Unresolved draft response remains}{Replace every \string\draftresponse\space block before final compilation.}%
+  \fi
+}
+
+\begin{document}
+
+\ifresponsedraft
+\begin{center}
+{\color{DraftRed}\Large\textbf{WORKING DRAFT: NOT FOR SUBMISSION}}
+\end{center}
+\fi
+
+\begin{center}
+{\Large \textbf{Response to Reviewers, Second Revision}}\\[0.5em]
+{\large Interspecies interaction strength affects community-level selection in microbial coalescence}\\[0.35em]
+{\normalsize Manuscript NATECOLEVOL-26010384A}
+\end{center}
+
+Dear Editor and Reviewers,
+
+We thank the editor and reviewers for their careful re-evaluation of our manuscript and for recognizing the substantial improvements made in the first revision. Their remaining suggestions helped us further clarify the relationship between our operational definition of community-level selection and the assembly-history comparison. In response to the code-availability comment, we also expanded the public repository to include the full analysis pipeline and figure-generation code for most main-text panels and deposited an archived release on Zenodo.
+
+\textcolor{ReviewerSkyBlue}{Reviewer comments are shown in light blue.} Author responses are shown in black. \textcolor{SecondRoundBlue}{Text quoted from second-round manuscript changes is shown in dark blue, matching the marked manuscript.}
+
+\input{response/reviewer1_response.tex}
+\clearpage
+\input{response/reviewer2_response.tex}
+\clearpage
+\input{response/reviewer3_response.tex}
+
+\end{document}

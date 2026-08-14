@@ -1,0 +1,32 @@
+% Superseded by latex/revision/response/reviewer2_response.tex and
+% revision_figure_folder/Fig_R2_5_natural_taxonomic_distinctness.pdf.
+
+\reviewercomment{%
+5. Natural community experiments and pre-selection effects
+
+The inclusion of natural communities is an important strength of the study. However, the use of a common stabilisation phase in defined media may introduce pre-selection effects that reduce ecological heterogeneity across communities.
+
+In particular, incubating diverse natural communities in simplified media is known to drive convergence toward a limited set of functional guilds [Goldford et al., 2018]. As a result, the ``natural'' communities used here may already be filtered to resemble the synthetic communities, potentially contributing to the similarity of results across systems.
+
+We therefore suggest that the authors:
+- discuss the potential effects of this pre-selection more explicitly
+- clarify the extent to which taxonomic or functional convergence occurs during the stabilisation phase
+
+This would help contextualise the generality of the natural-community results.
+}
+
+\responselabel
+We agree that the seven-cycle stabilization phase in defined laboratory media could pre-select natural sample-derived communities, and we have revised the response framing so that the natural-community experiment is interpreted as a test in laboratory-stabilized enrichments rather than as a direct proxy for unfiltered natural ecosystems. The current data can address taxonomic distinctness after stabilization, but they cannot quantify taxonomic convergence during stabilization because we did not sequence the original environmental inocula before enrichment, and they cannot quantify functional convergence because we did not collect metagenomic, metabolomic, or trait-resolved functional profiles for these communities.
+
+The available post-stabilization data show that filtering was not complete at the ASV level. After seven serial growth-dilution cycles, the natural sample-derived parental communities retained a mean richness of $13.7 \pm 7.2$ ASVs above the 0.1\% relative-abundance threshold, compared with $9.8 \pm 4.8$ ASVs in the synthetic parental communities. In a response-only check of the stabilized natural parental communities, ASV Jaccard similarity between communities from different environmental source samples remained low in all three media: 0.126 in Nutr$-$, 0.181 in Base medium, and 0.205 in Nutr$+$, whereas same-source biological replicates were more similar: 0.413, 0.443, and 0.351, respectively (Response Fig.~R2Q5-1). Thus, the natural communities were not taxonomically identical after stabilization, but this analysis does not exclude substantial filtering relative to the original environmental samples.
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.78\textwidth]{figures/post_stabilization_taxonomic_distinctness.pdf}
+\caption{\textbf{Response Fig.~R2Q5-1. Post-stabilization taxonomic distinctness of natural sample-derived parental communities.} Pairwise ASV Jaccard similarity and Bray--Curtis similarity among natural parental communities after seven serial dilution cycles in defined laboratory media. Comparisons are grouped by whether the two stabilized communities came from the same environmental source sample or from different source samples. The analysis uses ASVs above the 0.1\% relative-abundance threshold and is restricted to post-stabilization samples, so it does not measure pre-to-post stabilization convergence.}
+\label{fig:r2q5_taxonomic_distinctness}
+\end{figure}
+
+We therefore do not claim that the natural communities preserve the full taxonomic or functional heterogeneity of the source environments. The narrower conclusion is that the nutrient-dependent increase in Dominance/CLS also appears in taxonomically richer, laboratory-stabilized communities derived from natural samples: Dominance outcomes increased from 37\% in Nutr$-$ to 70\% in Base medium and 77\% in Nutr$+$, with $n=30$ coalescence events per condition. This supports qualitative consistency across synthetic and natural sample-derived systems, but not broad generality to all unfiltered natural communities.
+
+\mschange{We propose revising the Results and Discussion to state explicitly that the natural-community experiment uses laboratory-stabilized enrichments, that pre-selection may contribute to similarity between systems, and that the current data cannot measure functional convergence or taxonomic convergence during stabilization because pre-enrichment community compositions and functional profiles were not collected. Exact proposed v5 text is provided in \texttt{proposed\_v5\_patches.md}.}

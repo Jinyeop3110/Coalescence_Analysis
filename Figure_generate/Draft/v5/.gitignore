@@ -1,0 +1,21 @@
+# LaTeX auxiliary files
+*.aux
+*.bbl
+*.blg
+*.out
+*.log
+*.fls
+*.fdb_latexmk
+*.synctex.gz
+*.toc
+*.lot
+*.lof
+
+# Local OS, editor, and Python artifacts
+.DS_Store
+__pycache__/
+*.py[cod]
+~$*
+
+# Timestamped local output backups
+*.backup_*.pdf

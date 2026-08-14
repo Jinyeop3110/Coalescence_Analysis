@@ -1,0 +1,76 @@
+\documentclass[11pt,a4paper]{article}
+
+% ============================================
+% Packages
+% ============================================
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{amsmath,amssymb,amsfonts}
+\usepackage{graphicx}
+\usepackage[margin=1in]{geometry}
+%\usepackage[round,authoryear]{natbib}
+\usepackage[numbers,super,sort&compress]{natbib}
+\usepackage{hyperref}
+\usepackage{xurl}  % Allows URL breaks at any character
+\usepackage{xcolor}
+\usepackage{booktabs}
+\usepackage{float}
+\usepackage{caption}
+\usepackage{subcaption}
+\usepackage{lineno}
+\usepackage{setspace}
+\usepackage{authblk}
+
+% ============================================
+% Document Settings
+% ============================================
+% Line numbers for review
+\linenumbers
+\doublespacing
+
+% Hyperref settings
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue,
+    citecolor=blue,
+    urlcolor=blue
+}
+
+% Main figure captions already include explicit "Fig. N." labels.
+\captionsetup[figure]{labelformat=empty,labelsep=none}
+
+% ============================================
+% Custom Commands
+% ============================================
+\newcommand{\figref}[1]{Fig.~\ref{#1}}
+\newcommand{\eqnref}[1]{Eq.~(\ref{#1})}
+\newcommand{\secref}[1]{Section~\ref{#1}}
+\newcommand{\tabref}[1]{Table~\ref{#1}}
+
+% Graphics path
+\graphicspath{{figures/}}
+
+% ============================================
+% Document Begin
+% ============================================
+\begin{document}
+
+% Title and Abstract
+\input{sections/title_abstract}
+
+% Main Text
+\input{sections/introduction}
+\input{sections/results}
+\input{sections/discussion}
+
+\newpage
+\input{sections/methods}
+
+% Figure Legends
+\input{sections/figure_legends}
+
+% References
+\bibliographystyle{naturemag}
+\bibliography{references}
+
+\end{document}

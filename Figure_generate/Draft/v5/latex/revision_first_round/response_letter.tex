@@ -1,0 +1,79 @@
+\documentclass[11pt]{article}
+
+\usepackage[margin=1in]{geometry}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{bm}
+\usepackage{float}
+\usepackage[round,authoryear]{natbib}
+\usepackage{hyperref}
+\usepackage{xcolor}
+\usepackage{setspace}
+\usepackage{enumitem}
+\usepackage{caption}
+
+\singlespacing
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0.45em plus 0.1em minus 0.05em}
+\setlength{\emergencystretch}{3em}
+\graphicspath{{revision_figure_folder/}}
+
+\definecolor{ReviewerSkyBlue}{RGB}{0,150,220}
+\definecolor{ManuscriptEditRed}{RGB}{150,0,0}
+\definecolor{TodoBrightRed}{RGB}{255,0,0}
+\definecolor{StatusGray}{RGB}{90,90,90}
+
+\newcommand{\mschange}[1]{%
+  \par\smallskip
+  \noindent{\color{ManuscriptEditRed}#1}\par
+  \smallskip
+}
+\newcommand{\statusnote}[1]{\noindent{\color{StatusGray}\textit{#1}}\par\smallskip}
+\newenvironment{reviewercommentenv}{\par\smallskip\noindent\color{ReviewerSkyBlue}\ignorespaces}{\par\normalfont\color{black}\smallskip}
+\newcommand{\reviewercomment}[1]{\begin{reviewercommentenv}#1\end{reviewercommentenv}}
+\newcommand{\responselabel}{\par\smallskip\noindent\color{black}}
+\newcommand{\comment}[1]{{\color{StatusGray}\textit{[comment: #1]}}}
+\makeatletter
+\newcommand{\figref}[1]{Fig.~\@ifundefined{responsefigref@#1}{??}{\csname responsefigref@#1\endcsname}}
+\expandafter\def\csname responsefigref@fig:fig1\endcsname{1}
+\expandafter\def\csname responsefigref@fig:fig2\endcsname{2}
+\expandafter\def\csname responsefigref@fig:fig4\endcsname{4}
+\makeatother
+
+\begin{document}
+
+\begin{center}
+{\Large \textbf{Response to Reviewers}}\\[0.5em]
+{\large Interspecies Interactions Drive Community-Level Selection in Microbial Coalescence}
+\end{center}
+
+Dear Editor and Reviewers,
+
+We thank the reviewers for their careful, rigorous, and constructive feedback. The comments substantially improved both the framing and the technical clarity of the manuscript. Below, we respond point by point and summarize the analyses and text revisions undertaken in response to the major concerns.
+
+\textcolor{ReviewerSkyBlue}{Reviewer comments are shown in blue.} \textcolor{black}{Author responses are shown in black.} \textcolor{ManuscriptEditRed}{Text quoted from the revised manuscript is shown in dark red, matching the marked revised manuscript.}
+
+\textbf{Summary of major revisions.}
+
+\begin{itemize}[leftmargin=1.5em,itemsep=0.2em,topsep=0.2em]
+\item We clarified the central conceptual framing by defining community-level selection as an outcome-level description of origin-correlated persistence during coalescence, while separating this operational definition from causal ecological or biochemical mechanisms (Reviewer~2).
+\item We refined the connection between model and experiment by distinguishing the phenomenological gLV interaction-strength parameter from empirical readouts of invasion resistance, net interaction intensity, and environmental feedbacks across nutrient conditions (Reviewers~2 and~3).
+\item We revised key figure panels: Fig.~1B now states the cosine-similarity calculation and Euclidean-norm normalization explicitly; Fig.~2C now more clearly shows the assembly-driven decrease in within-community interaction strength; and Supplementary Fig.~3 now shows post-assembly interaction matrices ordered by parental-community origin (Reviewers~1 and~3).
+\item We added metric and null-model analyses, including continuous similarity measures, classification-boundary sensitivity, alternative similarity metrics, and coalescence-pair-specific additive-null comparisons (Reviewers~1--3).
+\item We added controls and alternative-mechanism analyses, including biomass imbalance, pool-size/richness effects, dominant-species artifacts, pH-mediated feedback, and alternative interaction structures (Reviewers~1--3).
+\item We narrowed the natural sample-derived community claims by emphasizing laboratory stabilization, adding taxonomic-distinctness analyses, and discussing pre-selection during stabilization as an explicit caveat (Reviewers~2 and~3).
+\end{itemize}
+
+\input{response/reviewer1_response.tex}
+\clearpage
+\input{response/reviewer2_response.tex}
+\clearpage
+\input{response/reviewer3_response.tex}
+
+\bibliographystyle{unsrtnat}
+\bibliography{../references}
+
+\end{document}

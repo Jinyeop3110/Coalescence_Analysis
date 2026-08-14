@@ -1,0 +1,105 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[margin=0.9in]{geometry}
+\usepackage[T1]{fontenc}\usepackage[utf8]{inputenc}
+\usepackage{xcolor}\usepackage[normalem]{ulem}\usepackage{amsmath,amssymb}
+\usepackage{setspace}\usepackage{parskip}\usepackage{hyperref}
+\hypersetup{colorlinks=true,linkcolor=blue,urlcolor=blue}
+\definecolor{CutRed}{RGB}{200,30,30}
+\definecolor{HeadBlue}{RGB}{0,70,180}
+\definecolor{GrayNote}{RGB}{90,90,90}
+\newcommand{\citep}[1]{\textsuperscript{[refs]}}
+\newcommand{\figref}[1]{Fig.~X}
+\newcommand{\cutx}[1]{{\color{CutRed}\sout{#1}}}
+\newcommand{\newx}[1]{{\color{CutRed}\uline{#1}}}
+\newcommand{\cutmark}{{\color{CutRed}\,\textbf{[\,\ldots\,]}\,}}
+\newcommand{\itemhead}[5]{\vspace{1.1em}\noindent{\color{HeadBlue}\large\textbf{#1}\quad\normalsize\textbf{#2}}\\[0.2em]
+{\color{GrayNote}\small #3 words $\rightarrow$ #4 words, saves \textbf{#5}}\par}
+\newcommand{\rationale}[1]{{\color{GrayNote}\small\textit{#1}}\par\smallskip}
+\newcommand{\marknote}[1]{{\color{CutRed}\small\textbf{Reviewer-marked text involved:} #1}\par}
+\newcommand{\panel}[1]{\par\smallskip\noindent\textbf{\small #1}\par}
+\newcommand{\decision}{\par\smallskip\noindent{\color{GrayNote}\small$\square$~accept\quad$\square$~reject\quad$\square$~modify}\par
+\noindent\rule{\linewidth}{0.4pt}}
+\setstretch{1.05}
+\setlength{\emergencystretch}{3em}
+\begin{document}
+\begin{center}{\Large\textbf{Length reduction, Tier 1B: a further 134 words}}\\[0.3em]
+{\normalsize Prepared 2026-08-01. Additional to the ten items in \texttt{length\_reduction\_review\_v2.pdf}. No manuscript file has been edited.}\end{center}
+\vspace{0.5em}
+{\small\textbf{Why this exists.} Tier 1 now saves 365 words after context and style review. These six further items are the same grade of
+edit, restatement within a paragraph and recap of the preceding subsection, and close part of the remaining shortfall.
+All six sit in Results, which is where the remaining redundancy is.
+
+\textbf{How to read this.} For each item, \textbf{Current} shows the existing text with
+\cutx{deleted wording struck through in red}; \textbf{Proposed} shows the resulting text with
+\newx{newly written wording underlined in red}, and \cutmark{} marks each point where wording was removed with no replacement. Citations are collapsed to \citep{} and figure
+references to \figref{} for readability; both are preserved verbatim in the real edit.
+The red here is a review aid only and is unrelated to the manuscript's
+\texttt{\textbackslash rev\{\}} / \texttt{\textbackslash revsecond\{\}} colour scheme.}\par
+\vspace{0.3em}
+\noindent\rule{\linewidth}{0.4pt}
+
+\itemhead{R-4}{Results section 1, paragraph 1 (after Eq.~1)}{92}{63}{29}
+\marknote{the symbol list is \texttt{\textbackslash rev\{\}} (compressed, not deleted)}
+\rationale{This is the passage elided as ``[\ldots equation and definitions unchanged \ldots]'' in item R-1, so R-4 and R-1 combine into a single edit of one paragraph. The symbol list restates what Eq.~1 already shows and what Methods defines; the map sentence is restated by the sentence that follows it (``We partition this map into three\ldots''). The symbol definition itself is kept, so the reviewer point that prompted it still stands.}
+\panel{Current (92 words)}
+\cutx{where $\vec{x}_A$, $\vec{x}_B$, and $\vec{x}_C$ denote community composition (relative-abundance) vectors for the two parental communities and the coalesced community, and $\|\cdot\|_2$ denotes the Euclidean norm. These two similarity scores yield a two-dimensional similarity map in which the location of C reflects how strongly it resembles each parental community. }We partition this map into three coalescence outcome classes (see Methods): Dominance, where C closely resembles one parental community but not the other; Mixture, where C similarly resembles both parental communities; and Restructuring, where C diverges from both parental communities into a novel configuration.
+\panel{Proposed (63 words, saves 29)}
+\newx{where $\vec{x}$ denotes relative-abundance composition vectors and $\|\cdot\|_2$ the Euclidean norm. These two scores define a two-dimensional similarity map. }We partition this map into three coalescence outcome classes (see Methods): Dominance, where C closely resembles one parental community but not the other; Mixture, where C similarly resembles both parental communities; and Restructuring, where C diverges from both parental communities into a novel configuration.
+\decision
+
+\itemhead{R-9}{Results section 1, paragraph 4 (null-model controls)}{90}{64}{26}
+\marknote{the passage is \texttt{\textbackslash rev\{\}}; the closing sentence is \texttt{\textbackslash revsecond\{\}}}
+\rationale{The closing sentence states the same conclusion as the sentence before it, which already carries the Wilcoxon result. The opener repeats ``matched additive-null expectations'' one sentence later. The Wilcoxon test, Extended Data Fig.~3, and Supplementary Note~1 are all kept. Checked against the second-round response letter: this passage is not quoted anywhere in it, so no \texttt{\textbackslash mschange\{\}} lock applies.}
+\panel{Current (90 words)}
+\cutx{To test whether Base-medium Dominance could arise from a compositional artifact of parental abundance structure, we compared observed outcomes with matched additive-null expectations constructed from the same parental-community pairs. Observed outcomes were more strongly biased toward one parental community than their matched additive-null expectations }(one-sided paired Wilcoxon test, $p = 5.9 \times 10^{-14}$; Extended Data Fig.~3), and additional abundance-skew null models also produced weaker parental bias than the data (Supplementary Note~1). \cutx{Together, these null-model controls indicate that the observed bias toward Dominance is stronger than what parental abundance structure alone would produce.}
+\panel{Proposed (64 words, saves 26)}
+\newx{To test whether Dominance could be a compositional artifact of parental abundance structure, we compared observed outcomes with matched additive-null expectations from the same parental-community pairs. Observed outcomes were more strongly biased toward one parental community than these expectations }(one-sided paired Wilcoxon test, $p = 5.9 \times 10^{-14}$; Extended Data Fig.~3), and additional abundance-skew null models also produced weaker parental bias than the data (Supplementary Note~1). \cutmark{}
+\decision
+
+\itemhead{R-5}{Results section 2, paragraph 2 (closing sentence)}{78}{54}{24}
+
+\rationale{Pure duplication: the cut sentence repeats the claim made three sentences earlier in the same paragraph (``the random-interaction model quantitatively reproduces the high frequency of Dominance observed in the experiments''). Not reviewer-marked.}
+\panel{Current (78 words)}
+At this parameter value, the random-interaction model quantitatively reproduces the high frequency of Dominance observed in the experiments. Outcomes concentrate near the axes rather than the diagonal, indicating asymmetric dominance by one parental community (\figref{fig:fig2}b). Quantitatively, Dominance accounts for 61\% of all outcomes, far more frequent than Restructuring (26\%) or Mixture (13\%; \figref{fig:fig2}b, right). \cutx{This observation suggests that, within this competitive gLV framework, interspecies competitive interactions are sufficient to reproduce the high frequency of Dominance observed in coalescence.}
+\panel{Proposed (54 words, saves 24)}
+At this parameter value, the random-interaction model quantitatively reproduces the high frequency of Dominance observed in the experiments. Outcomes concentrate near the axes rather than the diagonal, indicating asymmetric dominance by one parental community (\figref{fig:fig2}b). Quantitatively, Dominance accounts for 61\% of all outcomes, far more frequent than Restructuring (26\%) or Mixture (13\%; \figref{fig:fig2}b, right). \cutmark{}
+\decision
+
+\itemhead{R-6}{Results section 3, opening sentence}{47}{34}{13}
+
+\rationale{Recap transition: the clause summarises the subsection the reader has just finished. The subsection heading already carries the topic. Not reviewer-marked.}
+\panel{Current (47 words)}
+\cutx{Having established that random interspecies interactions can recapitulate Dominance with correlated pairwise selection, we next investigated how the interaction-strength parameter alters coalescence outcomes. }We simulated 1,200 coalescence events at each of three representative values of the interaction-strength parameter ($\mu = 0.3, 0.6, 0.8$) and mapped outcomes into the similarity space (\figref{fig:fig3}a).
+\panel{Proposed (34 words, saves 13)}
+\newx{We next asked how the interaction-strength parameter alters coalescence outcomes. }We simulated 1,200 coalescence events at each of three representative values of the interaction-strength parameter ($\mu = 0.3, 0.6, 0.8$) and mapped outcomes into the similarity space (\figref{fig:fig3}a).
+\decision
+
+\itemhead{R-7}{Results section 4, paragraph 2 (closing sentence)}{70}{51}{19}
+\marknote{\texttt{\textbackslash revsecond\{\}} (shortened, not deleted)}
+\rationale{The clause after the colon restates the two sentences immediately preceding it, which already report the $P < 0.001$ within-community correlation in Base and Nutr$+$ and its absence in Nutr$-$. The sentence is second-round marked, so it is shortened rather than removed and keeps its \texttt{\textbackslash revsecond\{\}} wrapper.}
+\panel{Current (70 words)}
+In Base and Nutr$+$ media, within-community species pairs showed significantly higher selection correlation than cross-community pairs ($P < 0.001$), consistent with community-level selection. In Nutr$-$, no such correlation was observed, consistent with weaker origin-correlated persistence and more species-level dynamics. These results match the \cutx{qualitative }theoretical prediction and extend it to the level of selection\cutx{: weak effective interactions yield Mixture with uncorrelated species fates, whereas strong effective interactions yield Dominance with community-level selection}.
+\panel{Proposed (51 words, saves 19)}
+In Base and Nutr$+$ media, within-community species pairs showed significantly higher selection correlation than cross-community pairs ($P < 0.001$), consistent with community-level selection. In Nutr$-$, no such correlation was observed, consistent with weaker origin-correlated persistence and more species-level dynamics. These results match the \cutmark{}theoretical prediction and extend it to the level of selection\cutmark{}.
+\decision
+
+\itemhead{R-8}{Results section 5, opening sentence}{67}{44}{23}
+
+\rationale{Recap of the subsection just finished. Extended Data Fig.~7 is already cited in Results section 4, so no figure reference is orphaned by the cut. Not reviewer-marked.}
+\panel{Current (67 words)}
+\cutx{We observed Dominance in both Base and Nutr$+$ media, consistent with community-level selection as confirmed by pairwise selection correlation (Extended Data Fig.~7). }We next asked whether we could predict which parental community would win during coalescence. Prior work has suggested that species-level competitive outcomes may correlate with Dominance direction \citep{Rillig2015, Castledine2020}. Inspired by these observations, we tested whether pairwise competition between dominant species \citep{Hu2022, Ratzke2020} predicts which community wins (\figref{fig:fig5}a).
+\panel{Proposed (44 words, saves 23)}
+\cutmark{}We next asked whether we could predict which parental community would win during coalescence. Prior work has suggested that species-level competitive outcomes may correlate with Dominance direction \citep{Rillig2015, Castledine2020}. Inspired by these observations, we tested whether pairwise competition between dominant species \citep{Hu2022, Ratzke2020} predicts which community wins (\figref{fig:fig5}a).
+\decision
+
+\vspace{0.8em}
+\begin{center}\textbf{TOTALS}\end{center}
+\noindent Tier 1B as drafted: \textbf{444} words $\rightarrow$ \textbf{310} words, saving \textbf{134}.\par
+\smallskip
+\noindent Of that, \textbf{60} words come from text carrying no revision markup at all
+(R-5, R-6, R-8), and the rest from compressing marked text without deleting the reviewer-facing claim
+(R-4, R-7, R-9).\par
+\smallskip
+\noindent Running position: 4{,}359 baseline $-$ 365 (Tier 1) $-$ 134 (Tier 1B) = \textbf{3860} words.
+Tier 2, mostly relocation into uncounted figure legends, still has to save about 360 words to reach 3{,}500.\par
+\end{document}
